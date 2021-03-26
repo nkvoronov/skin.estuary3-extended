@@ -50,7 +50,7 @@
 					<top>0</top>
 					<bottom>0</bottom>
 					<aligny>center</aligny>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
@@ -61,7 +61,7 @@
 					<bottom>0</bottom>
 					<right>0</right>
 					<visible>Control.HasFocus(10)</visible>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>

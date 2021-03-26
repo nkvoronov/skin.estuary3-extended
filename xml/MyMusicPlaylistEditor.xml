@@ -3,6 +3,8 @@
 	<defaultcontrol always="true">6</defaultcontrol>
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
+	<onload>SetProperty(fanarthometype,music,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundMusicVar],Home)</onload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
@@ -92,7 +94,7 @@
 			</control>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[10503][COLOR=button_focus][/COLOR]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[10503][COLOR $VAR[MainColorVar]][/COLOR]" />
 		</include>
 		<include>BottomBar</include>
 		<include content="BottomBarTwoListInfo">

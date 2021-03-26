@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
-	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
-	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],Home)</onload>
+	<onunload>ClearProperty(infobackground,Home)</onunload>
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
@@ -117,7 +117,7 @@
 							<top>16</top>
 							<width>393</width>
 							<height>228</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -135,7 +135,7 @@
 						<width>450</width>
 						<height>396</height>
 						<aspectratio>scale</aspectratio>
-						<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+						<texture colordiffuse="bg_videoinfo">colors/black.png</texture>
 					</control>
 					<control type="group">
 						<left>1340</left>
@@ -325,7 +325,7 @@
 						<top>24</top>
 						<width>500</width>
 						<height>500</height>
-						<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+						<texture colordiffuse="bg_videoinfo">colors/black.png</texture>
 					</control>
 					<control type="textbox">
 						<left>25</left>
@@ -349,12 +349,12 @@
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<label>[I]$INFO[ListItem.AddonDisclaimer][/I]</label>
-				<textcolor>88FFFFFF</textcolor>
+				<textcolor>white5</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
 			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.AddonName]" />
-				<param name="sub_label" value="$INFO[ListItem.AddonVersion,[COLOR grey],[/COLOR]]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ]" />
+				<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.AddonVersion][/COLOR]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ]" />
 			</include>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>

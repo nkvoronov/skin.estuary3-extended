@@ -35,7 +35,7 @@
 							<width>150</width>
 							<bottom>0</bottom>
 							<aligny>center</aligny>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
 							<label>$INFO[ListItem.StartTime]</label>
 						</control>
 						<control type="label">
@@ -52,7 +52,7 @@
 							<left>0</left>
 							<width>780</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 							<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 						</control>
@@ -136,7 +136,7 @@
 					<font>font45</font>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19069]$INFO[Container(11).ListItem.StartDate, - ]</label>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				</control>
 			</control>
 		</control>

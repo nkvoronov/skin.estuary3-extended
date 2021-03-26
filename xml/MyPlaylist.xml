@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">55</defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<menucontrol>9000</menucontrol>
-	<views>55,503</views>
+	<views>55</views>
+	<onload>SetProperty(fanarthometype,video,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundVideosVar],Home)</onload>
 	<controls>
-		<include>DefaultBackground</include>
+		<include content="DefaultBackground">
+			<param name="fanart_media" value="$VAR[MediaFanartVar]" />
+		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>View_55_WideList</include>
-			<include condition="Window.IsActive(musicplaylist)">View_503_NowPlaying</include>
 			<include>CommonScrollbars</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<include>Visible_Left</include>
-				<include>ListThumbInfoPanel</include>
+				<include>ListThumbInfoPanelA</include>
 			</control>
 			<include content="TopBar" condition="Window.IsActive(videoplaylist)">
 				<param name="breadcrumbs_label" value="$LOCALIZE[31065]" />

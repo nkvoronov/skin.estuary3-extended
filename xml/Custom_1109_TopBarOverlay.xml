@@ -15,14 +15,14 @@
 				<top>0</top>
 				<width>100%</width>
 				<height>55</height>
-				<texture colordiffuse="D0FFFFFF" border="0,55,0,0">frame/osdfade.png</texture>
+				<texture colordiffuse="white3" border="0,55,0,0">frame/osdfade.png</texture>
 			</control>
 			<control type="label">
 				<left>25</left>
 				<top>6</top>
 				<width>700</width>
 				<height>60</height>
-				<label>$VAR[SeekLabel]</label>
+				<label>$VAR[SeekLabelVar]</label>
 				<font>font30_title</font>
 				<shadowcolor>black</shadowcolor>
 			</control>
@@ -62,7 +62,7 @@
 				<width>100%</width>
 				<height>16</height>
 				<info>Player.ProgressCache</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 				<midtexture>colors/white50.png</midtexture>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
@@ -72,7 +72,7 @@
 				<width>100%</width>
 				<height>16</height>
 				<info>Player.Progress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 				<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
@@ -81,7 +81,7 @@
 				<top>50</top>
 				<width>100%</width>
 				<height>26</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+				<texturesliderbar colordiffuse="white6">osd/progress/nub_bar.png</texturesliderbar>
 				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
 				<info>Player.Seekbar</info>
@@ -118,7 +118,7 @@
 				<top>50</top>
 				<width>100%</width>
 				<height>26</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+				<texturesliderbar colordiffuse="white6">osd/progress/nub_bar.png</texturesliderbar>
 				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
 				<info>PVR.TimeShiftSeekbar</info>
@@ -129,9 +129,9 @@
 				<top>55</top>
 				<width>100%</width>
 				<height>8</height>
-				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="white6">colors/white50.png</texturebg>
 				<lefttexture>colors/white.png</lefttexture>
-				<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+				<midtexture colordiffuse="invalid">colors/white.png</midtexture>
 				<righttexture>colors/white.png</righttexture>
 				<info>Player.Cutlist</info>
 			</control>
@@ -140,7 +140,7 @@
 				<top>67</top>
 				<width>100%</width>
 				<height>4</height>
-				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="white6">colors/white50.png</texturebg>
 				<righttexture>colors/white.png</righttexture>
 				<info>Player.Chapters</info>
 			</control>
@@ -171,34 +171,34 @@
 						<width>300</width>
 						<texture>$VAR[PlayerClearLogoVar]</texture>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
+						<visible>!Window.IsActive(visualisation) + !Skin.HasSetting(hide_logo_play)</visible>
 					</control>
 					<control type="label">
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<label>$VAR[OSDSubLabelVar]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>
 				<control type="group">
 					<visible>!Window.IsActive(pvrosdchannels) + !Window.IsActive(pvrchannelguide)</visible>
-					<visible>String.IsEmpty(Player.Art(clearlogo))</visible>
-					<visible>String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
+					<visible>[String.IsEmpty(Player.Art(clearlogo)) + String.IsEmpty(Player.Art(tvshow.clearlogo))] | Skin.HasSetting(hide_logo_play)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
 					<left>20</left>
 					<right>400</right>
 					<control type="label">
 						<label>$VAR[NowPlayingBreadcrumbsVar]</label>
 						<font>font45</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<top>7</top>
 						<height>50</height>
 					</control>
 					<control type="label">
 						<top>60</top>
 						<label>$VAR[OSDSubLabelVar]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<height>60</height>
 					</control>
 				</control>
@@ -208,13 +208,14 @@
 				<animation effect="fade" time="150">VisibleChange</animation>
 				<control type="label">
 					<font>font_clock</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<top>0</top>
 					<right>20</right>
 					<height>200</height>
 					<width>600</width>
 					<align>right</align>
 					<label>$INFO[System.Time]</label>
+					<visible>!Skin.HasSetting(hide_time)</visible>
 				</control>
 				<control type="grouplist">
 					<right>24</right>
@@ -227,7 +228,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<control type="label">
 						<label>$INFO[Player.FinishTime,$LOCALIZE[31080]: ]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<height>100</height>
 						<width>auto</width>
 						<visible>!String.isempty(Player.Duration)</visible>
@@ -235,7 +236,7 @@
 					</control>
 					<control type="label">
 						<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31080]: ]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<height>100</height>
 						<width>auto</width>
 						<visible>VideoPlayer.HasEpg</visible>

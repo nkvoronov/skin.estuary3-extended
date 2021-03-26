@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<onload>SetProperty(fanarthometype,settings,Home)</onload>
+	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
 	<controls>
 		<include>DefaultBackground</include>
-		<control type="multiimage">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400" reversible="true" condition="!Window.Previous(Settings)">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300" reversible="true" condition="!Window.Next(Settings)">WindowClose</animation>
-			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath colordiffuse="35FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
-			<visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
-		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<control type="grouplist" id="5">
-				<description>control area</description>
+				<description>Control Area</description>
 				<top>133</top>
 				<left>470</left>
 				<pagecontrol>60</pagecontrol>
@@ -34,14 +25,14 @@
 				<top>130</top>
 				<right>0</right>
 				<height>2</height>
-				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
 				<left>470</left>
 				<bottom>135</bottom>
 				<right>0</right>
 				<height>2</height>
-				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
 		<control type="button" id="7">
@@ -63,9 +54,9 @@
 			<aligny>center</aligny>
 		</control>
 		<control type="image" id="11">
-			<description>separator image</description>
+			<description>Separator Image</description>
 			<height>3</height>
-			<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+			<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 		</control>
 		<control type="label" id="14">
 			<description>Default Label</description>
@@ -77,8 +68,8 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font25_title</font>
-			<textcolor>grey</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>$VAR[GreyColorVar]</textcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 		</control>
 		<control type="group">
 			<depth>DepthContentPanel</depth>
@@ -106,7 +97,7 @@
 				<textoffsetx>40</textoffsetx>
 				<aligny>center</aligny>
 				<font>font37</font>
-				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 				<texturenofocus />
 			</control>
 		</control>
@@ -148,7 +139,7 @@
 				<onclick>SettingsLevelChange</onclick>
 				<textoffsetx>100</textoffsetx>
 				<textoffsety>0</textoffsety>
-				<texturefocus colordiffuse="button_focus">colors/white.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorVar]">colors/white.png</texturefocus>
 				<texturenofocus />
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>
@@ -167,14 +158,14 @@
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<control type="textbox" id="6">
-				<description>description area</description>
+				<description>Description Area</description>
 				<left>510</left>
 				<bottom>25</bottom>
 				<right>60</right>
 				<height>102</height>
 				<font>font12</font>
 				<align>justify</align>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 		</control>

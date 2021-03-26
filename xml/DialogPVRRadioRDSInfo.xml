@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onunload>ClearProperty(infobackground,Home)</onunload>
 	<controls>
-		<control type="group">
-			<animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
-			<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-			<include>ColoredBackgroundImages</include>
-		</control>
+		<include>DefaultBackground</include>
 		<control type="group">
 			<centertop>50%</centertop>
 			<height>1080</height>
@@ -27,7 +22,7 @@
 				<top>180</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[179]</label>
 			</control>
@@ -79,7 +74,7 @@
 				<top>595</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29909]</label>
 			</control>
@@ -115,7 +110,7 @@
 				<top>180</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29908]</label>
 			</control>
@@ -167,7 +162,7 @@
 				<top>595</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29913]</label>
 			</control>
@@ -200,7 +195,7 @@
 				<control type="label">
 					<width>780</width>
 					<height>25</height>
-					<textcolor>button_focus</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font36_title</font>
 					<label>$LOCALIZE[29915]</label>
 				</control>
@@ -209,7 +204,17 @@
 					<width>780</width>
 					<height>170</height>
 					<align>justify</align>
-					<label>$INFO[RDS.InfoNews,[COLOR button_focus]$LOCALIZE[29916]:[/COLOR] ,[CR]]$INFO[RDS.InfoNewsLocal,[COLOR button_focus]$LOCALIZE[29917]:[/COLOR] ,[CR]]$INFO[RDS.InfoStock,[COLOR button_focus]$LOCALIZE[29920]:[/COLOR] ,[CR]]$INFO[RDS.InfoSport,[COLOR button_focus]$LOCALIZE[29918]:[/COLOR] ,[CR]]$INFO[RDS.Infolottery,[COLOR button_focus]$LOCALIZE[29919]:[/COLOR] ,[CR]]$INFO[RDS.InfoWeather,[COLOR button_focus]$LOCALIZE[400]:[/COLOR] ,[CR]]$INFO[RDS.InfoCinema,$[COLOR button_focus]LOCALIZE[19602]:[/COLOR] ,[CR]]$INFO[RDS.InfoHoroscope,[COLOR button_focus]$LOCALIZE[29922]:[/COLOR] ,[CR]]$INFO[RDS.InfoOther,[COLOR button_focus]$LOCALIZE[29921]:[/COLOR] ,[CR]]</label>
+					<label>
+					[COLOR $VAR[MainColorVar]]$LOCALIZE[29916]: [/COLOR]$INFO[RDS.InfoNews][CR]
+					[COLOR $VAR[MainColorVar]]$LOCALIZE[29917]: [/COLOR]$INFO[RDS.InfoNewsLocal][CR]
+					[COLOR $VAR[MainColorVar]]$LOCALIZE[29920]: [/COLOR]$INFO[RDS.InfoStock][CR]
+					[COLOR $VAR[MainColorVar]]$LOCALIZE[29918]: [/COLOR]$INFO[RDS.InfoSport][CR]
+					[COLOR $VAR[MainColorVar]]$LOCALIZE[29919]: [/COLOR]$INFO[RDS.Infolottery][CR]
+					[COLOR $VAR[MainColorVar]]$LOCALIZE[400]: [/COLOR]$INFO[RDS.InfoWeather][CR]
+					[COLOR $VAR[MainColorVar]]LOCALIZE[19602]: [/COLOR]$INFO[RDS.InfoCinema][CR]
+					[COLOR $VAR[MainColorVar]]$LOCALIZE[29922]: [/COLOR]$INFO[RDS.InfoHoroscope][CR]
+					[COLOR $VAR[MainColorVar]]$LOCALIZE[29921]: [/COLOR]$INFO[RDS.InfoOther][CR]
+					</label>
 					<autoscroll delay="5000" time="3000" repeat="10000">true</autoscroll>
 				</control>
 			</control>
@@ -227,7 +232,7 @@
 				<control type="label">
 					<width>780</width>
 					<height>25</height>
-					<textcolor>button_focus</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font36_title</font>
 					<label>$LOCALIZE[14304]</label>
 				</control>
@@ -267,7 +272,7 @@
 
 			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$LOCALIZE[29900]" />
-				<param name="sub_label" value="[COLOR grey]$VAR[RDSInfoSubTitle][/COLOR]" />
+				<param name="sub_label" value="[COLOR $VAR[GreyColorVar]]$VAR[RDSInfoSubTitleVar][/COLOR]" />
 				<param name="posy" value="40" />
 			</include>
 		</control>

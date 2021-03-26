@@ -21,7 +21,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="bg_desc">dialogs/dialog-bg-nobo.png</texture>
 				<visible>Control.IsVisible(51)</visible>
 			</control>
 			<control type="group">
@@ -50,7 +50,7 @@
 						<control type="group">
 							<left>-220</left>
 							<top>18</top>
-							<include>InfoWallMovieLayout</include>
+							<include>PosterLayout</include>
 						</control>
 					</itemlayout>
 					<focusedlayout width="490">
@@ -61,7 +61,7 @@
 								<visible>Container.OnScrollPrevious</visible>
 								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-								<include>InfoWallMovieLayout</include>
+								<include>PosterLayout</include>
 							</control>
 							<control type="group">
 								<left>-40</left>
@@ -69,96 +69,98 @@
 								<visible>Container.OnScrollNext</visible>
 								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-								<include>InfoWallMovieLayout</include>
+								<include>PosterLayout</include>
 							</control>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="group">
 					<top>25</top>
-					<control type="group">
-						<left>635</left>
-						<top>480</top>
-						<height>245</height>
-						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)</visible>
-						<include content="InfoList">
-							<param name="bottom" value="0" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="font" value="font13" />
-						</include>
-					</control>
-					<control type="image">
-						<left>645</left>
-						<top>415</top>
-						<width>32</width>
-						<height>32</height>
-						<texture>$VAR[ListWatchedIconVar]</texture>
-					</control>
+					<left>-25</left>
 					<control type="label">
-						<left>695</left>
-						<top>400</top>
-						<right>50</right>
-						<height>40</height>
-						<label>$INFO[ListItem.Label]$VAR[ListSubLabelVar]</label>
-						<font>font45_title</font>
-						<shadowcolor>text_shadow</shadowcolor>
-					</control>
-					<control type="textbox">
 						<left>645</left>
-						<top>480</top>
-						<height>250</height>
-						<right>115</right>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$VAR[PlotTextBoxVar]</label>
-						<shadowcolor>text_shadow</shadowcolor>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)]</visible>
+						<top>400</top>
+						<right>25</right>
+						<height>40</height>
+						<label>$VAR[TitleAndYearVar]</label>
+						<font>font45_title</font>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<scroll>true</scroll>
+					</control>
+					<control type="group">
+						<visible>!ListItem.IsCollection</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="textbox">
+							<left>645</left>
+							<top>470</top>
+							<height>250</height>
+							<right>25</right>
+							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+							<label>$VAR[PlotAndTagVar]</label>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+						</control>
+						<control type="textbox">
+							<left>645</left>
+							<top>470</top>
+							<height>255</height>
+							<right>25</right>
+							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+							<label>$VAR[PlotAndTagVar]</label>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<visible>String.IsEqual(Skin.Font, Arial)</visible>
+						</control>
+					</control>
+					<control type="group">
+						<visible>ListItem.IsCollection</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="group">
+							<left>635</left>
+							<top>470</top>
+							<height>245</height>
+							<visible>!Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoList">
+								<param name="bottom" value="0" />
+								<param name="width" value="1032" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="5800" />
+							</include>
+						</control>
+						<control type="group">
+							<left>643</left>
+							<top>480</top>
+							<height>245</height>
+							<visible>Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoListPics">
+								<param name="bottom" value="0" />
+								<param name="width" value="1032" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="6100" />
+							</include>
+						</control>
 					</control>
 				</control>
 			</control>
 		</control>
 		<control type="group">
-			<centertop>50%</centertop>
+			<top>200</top>
 			<height>670</height>
-			<left>101</left>
+			<left>70</left>
 			<depth>DepthContentPopout</depth>
 			<visible>Control.IsVisible(51)</visible>
 			<include>OpenClose_Left</include>
 			<include>Visible_Left</include>
-			<control type="image">
-				<top>-16</top>
-				<left>-16</left>
-				<width>516</width>
-				<height>756</height>
-				<texture>colors/black.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-			</control>
-			<control type="image">
-				<left>4</left>
-				<top>4</top>
-				<width>476</width>
-				<height>716</height>
-				<fadetime>200</fadetime>
-				<aspectratio>scale</aspectratio>
-				<texture fallback="DefaultMovies.png" background="true">$VAR[PosterThumbVar]</texture>
-			</control>
-			<control type="image">
-				<left>1</left>
-				<top>1</top>
-				<width>482</width>
-				<height>721</height>
-				<visible>Control.HasFocus(51)</visible>
-				<animation effect="fade" time="100">VisibleChange</animation>
-				<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
-			</control>
-			<control type="group">
-				<left>216</left>
-				<top>-18</top>
-				<include content="RatingCircle">
-					<param name="animation" value="True" />
-				</include>
-			</control>
+			<include content="PosterLayout">
+				<param name="width" value="524" />
+				<param name="height" value="764" />
+				<param name="focused"value="true" />
+				<param name="img_height" value="97%" />
+				<param name="txt_label" value="false" />
+				<param name="cd_art_size" value="300" />
+				<param name="cd_art_size_overlay" value="302" />
+			</include>
 		</control>
 	</include>
 </includes>

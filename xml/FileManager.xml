@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">20</defaultcontrol>
+	<onload>SetProperty(fanarthometype,filemanager,Home)</onload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="image">
@@ -9,7 +10,7 @@
 			<centertop>50%</centertop>
 			<width>68</width>
 			<height>68</height>
-			<texture colordiffuse="button_focus" border="2">icons/file-manager/left-right.png</texture>
+			<texture colordiffuse="$VAR[MainColorVar]" border="2">icons/file-manager/left-right.png</texture>
 			<animation effect="fade" start="0" end="100" time="300" delay="100">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
 		</control>
@@ -82,7 +83,7 @@
 				<height>48</height>
 				<aligny>center</aligny>
 				<align>right</align>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 				<label>$INFO[Container(21).CurrentItem,, / ]$INFO[Container(21).NumItems]</label>
 			</control>
 			<control type="label" id="102">
@@ -94,14 +95,14 @@
 				<aligny>center</aligny>
 				<label>$PARAM[header_label]</label>
 				<haspath>true</haspath>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 			<control type="label">
 				<left>730</left>
 				<width>400</width>
 				<height>48</height>
 				<aligny>center</aligny>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 				<label>$INFO[Container(20).CurrentItem,, / ]$INFO[Container(20).NumItems]</label>
 			</control>
 			<control type="label" id="101">
@@ -112,7 +113,7 @@
 				<aligny>center</aligny>
 				<label>$PARAM[header_label]</label>
 				<haspath>true</haspath>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 		</control>
 	</controls>

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<menucontrol>9000</menucontrol>
-	<views>50,52,53,54,55,500</views>
+	<views>50,52,53,54,55,58,500</views>
+	<onload>SetProperty(fanarthometype,music,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundMusicVar],Home)</onload>
 	<controls>
-		<include>DefaultBackground</include>
+		<include content="DefaultBackground">
+			<param name="fanart_media" value="$VAR[MediaFanartVar]" />
+		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>View_50_List</include>
@@ -13,13 +17,19 @@
 			<include>View_53_Shift</include>
 			<include>View_54_InfoWall</include>
 			<include>View_55_WideList</include>
+			<include>View_58_BigPoster</include>
 			<include>View_500_Wall</include>
-			<include>CommonScrollbars</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
-				<visible>Control.Isvisible(54) | Control.IsVisible(55)</visible>
+				<visible>Control.IsVisible(55)</visible>
 				<include>Visible_Left</include>
-				<include>ListThumbInfoPanel</include>
+				<include>ListThumbInfoPanelA</include>
+			</control>
+			<control type="group">
+				<include>OpenClose_Left</include>
+				<visible>Control.Isvisible(54)</visible>
+				<include>Visible_Left</include>
+				<include>ListThumbInfoPanelB</include>
 			</control>
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="$LOCALIZE[2]" />
@@ -27,6 +37,37 @@
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<visible>!Container.Scrolling</visible>
+				<visible>!Skin.HasSetting(hide_logo_library)</visible>
+				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+				<control type="image">
+					<top>0</top>
+					<height>140</height>
+					<texture>$VAR[LibraryClearLogoVar]</texture>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<visible>![Control.IsVisible(52) | Control.IsVisible(53)]</visible>
+					<visible>!Container.Content()</visible>
+				</control>
+				<control type="image">
+					<top>0</top>
+					<height>140</height>
+					<texture>$VAR[ViewClearArtVar]</texture>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<visible>Control.IsVisible(53)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<bottom>0</bottom>
+				<height>70</height>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<include condition="!Skin.HasSetting(hide_mediaflags_library)">MediaFlags</include>
+			</control>
+			<include>CommonAlphabet</include>
+			<include>CommonScrollbars</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
 				<include>MediaMenuCommon</include>

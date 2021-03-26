@@ -80,8 +80,8 @@
 					<label>$INFO[Player.Filename]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="list" id="120">
@@ -108,7 +108,7 @@
 							<width>100</width>
 							<height>100</height>
 							<font>font12</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -151,7 +151,7 @@
 							<left>0</left>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(120)</visible>
 						</control>
 						<control type="image">
@@ -168,7 +168,7 @@
 							<width>100</width>
 							<height>100</height>
 							<font>font12</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -237,8 +237,8 @@
 					<align>center</align>
 					<font>font30_title</font>
 					<aligny>top</aligny>
-					<textcolor>button_focus</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
 				<control type="image" id="110">

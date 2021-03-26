@@ -11,7 +11,7 @@
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1720" />
 				<param name="height" value="880" />
-				<param name="header_label" value="$VAR[PVRGroupMgrHeader]$INFO[Container(13).NumItems, (,)]" />
+				<param name="header_label" value="$VAR[PVRGroupMgrHeaderVar]$INFO[Container(13).NumItems, (,)]" />
 				<param name="header_id" value="1" />
 			</include>
 			<control type="grouplist" id="9000">
@@ -99,10 +99,9 @@
 					<top>0</top>
 					<width>360</width>
 					<height>70</height>
-					<label>$LOCALIZE[31089]: [COLOR white]$INFO[Container(13).NumItems][/COLOR]</label>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[31089]: [/COLOR]$INFO[Container(13).NumItems]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -129,7 +128,7 @@
 							<height>70</height>
 							<aligny>center</aligny>
 							<font>font27</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="image">
@@ -149,7 +148,7 @@
 							<top>0</top>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(13)</visible>
 						</control>
 						<control type="label">

@@ -7,10 +7,10 @@
 		<height>80</height>
 		<radioposx>370</radioposx>
 		<aligny>center</aligny>
-		<invalidcolor>invalid</invalidcolor>
-		<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+		<invalidcolor>$VAR[InvalidColorVar]</invalidcolor>
+		<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 		<texturenofocus />
-		<alttexturefocus colordiffuse="button_focus">lists/focus.png</alttexturefocus>
+		<alttexturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</alttexturefocus>
 		<alttexturenofocus></alttexturenofocus>
 	</include>
 	<include name="PVRQuickNavItemsCommon">
@@ -22,7 +22,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font></font>
-				<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 				<texturenofocus />
 				<radioposx>26</radioposx>
 				<radioposy>0</radioposy>
@@ -32,7 +32,7 @@
 				<textureradioonnofocus>$PARAM[icon]</textureradioonnofocus>
 				<textureradioofffocus>$PARAM[icon]</textureradioofffocus>
 				<textureradiooffnofocus>$PARAM[icon]</textureradiooffnofocus>
-				<textureradiooffdisabled colordiffuse="button_focus">$PARAM[icon]</textureradiooffdisabled>
+				<textureradiooffdisabled colordiffuse="$VAR[MainColorVar]">$PARAM[icon]</textureradiooffdisabled>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TV$PARAM[area])</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(Radio$PARAM[area])</onclick>
 				<enable>!Window.IsActive(TV$PARAM[area]) + !Window.IsActive(Radio$PARAM[area])</enable>
@@ -70,7 +70,7 @@
 						<font>font12</font>
 						<align>right</align>
 						<aligny>top</aligny>
-						<textcolor>grey</textcolor>
+						<textcolor>$VAR[GreyColorVar]</textcolor>
 						<label>$VAR[PVRAreaVar]</label>
 					</control>
 				</control>
@@ -127,7 +127,7 @@
 					<label>$LOCALIZE[31023]</label>
 					<label2>[B]$INFO[Container.Viewmode][/B]</label2>
 					<onclick>Container.NextViewMode</onclick>
-					<visible>Window.IsActive(MyPVRGuide.xml)</visible>
+					<visible>Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml)</visible>
 				</control>
 				<control type="button" id="6054">
 					<include>MediaMenuItemsCommon</include>
@@ -258,7 +258,7 @@
 		<radioposx>300</radioposx>
 		<font>font25_title</font>
 		<aligny>top</aligny>
-		<textcolor>button_focus</textcolor>
+		<textcolor>$VAR[MainColorVar]</textcolor>
 	</include>
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>
@@ -271,7 +271,7 @@
 			<width>4000</width>
 			<height>100%</height>
 			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="80FFFFFF">colors/black.png</texture>
+			<texture colordiffuse="white8">colors/black.png</texture>
 			<visible>$EXP[sidebar_visible] + !System.HasActiveModalDialog</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 		</control>
@@ -402,7 +402,7 @@
 	</include>
 	<include name="MediaMenuMouseOverlay">
 		<control type="button" id="6130">
-			<label></label>
+			<label />
 			<left>-50</left>
 			<top>200</top>
 			<bottom>0</bottom>
