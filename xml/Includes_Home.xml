@@ -489,10 +489,10 @@
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
-					<visible>Skin.HasSetting(hide_widget_labels) | $PARAM[small_cat]</visible>
+					<visible>Skin.HasSetting(HideWidgetLabels) | $PARAM[small_cat]</visible>
 				</control>
 				<control type="group">
-					<visible>!Skin.HasSetting(hide_widget_labels)</visible>
+					<visible>!Skin.HasSetting(HideWidgetLabels)</visible>
 					<control type="grouplist">
 						<description>Double label</description>
 						<orientation>horizontal</orientation>
@@ -627,15 +627,15 @@
 				<top>110</top>
 				<right>0</right>
 				<left>0</left>
-				<include condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">Widget-Categories-HeightMax</include>
-				<include condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">Widget-Categories-HeightMin</include>
+				<include condition="!$PARAM[small] + Skin.HasSetting(HideWidgetLabels)">Widget-Categories-HeightMax</include>
+				<include condition="!$PARAM[small] + !Skin.HasSetting(HideWidgetLabels)">Widget-Categories-HeightMin</include>
 				<include condition="$PARAM[small]">Widget-Categories-Small</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="IconLayoutCategories">
@@ -651,7 +651,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -675,7 +675,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="IconLayoutCategories">
@@ -690,7 +690,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -805,7 +805,7 @@
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<itemlayout width="310" height="486" condition="Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="486" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>68</left>
 						<top>10</top>
@@ -814,7 +814,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="486" condition="Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="486" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
@@ -831,7 +831,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="486" condition="!Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="486" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>68</left>
 						<top>10</top>
@@ -842,7 +842,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="486" condition="!Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="486" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
@@ -903,14 +903,14 @@
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Thumbs-HeightMax</include>
-				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Thumbs-HeightMin</include>
+				<include condition="Skin.HasSetting(HideWidgetLabels)">Widget-Thumbs-HeightMax</include>
+				<include condition="!Skin.HasSetting(HideWidgetLabels)">Widget-Thumbs-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -922,7 +922,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -942,7 +942,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="440" condition="!Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="440" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -959,7 +959,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="440" condition="!Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="440" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1032,15 +1032,15 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Squares-HeightMax</include>
-				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Squares-HeightMin</include>
+				<include condition="Skin.HasSetting(HideWidgetLabels)">Widget-Squares-HeightMax</include>
+				<include condition="!Skin.HasSetting(HideWidgetLabels)">Widget-Squares-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<onclick condition="$PARAM[favourites]">$INFO[ListItem.FileNameAndPath]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -1052,7 +1052,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1072,7 +1072,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="500" condition="!Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="500" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -1087,7 +1087,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1209,14 +1209,14 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Channels-HeightMax</include>
-				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Channels-HeightMin</include>
+				<include condition="Skin.HasSetting(HideWidgetLabels)">Widget-Channels-HeightMax</include>
+				<include condition="!Skin.HasSetting(HideWidgetLabels)">Widget-Channels-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -1251,7 +1251,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1294,7 +1294,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="500" condition="!Skin.HasSetting(hide_widget_labels)">
+				<itemlayout width="310" height="500" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -1329,7 +1329,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(hide_widget_labels)">
+				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>

@@ -357,6 +357,6 @@
 				<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.AddonVersion][/COLOR]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ]" />
 			</include>
 		</control>
-		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
+		<include condition="Skin.HasSetting(TouchMode)">TouchBackButton</include>
 	</controls>
 </window>

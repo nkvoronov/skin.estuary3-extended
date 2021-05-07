@@ -25,7 +25,7 @@
 					<onright>73</onright>
 					<onup>50</onup>
 					<ondown>50</ondown>
-					<viewtype label="$LOCALIZE[44122]">list</viewtype>
+					<viewtype label="$LOCALIZE[32235]">list</viewtype>
 					<preloaditems>1</preloaditems>
 					<pagecontrol>73</pagecontrol>
 					<focusedlayout height="90">
@@ -178,7 +178,7 @@
 					<onright>73</onright>
 					<onup>51</onup>
 					<ondown>51</ondown>
-					<viewtype label="$LOCALIZE[44123]">list</viewtype>
+					<viewtype label="$LOCALIZE[32236]">list</viewtype>
 					<preloaditems>1</preloaditems>
 					<pagecontrol>73</pagecontrol>
 					<focusedlayout height="70">

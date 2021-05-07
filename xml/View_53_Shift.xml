@@ -106,7 +106,7 @@
 							<aspectratio aligny="center">keep</aspectratio>
 							<texture>$VAR[ViewClearLogoVar]</texture>
 							<visible>!ListItem.IsParentFolder</visible>
-							<visible>!Skin.HasSetting(hide_logo_library)</visible>
+							<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
 							<visible>![String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)]</visible>
 						</control>
 						<control type="textbox">
@@ -118,7 +118,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>!Skin.HasSetting(hide_logo_library)</visible>
+							<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
 							<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<visible>![String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)]</visible>
 						</control>
@@ -131,7 +131,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>Skin.HasSetting(hide_logo_library) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)</visible>
+							<visible>Skin.HasSetting(HideLogoLibrary) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="370">
@@ -182,7 +182,7 @@
 							<aspectratio aligny="center">keep</aspectratio>
 							<texture>$VAR[ViewClearLogoVar]</texture>
 							<visible>!ListItem.IsParentFolder</visible>
-							<visible>!Skin.HasSetting(hide_logo_library)</visible>
+							<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
 							<visible>![String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)]</visible>
 						</control>
 						<control type="textbox">
@@ -194,7 +194,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>!Skin.HasSetting(hide_logo_library)</visible>
+							<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
 							<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<visible>![String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)]</visible>
 						</control>
@@ -207,7 +207,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>Skin.HasSetting(hide_logo_library) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)</visible>
+							<visible>Skin.HasSetting(HideLogoLibrary) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)</visible>
 						</control>
 					</focusedlayout>
 				</control>
@@ -238,7 +238,7 @@
 						<left>20</left>
 						<top>45</top>
 						<height>166</height>
-						<visible>!Skin.HasSetting(hide_collections_text)</visible>
+						<visible>!Skin.HasSetting(HideCollectionsText)</visible>
 						<include content="InfoList">
 							<param name="bottom" value="0" />
 							<param name="width" value="903" />
@@ -251,7 +251,7 @@
 						<left>20</left>
 						<top>45</top>
 						<height>245</height>
-						<visible>Skin.HasSetting(hide_collections_text)</visible>
+						<visible>Skin.HasSetting(HideCollectionsText)</visible>
 						<include content="InfoListPics">
 							<param name="bottom" value="0" />
 							<param name="width" value="903" />
@@ -269,7 +269,7 @@
 						<left>20</left>
 						<top>45</top>
 						<height>166</height>
-						<visible>!Skin.HasSetting(hide_albums_text)</visible>
+						<visible>!Skin.HasSetting(HideAlbumsText)</visible>
 						<include content="InfoList">
 							<param name="bottom" value="0" />
 							<param name="width" value="903" />
@@ -283,7 +283,7 @@
 						<left>20</left>
 						<top>45</top>
 						<height>245</height>
-						<visible>Skin.HasSetting(hide_albums_text)</visible>
+						<visible>Skin.HasSetting(HideAlbumsText)</visible>
 						<include content="InfoListPics">
 							<param name="bottom" value="0" />
 							<param name="width" value="903" />
@@ -310,7 +310,7 @@
 				<height>168</height>
 				<label>$PARAM[textbox_content]</label>
 				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 			</control>
 			<control type="textbox" id="$PARAM[textbox_id]">
@@ -320,7 +320,7 @@
 				<height>165</height>
 				<label>$PARAM[textbox_content]</label>
 				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>String.IsEqual(Skin.Font, Arial)</visible>
 			</control>
 		</control>

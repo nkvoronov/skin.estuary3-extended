@@ -44,7 +44,7 @@
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(show_borders)</visible>
+							<visible>Skin.HasSetting(ShowBorders)</visible>
 						</control>
 						<control type="image">
 							<left>2</left>
@@ -144,7 +144,7 @@
 						</control>
 						<control type="group">
 							<left>405</left>
-							<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
+							<visible>Skin.HasSetting(CircleRating) | Skin.HasSetting(CircleUserRating)</visible>
 							<include>RatingCircle</include>
 						</control>
 					</control>
@@ -180,7 +180,7 @@
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(show_borders)</visible>
+							<visible>Skin.HasSetting(ShowBorders)</visible>
 						</control>
 						<control type="image">
 							<left>-6</left>
@@ -290,7 +290,7 @@
 						</control>
 						<control type="group">
 							<left>405</left>
-							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+							<include condition="Skin.HasSetting(CircleRating) | Skin.HasSetting(CircleUserRating)">RatingCircle</include>
 						</control>
 					</control>
 				</focusedlayout>

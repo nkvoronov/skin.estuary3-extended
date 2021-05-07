@@ -50,21 +50,21 @@
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
-					<label>$LOCALIZE[40323]</label>
+					<label>$LOCALIZE[32237]</label>
 					<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
-					<visible>System.AddonIsEnabled(script.simpleplaylists) + Skin.HasSetting(enable_watchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
+					<visible>System.AddonIsEnabled(script.simpleplaylists) + Skin.HasSetting(EnableWatchitLater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
 				</control>
-				<control type="button" id="3001">
+				<!-- <control type="button" id="3001">
 					<description>Jump To Letter</description>
 					<left>0</left>
 					<height>65</height>
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
-					<label>$LOCALIZE[40326]</label>
+					<label>$LOCALIZE[32252]</label>
 					<onclick>RunScript(script.skin.helper.service,action=jumptoletter)</onclick>
 					<visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)] + !Window.IsVisible(Home)</visible>
-				</control>
+				</control> -->
 				<control type="button" id="3002">
 					<description>Extended Info</description>
 					<left>0</left>
@@ -74,7 +74,7 @@
 					<texturenofocus />
 					<label>$LOCALIZE[31034]</label>
 					<onclick>RunScript(script.extendedinfo,info=openinfodialogmenu)</onclick>
-					<visible>System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + !System.AddonIsEnabled(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
+					<visible>System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(EnableExtendedInfo) + !System.AddonIsEnabled(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
 				</control>
 			</control>
 			<include content="UpDownArrows">

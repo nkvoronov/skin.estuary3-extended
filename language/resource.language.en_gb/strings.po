@@ -1,6 +1,6 @@
 # Kodi Media Center language file
-# Addon Name: Estuary v2 Extended Shortcuts
-# Addon id: skin.estuary2-extended-s
+# Addon Name: Estuary v3 Extended
+# Addon id: skin.estuary3-extended
 # Addon Provider: phil65, Ichabod Fletchman, YLLOW_DRAGON, Guilouz
 msgid ""
 msgstr ""
@@ -795,706 +795,580 @@ msgstr ""
 
 # EXTENDED ADDED VALUE
 
-msgctxt "#41999"
-msgid "Main menu"
-msgstr ""
-
-msgctxt "#42000"
-msgid "Use custom global background"
-msgstr ""
-
-msgctxt "#42001"
-msgid "Choose image path"
-msgstr ""
-
-msgctxt "#42002"
-msgid "Previous location"
-msgstr ""
-
-msgctxt "#42003"
-msgid "Next location"
-msgstr ""
-
-msgctxt "#43000"
-msgid "Options"
-msgstr ""
-
-msgctxt "#43001"
-msgid "User widgets"
-msgstr ""
-
-msgctxt "#43002"
-msgid "Colors"
-msgstr ""
-
-msgctxt "#43003"
-msgid "Enable splash screen (photo, video or music)"
-msgstr ""
-
-msgctxt "#43004"
-msgid "Path:"
-msgstr ""
-
-msgctxt "#43005"
-msgid "Duration, s"
-msgstr ""
-
-msgctxt "#43006"
-msgid "Enable Smart Shortcuts Playlists"
-msgstr ""
-
-msgctxt "#43007"
-msgid "Enable Smart Shortcuts Favourites"
-msgstr ""
-
-msgctxt "#43008"
-msgid "Enable Animated Posters"
-msgstr ""
-
-msgctxt "#43009"
-msgid "Enable FullScreen Clock"
-msgstr ""
-
-msgctxt "#43010"
-msgid "Enable SlideShow Info"
-msgstr ""
-
-msgctxt "#43011"
-msgid "Show stats"
-msgstr ""
-
-msgctxt "#43012"
-msgid "Choose movie genre icons pack"
-msgstr ""
-
-msgctxt "#43013"
-msgid "Choose studios icons pack"
-msgstr ""
-
-msgctxt "#43014"
-msgid "Choose flags country icons pack"
-msgstr ""
-
-msgctxt "#43015"
-msgid "Choose weather icons pack"
-msgstr ""
-
-msgctxt "#43016"
-msgid "Busy spinner"
-msgstr ""
-
-msgctxt "#43017"
-msgid "Enable user list of add-ons"
-msgstr ""
-
-msgctxt "#43018"
-msgid "Enable user list of TV and radio channels"
-msgstr ""
-
-msgctxt "#43019"
-msgid "Debug infos"
-msgstr ""
-
-msgctxt "#43021"
-msgid "User list of add-ons"
-msgstr ""
-
-msgctxt "#43022"
-msgid "User list of TV and radio channels"
-msgstr ""
-
-msgctxt "#43023"
-msgid "Choose background pattern"
-msgstr ""
-
-msgctxt "#43024"
-msgid "Choose Records labels icons pack"
-msgstr ""
-
-msgctxt "#43026"
-msgid "Color Primary Background"
-msgstr ""
-
-msgctxt "#43027"
-msgid "Color Secondary Background"
-msgstr ""
-
-msgctxt "#43028"
-msgid "Main Color"
-msgstr ""
-
-msgctxt "#43029"
-msgid "Backup Skin Settings"
-msgstr ""
-
-msgctxt "#43030"
-msgid "Create"
-msgstr ""
-
-msgctxt "#43031"
-msgid "Restory"
-msgstr ""
-
-msgctxt "#43033"
-msgid "Choose music genre icons pack"
-msgstr ""
-
-msgctxt "#43040"
-msgid "Advanced options"
-msgstr ""
-
-msgctxt "#43041"
-msgid "User widgets options"
-msgstr ""
-
-msgctxt "#43042"
-msgid "Background options"
-msgstr ""
-
-msgctxt "#43043"
-msgid "Colors skin options"
-msgstr ""
-
-msgctxt "#43044"
-msgid "Reset skin options"
-msgstr ""
-
-msgctxt "#43045"
-msgid "Artwork Downloader"
-msgstr ""
-
-msgctxt "#43050"
-msgid "Picture Add-On"
-msgstr ""
-
-msgctxt "#43051"
-msgid "TV Channel"
-msgstr ""
-
-msgctxt "#43052"
-msgid "Radio Channel"
-msgstr ""
-
-msgctxt "#43053"
-msgid "Video Add-On"
-msgstr ""
-
-msgctxt "#43054"
-msgid "Video Source"
-msgstr ""
-
-msgctxt "#43055"
-msgid "Music Source"
-msgstr ""
-
-msgctxt "#43056"
-msgid "Music Add-On"
-msgstr ""
-
-msgctxt "#43057"
-msgid "Program"
-msgstr ""
-
-msgctxt "#43058"
-msgid "Video Playlist"
-msgstr ""
-
-msgctxt "#43059"
-msgid "Music Playlist"
-msgstr ""
-
-msgctxt "#43060"
-msgid "Timer rules"
-msgstr ""
-
-msgctxt "#43061"
-msgid "Hide disabled"
-msgstr ""
-
-msgctxt "#43070"
-msgid "Set type of widgets"
-msgstr ""
-
-msgctxt "#43071"
-msgid "Disable"
-msgstr ""
-
-msgctxt "#43072"
-msgid "Enable"
-msgstr ""
-
-msgctxt "#43081"
-msgid "Weather Widgets"
-msgstr ""
-
-msgctxt "#43082"
-msgid "Pictures Widgets"
-msgstr ""
-
-msgctxt "#43083"
-msgid "Video Widgets"
-msgstr ""
-
-msgctxt "#43084"
-msgid "LiveTV Widgets"
-msgstr ""
-
-msgctxt "#43085"
-msgid "Radio Widgets"
-msgstr ""
-
-msgctxt "#43086"
-msgid "Movies Widgets"
-msgstr ""
-
-msgctxt "#43087"
-msgid "TVShows Widgets"
-msgstr ""
-
-msgctxt "#43088"
-msgid "Music Videos widgets"
-msgstr ""
-
-msgctxt "#43089"
-msgid "Music Widgets"
-msgstr ""
-
-msgctxt "#43090"
-msgid "Most watched music videos"
-msgstr ""
-
-msgctxt "#43091"
-msgid "Random music videos artists"
-msgstr ""
-
-msgctxt "#43100"
-msgid "Smart Shortcuts"
-msgstr ""
-
-msgctxt "#43101"
-msgid "Smart Widgets"
-msgstr ""
-
-msgctxt "#43110"
-msgid "Addons Widgets"
-msgstr ""
-
-msgctxt "#43111"
-msgid "Games Widgets"
-msgstr ""
-
-msgctxt "#43112"
-msgid "Favourites Widget"
-msgstr ""
-
-msgctxt "#43113"
-msgid "Media Widgets"
-msgstr ""
-
-msgctxt "#43200"
-msgid "Big posters"
-msgstr ""
-
-msgctxt "#43201"
-msgid "Clear Logos"
-msgstr ""
-
-msgctxt "#43202"
-msgid "Clear Arts"
-msgstr ""
-
-msgctxt "#43210"
-msgid "Aired"
-msgstr ""
-
-msgctxt "#43220"
-msgid "Watch it Later"
-msgstr ""
-
-msgctxt "#43230"
-msgid "Hardware"
-msgstr ""
-
-msgctxt "#43240"
-msgid "Channel"
-msgstr ""
-
-msgctxt "#43241"
-msgid "Favourites TV Channels"
-msgstr ""
-
-msgctxt "#43242"
-msgid "Favourites Radio Channels"
-msgstr ""
-
-msgctxt "#43250"
-msgid "Apply"
-msgstr ""
-
-msgctxt "#44000"
-msgid "Background opacity"
-msgstr ""
-
-msgctxt "#44001"
-msgid "Opacity "
-msgstr ""
-
-msgctxt "#44100"
+msgctxt "#32100"
 msgid "Hide time"
 msgstr ""
 
-msgctxt "#44101"
-msgid "Notification popup position"
-msgstr ""
-
-msgctxt "#44102"
-msgid "Hide notification popup during playback"
-msgstr ""
-
-msgctxt "#44103"
-msgid "Set notification popup position."
-msgstr ""
-
-msgctxt "#44104"
-msgid "Top left"
-msgstr ""
-
-msgctxt "#44105"
-msgid "Top center"
-msgstr ""
-
-msgctxt "#44106"
-msgid "Top right"
-msgstr ""
-
-msgctxt "#44107"
-msgid "Bottom left"
-msgstr ""
-
-msgctxt "#44108"
-msgid "Bottom center"
-msgstr ""
-
-msgctxt "#44109"
-msgid "Bottom right"
-msgstr ""
-
-msgctxt "#44111"
-msgid "Single image"
-msgstr ""
-
-msgctxt "#44112"
-msgid "Multi-image"
-msgstr ""
-
-msgctxt "#44113"
-msgid "Alternative view"
-msgstr ""
-
-msgctxt "#44114"
-msgid "Enable Wall Backgrounds"
-msgstr ""
-
-msgctxt "#44115"
-msgid "Random Fanart Delay, s"
-msgstr ""
-
-msgctxt "#44116"
-msgid "Enable Animated Fanarts"
-msgstr ""
-
-msgctxt "#44117"
-msgid "Hide fanart in full screen visualisation"
-msgstr ""
-
-msgctxt "#44118"
-msgid "Show background \"Now playing\" video"
-msgstr ""
-
-msgctxt "#44119"
-msgid "Show background \"Now playing\" visualisation"
-msgstr ""
-
-msgctxt "#44120"
-msgid "Music and Radio"
-msgstr ""
-
-msgctxt "#44121"
-msgid "Download Music Theme"
-msgstr ""
-
-msgctxt "#44122"
-msgid "List with Icon"
-msgstr ""
-
-msgctxt "#44123"
-msgid "List without Icon"
-msgstr ""
-
-msgctxt "#44124"
-msgid "After launching KODI, move the focus of the main menu to"
-msgstr ""
-
-msgctxt "#44125"
-msgid "Addons options"
-msgstr ""
-
-msgctxt "#44126"
-msgid "Show Info At Playback Start, s"
-msgstr ""
-
-msgctxt "#44127"
-msgid "Auto Close Video OSD, s"
-msgstr ""
-
-msgctxt "#44128"
-msgid "Auto Close Music OSD, s"
-msgstr ""
-
-msgctxt "#44129"
-msgid "Enable Extra Posters"
-msgstr ""
-
-msgctxt "#44130"
-msgid "Enable Extra Fanarts"
-msgstr ""
-
-msgctxt "#44131"
-msgid "Enable PVR Thumbs"
-msgstr ""
-
-msgctxt "#44132"
-msgid "Enable Music Art"
-msgstr ""
-
-msgctxt "#44133"
-msgid "Enable Extended Art"
-msgstr ""
-
-msgctxt "#44134"
-msgid "Configure Artworks"
-msgstr ""
-
-msgctxt "#44135"
-msgid "Configure Backgrounds"
-msgstr ""
-
-msgctxt "#44136"
-msgid "Configure Widgets"
-msgstr ""
-
-msgctxt "#44137"
-msgid "Configure Backup"
-msgstr ""
-
-msgctxt "#44138"
-msgid "ClearLogo"
-msgstr ""
-
-msgctxt "#44139"
+msgctxt "#32101"
 msgid "Show In Main Menu"
 msgstr ""
 
-msgctxt "#44140"
-msgid "Show In Library"
-msgstr ""
-
-msgctxt "#44141"
-msgid "Show In Global Search"
-msgstr ""
-
-msgctxt "#44142"
-msgid "Show In Play Window"
-msgstr ""
-
-msgctxt "#44143"
+msgctxt "#32102"
 msgid "Show In Info Window"
 msgstr ""
 
-msgctxt "#44144"
-msgid "Additional colors"
+msgctxt "#32103"
+msgid "Show In Library"
 msgstr ""
 
-msgctxt "#44145"
-msgid "Color Screen"
+msgctxt "#32104"
+msgid "Show In Global Search"
 msgstr ""
 
-msgctxt "#44146"
-msgid "Color Dialogs"
+msgctxt "#32105"
+msgid "Enable splash screen (photo, video or music)"
 msgstr ""
 
-msgctxt "#44148"
-msgid "Color Text"
+msgctxt "#32106"
+msgid "Path"
 msgstr ""
 
-msgctxt "#44149"
-msgid "Color Text Shadow"
+msgctxt "#32107"
+msgid "Duration, s"
 msgstr ""
 
-msgctxt "#44150"
-msgid "Color Selected"
+msgctxt "#32108"
+msgid "Enable FullScreen Clock"
 msgstr ""
 
-msgctxt "#44151"
-msgid "Color Disabled"
+msgctxt "#32109"
+msgid "Enable SlideShow Info"
 msgstr ""
 
-msgctxt "#44152"
-msgid "Color Invalid"
+msgctxt "#32110"
+msgid "Show stats"
 msgstr ""
 
-msgctxt "#44153"
-msgid "Color Scrollbars"
-msgstr ""
-
-msgctxt "#44154"
-msgid "Color Scrollbars Background"
-msgstr ""
-
-msgctxt "#44155"
-msgid "Color Separator"
-msgstr ""
-
-msgctxt "#44156"
-msgid "Color RSS headers"
-msgstr ""
-
-msgctxt "#44157"
-msgid "Color Grey"
-msgstr ""
-
-msgctxt "#44158"
-msgid "Color Blue"
-msgstr ""
-
-msgctxt "#44159"
-msgid "Color Red"
-msgstr ""
-
-msgctxt "#44160"
-msgid "Color Black"
-msgstr ""
-
-msgctxt "#44161"
-msgid "Color media flags"
-msgstr ""
-
-msgctxt "#44162"
-msgid "Color media border"
-msgstr ""
-
-msgctxt "#44170"
-msgid "Show border for media"
-msgstr ""
-
-msgctxt "#44200"
-msgid "Widget appearence"
-msgstr ""
-
-msgctxt "#44201"
-msgid "Posters"
-msgstr ""
-
-msgctxt "#44202"
-msgid "Thumbs"
-msgstr ""
-
-msgctxt "#44203"
-msgid "Squares"
-msgstr ""
-
-msgctxt "#44204"
-msgid "Categories"
-msgstr ""
-
-msgctxt "#44205"
-msgid "Channels"
-msgstr ""
-
-msgctxt "#44206"
-msgid "Auto"
-msgstr ""
-
-msgctxt "#44210"
-msgid "Sort method of widget"
-msgstr ""
-
-msgctxt "#44220"
-msgid "Sort direction of widget"
-msgstr ""
-
-msgctxt "#40310"
-msgid "Minimize main menu"
-msgstr ""
-
-msgctxt "#40311"
-msgid "Show item label on top"
-msgstr ""
-
-msgctxt "#40312"
-msgid "Hide main menu when selecting widgets"
-msgstr ""
-
-msgctxt "#40313"
-msgid "Customize main menu"
-msgstr ""
-
-msgctxt "#40314"
-msgid "Reset menus settings"
-msgstr ""
-
-msgctxt "#40315"
-msgid "Customize power menu"
-msgstr ""
-
-msgctxt "#40316"
+msgctxt "#32111"
 msgid "Number of items to display on widgets"
 msgstr ""
 
-msgctxt "#40317"
+msgctxt "#32112"
 msgid "Show media names with widgets names"
 msgstr ""
 
-msgctxt "#40318"
+msgctxt "#32113"
 msgid "Show smaller icons for 'Categories' widgets"
 msgstr ""
 
-msgctxt "#40319"
+msgctxt "#32114"
+msgid "Choose studios icons pack"
+msgstr ""
+
+msgctxt "#32115"
+msgid "Choose Records labels icons pack"
+msgstr ""
+
+msgctxt "#32116"
+msgid "Choose flags country icons pack"
+msgstr ""
+
+msgctxt "#32117"
+msgid "Choose movie genre icons pack"
+msgstr ""
+
+msgctxt "#32118"
+msgid "Choose music genre icons pack"
+msgstr ""
+
+msgctxt "#32119"
+msgid "Choose weather icons pack"
+msgstr ""
+
+msgctxt "#32120"
+msgid "Notification popup position"
+msgstr ""
+
+msgctxt "#32121"
+msgid "Hide notification popup during playback"
+msgstr ""
+
+msgctxt "#32122"
+msgid "Busy spinner"
+msgstr ""
+
+msgctxt "#32123"
+msgid "Enable user list of add-ons"
+msgstr ""
+
+msgctxt "#32124"
+msgid "Enable user list of TV and radio channels"
+msgstr ""
+
+msgctxt "#32125"
+msgid "After launching KODI, move the focus of the main menu to"
+msgstr ""
+
+msgctxt "#32126"
+msgid "ClearLogo"
+msgstr ""
+
+msgctxt "#32127"
+msgid "Show In Play Window"
+msgstr ""
+
+msgctxt "#32128"
 msgid "Disk Art"
 msgstr ""
 
-msgctxt "#40320"
+msgctxt "#32129"
 msgid "Show colored outline"
 msgstr ""
 
-msgctxt "#40321"
+msgctxt "#32130"
 msgid "List Movies In Set as Text"
 msgstr ""
 
-msgctxt "#40322"
+msgctxt "#32131"
 msgid "List Albums as Text"
 msgstr ""
 
-msgctxt "#40323"
+msgctxt "#32132"
+msgid "Show border for media"
+msgstr ""
+
+msgctxt "#32133"
+msgid "Debug infos"
+msgstr ""
+
+msgctxt "#32134"
+msgid "Minimize main menu"
+msgstr ""
+
+msgctxt "#32135"
+msgid "Show item label on top"
+msgstr ""
+
+msgctxt "#32136"
+msgid "Hide main menu when selecting widgets"
+msgstr ""
+
+msgctxt "#32137"
+msgid "Customize main menu"
+msgstr ""
+
+msgctxt "#32138"
+msgid "Customize power menu"
+msgstr ""
+
+msgctxt "#32139"
+msgid "Reset menus settings"
+msgstr ""
+
+msgctxt "#32140"
+msgid "Widget appearence"
+msgstr ""
+
+msgctxt "#32141"
+msgid "Sort method of widget"
+msgstr ""
+
+msgctxt "#32142"
+msgid "Sort direction of widget"
+msgstr ""
+
+msgctxt "#32143"
+msgid "Posters"
+msgstr ""
+
+msgctxt "#32144"
+msgid "Thumbs"
+msgstr ""
+
+msgctxt "#32145"
+msgid "Squares"
+msgstr ""
+
+msgctxt "#32146"
+msgid "Categories"
+msgstr ""
+
+msgctxt "#32147"
+msgid "Channels"
+msgstr ""
+
+msgctxt "#32148"
+msgid "Auto"
+msgstr ""
+
+msgctxt "#32149"
+msgid "Show background \"Now playing\" video"
+msgstr ""
+
+msgctxt "#32150"
+msgid "Show background \"Now playing\" visualisation"
+msgstr ""
+
+msgctxt "#32151"
+msgid "Background opacity"
+msgstr ""
+
+msgctxt "#32152"
+msgid "Use custom global background"
+msgstr ""
+
+msgctxt "#32153"
+msgid "Choose image path"
+msgstr ""
+
+msgctxt "#32154"
+msgid "Music and Radio"
+msgstr ""
+
+msgctxt "#32155"
+msgid "Main Color"
+msgstr ""
+
+msgctxt "#32156"
+msgid "Color Primary Background"
+msgstr ""
+
+msgctxt "#32157"
+msgid "Color Secondary Background"
+msgstr ""
+
+msgctxt "#32158"
+msgid "Color media flags"
+msgstr ""
+
+msgctxt "#32159"
+msgid "Color media border"
+msgstr ""
+
+msgctxt "#32160"
+msgid "Color RSS headers"
+msgstr ""
+
+msgctxt "#32161"
+msgid "Additional colors"
+msgstr ""
+
+msgctxt "#32162"
+msgid "Color Screen"
+msgstr ""
+
+msgctxt "#32163"
+msgid "Color Dialogs"
+msgstr ""
+
+msgctxt "#32164"
+msgid "Color Text"
+msgstr ""
+
+msgctxt "#32165"
+msgid "Color Text Shadow"
+msgstr ""
+
+msgctxt "#32166"
+msgid "Color Selected"
+msgstr ""
+
+msgctxt "#32167"
+msgid "Color Disabled"
+msgstr ""
+
+msgctxt "#32168"
+msgid "Color Invalid"
+msgstr ""
+
+msgctxt "#32169"
+msgid "Color Scrollbars"
+msgstr ""
+
+msgctxt "#32170"
+msgid "Color Scrollbars Background"
+msgstr ""
+
+msgctxt "#32171"
+msgid "Color Separator"
+msgstr ""
+
+msgctxt "#32172"
+msgid "Color Grey"
+msgstr ""
+
+msgctxt "#32173"
+msgid "Color Blue"
+msgstr ""
+
+msgctxt "#32174"
+msgid "Color Red"
+msgstr ""
+
+msgctxt "#32175"
+msgid "Color Black"
+msgstr ""
+
+msgctxt "#32176"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#32177"
+msgid "Disable"
+msgstr ""
+
+msgctxt "#32178"
+msgid "Alternative view"
+msgstr ""
+
+msgctxt "#32179"
+msgid "Backup Skin Settings"
+msgstr ""
+
+msgctxt "#32180"
+msgid "Create"
+msgstr ""
+
+msgctxt "#32181"
+msgid "Restory"
+msgstr ""
+
+msgctxt "#32182"
+msgid "Options"
+msgstr ""
+
+msgctxt "#32183"
+msgid "Main menu"
+msgstr ""
+
+msgctxt "#32184"
+msgid "User widgets"
+msgstr ""
+
+msgctxt "#32185"
+msgid "Colors"
+msgstr ""
+
+msgctxt "#32186"
+msgid "Previous location"
+msgstr ""
+
+msgctxt "#32187"
+msgid "Next location"
+msgstr ""
+
+msgctxt "#32188"
+msgid "User list of add-ons"
+msgstr ""
+
+msgctxt "#32189"
+msgid "User list of TV and radio channels"
+msgstr ""
+
+msgctxt "#32190"
+msgid "Advanced options"
+msgstr ""
+
+msgctxt "#32191"
+msgid "User widgets options"
+msgstr ""
+
+msgctxt "#32192"
+msgid "Background options"
+msgstr ""
+
+msgctxt "#32193"
+msgid "Colors skin options"
+msgstr ""
+
+msgctxt "#32194"
+msgid "Addons options"
+msgstr ""
+
+msgctxt "#32195"
+msgid "Reset skin options"
+msgstr ""
+
+msgctxt "#32196"
+msgid "Picture Add-On"
+msgstr ""
+
+msgctxt "#32197"
+msgid "TV Channel"
+msgstr ""
+
+msgctxt "#32198"
+msgid "Radio Channel"
+msgstr ""
+
+msgctxt "#32199"
+msgid "Video Add-On"
+msgstr ""
+
+msgctxt "#32200"
+msgid "Video Source"
+msgstr ""
+
+msgctxt "#32201"
+msgid "Music Source"
+msgstr ""
+
+msgctxt "#32202"
+msgid "Music Add-On"
+msgstr ""
+
+msgctxt "#32203"
+msgid "Program"
+msgstr ""
+
+msgctxt "#32204"
+msgid "Video Playlist"
+msgstr ""
+
+msgctxt "#32205"
+msgid "Music Playlist"
+msgstr ""
+
+msgctxt "#32206"
+msgid "Set type of widgets"
+msgstr ""
+
+msgctxt "#32207"
+msgid "Weather Widgets"
+msgstr ""
+
+msgctxt "#32208"
+msgid "Pictures Widgets"
+msgstr ""
+
+msgctxt "#32209"
+msgid "Video Widgets"
+msgstr ""
+
+msgctxt "#32210"
+msgid "LiveTV Widgets"
+msgstr ""
+
+msgctxt "#32211"
+msgid "Radio Widgets"
+msgstr ""
+
+msgctxt "#32212"
+msgid "Movies Widgets"
+msgstr ""
+
+msgctxt "#32213"
+msgid "TVShows Widgets"
+msgstr ""
+
+msgctxt "#32214"
+msgid "Music Videos widgets"
+msgstr ""
+
+msgctxt "#32215"
+msgid "Music Widgets"
+msgstr ""
+
+msgctxt "#32216"
+msgid "Addons Widgets"
+msgstr ""
+
+msgctxt "#32217"
+msgid "Games Widgets"
+msgstr ""
+
+msgctxt "#32218"
+msgid "Favourites Widget"
+msgstr ""
+
+msgctxt "#32219"
+msgid "Media Widgets"
+msgstr ""
+
+msgctxt "#32220"
+msgid "Big posters"
+msgstr ""
+
+msgctxt "#32221"
+msgid "Clear Logos"
+msgstr ""
+
+msgctxt "#32222"
+msgid "Clear Arts"
+msgstr ""
+
+msgctxt "#32223"
+msgid "Channel"
+msgstr ""
+
+msgctxt "#32224"
+msgid "Favourites TV Channels"
+msgstr ""
+
+msgctxt "#32225"
+msgid "Favourites Radio Channels"
+msgstr ""
+
+msgctxt "#32226"
+msgid "Opacity "
+msgstr ""
+
+msgctxt "#32227"
+msgid "Top left"
+msgstr ""
+
+msgctxt "#32228"
+msgid "Top center"
+msgstr ""
+
+msgctxt "#32229"
+msgid "Top right"
+msgstr ""
+
+msgctxt "#32230"
+msgid "Bottom left"
+msgstr ""
+
+msgctxt "#32231"
+msgid "Bottom center"
+msgstr ""
+
+msgctxt "#32232"
+msgid "Bottom right"
+msgstr ""
+
+msgctxt "#32233"
+msgid "Single image"
+msgstr ""
+
+msgctxt "#32234"
+msgid "Multi-image"
+msgstr ""
+
+msgctxt "#32235"
+msgid "List with Icon"
+msgstr ""
+
+msgctxt "#32236"
+msgid "List without Icon"
+msgstr ""
+
+msgctxt "#32237"
 msgid "Watch It Later"
 msgstr ""
 
-msgctxt "#40324"
+msgctxt "#32238"
 msgid "Ended"
 msgstr ""
 
-msgctxt "#40325"
+msgctxt "#32239"
 msgid "Continuing"
 msgstr ""
 
-msgctxt "#40326"
-msgid "Jump to letter"
-msgstr ""
-
-msgctxt "#40327"
+msgctxt "#32240"
 msgid "Search TheMovieDB"
 msgstr ""
 
-msgctxt "#40328"
-msgid "Search trailer"
+###############################
+
+msgctxt "#32250"
+msgid "Artwork Downloader"
+msgstr ""
+
+msgctxt "#32251"
+msgid "Download Music Theme"
+msgstr ""
+
+msgctxt "#32252"
+msgid "Jump to letter"
 msgstr ""

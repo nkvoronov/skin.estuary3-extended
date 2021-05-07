@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<controls>
-		<include condition="Skin.HasSetting(touchmode)">TouchBackSlideshowButton</include>
+		<include condition="Skin.HasSetting(TouchMode)">TouchBackSlideshowButton</include>
 		<control type="label">
 			<description>SlideShow Info</description>
 			<left>25</left>
@@ -15,7 +15,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<label>([COLOR $VAR[MainColorVar]]$INFO[Slideshow.SlideIndex][/COLOR]) $INFO[Slideshow.Filename]</label>
-			<visible>Skin.HasSetting(slideshow_info)</visible>
+			<visible>Skin.HasSetting(SlideshowInfo)</visible>
 		</control>
 		<control type="label">
 			<description>Clock label</description>
@@ -29,7 +29,7 @@
 			<textcolor>$VAR[WhiteColorVar]</textcolor>
 			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			<label>$INFO[System.Time]</label>
-			<visible>Skin.HasSetting(full_screen_clock)</visible>
+			<visible>Skin.HasSetting(FullScreenClock)</visible>
 		</control>
 		<control type="image">
 			<centerleft>50%</centerleft>

@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
-	<onload>SetProperty(CurrentSkin,skin.estuary2-extended-s,Home)</onload>
+	<onload>SetProperty(CurrentSkin,skin.estuary3-extended,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(fanarthometype))">ClearProperty(fanarthometype,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(homebackground))">ClearProperty(homebackground,Home)</onload>
-	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
-	<onload condition="Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
-	<onload condition="![Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)]">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
-	<onload condition="Skin.HasSetting(enable_extended_art)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
-	<onload condition="!Skin.HasSetting(enable_extended_art)">Skin.Reset(SkinHelper.EnableExtendedArt)</onload>
-	<onload condition="Skin.HasSetting(enable_music_art)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
-	<onload condition="!Skin.HasSetting(enable_music_art)">Skin.Reset(SkinHelper.EnableMusicArt)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
-	<onload condition="Skin.HasSetting(enable_pvr_thumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
-	<onload condition="!Skin.HasSetting(enable_pvr_thumbs)">Skin.Reset(SkinHelper.EnablePVRThumbs)</onload>
-	<onload condition="Skin.HasSetting(wall_backgrounds)">Skin.SetBool(SkinHelper.EnableWallBackgrounds)</onload>
-	<onload condition="!Skin.HasSetting(wall_backgrounds)">Skin.Reset(SkinHelper.EnableWallBackgrounds)</onload>
-	<onload condition="Skin.HasSetting(smartshortcuts_playlists)">Skin.SetBool(SmartShortcuts.playlists)</onload>
-	<onload condition="!Skin.HasSetting(smartshortcuts_playlists)">Skin.Reset(SmartShortcuts.playlists)</onload>
-	<onload condition="Skin.HasSetting(smartshortcuts_favourites)">Skin.SetBool(SmartShortcuts.favorites)</onload>
-	<onload condition="!Skin.HasSetting(smartshortcuts_favourites)">Skin.Reset(SmartShortcuts.favorites)</onload>
-	<onload>Skin.SetString(SkinHelper.RandomFanartDelay, $VAR[RandomFanartDelayVar])</onload>
-	<onload condition="System.AddonIsEnabled(script.pvr.favourites) + Skin.HasSetting(enable_custom_list_channels) + [Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml,mainmenuID=9000,group=mainmenu|powermenu)</onload>
+	<onload condition="System.AddonIsEnabled(script.skin.utils) + Skin.HasSetting(CustomListChannels) + [Skin.HasSetting(EnableCustomListChannelsTV) | Skin.HasSetting(EnableCustomListChannelsRadio)]">RunScript(script.skin.utils,action=updatechannel)</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$VAR[CustomFocusVar])</onload>
-	<onunload>ClearProperty(SkinHelper.WidgetContainer,Home)</onunload>
+
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<control type="button" id="20000">
@@ -46,10 +30,10 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group" id="2000">
-				<include condition="!Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">NormalMainMenu</include>
-				<include condition="Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">HideMainMenu</include>
-				<include condition="Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">HideMainMenu</include>
-				<include condition="!Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">MinimizeMainMenu</include>
+				<include condition="!Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">NormalMainMenu</include>
+				<include condition="Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">HideMainMenu</include>
+				<include condition="Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">HideMainMenu</include>
+				<include condition="!Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">MinimizeMainMenu</include>
 				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
 					<effect type="slide" end="0,20" time="60" tween="sine" />
 					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
@@ -58,23 +42,23 @@
 					<effect type="slide" end="0,-20" time="60" tween="sine" />
 					<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
 				</animation>
-				<animation effect="slide" end="502,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">Conditional</animation>
-				<animation effect="slide" end="135,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">Conditional</animation>
+				<animation effect="slide" end="502,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<animation effect="slide" end="135,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 				<include>OpenClose_Right</include>
 				<include>skinshortcuts-template-submenus</include>
 			</control>
 			<control type="group">
-				<animation effect="slide" end="-522,0" time="300" tween="sine" easing="inout" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">Conditional</animation>
-				<animation effect="slide" end="-95,0" time="300" tween="sine" easing="inout" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">Conditional</animation>
+				<animation effect="slide" end="-522,0" time="300" tween="sine" easing="inout" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<animation effect="slide" end="-95,0" time="300" tween="sine" easing="inout" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
 					<param name="width" value="522" />
-					<param name="visible" value="!Skin.HasSetting(minimize_main_menu)" />
+					<param name="visible" value="!Skin.HasSetting(MinimizeMainMenu)" />
 				</include>
 				<include content="ContentPanel">
 					<param name="width" value="155" />
-					<param name="visible" value="Skin.HasSetting(minimize_main_menu)" />
+					<param name="visible" value="Skin.HasSetting(MinimizeMainMenu)" />
 				</include>
 				<control type="fixedlist" id="9000">
 					<left>0</left>
@@ -100,7 +84,7 @@
 								<height>95</height>
 								<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 								<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasModalDialog">Conditional</animation>
-								<visible>!Skin.HasSetting(minimize_main_menu)</visible>
+								<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 							</control>
 							<control type="image">
 								<left>0</left>
@@ -109,7 +93,7 @@
 								<height>95</height>
 								<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 								<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasModalDialog">Conditional</animation>
-								<visible>Skin.HasSetting(minimize_main_menu)</visible>
+								<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
 							</control>
 							<control type="image">
 								<left>-3</left>
@@ -118,7 +102,7 @@
 								<height>95</height>
 								<texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Icon]</texture>
 								<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
-								<visible>!Skin.HasSetting(minimize_main_menu)</visible>
+								<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 							</control>
 							<control type="image">
 								<left>0</left>
@@ -145,7 +129,7 @@
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-							<visible>!Skin.HasSetting(minimize_main_menu)</visible>
+							<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 						</control>
 					</focusedlayout>
 					<itemlayout height="95">
@@ -165,7 +149,7 @@
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-							<visible>!Skin.HasSetting(minimize_main_menu)</visible>
+							<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 						</control>
 					</itemlayout>
 					<content>
@@ -183,7 +167,7 @@
 					<ondown>SetFocus(9000,0,absolute)</ondown>
 					<onright>2000</onright>
 					<align>justify</align>
-					<visible>!Skin.HasSetting(minimize_main_menu)</visible>
+					<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 					<include content="IconButton">
 						<param name="control_id" value="801" />
 						<param name="onclick" value="SetProperty(fanarthometype,power,Home)" />
@@ -222,7 +206,7 @@
 					<top>100</top>
 					<onup>SetFocus(9000,99,absolute)</onup>
 					<ondown>SetFocus(9000,0,absolute)</ondown>
-					<visible>Skin.HasSetting(minimize_main_menu)</visible>
+					<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
 					<include content="IconButton">
 						<param name="control_id" value="801" />
 						<param name="onclick" value="SetProperty(fanarthometype,power,Home)" />
@@ -267,7 +251,7 @@
 				</control>
 				<control type="group">
 					<visible>ControlGroup(700).HasFocus</visible>
-					<visible>Skin.HasSetting(minimize_main_menu)</visible>
+					<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
 					<top>195</top>
 					<control type="image">
 						<left>25</left>
@@ -296,7 +280,7 @@
 				<height>70</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<include condition="!Skin.HasSetting(hide_mediaflags_home)" content="MediaFlags">
+				<include condition="!Skin.HasSetting(HideMediaFlagsHome)" content="MediaFlags">
 					<param name="infolabel_prefix" value="Container." />
 					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
 					<param name="visible" value="String.StartsWith(Container.ListItem.FolderPath,videodb) | String.StartsWith(Container.ListItem.FolderPath,musicdb)" />
@@ -314,7 +298,7 @@
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<headlinecolor>$VAR[RssHeaderColorVar]</headlinecolor>
-					<visible>Skin.HasSetting(hide_mediaflags_home) | !ControlGroup(2000).HasFocus</visible>
+					<visible>Skin.HasSetting(HideMediaFlagsHome) | !ControlGroup(2000).HasFocus</visible>
 					<animation effect="fade" time="300">VisibleChange</animation>
 				</control>
 			</control>
@@ -330,7 +314,7 @@
 				<top>30</top>
 				<left>90</left>
 				<control type="group">
-					<visible>!Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)</visible>
+					<visible>!Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)</visible>
 					<control type="image">
 						<aspectratio>keep</aspectratio>
 						<height>56</height>
@@ -347,7 +331,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu) + [ Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
+					<visible>Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu) + [ Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
 					<control type="image">
 						<aspectratio>keep</aspectratio>
 						<height>56</height>
@@ -365,7 +349,7 @@
 				</control>
 				<control type="group">
 					<left>-70</left>
-					<visible>!Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)</visible>
+					<visible>!Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)</visible>
 					<control type="image">
 						<aspectratio>keep</aspectratio>
 						<width>56</width>
@@ -375,7 +359,7 @@
 				</control>
 				<control type="group">
 					<left>-70</left>
-					<visible>Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu) + [ Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
+					<visible>Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu) + [ Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
 					<control type="image">
 						<aspectratio>keep</aspectratio>
 						<width>56</width>
@@ -397,19 +381,19 @@
 					<height>140</height>
 					<texture>$VAR[HomeClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
-					<visible>!Skin.HasSetting(hide_logo_home) + ControlGroup(2000).HasFocus</visible>
+					<visible>!Skin.HasSetting(HideLogoHome) + ControlGroup(2000).HasFocus</visible>
 				</control>
 				<control type="label">
 					<top>15</top>
 					<align>center</align>
 					<label>$VAR[InfoBarStatsVar]</label>
 					<font>font12</font>
-					<visible>[Skin.HasSetting(hide_logo_home) | !ControlGroup(2000).HasFocus] + Skin.HasSetting(enable_home_stats)</visible>
+					<visible>[Skin.HasSetting(HideLogoHome) | !ControlGroup(2000).HasFocus] + Skin.HasSetting(HomeStats)</visible>
 				</control>
 			</control>
 			<control type="group">
 				<description>Top Name Item</description>
-				<visible>Skin.HasSetting(minimize_main_menu) + Skin.HasSetting(top_name_item)</visible>
+				<visible>Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(TopNameItem)</visible>
 				<left>115</left>
 				<top>30</top>
 				<height>56</height>

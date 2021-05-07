@@ -112,10 +112,10 @@
 		<definition>
 			<control type="group">
 				<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
-				<include content="UserRatingContent" condition="Skin.HasSetting(circle_userrating)">
+				<include content="UserRatingContent" condition="Skin.HasSetting(CircleUserRating)">
 					<param name="infolabel" value="ListItem.UserRating" />
 				</include>
-				<include content="UserRatingContent" condition="Skin.HasSetting(circle_rating)">
+				<include content="UserRatingContent" condition="Skin.HasSetting(CircleRating)">
 					<param name="infolabel" value="ListItem.Rating" />
 				</include>
 			</control>
@@ -842,7 +842,7 @@
 				<textureradioonfocus colordiffuse="white7">dialogs/close.png</textureradioonfocus>
 				<textureradioonnofocus colordiffuse="white7">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
 				<onclick>Action(close)</onclick>
-				<visible>!Skin.HasSetting(touchmode)</visible>
+				<visible>!Skin.HasSetting(TouchMode)</visible>
 			</control>
 			<control type="button">
 				<right>10</right>
@@ -852,7 +852,7 @@
 				<texturefocus>dialogs/close.png</texturefocus>
 				<texturenofocus>dialogs/close.png</texturenofocus>
 				<onclick>Action(close)</onclick>
-				<visible>Skin.HasSetting(touchmode)</visible>
+				<visible>Skin.HasSetting(TouchMode)</visible>
 			</control>
 		</control>
 	</include>
@@ -962,7 +962,7 @@
 					<control type="group">
 						<visible>Integer.IsGreater(System.ProfileCount,1) + !Player.HasMedia</visible>
 						<control type="image">
-							<visible>Skin.HasSetting(show_profileavatar)</visible>
+							<visible>Skin.HasSetting(ShowProfileAvatar)</visible>
 							<top>25</top>
 							<left>-70</left>
 							<width>50</width>
@@ -972,7 +972,7 @@
 							<aspectratio>scale</aspectratio>
 						</control>
 						<control type="label">
-							<visible>Skin.HasSetting(show_profilename)</visible>
+							<visible>Skin.HasSetting(ShowProfileName)</visible>
 							<font>font45</font>
 							<align>right</align>
 							<left>-630</left>
@@ -991,7 +991,7 @@
 						<width>auto</width>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<label>$INFO[System.Time]</label>
-						<visible>!Skin.HasSetting(hide_time)</visible>
+						<visible>!Skin.HasSetting(HideTime)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -1025,7 +1025,7 @@
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
+						<visible>Skin.HasSetting(ShowWeatherInfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
 						<top>1</top>
@@ -1034,7 +1034,7 @@
 						<fadetime>300</fadetime>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture>$INFO[Weather.FanartCode,weather/small/,.png]</texture>
-						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
+						<visible>Skin.HasSetting(ShowWeatherInfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
 						<top>8</top>
@@ -1058,13 +1058,13 @@
 					<visible>!System.HasActiveModalDialog</visible>
 					<visible>Container.Scrolling</visible>
 					<visible>!Container.Content(seasons)</visible>
-					<visible>Skin.HasSetting(hide_logo_library) | Skin.HasSetting(hide_logo_search)</visible>
+					<visible>Skin.HasSetting(HideLogoLibrary) | Skin.HasSetting(HideLogoSearch)</visible>
 					<visible>Container.SortMethod(1) | Container.SortMethod(4) | Container.SortMethod(12) | Container.SortMethod(10) | Container.SortMethod(7) | Container.SortMethod(29) | Container.SortMethod(17)</visible>
 					<animation effect="fade" start="0" end="100" time="200" reversible="true">VisibleChange</animation>
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				</control>
 			</control>
-			<include condition="Skin.HasSetting(touchmode) + !Window.IsActive(Home)">TouchBackButton</include>
+			<include condition="Skin.HasSetting(TouchMode) + !Window.IsActive(Home)">TouchBackButton</include>
 		</definition>
 	</include>
 	<include name="TopBarLabels">
@@ -1128,7 +1128,7 @@
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="$VAR[SecondaryBackgroundColorVar]" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
+			<texture colordiffuse="$VAR[SecondaryBackgroundColorVar]" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(BackgroundOverlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
 		</control>
 	</include>
 	<include name="DefaultBackground">
@@ -1140,14 +1140,14 @@
 				<description>Video</description>
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
-				<visible>Player.HasVideo + !Skin.HasSetting(show_background_video)</visible>
+				<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
 				<visible>!Slideshow.IsActive</visible>
 			</control>
 			<control type="visualisation">
 				<description>Visualisation</description>
 				<include>FullScreenDimensions</include>
 				<visible>!Slideshow.IsActive</visible>
-				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(show_background_vis)</visible>
+				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(ShowBackgroundVis)</visible>
 			</control>
 			<control type="group">
 				<description>Backgrounds</description>
@@ -1161,7 +1161,7 @@
 				</control>
 				<control type="group" id="31111">
 					<description>Background x</description>
-					<visible>![[Player.HasVideo + !Skin.HasSetting(show_background_video)] | [Player.HasAudio + Visualisation.Enabled + !Skin.HasSetting(show_background_vis) + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]]</visible>
+					<visible>![[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + Visualisation.Enabled + !Skin.HasSetting(ShowBackgroundVis) + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]]</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -1174,11 +1174,11 @@
 							<aspectratio>scale</aspectratio>
 							<fadetime>400</fadetime>
 							<animation effect="fade" time="400">VisibleChange</animation>
-							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Skin.String(custom_background)]</imagepath>
-							<visible>Skin.HasSetting(use_custom_bg) + !String.IsEmpty(Skin.String(custom_background)) + String.IsEmpty(Control.GetLabel(32213))</visible>
+							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Skin.String(CustomBackground)]</imagepath>
+							<visible>Skin.HasSetting(UseCustomBg) + !String.IsEmpty(Skin.String(CustomBackground)) + String.IsEmpty(Control.GetLabel(32213))</visible>
 						</control>
 						<control type="group" id="32212">
-							<visible>Skin.HasSetting(separate_background) + String.IsEmpty(Control.GetLabel(32213))</visible>
+							<visible>Skin.HasSetting(SeparateBackground) + String.IsEmpty(Control.GetLabel(32213))</visible>
 							<animation effect="fade" time="400">VisibleChange</animation>
 							<control type="multiimage" id="32221">
 								<description>Background 2</description>
@@ -1204,7 +1204,7 @@
 							<fadetime>400</fadetime>
 							<animation effect="fade" time="400">VisibleChange</animation>
 							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[fanart_media]</imagepath>
-							<visible>!Skin.HasSetting(no_fanart)</visible>
+							<visible>!Skin.HasSetting(NoFanart)</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -1257,7 +1257,7 @@
 				<control type="group">
 					<visible>$PARAM[info_visible]</visible>
 					<visible>!System.HasActiveModalDialog</visible>
-					<visible>!Skin.HasSetting(touchmode)</visible>
+					<visible>!Skin.HasSetting(TouchMode)</visible>
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -1296,7 +1296,7 @@
 						<texturenofocus />
 					</control>
 				</control>
-				<include condition="Skin.HasSetting(touchmode)">TouchButtons</include>
+				<include condition="Skin.HasSetting(TouchMode)">TouchButtons</include>
 			</control>
 		</definition>
 	</include>
@@ -1441,7 +1441,7 @@
 	<include name="TouchButtons">
 		<control type="grouplist" id="700">
 			<orientation>horizontal</orientation>
-			<visible>Skin.HasSetting(touchmode)</visible>
+			<visible>Skin.HasSetting(TouchMode)</visible>
 			<visible>!Window.IsActive(Home) + !Window.IsActive(filemanager)</visible>
 			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>

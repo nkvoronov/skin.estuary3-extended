@@ -1,0 +1,30 @@
+<settings>
+	<setting id="Opacity" value="Default" label="$LOCALIZE[15109]" condition="" icon="DefaultAddon.png" description="$LOCALIZE[15109]"/>
+	<setting id="Opacity" value="0" label="0" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]0%"/>
+	<setting id="Opacity" value="5" label="5" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]5%"/>
+	<setting id="Opacity" value="10" label="10" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]10%"/>
+	<setting id="Opacity" value="15" label="15" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]15%"/>
+	<setting id="Opacity" value="20" label="20" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]20%"/>
+	<setting id="Opacity" value="25" label="25" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]25%"/>
+	<setting id="Opacity" value="30" label="30" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]30%"/>
+	<setting id="Opacity" value="35" label="35" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]35%"/>
+	<setting id="Opacity" value="40" label="40" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]40%"/>
+	<setting id="Opacity" value="45" label="45" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]45%"/>
+	<setting id="Opacity" value="50" label="50" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]50%"/>
+	<setting id="Opacity" value="55" label="55" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]55%"/>
+	<setting id="Opacity" value="60" label="60" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]60%"/>
+	<setting id="Opacity" value="65" label="65" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]65%"/>
+	<setting id="Opacity" value="70" label="70" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]70%"/>
+	<setting id="Opacity" value="75" label="75" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]75%"/>
+	<setting id="Opacity" value="80" label="80" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]80%"/>
+	<setting id="Opacity" value="85" label="85" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]85%"/>
+	<setting id="Opacity" value="90" label="90" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]90%"/>
+	<setting id="Opacity" value="95" label="95" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]95%"/>
+	<setting id="Opacity" value="100" label="100" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[32226]100%"/>
+	<setting id="PopupPosition" value="TopLeft" label="$LOCALIZE[32227]" condition="" icon="extras/popupnotification/topleft.png" description=""/>
+	<setting id="PopupPosition" value="TopCenter" label="$LOCALIZE[32228]" condition="" icon="extras/popupnotification/topcenter.png" description=""/>
+	<setting id="PopupPosition" value="TopRight" label="$LOCALIZE[32229]" condition="" icon="extras/popupnotification/topright.png" description=""/>
+	<setting id="PopupPosition" value="BottomLeft" label="$LOCALIZE[32230]" condition="" icon="extras/popupnotification/bottomleft.png" description=""/>
+	<setting id="PopupPosition" value="BottomCenter" label="$LOCALIZE[32231]" condition="" icon="extras/popupnotification/bottomcenter.png" description=""/>
+	<setting id="PopupPosition" value="BottomRight" label="$LOCALIZE[32232]" condition="" icon="extras/popupnotification/bottomright.png" description=""/>
+</settings>
