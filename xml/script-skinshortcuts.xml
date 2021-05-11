@@ -151,7 +151,7 @@
 				<control type="radiobutton" id="313">
 					<description>Disable Menu Item</description>
 					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[43071]</label>
+					<label>$LOCALIZE[32177]</label>
 					<selected>String.IsEqual(Control.GetLabel(599),IsTrue)</selected>
 				</control>
 				<control type="image" id="601">

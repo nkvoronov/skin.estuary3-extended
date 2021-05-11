@@ -3,13 +3,13 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[342]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>icons/sidemenu/movies.png</icon>
-			<thumb>resource://resource.images.skinicons.estuary/</thumb>
+			<thumb />
 			<property name="labelID">movies</property>
 			<property name="defaultID">movies</property>
 			<property name="widget">MoviesWidget</property>
-			<property name="widgetName">43086</property>
+			<property name="widgetName">33212</property>
 			<property name="background">special://skin/extras/home-images/movies.jpg</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -25,13 +25,13 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<label>$LOCALIZE[20343]</label>
-			<label2>Сериалы</label2>
+			<label2>$LOCALIZE[20343]</label2>
 			<icon>icons/sidemenu/tv.png</icon>
 			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
 			<property name="widget">TVShowsWidget</property>
-			<property name="widgetName">43087</property>
+			<property name="widgetName">33213</property>
 			<property name="background">special://skin/extras/home-images/tvshows.jpg</property>
 			<visible>Library.HasContent(TVShows)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -47,13 +47,13 @@
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
 			<label>$LOCALIZE[2]</label>
-			<label2>Музыка</label2>
+			<label2>$LOCALIZE[2]</label2>
 			<icon>icons/sidemenu/music.png</icon>
 			<thumb />
 			<property name="labelID">music</property>
 			<property name="defaultID">music</property>
 			<property name="widget">MusicWidget</property>
-			<property name="widgetName">43089</property>
+			<property name="widgetName">33215</property>
 			<property name="background">special://skin/extras/home-images/music.jpg</property>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
@@ -68,7 +68,7 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[427]</label>
-			<label2>Диск</label2>
+			<label2>$LOCALIZE[427]</label2>
 			<icon>icons/sidemenu/disc.png</icon>
 			<thumb />
 			<property name="labelID">427</property>
@@ -88,13 +88,13 @@
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
 			<label>$LOCALIZE[20389]</label>
-			<label2>Клипы</label2>
+			<label2>$LOCALIZE[20389]</label2>
 			<icon>icons/sidemenu/musicvideos.png</icon>
 			<thumb />
 			<property name="labelID">musicvideos</property>
 			<property name="defaultID">musicvideos</property>
 			<property name="widget">MusicVideosWidget</property>
-			<property name="widgetName">43088</property>
+			<property name="widgetName">33214</property>
 			<property name="background">special://skin/extras/home-images/musicvideo.jpg</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -110,13 +110,13 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[19020]</label>
-			<label2>ТВ</label2>
+			<label2>$LOCALIZE[19020]</label2>
 			<icon>icons/sidemenu/livetv.png</icon>
 			<thumb />
 			<property name="labelID">19020</property>
 			<property name="defaultID">livetv</property>
 			<property name="widget">LiveTVWidget</property>
-			<property name="widgetName">43084</property>
+			<property name="widgetName">33210</property>
 			<property name="background">special://skin/extras/home-images/livetv.jpg</property>
 			<visible>System.HasPVRAddon</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -132,13 +132,13 @@
 		<item id="7">
 			<property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[19021]</label>
-			<label2>Радио</label2>
+			<label2>$LOCALIZE[19021]</label2>
 			<icon>icons/sidemenu/radio.png</icon>
 			<thumb />
 			<property name="labelID">19021</property>
 			<property name="defaultID">radio</property>
 			<property name="widget">RadioWidget</property>
-			<property name="widgetName">43085</property>
+			<property name="widgetName">33211</property>
 			<property name="background">special://skin/extras/home-images/radio.jpg</property>
 			<visible>System.HasPVRAddon</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -154,13 +154,13 @@
 		<item id="8">
 			<property name="id">$NUMBER[8]</property>
 			<label>$LOCALIZE[15016]</label>
-			<label2>Игры</label2>
+			<label2>$LOCALIZE[15016]</label2>
 			<icon>icons/sidemenu/games.png</icon>
 			<thumb />
 			<property name="labelID">15016</property>
 			<property name="defaultID">games</property>
 			<property name="widget">GamesWidget</property>
-			<property name="widgetName">43111</property>
+			<property name="widgetName">33217</property>
 			<property name="background">special://skin/extras/home-images/games.jpg</property>
 			<visible>System.GetBool(gamesgeneral.enable)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -176,13 +176,13 @@
 		<item id="9">
 			<property name="id">$NUMBER[9]</property>
 			<label>$LOCALIZE[24001]</label>
-			<label2>Дополнения</label2>
+			<label2>$LOCALIZE[24001]</label2>
 			<icon>icons/sidemenu/addons.png</icon>
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">addons</property>
 			<property name="widget">AddonsWidget</property>
-			<property name="widgetName">43110</property>
+			<property name="widgetName">33216</property>
 			<property name="background">special://skin/extras/home-images/addons.jpg</property>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
@@ -197,13 +197,13 @@
 		<item id="10">
 			<property name="id">$NUMBER[10]</property>
 			<label>$LOCALIZE[1]</label>
-			<label2>Изображения</label2>
+			<label2>$LOCALIZE[1]</label2>
 			<icon>icons/sidemenu/pictures.png</icon>
 			<thumb />
 			<property name="labelID">1</property>
 			<property name="defaultID">pictures</property>
 			<property name="widget">PicturesWidget</property>
-			<property name="widgetName">43082</property>
+			<property name="widgetName">33208</property>
 			<property name="background">special://skin/extras/home-images/pictures.jpg</property>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
@@ -218,13 +218,13 @@
 		<item id="11">
 			<property name="id">$NUMBER[11]</property>
 			<label>$LOCALIZE[3]</label>
-			<label2>Видео</label2>
+			<label2>$LOCALIZE[3]</label2>
 			<icon>icons/sidemenu/videos.png</icon>
 			<thumb />
 			<property name="labelID">videos</property>
 			<property name="defaultID">video</property>
 			<property name="widget">VideosWidget</property>
-			<property name="widgetName">43083</property>
+			<property name="widgetName">33209</property>
 			<property name="background">special://skin/extras/home-images/videos.jpg</property>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
@@ -239,13 +239,13 @@
 		<item id="12">
 			<property name="id">$NUMBER[12]</property>
 			<label>$LOCALIZE[1036]</label>
-			<label2>Избранное</label2>
+			<label2>$LOCALIZE[1036]</label2>
 			<icon>icons/sidemenu/favourites.png</icon>
 			<thumb />
 			<property name="labelID">1036</property>
 			<property name="defaultID">favourites</property>
 			<property name="widget">FavouritesWidget</property>
-			<property name="widgetName">43112</property>
+			<property name="widgetName">33218</property>
 			<property name="background">special://skin/extras/home-images/favorites.jpg</property>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
@@ -260,13 +260,13 @@
 		<item id="13">
 			<property name="id">$NUMBER[13]</property>
 			<label>$LOCALIZE[8]</label>
-			<label2>Погода</label2>
+			<label2>$LOCALIZE[8]</label2>
 			<icon>icons/sidemenu/weather.png</icon>
 			<thumb />
 			<property name="labelID">8</property>
 			<property name="defaultID">weather</property>
 			<property name="widget">WeatherWidget</property>
-			<property name="widgetName">43081</property>
+			<property name="widgetName">33207</property>
 			<property name="background">special://skin/extras/home-images/weather.jpg</property>
 			<visible>!String.IsEmpty(Weather.Plugin)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -286,9 +286,9 @@
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20382]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
-			<thumb>resource://resource.images.skinicons.estuary/</thumb>
+			<thumb />
 			<property name="labelID">20382</property>
 			<property name="defaultID">20382</property>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -296,7 +296,7 @@
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</property>
 			<property name="list">videodb://recentlyaddedmovies/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<property name="group">movies</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -304,12 +304,12 @@
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[135]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultGenre.png</icon>
 			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/genres/,return)</onclick>
@@ -323,12 +323,12 @@
 			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[369]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultMovieTitle.png</icon>
 			<thumb />
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/titles/,return)</onclick>
@@ -342,12 +342,12 @@
 			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[562]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultYear.png</icon>
 			<thumb />
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/years/,return)</onclick>
@@ -361,12 +361,12 @@
 			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[344]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultActor.png</icon>
 			<thumb />
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/actors/,return)</onclick>
@@ -380,12 +380,12 @@
 			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20348]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultDirector.png</icon>
 			<thumb />
 			<property name="labelID">20348</property>
 			<property name="defaultID">20348</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/directors/,return)</onclick>
@@ -399,12 +399,12 @@
 			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20388]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultStudios.png</icon>
 			<thumb />
 			<property name="labelID">20388</property>
 			<property name="defaultID">20388</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/studios/,return)</onclick>
@@ -418,12 +418,12 @@
 			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20434]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultSets.png</icon>
 			<thumb />
 			<property name="labelID">20434</property>
 			<property name="defaultID">20434</property>
-			<visible>[Library.HasContent(MovieSets)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(MovieSets)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/sets/,return)</onclick>
@@ -437,12 +437,12 @@
 			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20451]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultCountry.png</icon>
 			<thumb />
 			<property name="labelID">20451</property>
 			<property name="defaultID">20451</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/countries/,return)</onclick>
@@ -456,12 +456,12 @@
 			<property name="id">$NUMBER[10]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20459]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultTags.png</icon>
 			<thumb />
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/tags/,return)</onclick>
@@ -475,7 +475,7 @@
 			<property name="id">$NUMBER[11]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[653]</label>
-			<label2>Видео</label2>
+			<label2>$LOCALIZE[3]</label2>
 			<icon>DefaultAddonsUpdates.png</icon>
 			<thumb />
 			<property name="labelID">653</property>
@@ -485,7 +485,7 @@
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<property name="group">movies</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -503,7 +503,7 @@
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</property>
 			<property name="list">videodb://recentlyaddedepisodes/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<property name="group">tvshows</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -521,7 +521,7 @@
 			<onclick>ActivateWindow(videos,videodb://inprogresstvshows/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://inprogresstvshows/,return)</property>
 			<property name="list">videodb://inprogresstvshows/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<property name="group">tvshows</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -534,7 +534,7 @@
 			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
-			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/genres/,return)</onclick>
@@ -553,7 +553,7 @@
 			<thumb />
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
-			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
@@ -572,7 +572,7 @@
 			<thumb />
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
-			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/years/,return)</onclick>
@@ -591,7 +591,7 @@
 			<thumb />
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
-			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/actors/,return)</onclick>
@@ -610,7 +610,7 @@
 			<thumb />
 			<property name="labelID">20388</property>
 			<property name="defaultID">20388</property>
-			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/studios/,return)</onclick>
@@ -629,7 +629,7 @@
 			<thumb />
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
-			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/tags/,return)</onclick>
@@ -653,7 +653,7 @@
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<property name="group">tvshows</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -666,7 +666,7 @@
 			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://genres/,return)</onclick>
@@ -685,7 +685,7 @@
 			<thumb />
 			<property name="labelID">133</property>
 			<property name="defaultID">133</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://artists/,return)</onclick>
@@ -704,7 +704,7 @@
 			<thumb />
 			<property name="labelID">132</property>
 			<property name="defaultID">132</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
@@ -723,7 +723,7 @@
 			<thumb />
 			<property name="labelID">1050</property>
 			<property name="defaultID">1050</property>
-			<visible>[Library.HasContent(Singles)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Singles)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://singles/,return)</onclick>
@@ -742,7 +742,7 @@
 			<thumb />
 			<property name="labelID">134</property>
 			<property name="defaultID">134</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://songs/,return)</onclick>
@@ -761,7 +761,7 @@
 			<thumb />
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://years/,return)</onclick>
@@ -780,7 +780,7 @@
 			<thumb />
 			<property name="labelID">271</property>
 			<property name="defaultID">271</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://top100/,return)</onclick>
@@ -799,7 +799,7 @@
 			<thumb />
 			<property name="labelID">359</property>
 			<property name="defaultID">359</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</onclick>
@@ -818,7 +818,7 @@
 			<thumb />
 			<property name="labelID">517</property>
 			<property name="defaultID">517</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://recentlyplayedalbums/,return)</onclick>
@@ -837,7 +837,7 @@
 			<thumb />
 			<property name="labelID">musicvideos</property>
 			<property name="defaultID">musicvideos</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/,return)</onclick>
@@ -861,7 +861,7 @@
 			<onclick>ActivateWindow(music,special://musicplaylists/,return)</onclick>
 			<property name="path">ActivateWindow(music,special://musicplaylists/,return)</property>
 			<property name="list">special://musicplaylists/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<property name="group">music</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -874,7 +874,7 @@
 			<thumb />
 			<property name="labelID">29994</property>
 			<property name="defaultID">29994</property>
-			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[Library.HasContent(Music)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(music,library://music/musicroles/,return)</onclick>
@@ -898,7 +898,7 @@
 			<onclick>ActivateWindow(music,library://music/musicsources/,return)</onclick>
 			<property name="path">ActivateWindow(music,library://music/musicsources/,return)</property>
 			<property name="list">library://music/musicsources/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<property name="group">music</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -916,7 +916,7 @@
 			<onclick>ActivateWindow(music,sources://music/,return)</onclick>
 			<property name="path">ActivateWindow(music,sources://music/,return)</property>
 			<property name="list">sources://music/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<property name="group">music</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -934,7 +934,7 @@
 			<onclick>ActivateWindow(music,addons://sources/audio/,return)</onclick>
 			<property name="path">ActivateWindow(music,addons://sources/audio/,return)</property>
 			<property name="list">addons://sources/audio/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<property name="group">music</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -952,7 +952,7 @@
 			<onclick>UpdateLibrary(music)</onclick>
 			<property name="path">UpdateLibrary(music)</property>
 			<property name="list">UpdateLibrary(music)</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<property name="group">music</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -965,7 +965,7 @@
 			<thumb />
 			<property name="labelID">341</property>
 			<property name="defaultID">341</property>
-			<visible>[System.HasMediaDVD] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-427)</visible>
+			<visible>[System.HasMediaDVD] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-427)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>PlayDVD</onclick>
@@ -989,7 +989,7 @@
 			<onclick>EjectTray()</onclick>
 			<property name="path">EjectTray()</property>
 			<property name="list">EjectTray()</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-427)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-427)</visible>
 			<property name="group">427</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1007,7 +1007,7 @@
 			<onclick>RipCD</onclick>
 			<property name="path">RipCD</property>
 			<property name="list">RipCD</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-427)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-427)</visible>
 			<property name="group">427</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1025,7 +1025,7 @@
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</property>
 			<property name="list">videodb://recentlyaddedmusicvideos/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<property name="group">musicvideos</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1038,7 +1038,7 @@
 			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</onclick>
@@ -1057,7 +1057,7 @@
 			<thumb />
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
@@ -1076,7 +1076,7 @@
 			<thumb />
 			<property name="labelID">652</property>
 			<property name="defaultID">652</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/years/,return)</onclick>
@@ -1095,7 +1095,7 @@
 			<thumb />
 			<property name="labelID">133</property>
 			<property name="defaultID">133</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</onclick>
@@ -1114,7 +1114,7 @@
 			<thumb />
 			<property name="labelID">132</property>
 			<property name="defaultID">132</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/albums/,return)</onclick>
@@ -1133,7 +1133,7 @@
 			<thumb />
 			<property name="labelID">20348</property>
 			<property name="defaultID">20348</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/directors/,return)</onclick>
@@ -1152,7 +1152,7 @@
 			<thumb />
 			<property name="labelID">20388</property>
 			<property name="defaultID">20388</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/studios/,return)</onclick>
@@ -1171,7 +1171,7 @@
 			<thumb />
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/tags/,return)</onclick>
@@ -1195,7 +1195,7 @@
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<property name="group">musicvideos</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1208,7 +1208,7 @@
 			<thumb />
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(tvchannels)</onclick>
@@ -1227,7 +1227,7 @@
 			<thumb />
 			<property name="labelID">19069</property>
 			<property name="defaultID">19069</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(tvguide)</onclick>
@@ -1246,7 +1246,7 @@
 			<thumb />
 			<property name="labelID">19017</property>
 			<property name="defaultID">19017</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(tvrecordings)</onclick>
@@ -1265,7 +1265,7 @@
 			<thumb />
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(tvtimers)</onclick>
@@ -1284,7 +1284,7 @@
 			<thumb />
 			<property name="labelID">19138</property>
 			<property name="defaultID">19138</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(tvtimerrules)</onclick>
@@ -1303,7 +1303,7 @@
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(tvsearch)</onclick>
@@ -1322,7 +1322,7 @@
 			<thumb />
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(radiochannels)</onclick>
@@ -1341,7 +1341,7 @@
 			<thumb />
 			<property name="labelID">19069</property>
 			<property name="defaultID">19069</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(radioguide)</onclick>
@@ -1360,7 +1360,7 @@
 			<thumb />
 			<property name="labelID">19017</property>
 			<property name="defaultID">19017</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(radiorecordings)</onclick>
@@ -1379,7 +1379,7 @@
 			<thumb />
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(radiotimers)</onclick>
@@ -1398,7 +1398,7 @@
 			<thumb />
 			<property name="labelID">19138</property>
 			<property name="defaultID">19138</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(radiotimerrules)</onclick>
@@ -1417,7 +1417,7 @@
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(radiosearch)</onclick>
@@ -1436,7 +1436,7 @@
 			<thumb />
 			<property name="labelID">35049</property>
 			<property name="defaultID">35049</property>
-			<visible>[System.GetBool(gamesgeneral.enable)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-15016)</visible>
+			<visible>[System.GetBool(gamesgeneral.enable)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-15016)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(games,addons://sources/game/,return)</onclick>
@@ -1460,7 +1460,7 @@
 			<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://user/,return)</property>
 			<property name="list">addons://user/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1478,7 +1478,7 @@
 			<onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://outdated/,return)</property>
 			<property name="list">addons://outdated/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1496,7 +1496,7 @@
 			<onclick>ActivateWindow(addonbrowser,addons://recently_updated/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://recently_updated/,return)</property>
 			<property name="list">addons://recently_updated/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1514,7 +1514,7 @@
 			<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://repos/,return)</property>
 			<property name="list">addons://repos/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1532,7 +1532,7 @@
 			<onclick>InstallFromZip</onclick>
 			<property name="path">InstallFromZip</property>
 			<property name="list">InstallFromZip</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1550,7 +1550,7 @@
 			<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://search/,return)</property>
 			<property name="list">addons://search/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1568,7 +1568,7 @@
 			<onclick>ActivateWindow(pictures,addons://sources/image/,return)</onclick>
 			<property name="path">ActivateWindow(pictures,addons://sources/image/,return)</property>
 			<property name="list">addons://sources/image/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-1)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-1)</visible>
 			<property name="group">1</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1581,7 +1581,7 @@
 			<thumb />
 			<property name="labelID">movies</property>
 			<property name="defaultID">movies</property>
-			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),videos)</visible>
+			<visible>[Library.HasContent(Movies)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),videos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/titles/,return)</onclick>
@@ -1600,7 +1600,7 @@
 			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
-			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),videos)</visible>
+			<visible>[Library.HasContent(TVShows)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),videos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
@@ -1619,7 +1619,7 @@
 			<thumb />
 			<property name="labelID">musicvideos</property>
 			<property name="defaultID">musicvideos</property>
-			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),videos)</visible>
+			<visible>[Library.HasContent(MusicVideos)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),videos)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/,return)</onclick>
@@ -1643,7 +1643,7 @@
 			<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,sources://video/,return)</property>
 			<property name="list">sources://video/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),videos)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),videos)</visible>
 			<property name="group">videos</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1661,7 +1661,7 @@
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
 			<property name="path">ActivateWindow(videos,special://videoplaylists/,return)</property>
 			<property name="list">special://videoplaylists/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),videos)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),videos)</visible>
 			<property name="group">videos</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1679,7 +1679,7 @@
 			<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,addons://sources/video/,return)</property>
 			<property name="list">addons://sources/video/</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),videos)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),videos)</visible>
 			<property name="group">videos</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1697,8 +1697,223 @@
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(0).ListItem.Property(submenuVisibility),videos)</visible>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),videos)</visible>
 			<property name="group">videos</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13012]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/quit.png</icon>
+			<thumb />
+			<property name="labelID">13012</property>
+			<property name="defaultID">13012</property>
+			<visible>[[System.ShowExitButton] + [System.ShowExitButton]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Quit</onclick>
+			<property name="path">Quit</property>
+			<property name="list">Quit</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13016]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/shutdown.png</icon>
+			<thumb />
+			<property name="labelID">13016</property>
+			<property name="defaultID">13016</property>
+			<visible>[[System.CanPowerDown] + [System.CanPowerDown]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Powerdown</onclick>
+			<property name="path">Powerdown</property>
+			<property name="list">Powerdown</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13011]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/suspend.png</icon>
+			<thumb />
+			<property name="labelID">13011</property>
+			<property name="defaultID">13011</property>
+			<visible>[[System.CanSuspend] + [System.CanSuspend]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Suspend</onclick>
+			<property name="path">Suspend</property>
+			<property name="list">Suspend</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13010]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/suspend.png</icon>
+			<thumb />
+			<property name="labelID">13010</property>
+			<property name="defaultID">13010</property>
+			<visible>[[System.CanHibernate] + [System.CanHibernate]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Hibernate</onclick>
+			<property name="path">Hibernate</property>
+			<property name="list">Hibernate</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13013]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/reboot.png</icon>
+			<thumb />
+			<property name="labelID">13013</property>
+			<property name="defaultID">13013</property>
+			<visible>[[System.CanReboot] + [System.CanReboot]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Reset</onclick>
+			<property name="path">Reset</property>
+			<property name="list">Reset</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20126]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/logout.png</icon>
+			<thumb />
+			<property name="labelID">20126</property>
+			<property name="defaultID">20126</property>
+			<visible>[[[System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)] + System.Loggedon] + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>System.LogOff</onclick>
+			<property name="path">System.LogOff</property>
+			<property name="list">System.LogOff</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20046]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/logout.png</icon>
+			<thumb />
+			<property name="labelID">20046</property>
+			<property name="defaultID">20046</property>
+			<visible>[[System.HasLocks] + [System.HasLocks]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>mastermode</onclick>
+			<property name="path">mastermode</property>
+			<property name="list">mastermode</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13017]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/power.png</icon>
+			<thumb />
+			<property name="labelID">13017</property>
+			<property name="defaultID">13017</property>
+			<visible>[[System.HasShutdown +!System.IsInhibit] + [System.HasShutdown +!System.IsInhibit]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>InhibitIdleShutdown(true)</onclick>
+			<property name="path">InhibitIdleShutdown(true)</property>
+			<property name="list">InhibitIdleShutdown(true)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13018]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/power.png</icon>
+			<thumb />
+			<property name="labelID">13018</property>
+			<property name="defaultID">13018</property>
+			<visible>[[System.HasShutdown + System.IsInhibit] + [System.HasShutdown + System.IsInhibit]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>InhibitIdleShutdown(false)</onclick>
+			<property name="path">InhibitIdleShutdown(false)</property>
+			<property name="list">InhibitIdleShutdown(false)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="10">
+			<property name="id">$NUMBER[10]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/shutdowntimer.png</icon>
+			<thumb />
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<visible>[[!System.HasAlarm(shutdowntimer) + [System.CanPowerDown | System.CanSuspend | System.CanHibernate]] + [!System.HasAlarm(shutdowntimer)]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+			<property name="path">AlarmClock(shutdowntimer,Shutdown())</property>
+			<property name="list">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/files.png</icon>
+			<thumb />
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<visible>[[System.HasAlarm(shutdowntimer)] + [System.HasAlarm(shutdowntimer)]] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">CancelAlarm(shutdowntimer)</property>
+			<property name="list">CancelAlarm(shutdowntimer)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="12">
+			<property name="id">$NUMBER[12]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20183]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/reloadskin.png</icon>
+			<thumb />
+			<property name="labelID">20183</property>
+			<property name="defaultID">20183</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ReloadSkin</onclick>
+			<property name="path">ReloadSkin</property>
+			<property name="list">ReloadSkin</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<property name="group">powermenu</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
@@ -1707,9 +1922,9 @@
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20382]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
-			<thumb>resource://resource.images.skinicons.estuary/</thumb>
+			<thumb />
 			<property name="labelID">20382</property>
 			<property name="defaultID">20382</property>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -1725,7 +1940,7 @@
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[135]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultGenre.png</icon>
 			<thumb />
 			<property name="labelID">135</property>
@@ -1744,7 +1959,7 @@
 			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[369]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultMovieTitle.png</icon>
 			<thumb />
 			<property name="labelID">369</property>
@@ -1763,7 +1978,7 @@
 			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[562]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultYear.png</icon>
 			<thumb />
 			<property name="labelID">562</property>
@@ -1782,7 +1997,7 @@
 			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[344]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultActor.png</icon>
 			<thumb />
 			<property name="labelID">344</property>
@@ -1801,7 +2016,7 @@
 			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20348]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultDirector.png</icon>
 			<thumb />
 			<property name="labelID">20348</property>
@@ -1820,7 +2035,7 @@
 			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20388]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultStudios.png</icon>
 			<thumb />
 			<property name="labelID">20388</property>
@@ -1839,7 +2054,7 @@
 			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20434]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultSets.png</icon>
 			<thumb />
 			<property name="labelID">20434</property>
@@ -1858,7 +2073,7 @@
 			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20451]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultCountry.png</icon>
 			<thumb />
 			<property name="labelID">20451</property>
@@ -1877,7 +2092,7 @@
 			<property name="id">$NUMBER[10]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20459]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultTags.png</icon>
 			<thumb />
 			<property name="labelID">20459</property>
@@ -1896,7 +2111,7 @@
 			<property name="id">$NUMBER[11]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[653]</label>
-			<label2>Видео</label2>
+			<label2>$LOCALIZE[3]</label2>
 			<icon>DefaultAddonsUpdates.png</icon>
 			<thumb />
 			<property name="labelID">653</property>
@@ -1916,9 +2131,9 @@
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20382]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
-			<thumb>resource://resource.images.skinicons.estuary/</thumb>
+			<thumb />
 			<property name="labelID">20382</property>
 			<property name="defaultID">20382</property>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
@@ -1934,7 +2149,7 @@
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[135]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultGenre.png</icon>
 			<thumb />
 			<property name="labelID">135</property>
@@ -1953,7 +2168,7 @@
 			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[369]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultMovieTitle.png</icon>
 			<thumb />
 			<property name="labelID">369</property>
@@ -1972,7 +2187,7 @@
 			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[562]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultYear.png</icon>
 			<thumb />
 			<property name="labelID">562</property>
@@ -1991,7 +2206,7 @@
 			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[344]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultActor.png</icon>
 			<thumb />
 			<property name="labelID">344</property>
@@ -2010,7 +2225,7 @@
 			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20348]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultDirector.png</icon>
 			<thumb />
 			<property name="labelID">20348</property>
@@ -2029,7 +2244,7 @@
 			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20388]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultStudios.png</icon>
 			<thumb />
 			<property name="labelID">20388</property>
@@ -2048,7 +2263,7 @@
 			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20434]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultSets.png</icon>
 			<thumb />
 			<property name="labelID">20434</property>
@@ -2067,7 +2282,7 @@
 			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20451]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultCountry.png</icon>
 			<thumb />
 			<property name="labelID">20451</property>
@@ -2086,7 +2301,7 @@
 			<property name="id">$NUMBER[10]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[20459]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>DefaultTags.png</icon>
 			<thumb />
 			<property name="labelID">20459</property>
@@ -2105,7 +2320,7 @@
 			<property name="id">$NUMBER[11]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[653]</label>
-			<label2>Видео</label2>
+			<label2>$LOCALIZE[3]</label2>
 			<icon>DefaultAddonsUpdates.png</icon>
 			<thumb />
 			<property name="labelID">653</property>
@@ -4596,12 +4811,446 @@
 	<include name="skinshortcuts-group-alt-num-8">
 		<description>No items</description>
 	</include>
+	<include name="skinshortcuts-group-powermenu">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13012]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/quit.png</icon>
+			<thumb />
+			<property name="labelID">13012</property>
+			<property name="defaultID">13012</property>
+			<visible>[System.ShowExitButton] + [System.ShowExitButton]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Quit</onclick>
+			<property name="path">Quit</property>
+			<property name="list">Quit</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13016]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/shutdown.png</icon>
+			<thumb />
+			<property name="labelID">13016</property>
+			<property name="defaultID">13016</property>
+			<visible>[System.CanPowerDown] + [System.CanPowerDown]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Powerdown</onclick>
+			<property name="path">Powerdown</property>
+			<property name="list">Powerdown</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13011]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/suspend.png</icon>
+			<thumb />
+			<property name="labelID">13011</property>
+			<property name="defaultID">13011</property>
+			<visible>[System.CanSuspend] + [System.CanSuspend]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Suspend</onclick>
+			<property name="path">Suspend</property>
+			<property name="list">Suspend</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13010]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/suspend.png</icon>
+			<thumb />
+			<property name="labelID">13010</property>
+			<property name="defaultID">13010</property>
+			<visible>[System.CanHibernate] + [System.CanHibernate]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Hibernate</onclick>
+			<property name="path">Hibernate</property>
+			<property name="list">Hibernate</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13013]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/reboot.png</icon>
+			<thumb />
+			<property name="labelID">13013</property>
+			<property name="defaultID">13013</property>
+			<visible>[System.CanReboot] + [System.CanReboot]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Reset</onclick>
+			<property name="path">Reset</property>
+			<property name="list">Reset</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20126]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/logout.png</icon>
+			<thumb />
+			<property name="labelID">20126</property>
+			<property name="defaultID">20126</property>
+			<visible>[[System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)] + System.Loggedon] + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>System.LogOff</onclick>
+			<property name="path">System.LogOff</property>
+			<property name="list">System.LogOff</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20046]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/logout.png</icon>
+			<thumb />
+			<property name="labelID">20046</property>
+			<property name="defaultID">20046</property>
+			<visible>[System.HasLocks] + [System.HasLocks]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>mastermode</onclick>
+			<property name="path">mastermode</property>
+			<property name="list">mastermode</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13017]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/power.png</icon>
+			<thumb />
+			<property name="labelID">13017</property>
+			<property name="defaultID">13017</property>
+			<visible>[System.HasShutdown +!System.IsInhibit] + [System.HasShutdown +!System.IsInhibit]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>InhibitIdleShutdown(true)</onclick>
+			<property name="path">InhibitIdleShutdown(true)</property>
+			<property name="list">InhibitIdleShutdown(true)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13018]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/power.png</icon>
+			<thumb />
+			<property name="labelID">13018</property>
+			<property name="defaultID">13018</property>
+			<visible>[System.HasShutdown + System.IsInhibit] + [System.HasShutdown + System.IsInhibit]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>InhibitIdleShutdown(false)</onclick>
+			<property name="path">InhibitIdleShutdown(false)</property>
+			<property name="list">InhibitIdleShutdown(false)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="10">
+			<property name="id">$NUMBER[10]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/shutdowntimer.png</icon>
+			<thumb />
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<visible>[!System.HasAlarm(shutdowntimer) + [System.CanPowerDown | System.CanSuspend | System.CanHibernate]] + [!System.HasAlarm(shutdowntimer)]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+			<property name="path">AlarmClock(shutdowntimer,Shutdown())</property>
+			<property name="list">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/files.png</icon>
+			<thumb />
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<visible>[System.HasAlarm(shutdowntimer)] + [System.HasAlarm(shutdowntimer)]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">CancelAlarm(shutdowntimer)</property>
+			<property name="list">CancelAlarm(shutdowntimer)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="12">
+			<property name="id">$NUMBER[12]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20183]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/reloadskin.png</icon>
+			<thumb />
+			<property name="labelID">20183</property>
+			<property name="defaultID">20183</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ReloadSkin</onclick>
+			<property name="path">ReloadSkin</property>
+			<property name="list">ReloadSkin</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-powermenu">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13012]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/quit.png</icon>
+			<thumb />
+			<property name="labelID">13012</property>
+			<property name="defaultID">13012</property>
+			<visible>[[System.ShowExitButton] + [System.ShowExitButton]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Quit</onclick>
+			<property name="path">Quit</property>
+			<property name="list">Quit</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13016]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/shutdown.png</icon>
+			<thumb />
+			<property name="labelID">13016</property>
+			<property name="defaultID">13016</property>
+			<visible>[[System.CanPowerDown] + [System.CanPowerDown]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Powerdown</onclick>
+			<property name="path">Powerdown</property>
+			<property name="list">Powerdown</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13011]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/suspend.png</icon>
+			<thumb />
+			<property name="labelID">13011</property>
+			<property name="defaultID">13011</property>
+			<visible>[[System.CanSuspend] + [System.CanSuspend]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Suspend</onclick>
+			<property name="path">Suspend</property>
+			<property name="list">Suspend</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13010]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/suspend.png</icon>
+			<thumb />
+			<property name="labelID">13010</property>
+			<property name="defaultID">13010</property>
+			<visible>[[System.CanHibernate] + [System.CanHibernate]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Hibernate</onclick>
+			<property name="path">Hibernate</property>
+			<property name="list">Hibernate</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13013]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/reboot.png</icon>
+			<thumb />
+			<property name="labelID">13013</property>
+			<property name="defaultID">13013</property>
+			<visible>[[System.CanReboot] + [System.CanReboot]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>Reset</onclick>
+			<property name="path">Reset</property>
+			<property name="list">Reset</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20126]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/logout.png</icon>
+			<thumb />
+			<property name="labelID">20126</property>
+			<property name="defaultID">20126</property>
+			<visible>[[[System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)] + System.Loggedon] + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>System.LogOff</onclick>
+			<property name="path">System.LogOff</property>
+			<property name="list">System.LogOff</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20046]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/logout.png</icon>
+			<thumb />
+			<property name="labelID">20046</property>
+			<property name="defaultID">20046</property>
+			<visible>[[System.HasLocks] + [System.HasLocks]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>mastermode</onclick>
+			<property name="path">mastermode</property>
+			<property name="list">mastermode</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13017]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/power.png</icon>
+			<thumb />
+			<property name="labelID">13017</property>
+			<property name="defaultID">13017</property>
+			<visible>[[System.HasShutdown +!System.IsInhibit] + [System.HasShutdown +!System.IsInhibit]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>InhibitIdleShutdown(true)</onclick>
+			<property name="path">InhibitIdleShutdown(true)</property>
+			<property name="list">InhibitIdleShutdown(true)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[13018]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/power.png</icon>
+			<thumb />
+			<property name="labelID">13018</property>
+			<property name="defaultID">13018</property>
+			<visible>[[System.HasShutdown + System.IsInhibit] + [System.HasShutdown + System.IsInhibit]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>InhibitIdleShutdown(false)</onclick>
+			<property name="path">InhibitIdleShutdown(false)</property>
+			<property name="list">InhibitIdleShutdown(false)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="10">
+			<property name="id">$NUMBER[10]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/shutdowntimer.png</icon>
+			<thumb />
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<visible>[[!System.HasAlarm(shutdowntimer) + [System.CanPowerDown | System.CanSuspend | System.CanHibernate]] + [!System.HasAlarm(shutdowntimer)]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+			<property name="path">AlarmClock(shutdowntimer,Shutdown())</property>
+			<property name="list">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/files.png</icon>
+			<thumb />
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<visible>[[System.HasAlarm(shutdowntimer)] + [System.HasAlarm(shutdowntimer)]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">CancelAlarm(shutdowntimer)</property>
+			<property name="list">CancelAlarm(shutdowntimer)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="12">
+			<property name="id">$NUMBER[12]</property>
+			<property name="mainmenuid">14</property>
+			<label>$LOCALIZE[20183]</label>
+			<label2>$LOCALIZE[13005]</label2>
+			<icon>resource://resource.images.skinicons.estuary/reloadskin.png</icon>
+			<thumb />
+			<property name="labelID">20183</property>
+			<property name="defaultID">20183</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ReloadSkin</onclick>
+			<property name="path">ReloadSkin</property>
+			<property name="list">ReloadSkin</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
 	<include name="skinshortcuts-template-submenus">
 		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-submenus-Master user</include>
 	</include>
 	<include name="skinshortcuts-template-submenus-Master user">
 		<control type="group" id="23000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),movies)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="1" />
 			</include>
@@ -4689,7 +5338,7 @@
 			</include>
 		</control>
 		<control type="group" id="24000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="2" />
 			</include>
@@ -4777,7 +5426,7 @@
 			</include>
 		</control>
 		<control type="group" id="25000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),music)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="3" />
 			</include>
@@ -4865,7 +5514,7 @@
 			</include>
 		</control>
 		<control type="group" id="26000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-427)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-427)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="4" />
 			</include>
@@ -4953,7 +5602,7 @@
 			</include>
 		</control>
 		<control type="group" id="27000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="5" />
 			</include>
@@ -5041,7 +5690,7 @@
 			</include>
 		</control>
 		<control type="group" id="28000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="6" />
 			</include>
@@ -5129,7 +5778,7 @@
 			</include>
 		</control>
 		<control type="group" id="29000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="7" />
 			</include>
@@ -5217,7 +5866,7 @@
 			</include>
 		</control>
 		<control type="group" id="30000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-15016)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-15016)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="8" />
 			</include>
@@ -5305,7 +5954,7 @@
 			</include>
 		</control>
 		<control type="group" id="31000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="9" />
 			</include>
@@ -5393,7 +6042,7 @@
 			</include>
 		</control>
 		<control type="group" id="32000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-1)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-1)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="10" />
 			</include>
@@ -5481,7 +6130,7 @@
 			</include>
 		</control>
 		<control type="group" id="33000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),videos)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),videos)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="11" />
 			</include>
@@ -5569,7 +6218,7 @@
 			</include>
 		</control>
 		<control type="group" id="34000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-1036)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-1036)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="12" />
 			</include>
@@ -5657,7 +6306,7 @@
 			</include>
 		</control>
 		<control type="group" id="35000">
-			<visible>String.IsEqual(Container(0).ListItem.Property(submenuVisibility),num-8)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-8)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="13" />
 			</include>

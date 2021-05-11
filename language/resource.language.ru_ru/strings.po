@@ -780,23 +780,23 @@ msgctxt "#32142"
 msgid "Sort direction of widget"
 msgstr "Направление сортировки в виджете"
 
-msgctxt "#32143"
+msgctxt "#33143"
 msgid "Posters"
 msgstr "Постеры"
 
-msgctxt "#32144"
+msgctxt "#33144"
 msgid "Thumbs"
 msgstr "Эскизы"
 
-msgctxt "#32145"
+msgctxt "#33145"
 msgid "Squares"
 msgstr "Квадраты"
 
-msgctxt "#32146"
+msgctxt "#33146"
 msgid "Categories"
 msgstr "Категории"
 
-msgctxt "#32147"
+msgctxt "#33147"
 msgid "Channels"
 msgstr "Каналы"
 
@@ -960,7 +960,7 @@ msgctxt "#32187"
 msgid "Next location"
 msgstr "Следующее местоположение"
 
-msgctxt "#32188"
+msgctxt "#33188"
 msgid "User list of add-ons"
 msgstr "Пользовательский список дополнений"
 
@@ -1036,55 +1036,55 @@ msgctxt "#32206"
 msgid "Set type of widgets"
 msgstr "Выберите тип виджетов"
 
-msgctxt "#32207"
+msgctxt "#33207"
 msgid "Weather Widgets"
 msgstr "Виджеты погоды"
 
-msgctxt "#32208"
+msgctxt "#33208"
 msgid "Pictures Widgets"
 msgstr "Виджеты картинок"
 
-msgctxt "#32209"
+msgctxt "#33209"
 msgid "Video Widgets"
 msgstr "Виджеты видео"
 
-msgctxt "#32210"
+msgctxt "#33210"
 msgid "LiveTV Widgets"
 msgstr "Виджеты ТВ"
 
-msgctxt "#32211"
+msgctxt "#33211"
 msgid "Radio Widgets"
 msgstr "Виджеты радио"
 
-msgctxt "#32212"
+msgctxt "#33212"
 msgid "Movies Widgets"
 msgstr "Виджеты фильмов"
 
-msgctxt "#32213"
+msgctxt "#33213"
 msgid "TVShows Widgets"
 msgstr "Виджеты сериалов"
 
-msgctxt "#32214"
+msgctxt "#33214"
 msgid "Music Videos widgets"
 msgstr "Виджеты муз. видео"
 
-msgctxt "#32215"
+msgctxt "#33215"
 msgid "Music Widgets"
 msgstr "Виджеты музыки"
 
-msgctxt "#32216"
+msgctxt "#33216"
 msgid "Addons Widgets"
 msgstr "Виджеты дополнений"
 
-msgctxt "#32217"
+msgctxt "#33217"
 msgid "Games Widgets"
 msgstr "Виджеты игр"
 
-msgctxt "#32218"
+msgctxt "#33218"
 msgid "Favourites Widget"
 msgstr "Виджет избранного"
 
-msgctxt "#32219"
+msgctxt "#33219"
 msgid "Media Widgets"
 msgstr "Виджеты медиа"
 
@@ -1104,11 +1104,11 @@ msgctxt "#32223"
 msgid "Channel"
 msgstr "Канал"
 
-msgctxt "#32224"
+msgctxt "#33224"
 msgid "Favourites TV Channels"
 msgstr "Избранные ТВ каналы"
 
-msgctxt "#32225"
+msgctxt "#33225"
 msgid "Favourites Radio Channels"
 msgstr "Избранные Радио каналы"
 

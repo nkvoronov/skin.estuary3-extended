@@ -967,23 +967,23 @@ msgctxt "#32142"
 msgid "Sort direction of widget"
 msgstr ""
 
-msgctxt "#32143"
+msgctxt "#33143"
 msgid "Posters"
 msgstr ""
 
-msgctxt "#32144"
+msgctxt "#33144"
 msgid "Thumbs"
 msgstr ""
 
-msgctxt "#32145"
+msgctxt "#33145"
 msgid "Squares"
 msgstr ""
 
-msgctxt "#32146"
+msgctxt "#33146"
 msgid "Categories"
 msgstr ""
 
-msgctxt "#32147"
+msgctxt "#33147"
 msgid "Channels"
 msgstr ""
 
@@ -1147,7 +1147,7 @@ msgctxt "#32187"
 msgid "Next location"
 msgstr ""
 
-msgctxt "#32188"
+msgctxt "#33188"
 msgid "User list of add-ons"
 msgstr ""
 
@@ -1223,55 +1223,55 @@ msgctxt "#32206"
 msgid "Set type of widgets"
 msgstr ""
 
-msgctxt "#32207"
+msgctxt "#33207"
 msgid "Weather Widgets"
 msgstr ""
 
-msgctxt "#32208"
+msgctxt "#33208"
 msgid "Pictures Widgets"
 msgstr ""
 
-msgctxt "#32209"
+msgctxt "#33209"
 msgid "Video Widgets"
 msgstr ""
 
-msgctxt "#32210"
+msgctxt "#33210"
 msgid "LiveTV Widgets"
 msgstr ""
 
-msgctxt "#32211"
+msgctxt "#33211"
 msgid "Radio Widgets"
 msgstr ""
 
-msgctxt "#32212"
+msgctxt "#33212"
 msgid "Movies Widgets"
 msgstr ""
 
-msgctxt "#32213"
+msgctxt "#33213"
 msgid "TVShows Widgets"
 msgstr ""
 
-msgctxt "#32214"
+msgctxt "#33214"
 msgid "Music Videos widgets"
 msgstr ""
 
-msgctxt "#32215"
+msgctxt "#33215"
 msgid "Music Widgets"
 msgstr ""
 
-msgctxt "#32216"
+msgctxt "#33216"
 msgid "Addons Widgets"
 msgstr ""
 
-msgctxt "#32217"
+msgctxt "#33217"
 msgid "Games Widgets"
 msgstr ""
 
-msgctxt "#32218"
+msgctxt "#33218"
 msgid "Favourites Widget"
 msgstr ""
 
-msgctxt "#32219"
+msgctxt "#33219"
 msgid "Media Widgets"
 msgstr ""
 
@@ -1291,11 +1291,11 @@ msgctxt "#32223"
 msgid "Channel"
 msgstr ""
 
-msgctxt "#32224"
+msgctxt "#33224"
 msgid "Favourites TV Channels"
 msgstr ""
 
-msgctxt "#32225"
+msgctxt "#33225"
 msgid "Favourites Radio Channels"
 msgstr ""
 

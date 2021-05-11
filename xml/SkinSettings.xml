@@ -5,7 +5,7 @@
 	<onload condition="String.IsEmpty(Skin.String(BackgroundOverlay))">Skin.SetString(BackgroundOverlay,1)</onload>
 	<onload>SetProperty(fanarthometype,settings,Home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
-	<onunload>RunScript(script.skinshortcuts,type=buildxml,mainmenuID=9000,group=mainmenu|powermenu)</onunload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group" id="10000">

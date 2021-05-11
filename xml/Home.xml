@@ -4,7 +4,7 @@
 	<onload>SetProperty(CurrentSkin,skin.estuary3-extended,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(fanarthometype))">ClearProperty(fanarthometype,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(homebackground))">ClearProperty(homebackground,Home)</onload>
-	<onload>RunScript(script.skinshortcuts,type=buildxml,mainmenuID=9000,group=mainmenu|powermenu)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
 	<onload condition="System.AddonIsEnabled(script.skin.utils) + Skin.HasSetting(CustomListChannels) + [Skin.HasSetting(EnableCustomListChannelsTV) | Skin.HasSetting(EnableCustomListChannelsRadio)]">RunScript(script.skin.utils,action=updatechannel)</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$VAR[CustomFocusVar])</onload>
 
