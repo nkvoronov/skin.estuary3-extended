@@ -288,7 +288,7 @@
 			<label>- $LOCALIZE[32223] [B]1[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].0.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].0)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].0)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>			
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -299,7 +299,7 @@
 			<label>- $LOCALIZE[32223] [B]2[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].1.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].1)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].1)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -311,7 +311,7 @@
 			<label>- $LOCALIZE[32223] [B]3[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].2.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].2)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].2)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -323,7 +323,7 @@
 			<label>- $LOCALIZE[32223] [B]4[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].3.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].3)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].3)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -335,7 +335,7 @@
 			<label>- $LOCALIZE[32223] [B]5[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].4.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].4)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].4)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -347,7 +347,7 @@
 			<label>- $LOCALIZE[32223] [B]6[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].5.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].5)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].5)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -359,7 +359,7 @@
 			<label>- $LOCALIZE[32223] [B]7[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].6.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].6)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].6)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -371,7 +371,7 @@
 			<label>- $LOCALIZE[32223] [B]8[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].7.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].7)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].7)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -383,7 +383,7 @@
 			<label>- $LOCALIZE[32223] [B]9[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].8.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].8)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].8)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -395,7 +395,7 @@
 			<label>- $LOCALIZE[32223] [B]10[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].9.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
-			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,isradio=$PARAM[type],property=Channel$PARAM[setchannelstype].9)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=Channel$PARAM[setchannelstype].9)</onclick>
 			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>

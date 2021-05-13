@@ -630,7 +630,7 @@
 				<include>DefaultSettingButton</include>
 				<label>$PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectcolor,skinstring=$PARAM[property])</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectcolor,header=$PARAM[label],skinstring=$PARAM[property])</onclick>
 				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 			</control>
@@ -639,7 +639,7 @@
 				<include>DefaultSettingButton</include>
 				<label>- $LOCALIZE[13007]</label>
 				<onclick>Skin.Reset($PARAM[property])</onclick>
-				<visible>!String.IsEmpty(Skin.String($PARAM[property]))</visible>
+				<visible>!String.IsEmpty(Skin.String($PARAM[property])) + !String.IsEqual(Skin.String($PARAM[property]), None)</visible>
 			</control>
 		</definition>
 	</include>

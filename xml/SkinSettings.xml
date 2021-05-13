@@ -286,7 +286,7 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[32122]</label>
 					<label2>$VAR[SkinSettingSpinnerVar]</label2>
-					<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=busytexture)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setbusytexture)</onclick>
 					<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 					<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 				</control>
@@ -308,7 +308,7 @@
 					<label>$LOCALIZE[32124]</label>
 					<onclick>Skin.ToggleSetting(CustomListChannels)</onclick>
 					<selected>Skin.HasSetting(CustomListChannels)</selected>
-					<visible>System.HasAddon(script.pvr.favourites)</visible>
+					<visible>System.HasAddon(script.skin.utils)</visible>
 					<visible>PVR.HasTVChannels | PVR.HasRadioChannels</visible>
 				</control>
 				<control type="image" id="223">
