@@ -1220,7 +1220,7 @@ msgid "Music Playlist"
 msgstr ""
 
 msgctxt "#32206"
-msgid "Set type of widgets"
+msgid "Select type of widgets"
 msgstr ""
 
 msgctxt "#33207"
@@ -1357,6 +1357,10 @@ msgstr ""
 
 msgctxt "#32240"
 msgid "Search TheMovieDB"
+msgstr ""
+
+msgctxt "#32241"
+msgid "Select background"
 msgstr ""
 
 ###############################

@@ -1156,7 +1156,7 @@
 	</variable>
 	<variable name="BackgroundPowerNameVar">
 		<value condition="!String.IsEmpty(Skin.String(BackgroundPower))">$INFO[Skin.String(BackgroundPower)]</value>
-		<value>$LOCALIZE[15109]</value>
+		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="BackgroundSettingsVar">
 		<value condition="!String.IsEmpty(Skin.String(BackgroundSettings))">$INFO[Skin.String(BackgroundSettings)]</value>
@@ -1164,7 +1164,7 @@
 	</variable>
 	<variable name="BackgroundSettingsNameVar">
 		<value condition="!String.IsEmpty(Skin.String(BackgroundSettings))">$INFO[Skin.String(BackgroundSettings)]</value>
-		<value>$LOCALIZE[15109]</value>
+		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="BackgroundSearchVar">
 		<value condition="!String.IsEmpty(Skin.String(BackgroundSearch))">$INFO[Skin.String(BackgroundSearch)]</value>
@@ -1172,7 +1172,7 @@
 	</variable>
 	<variable name="BackgroundSearchNameVar">
 		<value condition="!String.IsEmpty(Skin.String(BackgroundSearch))">$INFO[Skin.String(BackgroundSearch)]</value>
-		<value>$LOCALIZE[15109]</value>
+		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="BackgroundAudioVar">
 		<value condition="!String.IsEmpty(Skin.String(BackgroundAudio))">$INFO[Skin.String(BackgroundAudio)]</value>
@@ -1180,7 +1180,7 @@
 	</variable>
 	<variable name="BackgroundAudioNameVar">
 		<value condition="!String.IsEmpty(Skin.String(BackgroundAudio))">$INFO[Skin.String(BackgroundAudio)]</value>
-		<value>$LOCALIZE[15109]</value>
+		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="HomeFanartNameVar">
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.name))">$INFO[Skin.String(HomeFanart.name)]</value>

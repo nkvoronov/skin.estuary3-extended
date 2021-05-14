@@ -402,9 +402,8 @@
 			</control>
 		</control>
 	</include> -->
-	<include name="CustomSelectDialog">
-		<param name="header">$LOCALIZE[33069]</param>
-		<param name="content">BackgroundsSelVal</param>
+	<include name="BackgroundSelect">
+		<param name="header">$LOCALIZE[32241]</param>
 		<param name="enable">true</param>
 		<param name="reload">false</param>
 		<definition>
@@ -413,11 +412,9 @@
 				<include>DefaultSettingButton</include>
 				<label>- $PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick>SetProperty(dlg_title,$PARAM[header],Home)</onclick>
-				<onclick>SetProperty(dlg_content,$PARAM[content],Home)</onclick>
-				<onclick>SetProperty(dlg_property,$PARAM[property],Home)</onclick>
-				<onclick>ActivateWindow(1200)</onclick>
-				<onclick condition="$PARAM[reload]">SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setbackground,header=$PARAM[header] - $PARAM[label],skinstring=$PARAM[property])</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>				
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
@@ -460,168 +457,6 @@
 	<include name="Lrclyrics_Dialog">
 		<include>Animation_DialogPopupOpenClose</include>
 		<depth>DepthOSD</depth>
-	</include>
-	<include name="SelectDialog">
-		<definition>
-			<control type="group">
-				<centertop>50%</centertop>
-				<centerleft>50%</centerleft>
-				<height>742</height>
-				<width>1220</width>
-				<include content="DialogBackgroundCommons">
-					<param name="width" value="1220" />
-					<param name="height" value="742" />
-					<param name="header_label" value="$PARAM[dialogheaderlab]" />
-					<param name="header_id" value="1" />
-				</include>
-				<control type="image">
-					<left>0</left>
-					<top>80</top>
-					<width>920</width>
-					<height>665</height>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control>
-				<control type="list" id="6">
-					<left>20</left>
-					<top>100</top>
-					<width>880</width>
-					<height>625</height>
-					<onup>6</onup>
-					<ondown>6</ondown>
-					<onleft>9001</onleft>
-					<onright>61</onright>
-					<pagecontrol>61</pagecontrol>
-					<scrolltime>200</scrolltime>
-					<itemlayout height="125" width="880">
-						<control type="image">
-							<left>12</left>
-							<top>7</top>
-							<width>110</width>
-							<height>110</height>
-							<texture colordiffuse="$VAR[GreyColorVar]">$INFO[Listitem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="label">
-							<left>135</left>
-							<top>0</top>
-							<right>20</right>
-							<height>60</height>
-							<font>font14</font>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="textbox">
-							<left>135</left>
-							<top>52</top>
-							<right>20</right>
-							<height>65</height>
-							<font>font12</font>
-							<textcolor>$VAR[GreyColorVar]</textcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="125" width="880">
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<bottom>0</bottom>
-							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
-							<visible>Control.HasFocus(6)</visible>
-						</control>
-						<control type="image">
-							<left>12</left>
-							<top>7</top>
-							<width>110</width>
-							<height>110</height>
-							<texture>$INFO[Listitem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="label">
-							<left>135</left>
-							<top>0</top>
-							<right>20</right>
-							<height>60</height>
-							<aligny>center</aligny>
-							<scroll>true</scroll>
-							<font>font14</font>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="textbox">
-							<left>135</left>
-							<top>52</top>
-							<right>20</right>
-							<height>65</height>
-							<font>font12</font>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</focusedlayout>
-					<content>
-						<include content="BackgroundsSelVal" condition="String.IsEqual(Window(Home).Property(dlg_content),BackgroundsSelVal)">
-							<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
-						</include>
-					</content>
-				</control>
-				<control type="scrollbar" id="61">
-					<left>910</left>
-					<top>100</top>
-					<width>12</width>
-					<height>625</height>
-					<onleft>6</onleft>
-					<onright>9001</onright>
-					<orientation>vertical</orientation>
-				</control>
-				<control type="label">
-					<left>925</left>
-					<top>695</top>
-					<width>275</width>
-					<height>35</height>
-					<font>font12</font>
-					<align>right</align>
-					<aligny>center</aligny>
-					<textcolor>$VAR[GreyColorVar]</textcolor>
-					<label>$VAR[SelectLabelVar]</label>
-				</control>
-				<control type="grouplist" id="9001">
-					<left>920</left>
-					<top>80</top>
-					<onleft>61</onleft>
-					<itemgap>dialogbuttons_itemgap</itemgap>
-					<onright>6</onright>
-					<include content="DefaultDialogButton">
-						<param name="id" value="7" />
-						<param name="label" value="$LOCALIZE[222]" />
-						<param name="onclick" value="PreviousMenu" />
-					</include>
-				</control>
-			</control>
-		</definition>
-	</include>
-	<include name="BackgroundsSelVal">
-		<item id="1">
-			<description>Reset Background</description>
-			<icon>DefaultAddon.png</icon>
-			<label>$LOCALIZE[15109]</label>
-			<label2></label2>
-			<onclick>Skin.Reset($PARAM[dialogsettingval])</onclick>
-			<onclick>PreviousMenu</onclick>
-		</item>
-		<item id="2">
-			<description>Own Background</description>
-			<icon>DefaultFile.png</icon>
-			<label>$LOCALIZE[32233]</label>
-			<label2></label2>
-			<onclick>Skin.SetImage($PARAM[dialogsettingval])</onclick>
-			<onclick>PreviousMenu</onclick>
-		</item>
-		<item id="3">
-			<description>Multi Background</description>
-			<icon>DefaultFolder.png</icon>
-			<label>$LOCALIZE[32234]</label>
-			<label2></label2>
-			<onclick>Skin.SetPath($PARAM[dialogsettingval])</onclick>
-			<onclick>PreviousMenu</onclick>
-		</item>
 	</include>
 	<include name="ColorSkinSetting">
 		<definition>

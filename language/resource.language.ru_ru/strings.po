@@ -1033,8 +1033,8 @@ msgid "Music Playlist"
 msgstr "Музыкальный плейлист"
 
 msgctxt "#32206"
-msgid "Set type of widgets"
-msgstr "Выберите тип виджетов"
+msgid "Select type of widgets"
+msgstr "Выбрать тип виджетов"
 
 msgctxt "#33207"
 msgid "Weather Widgets"
@@ -1171,6 +1171,10 @@ msgstr "Продолжается"
 msgctxt "#32240"
 msgid "Search TheMovieDB"
 msgstr "Искать в TheMovieDB"
+
+msgctxt "#32241"
+msgid "Select background"
+msgstr "Выбрать фон"
 
 ###############################
 

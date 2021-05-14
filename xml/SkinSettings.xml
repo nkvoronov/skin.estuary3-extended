@@ -721,14 +721,14 @@
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<include content="CustomSelectDialog">
+				<include content="BackgroundSelect">
 					<param name="control_id" value="512" />
 					<param name="label" value="$LOCALIZE[33060]" />
 					<param name="label2" value="$VAR[BackgroundPowerNameVar]" />
 					<param name="property" value="BackgroundPower" />
 					<param name="enable" value="Skin.HasSetting(SeparateBackground)" />
 				</include>
-				<include content="CustomSelectDialog">
+				<include content="BackgroundSelect">
 					<param name="control_id" value="513" />
 					<param name="label" value="$LOCALIZE[21417]" />
 					<param name="label2" value="$VAR[BackgroundSettingsNameVar]" />
@@ -736,14 +736,14 @@
 					<param name="enable" value="Skin.HasSetting(SeparateBackground)" />
 					<param name="reload" value="true" />
 				</include>
-				<include content="CustomSelectDialog">
+				<include content="BackgroundSelect">
 					<param name="control_id" value="514" />
 					<param name="label" value="$LOCALIZE[137]" />
 					<param name="label2" value="$VAR[BackgroundSearchNameVar]" />
 					<param name="property" value="BackgroundSearch" />
 					<param name="enable" value="Skin.HasSetting(SeparateBackground)" />
 				</include>
-				<include content="CustomSelectDialog">
+				<include content="BackgroundSelect">
 					<param name="control_id" value="515" />
 					<param name="label" value="$LOCALIZE[32154]" />
 					<param name="label2" value="$VAR[BackgroundAudioNameVar]" />

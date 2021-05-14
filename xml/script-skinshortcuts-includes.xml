@@ -3,14 +3,15 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[342]</label>
-			<label2>$LOCALIZE[342]</label2>
+			<label2>Фильмы</label2>
 			<icon>icons/sidemenu/movies.png</icon>
-			<thumb />
+			<thumb>resource://resource.images.skinicons.estuary/</thumb>
 			<property name="labelID">movies</property>
 			<property name="defaultID">movies</property>
 			<property name="widget">MoviesWidget</property>
 			<property name="widgetName">33212</property>
-			<property name="background">special://skin/extras/home-images/movies.jpg</property>
+			<property name="background">protocol://</property>
+			<property name="backgroundName">protocol://</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
@@ -25,14 +26,17 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<label>$LOCALIZE[20343]</label>
-			<label2>$LOCALIZE[20343]</label2>
+			<label2>Сериалы</label2>
 			<icon>icons/sidemenu/tv.png</icon>
-			<thumb />
+			<thumb>resource://resource.images.skinicons.estuary/</thumb>
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
-			<property name="widget">TVShowsWidget</property>
-			<property name="widgetName">33213</property>
+			<property name="widget">MediaWidget</property>
+			<property name="widgetName">33219</property>
 			<property name="background">special://skin/extras/home-images/tvshows.jpg</property>
+			<property name="widgetType" />
+			<property name="widgetTarget" />
+			<property name="widgetPath">MediaWidget</property>
 			<visible>Library.HasContent(TVShows)</visible>
 			<onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
 			<onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
@@ -47,7 +51,7 @@
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
 			<label>$LOCALIZE[2]</label>
-			<label2>$LOCALIZE[2]</label2>
+			<label2>Музыка</label2>
 			<icon>icons/sidemenu/music.png</icon>
 			<thumb />
 			<property name="labelID">music</property>
@@ -68,7 +72,7 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[427]</label>
-			<label2>$LOCALIZE[427]</label2>
+			<label2>Диск</label2>
 			<icon>icons/sidemenu/disc.png</icon>
 			<thumb />
 			<property name="labelID">427</property>
@@ -88,7 +92,7 @@
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
 			<label>$LOCALIZE[20389]</label>
-			<label2>$LOCALIZE[20389]</label2>
+			<label2>Клипы</label2>
 			<icon>icons/sidemenu/musicvideos.png</icon>
 			<thumb />
 			<property name="labelID">musicvideos</property>
@@ -110,7 +114,7 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[19020]</label>
-			<label2>$LOCALIZE[19020]</label2>
+			<label2>ТВ</label2>
 			<icon>icons/sidemenu/livetv.png</icon>
 			<thumb />
 			<property name="labelID">19020</property>
@@ -132,7 +136,7 @@
 		<item id="7">
 			<property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[19021]</label>
-			<label2>$LOCALIZE[19021]</label2>
+			<label2>Радио</label2>
 			<icon>icons/sidemenu/radio.png</icon>
 			<thumb />
 			<property name="labelID">19021</property>
@@ -154,7 +158,7 @@
 		<item id="8">
 			<property name="id">$NUMBER[8]</property>
 			<label>$LOCALIZE[15016]</label>
-			<label2>$LOCALIZE[15016]</label2>
+			<label2>Игры</label2>
 			<icon>icons/sidemenu/games.png</icon>
 			<thumb />
 			<property name="labelID">15016</property>
@@ -176,7 +180,7 @@
 		<item id="9">
 			<property name="id">$NUMBER[9]</property>
 			<label>$LOCALIZE[24001]</label>
-			<label2>$LOCALIZE[24001]</label2>
+			<label2>Дополнения</label2>
 			<icon>icons/sidemenu/addons.png</icon>
 			<thumb />
 			<property name="labelID">24001</property>
@@ -197,7 +201,7 @@
 		<item id="10">
 			<property name="id">$NUMBER[10]</property>
 			<label>$LOCALIZE[1]</label>
-			<label2>$LOCALIZE[1]</label2>
+			<label2>Изображения</label2>
 			<icon>icons/sidemenu/pictures.png</icon>
 			<thumb />
 			<property name="labelID">1</property>
@@ -218,7 +222,7 @@
 		<item id="11">
 			<property name="id">$NUMBER[11]</property>
 			<label>$LOCALIZE[3]</label>
-			<label2>$LOCALIZE[3]</label2>
+			<label2>Видео</label2>
 			<icon>icons/sidemenu/videos.png</icon>
 			<thumb />
 			<property name="labelID">videos</property>
@@ -239,7 +243,7 @@
 		<item id="12">
 			<property name="id">$NUMBER[12]</property>
 			<label>$LOCALIZE[1036]</label>
-			<label2>$LOCALIZE[1036]</label2>
+			<label2>Избранное</label2>
 			<icon>icons/sidemenu/favourites.png</icon>
 			<thumb />
 			<property name="labelID">1036</property>
@@ -260,7 +264,7 @@
 		<item id="13">
 			<property name="id">$NUMBER[13]</property>
 			<label>$LOCALIZE[8]</label>
-			<label2>$LOCALIZE[8]</label2>
+			<label2>Погода</label2>
 			<icon>icons/sidemenu/weather.png</icon>
 			<thumb />
 			<property name="labelID">8</property>
@@ -5353,7 +5357,7 @@
 					<param name="custom" value="true" />
 					<param name="list_id" value="24100" />
 				</include>
-				<include content="include-TVShowsWidget">
+				<include content="include-MediaWidget">
 					<param name="control_id" value="24" />
 					<param name="widget1_name" value="" />
 					<param name="widget1_name_focus" value="$VAR[WidgetLabelFocus24200Var]" />
