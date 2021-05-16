@@ -709,7 +709,7 @@
 					<selected>Skin.HasSetting(usecustombg)</selected>
 					<enable>!Skin.HasSetting(separatebackground)</enable>
 				</control>
-				<include content="CustomSelectDialog">
+				<include content="BackgroundSelect">
 					<param name="control_id" value="510" />
 					<param name="label" value="$LOCALIZE[32153]" />
 					<param name="label2" value="$INFO[Skin.String(custombackground)]" />

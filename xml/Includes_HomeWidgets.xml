@@ -305,7 +305,7 @@
 					<param name="texture" value="icons/weather/sunset.png" />
 					<param name="header" value="403" />
 				</include>
-				<include content="WeatherImages" condition="!String.IsEmpty(Weather.Plugin)">
+				<include content="WeatherIcons" condition="!String.IsEmpty(Weather.Plugin)">
 					<param name="left" value="0" />
 					<param name="top" value="-10" />
 					<param name="width" value="130" />

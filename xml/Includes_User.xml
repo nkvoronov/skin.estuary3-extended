@@ -15,7 +15,7 @@
 	<include name="Right_55">
 		<right>0</right>
 	</include>
-	<include name="WeatherImages">
+	<include name="WeatherIcons">
 		<param name="left">50</param>
 		<param name="top">232</param>
 		<param name="width">300</param>

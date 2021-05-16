@@ -116,7 +116,7 @@
 						<param name="texture" value="icons/weather/sunset.png" />
 						<param name="header" value="$LOCALIZE[403]" />
 					</include>
-					<include content="WeatherImages">
+					<include content="WeatherIcons">
 						<param name="left" value="0" />
 						<param name="top" value="-5" />
 						<param name="width" value="130" />
