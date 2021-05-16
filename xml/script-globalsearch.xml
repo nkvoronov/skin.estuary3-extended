@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<views>50,54</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
@@ -50,7 +50,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="label">
@@ -62,7 +62,7 @@
 						<scroll>true</scroll>
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<top>0</top>
@@ -74,7 +74,7 @@
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					</control>
 					<control type="image">
 						<left>21</left>
@@ -89,7 +89,7 @@
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						<animation effect="fade" time="150">VisibleChange</animation>
 						<visible>!Control.HasFocus(50)</visible>
@@ -104,7 +104,7 @@
 						<aligny>center</aligny>
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -115,15 +115,15 @@
 						<aligny>center</aligny>
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<textcolor>$VAR[ColorMainVar]</textcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					</control>
 					<control type="image">
 						<left>21</left>
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="$VAR[GreyColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[ColorGreyVar]">$VAR[ListWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
 			</control>
@@ -205,7 +205,7 @@
 						<left>64</left>
 						<top>110</top>
 						<include content="ThumbLayout">
-							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]" />
+							<param name="thumb_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Duration][/COLOR]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
 							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
@@ -221,7 +221,7 @@
 						<top>110</top>
 						<include content="ThumbLayout">
 							<param name="focused" value="true" />
-							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]" />
+							<param name="thumb_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Duration][/COLOR]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
 							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
@@ -391,7 +391,7 @@
 			</include>
 			<control type="group">
 				<centerleft>50%</centerleft>
-				<visible>!Skin.HasSetting(HideLogoSearch)</visible>
+				<visible>!Skin.HasSetting(hidelogosearch)</visible>
 				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)] + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				<control type="image">
 					<top>0</top>
@@ -407,7 +407,7 @@
 				<height>70</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<include condition="!Skin.HasSetting(HideMediaFlagsSearch)" content="MediaFlags">
+				<include condition="!Skin.HasSetting(hidemediaflagssearch)" content="MediaFlags">
 					<param name="infolabel_prefix" value="Container." />
 					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
 				</include>
@@ -428,7 +428,7 @@
 					<top>86</top>
 					<width>118</width>
 					<height>118</height>
-					<texture colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texture>
+					<texture colordiffuse="$VAR[ColorMainVar]">buttons/roundbutton-fo.png</texture>
 					<visible>Control.HasFocus(990)</visible>
 				</control>
 				<control type="image">
@@ -436,7 +436,7 @@
 					<top>125</top>
 					<width>40</width>
 					<height>40</height>
-					<texture colordiffuse="$VAR[GreyColorVar]">icons/search.png</texture>
+					<texture colordiffuse="$VAR[ColorGreyVar]">icons/search.png</texture>
 					<visible>Control.IsVisible(990) + !Control.HasFocus(990)</visible>
 				</control>
 				<control type="image">
@@ -498,7 +498,7 @@
 						<radioposx>300</radioposx>
 						<font>font25_title</font>
 						<aligny>top</aligny>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[ColorMainVar]</textcolor>
 						<label>$LOCALIZE[14018]</label>
 					</control>
 					<control type="button" id="2">
@@ -510,7 +510,7 @@
 						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
 						<texturenofocus />
-						<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 						<onup>990</onup>
 						<ondown>SetFocus(9000,0,absolute)</ondown>
 						<onleft>990</onleft>
@@ -528,7 +528,7 @@
 						<radioposx>300</radioposx>
 						<font>font25_title</font>
 						<aligny>top</aligny>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[ColorMainVar]</textcolor>
 						<label>$LOCALIZE[14211]</label>
 					</control>
 					<control type="fixedlist" id="9000">
@@ -550,7 +550,7 @@
 									<top>0</top>
 									<width>470</width>
 									<height>95</height>
-									<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+									<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasModalDialog">Conditional</animation>
 								</control>
 								<control type="image">
@@ -558,7 +558,7 @@
 									<top>1</top>
 									<width>95</width>
 									<height>95</height>
-									<texture colordiffuse="$VAR[MainColorVar]">$VAR[SearchIconVar]</texture>
+									<texture colordiffuse="$VAR[ColorMainVar]">$VAR[SearchIconVar]</texture>
 									<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 								</control>
 								<control type="image">
@@ -585,7 +585,7 @@
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label]</label>
-								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+								<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>104</left>
@@ -596,7 +596,7 @@
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>[B]$INFO[ListItem.Label2][/B]</label>
-								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+								<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							</control>
 						</focusedlayout>
 						<itemlayout height="95" width="470">
@@ -605,7 +605,7 @@
 								<top>1</top>
 								<width>95</width>
 								<height>95</height>
-								<texture colordiffuse="$VAR[GreyColorVar]">$VAR[SearchIconVar]</texture>
+								<texture colordiffuse="$VAR[ColorGreyVar]">$VAR[SearchIconVar]</texture>
 							</control>
 							<control type="label">
 								<left>104</left>
@@ -615,7 +615,7 @@
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label]</label>
-								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+								<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>104</left>
@@ -626,7 +626,7 @@
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>[B]$INFO[ListItem.Label2][/B]</label>
-								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+								<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							</control>
 						</itemlayout>
 					</control>

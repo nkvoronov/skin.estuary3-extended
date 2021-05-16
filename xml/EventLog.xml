@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<views>50</views>
 	<onload>SetProperty(fanarthometype,settings,Home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
@@ -52,7 +52,7 @@
 							<right>20</right>
 							<height>80</height>
 							<aligny>top</aligny>
-							<textcolor>$VAR[GreyColorVar]</textcolor>
+							<textcolor>$VAR[ColorGreyVar]</textcolor>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
 						</control>
 						<control type="label">
@@ -71,7 +71,7 @@
 							<top>0</top>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="image">
@@ -135,9 +135,9 @@
 						<aligny>top</aligny>
 						<textoffsetx>40</textoffsetx>
 						<texturenofocus />
-						<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 						<alttexturenofocus></alttexturenofocus>
-						<alttexturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</alttexturefocus>
+						<alttexturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</alttexturefocus>
 						<textoffsety>35</textoffsety>
 						<label>$LOCALIZE[31032]: $LOCALIZE[584]</label>
 						<altlabel>$LOCALIZE[31032]: $LOCALIZE[585]</altlabel>
@@ -151,7 +151,7 @@
 						<height>110</height>
 						<aligny>top</aligny>
 						<texturenofocus />
-						<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>35</textoffsety>
 					</control>

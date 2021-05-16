@@ -99,7 +99,7 @@
 					<param name="icon" value="$INFO[PVR.TVNowRecordingChannelIcon]" />
 					<param name="header" value="$LOCALIZE[19158]" />
 					<param name="label1" value="$INFO[PVR.TVNowRecordingDateTime]" />
-					<param name="label2" value="$INFO[PVR.TVNowRecordingTitle][CR][COLOR $VAR[GreyColorVar]]$INFO[PVR.TVNowRecordingChannel][/COLOR]" />
+					<param name="label2" value="$INFO[PVR.TVNowRecordingTitle][CR][COLOR $VAR[ColorGreyVar]]$INFO[PVR.TVNowRecordingChannel][/COLOR]" />
 				</include>
 			</control>
 			<control type="group">
@@ -109,7 +109,7 @@
 					<param name="icon" value="$INFO[PVR.TVNextRecordingChannelIcon]" />
 					<param name="header" value="$LOCALIZE[19157]" />
 					<param name="label1" value="$INFO[PVR.TVNextRecordingDateTime]" />
-					<param name="label2" value="$INFO[PVR.TVNextRecordingTitle][CR][COLOR $VAR[GreyColorVar]]$INFO[PVR.TVNextRecordingChannel][/COLOR]" />
+					<param name="label2" value="$INFO[PVR.TVNextRecordingTitle][CR][COLOR $VAR[ColorGreyVar]]$INFO[PVR.TVNextRecordingChannel][/COLOR]" />
 				</include>
 			</control>
 		</control>
@@ -130,7 +130,7 @@
 					<param name="icon" value="$INFO[PVR.RadioNowRecordingChannelIcon]" />
 					<param name="header" value="$LOCALIZE[19158]" />
 					<param name="label1" value="$INFO[PVR.RadioNowRecordingDateTime]" />
-					<param name="label2" value="$INFO[PVR.RadioNowRecordingTitle][CR][COLOR $VAR[GreyColorVar]]$INFO[PVR.RadioNowRecordingChannel][/COLOR]" />
+					<param name="label2" value="$INFO[PVR.RadioNowRecordingTitle][CR][COLOR $VAR[ColorGreyVar]]$INFO[PVR.RadioNowRecordingChannel][/COLOR]" />
 				</include>
 			</control>
 			<control type="group">
@@ -140,7 +140,7 @@
 					<param name="icon" value="$INFO[PVR.RadioNextRecordingChannelIcon]" />
 					<param name="header" value="$LOCALIZE[19157]" />
 					<param name="label1" value="$INFO[PVR.RadioNextRecordingDateTime]" />
-					<param name="label2" value="$INFO[PVR.RadioNextRecordingTitle][CR][COLOR $VAR[GreyColorVar]]$INFO[PVR.RadioNextRecordingChannel][/COLOR]" />
+					<param name="label2" value="$INFO[PVR.RadioNextRecordingTitle][CR][COLOR $VAR[ColorGreyVar]]$INFO[PVR.RadioNextRecordingChannel][/COLOR]" />
 				</include>
 			</control>
 		</control>
@@ -241,7 +241,7 @@
 			<param name="list_id" value="$PARAM[list_id]"/>
 			<param name="main_label">$INFO[ListItem.Label]</param>
 			<param name="sub_label">$INFO[ListItem.Artist]</param>
-			<param name="thumb_label">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]</param>
+			<param name="thumb_label">[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Duration][/COLOR]</param>
 			<param name="img_fallback" value="DefaultMusicVideos.png" />
 		</include>
 	</include>
@@ -450,7 +450,7 @@
 					<width>100</width>
 					<height>100</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture colordiffuse="$VAR[BlackColorVar]">dialogs/extendedprogress/loading-back.png</texture>
+					<texture colordiffuse="$VAR[ColorBlackVar]">dialogs/extendedprogress/loading-back.png</texture>
 				</control>
 				<control type="image">
 					<top>$PARAM[posy]</top>
@@ -479,7 +479,7 @@
 					<top>6</top>
 					<width>25</width>
 					<height>25</height>
-					<texture colordiffuse="$VAR[MainColorVar]">OverlayUnwatched.png</texture>
+					<texture colordiffuse="$VAR[ColorMainVar]">OverlayUnwatched.png</texture>
 				</control>
 				<control type="label">
 					<left>22</left>
@@ -489,10 +489,10 @@
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
-					<visible>Skin.HasSetting(HideWidgetLabels) | $PARAM[small_cat]</visible>
+					<visible>Skin.HasSetting(hidewidgetlabels) | $PARAM[small_cat]</visible>
 				</control>
 				<control type="group">
-					<visible>!Skin.HasSetting(HideWidgetLabels)</visible>
+					<visible>!Skin.HasSetting(hidewidgetlabels)</visible>
 					<control type="grouplist">
 						<description>Double label</description>
 						<orientation>horizontal</orientation>
@@ -586,7 +586,7 @@
 			<label>$PARAM[header]</label>
 			<aligny>center</aligny>
 			<font>font36_title</font>
-			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+			<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 		</control>
 		<control type="label">
 			<left>225</left>
@@ -595,7 +595,7 @@
 			<width>420</width>
 			<label>$PARAM[label1][CR]$PARAM[label2]</label>
 			<font>font12</font>
-			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+			<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 		</control>
 	</include>
 	<include name="Widget-Categories">
@@ -606,7 +606,7 @@
 		<param name="content_target"></param>
 		<param name="content_sortby"></param>
 		<param name="content_sortorder"></param>
-		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
 		<param name="img_ratio">keep</param>
 		<param name="img_fallback">DefaultFolder.png</param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
@@ -627,15 +627,15 @@
 				<top>110</top>
 				<right>0</right>
 				<left>0</left>
-				<include condition="!$PARAM[small] + Skin.HasSetting(HideWidgetLabels)">Widget-Categories-HeightMax</include>
-				<include condition="!$PARAM[small] + !Skin.HasSetting(HideWidgetLabels)">Widget-Categories-HeightMin</include>
+				<include condition="!$PARAM[small] + Skin.HasSetting(hidewidgetlabels)">Widget-Categories-HeightMax</include>
+				<include condition="!$PARAM[small] + !Skin.HasSetting(hidewidgetlabels)">Widget-Categories-HeightMin</include>
 				<include condition="$PARAM[small]">Widget-Categories-Small</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="IconLayoutCategories">
@@ -651,7 +651,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -675,7 +675,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="IconLayoutCategories">
@@ -690,7 +690,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -777,7 +777,7 @@
 	<include name="Widget-Posters">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
 		<param name="img_fallback">DefaultFolder.png</param>
 		<param name="content_type">no</param>
 		<param name="content_sortby"></param>
@@ -805,7 +805,7 @@
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<itemlayout width="310" height="486" condition="Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="486" condition="Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>68</left>
 						<top>10</top>
@@ -814,7 +814,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="486" condition="Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="486" condition="Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
@@ -831,7 +831,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="486" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="486" condition="!Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>68</left>
 						<top>10</top>
@@ -842,7 +842,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="486" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="486" condition="!Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
@@ -878,7 +878,7 @@
 	<include name="Widget-Thumbs">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$VAR[ListItemSeasonXEpisodeLabelVar]</param>
@@ -903,14 +903,14 @@
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(HideWidgetLabels)">Widget-Thumbs-HeightMax</include>
-				<include condition="!Skin.HasSetting(HideWidgetLabels)">Widget-Thumbs-HeightMin</include>
+				<include condition="Skin.HasSetting(hidewidgetlabels)">Widget-Thumbs-HeightMax</include>
+				<include condition="!Skin.HasSetting(hidewidgetlabels)">Widget-Thumbs-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -922,7 +922,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -942,7 +942,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="440" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="440" condition="!Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -959,7 +959,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="440" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="440" condition="!Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1008,7 +1008,7 @@
 		<param name="visible">true</param>
 		<param name="custom">false</param>
 		<param name="favourites">false</param>
-		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="img_fallback">DefaultFolder.png</param>
 		<param name="content_type">no</param>
@@ -1032,15 +1032,15 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(HideWidgetLabels)">Widget-Squares-HeightMax</include>
-				<include condition="!Skin.HasSetting(HideWidgetLabels)">Widget-Squares-HeightMin</include>
+				<include condition="Skin.HasSetting(hidewidgetlabels)">Widget-Squares-HeightMax</include>
+				<include condition="!Skin.HasSetting(hidewidgetlabels)">Widget-Squares-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<onclick condition="$PARAM[favourites]">$INFO[ListItem.FileNameAndPath]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -1052,7 +1052,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1072,7 +1072,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="500" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="500" condition="!Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -1087,7 +1087,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1184,7 +1184,7 @@
 	<include name="Widget-Channels">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="label2">$INFO[ListItem.Title]</param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
@@ -1209,14 +1209,14 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(HideWidgetLabels)">Widget-Channels-HeightMax</include>
-				<include condition="!Skin.HasSetting(HideWidgetLabels)">Widget-Channels-HeightMin</include>
+				<include condition="Skin.HasSetting(hidewidgetlabels)">Widget-Channels-HeightMax</include>
+				<include condition="!Skin.HasSetting(hidewidgetlabels)">Widget-Channels-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -1238,7 +1238,7 @@
 							<top>20</top>
 							<width>32</width>
 							<height>32</height>
-							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">$VAR[WallWatchedIconVar]</texture>
 							<visible>!ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -1251,7 +1251,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1281,7 +1281,7 @@
 							<top>20</top>
 							<width>32</width>
 							<height>32</height>
-							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">$VAR[WallWatchedIconVar]</texture>
 							<visible>!ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -1294,7 +1294,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout width="310" height="500" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<itemlayout width="310" height="500" condition="!Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -1316,7 +1316,7 @@
 							<top>20</top>
 							<width>32</width>
 							<height>32</height>
-							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">$VAR[WallWatchedIconVar]</texture>
 							<visible>!ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -1329,7 +1329,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(hidewidgetlabels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1359,7 +1359,7 @@
 							<top>20</top>
 							<width>32</width>
 							<height>32</height>
-							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">$VAR[WallWatchedIconVar]</texture>
 							<visible>!ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -1431,7 +1431,7 @@
 							<textoffsetx>40</textoffsetx>
 							<onclick>$PARAM[button_onclick]</onclick>
 							<align>center</align>
-							<texturefocus border="23" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+							<texturefocus border="23" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 							<visible>$PARAM[visible_1]</visible>
 						</control>
@@ -1443,7 +1443,7 @@
 							<onclick>$PARAM[button2_onclick]</onclick>
 							<onclick>SetFocus(9000)</onclick>
 							<align>center</align>
-							<texturefocus border="23" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+							<texturefocus border="23" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 							<visible>$PARAM[visible_2]</visible>
 						</control>
@@ -1455,7 +1455,7 @@
 							<onclick>$PARAM[button3_onclick]</onclick>
 							<onclick>SetFocus(9000)</onclick>
 							<align>center</align>
-							<texturefocus border="23" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+							<texturefocus border="23" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 							<visible>$PARAM[visible_3]</visible>
 						</control>
@@ -1493,7 +1493,7 @@
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
-						<include content="WeatherIcons">
+						<include content="WeatherImages">
 							<param name="left" value="60" />
 							<param name="top" value="108" />
 							<param name="width" value="130" />
@@ -1550,11 +1550,11 @@
 							<top>20</top>
 							<width>254</width>
 							<height>280</height>
-							<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
-						<include content="WeatherIcons">
+						<include content="WeatherImages">
 							<param name="left" value="60" />
 							<param name="top" value="108" />
 							<param name="width" value="130" />
@@ -1682,19 +1682,19 @@
 			<icon>resource://resource.images.weathericons.default/na.png</icon>
 			<onclick>noop</onclick>
 			<visible>$PARAM[visible]</visible>
-			<visible>String.IsEmpty(Skin.String(WeatherIcons.path))</visible>
+			<visible>String.IsEmpty(Skin.String(weathericons.path))</visible>
 		</item>
 		<item>
-			<icon>$INFO[Skin.String(WeatherIcons.path)]/na.png</icon>
+			<icon>$INFO[Skin.String(weathericons.path)]/na.png</icon>
 			<onclick>noop</onclick>
 			<visible>$PARAM[visible]</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 		<item>
-			<icon>$INFO[Skin.String(WeatherIcons.path)]/</icon>
+			<icon>$INFO[Skin.String(weathericons.path)]/</icon>
 			<onclick>noop</onclick>
 			<visible>$PARAM[visible]</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 	</include>
 	<include name="Widget-WeatherHourlyItem">
@@ -1709,7 +1709,7 @@
 			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode),,.png]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].Outlook)) + String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].ProviderIcon))</visible>
-			<visible>String.IsEmpty(Skin.String(WeatherIcons.path))</visible>
+			<visible>String.IsEmpty(Skin.String(weathericons.path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
@@ -1719,10 +1719,10 @@
 			<property name="Cloudiness">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Cloudiness)]</property>
 			<property name="ShortDate">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].ShortDate)]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode)]</property>
-			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode),,.png]</thumb>
+			<thumb>$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode),,.png]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].Outlook)) + String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].ProviderIcon))</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
@@ -1732,10 +1732,10 @@
 			<property name="Cloudiness">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Cloudiness)]</property>
 			<property name="ShortDate">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].ShortDate)]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode)]</property>
-			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode),,/]</thumb>
+			<thumb>$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode),,/]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].Outlook)) + String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].ProviderIcon))</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
@@ -1753,7 +1753,7 @@
 	<include name="Widget-WeatherDailyItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
-			<label2>[COLOR $VAR[BlueColorVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR $VAR[RedColorVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
+			<label2>[COLOR $VAR[ColorBlueVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR $VAR[ColorRedVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
 			<property name="LongDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</property>
 			<property name="TempDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].TempDay)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Cloudiness)]</property>
@@ -1763,39 +1763,39 @@
 			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode),,.png]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook)) + String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].ProviderIcon))</visible>
-			<visible>String.IsEmpty(Skin.String(WeatherIcons.path))</visible>
+			<visible>String.IsEmpty(Skin.String(weathericons.path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
-			<label2>[COLOR $VAR[BlueColorVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR $VAR[RedColorVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
+			<label2>[COLOR $VAR[ColorBlueVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR $VAR[ColorRedVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
 			<property name="LongDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</property>
 			<property name="TempDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].TempDay)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Cloudiness)]</property>
 			<property name="Outlook">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Outlook)]</property>
 			<property name="ShortDate">$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDate)]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode)]</property>
-			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode),,.png]</thumb>
+			<thumb>$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode),,.png]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook)) + String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].ProviderIcon))</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
-			<label2>[COLOR $VAR[BlueColorVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR $VAR[RedColorVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
+			<label2>[COLOR $VAR[ColorBlueVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR $VAR[ColorRedVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
 			<property name="LongDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</property>
 			<property name="TempDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].TempDay)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Cloudiness)]</property>
 			<property name="Outlook">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Outlook)]</property>
 			<property name="ShortDate">$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDate)]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode)]</property>
-			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode),,/]</thumb>
+			<thumb>$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode),,/]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook)) + String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].ProviderIcon))</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
-			<label2>[COLOR $VAR[BlueColorVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR $VAR[RedColorVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
+			<label2>[COLOR $VAR[ColorBlueVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR $VAR[ColorRedVar]]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
 			<property name="LongDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</property>
 			<property name="TempDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].TempDay)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Cloudiness)]</property>
@@ -1858,7 +1858,7 @@
 			<textoffsety>0</textoffsety>
 			<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 			<animation effect="slide" end="0,-90" time="0" condition="true">Conditional</animation>
-			<texturefocus border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
+			<texturefocus border="21" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texturefocus>
 			<font>font30_title</font>
 			<onclick>noop</onclick>
 			<label>$INFO[Window(weather).Property(Map.$PARAM[item_id].Heading)]</label>

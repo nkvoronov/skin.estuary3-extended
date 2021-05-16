@@ -3,7 +3,7 @@
 	<defaultcontrol>211</defaultcontrol>
 	<onload>SetProperty(fanarthometype,settings,home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group" id="10000">
@@ -49,7 +49,7 @@
 					<label>$ADDON[script.skinshortcuts 32045]</label>
 					<label2>$INFO[Container(211).ListItem.Property(background)]</label2>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<enable>![Skin.HasSetting(NoFanart) | Skin.HasSetting(hide_backgrounds)]</enable>
+					<enable>![Skin.HasSetting(nofanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
 				<control type="button" id="405">
 					<description>Edit Submenu</description>
@@ -140,7 +140,7 @@
 				<control type="image" id="600">
 					<description>Separator image</description>
 					<height>3</height>
-					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+					<texture colordiffuse="$VAR[ColorSeparatorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
 				<control type="label" id="599">
 					<description>Disable Menu Item Label</description>
@@ -157,7 +157,7 @@
 				<control type="image" id="601">
 					<description>Separator Image</description>
 					<height>3</height>
-					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+					<texture colordiffuse="$VAR[ColorSeparatorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
 				<control type="button" id="308">
 					<description>Restore Shortcuts</description>
@@ -171,7 +171,7 @@
 				<top>160</top>
 				<right>0</right>
 				<height>3</height>
-				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[ColorMainVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
 				<description>Dialog Header Image</description>
@@ -179,7 +179,7 @@
 				<bottom>134</bottom>
 				<right>0</right>
 				<height>3</height>
-				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[ColorMainVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -211,7 +211,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture colordiffuse="$VAR[GreyColorVar]">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$VAR[ColorGreyVar]">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>
@@ -222,8 +222,8 @@
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-						<textcolor>$VAR[WhiteColorVar]</textcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+						<textcolor>$VAR[ColorWhiteVar]</textcolor>
 						<visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 					<control type="label">
@@ -235,8 +235,8 @@
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-						<textcolor>$VAR[RedColorVar]</textcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+						<textcolor>$VAR[ColorRedVar]</textcolor>
 						<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 				</itemlayout>
@@ -248,7 +248,7 @@
 							<top>0</top>
 							<width>470</width>
 							<height>95</height>
-							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(211)">Conditional</animation>
 						</control>
 						<control type="image">
@@ -256,7 +256,7 @@
 							<top>1</top>
 							<width>95</width>
 							<height>95</height>
-							<texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Icon]</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">$INFO[ListItem.Icon]</texture>
 							<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						</control>
 						<control type="image">
@@ -284,8 +284,8 @@
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-						<textcolor>$VAR[WhiteColorVar]</textcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+						<textcolor>$VAR[ColorWhiteVar]</textcolor>
 						<visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 					<control type="label">
@@ -297,8 +297,8 @@
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-						<textcolor>$VAR[RedColorVar]</textcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+						<textcolor>$VAR[ColorRedVar]</textcolor>
 						<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 				</focusedlayout>
@@ -368,7 +368,7 @@
 			<height>100</height>
 			<font>font12</font>
 			<align>justify</align>
-			<label>[COLOR $VAR[MainColorVar]]$INFO[Container(211).ListItem.Label][/COLOR]</label>
+			<label>[COLOR $VAR[ColorMainVar]]$INFO[Container(211).ListItem.Label][/COLOR]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>
 	</controls>

@@ -98,7 +98,7 @@
 						<right>0</right>
 						<height>71</height>
 						<visible>Control.HasFocus(450)</visible>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -156,7 +156,7 @@
 						<right>0</right>
 						<height>71</height>
 						<visible>Control.HasFocus(451)</visible>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -195,7 +195,7 @@
 				<haspath>true</haspath>
 				<font>font12</font>
 				<aligny>bottom</aligny>
-				<textcolor>$VAR[GreyColorVar]</textcolor>
+				<textcolor>$VAR[ColorGreyVar]</textcolor>
 			</control>
 			<control type="label">
 				<left>0</left>
@@ -204,7 +204,7 @@
 				<height>30</height>
 				<align>right</align>
 				<aligny>bottom</aligny>
-				<textcolor>$VAR[GreyColorVar]</textcolor>
+				<textcolor>$VAR[ColorGreyVar]</textcolor>
 				<font>font12</font>
 				<label>$VAR[FileBrowserSelectLabelVar]</label>
 			</control>

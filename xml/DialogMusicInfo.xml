@@ -33,7 +33,7 @@
 					<height>140</height>
 					<texture>$VAR[ViewClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
-					<visible>!Skin.HasSetting(HideLogoInfo)</visible>
+					<visible>!Skin.HasSetting(hidelogoinfo)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -207,7 +207,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label,,.][/COLOR]$INFO[ListItem.Label2]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Label,,.][/COLOR]$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="72.5" width="595" condition="String.IsEqual(ListItem.DBType,song)">
@@ -215,7 +215,7 @@
 							<top>-10</top>
 							<width>595</width>
 							<height>100</height>
-							<texture border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
+							<texture border="21" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -224,7 +224,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label,,.][/COLOR]$INFO[ListItem.Label2]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Label,,.][/COLOR]$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 					<itemlayout height="72.5" width="595" condition="String.IsEqual(ListItem.DBType,album)">
@@ -241,12 +241,12 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Label]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
 							<top>28</top>
-							<include condition="Skin.HasSetting(CircleRating) | Skin.HasSetting(CircleUserRating)">RatingCircle</include>
+							<include condition="Skin.HasSetting(circlerating) | Skin.HasSetting(circleuserrating)">RatingCircle</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="72.5" width="595" condition="String.IsEqual(ListItem.DBType,album)">
@@ -255,7 +255,7 @@
 								<top>-10</top>
 								<width>595</width>
 								<height>100</height>
-								<texture border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
+								<texture border="21" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -264,12 +264,12 @@
 								<height>60</height>
 								<font>font12</font>
 								<aligny>center</aligny>
-								<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Label]</label>
+								<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Label]</label>
 							</control>
 							<control type="group">
 								<left>230</left>
 								<top>28</top>
-								<include condition="Skin.HasSetting(CircleRating) | Skin.HasSetting(CircleUserRating)">RatingCircle</include>
+								<include condition="Skin.HasSetting(circlerating) | Skin.HasSetting(circleuserrating)">RatingCircle</include>
 							</control>
 						</control>
 					</focusedlayout>
@@ -303,7 +303,7 @@
 						<control type="group">
 							<left>230</left>
 							<top>28</top>
-							<include condition="Skin.HasSetting(CircleRating) | Skin.HasSetting(CircleUserRating)">RatingCircle</include>
+							<include condition="Skin.HasSetting(circlerating) | Skin.HasSetting(circleuserrating)">RatingCircle</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="360" width="236" condition="String.IsEqual(ListItem.DBType,artist)">
@@ -340,14 +340,14 @@
 							<control type="group">
 								<left>230</left>
 								<top>28</top>
-								<include condition="Skin.HasSetting(CircleRating) | Skin.HasSetting(CircleUserRating)">RatingCircle</include>
+								<include condition="Skin.HasSetting(circlerating) | Skin.HasSetting(circleuserrating)">RatingCircle</include>
 							</control>
 							<control type="image">
 								<left>16</left>
 								<top>6</top>
 								<width>218</width>
 								<height>280</height>
-								<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+								<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 								<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
 							</control>
 						</control>
@@ -436,7 +436,7 @@
 							<param name="icon" value="extras/infodialogs/youtube.png" />
 						</include>
 						<onclick>Action(close)</onclick>
-						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(EnableExtendedInfo)</visible>
+						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(enableextendedinfo)</visible>
 						<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
 					</control>
@@ -447,7 +447,7 @@
 						</include>
 						<onclick>SetProperty(artist_discography,$INFO[ListItem.Artist],Home)</onclick>
 						<onclick>ActivateWindow(1300)</onclick>
-						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(EnableExtendedInfo) + String.IsEqual(ListItem.DBType,artist)</visible>
+						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(enableextendedinfo) + String.IsEqual(ListItem.DBType,artist)</visible>
 					</control> -->
 					<include content="InfoDialogButton">
 						<param name="id" value="6" />
@@ -546,26 +546,26 @@
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(HideLogoInfo)">
+				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(hidelogoinfo)">
 					<param name="main_label" value="$INFO[ListItem.Artist]" />
-					<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$VAR[GenreVar][/COLOR]" />
+					<param name="sub_label" value="[COLOR $VAR[ColorMainVar]]$VAR[GenreVar][/COLOR]" />
 					<param name="id" value="33333" />
 				</include>
-				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(HideLogoInfo)">
+				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hidelogoinfo)">
 					<param name="posx" value="400" />
 					<param name="main_label" value="$INFO[ListItem.Artist]" />
-					<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$VAR[GenreVar][/COLOR]" />
+					<param name="sub_label" value="[COLOR $VAR[ColorMainVar]]$VAR[GenreVar][/COLOR]" />
 					<param name="id" value="33333" />
 				</include>
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,album)</visible>
-				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(HideLogoInfo)">
+				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(hidelogoinfo)">
 					<param name="main_label" value="$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
 					<param name="sub_label" value="$INFO[ListItem.Artist]" />
 					<param name="id" value="33334" />
 				</include>
-				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(HideLogoInfo)">
+				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hidelogoinfo)">
 					<param name="posx" value="400" />
 					<param name="main_label" value="$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
 					<param name="sub_label" value="$INFO[ListItem.Artist]" />
@@ -574,14 +574,14 @@
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
-				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(HideLogoInfo)">
-					<param name="main_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Title]" />
+				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(hidelogoinfo)">
+					<param name="main_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Title]" />
 					<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
 					<param name="id" value="33335" />
 				</include>
-				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(HideLogoInfo)">
+				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hidelogoinfo)">
 					<param name="posx" value="400" />
-					<param name="main_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Title]" />
+					<param name="main_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Title]" />
 					<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
 					<param name="id" value="33335" />
 				</include>
@@ -595,8 +595,8 @@
 			<width>1920</width>
 			<bottom>0</bottom>
 			<height>70</height>
-			<include condition="!Skin.HasSetting(HideMediaFlagsInfo)">MediaFlags</include>
+			<include condition="!Skin.HasSetting(hidemediaflagsinfo)">MediaFlags</include>
 		</control>
-		<include condition="Skin.HasSetting(TouchMode)">TouchBackButton</include>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>
 </window>

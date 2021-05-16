@@ -270,8 +270,8 @@
 				<bottom>90</bottom>
 				<width>100%</width>
 				<texture border="21">dialogs/dialog-bg.png</texture>
-				<animation effect="zoom" start="100,100" end="75.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-				<animation effect="zoom" start="100,100" end="95.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<animation effect="zoom" start="100,100" end="75.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hidemainmenuwithwidgets) + !Skin.HasSetting(minimizemainmenu)">Conditional</animation>
+				<animation effect="zoom" start="100,100" end="95.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hidemainmenuwithwidgets) + Skin.HasSetting(minimizemainmenu)">Conditional</animation>
 			</control>
 			<control type="grouplist">
 				<top>50</top>
@@ -305,7 +305,7 @@
 					<param name="texture" value="icons/weather/sunset.png" />
 					<param name="header" value="403" />
 				</include>
-				<include content="WeatherIcons" condition="!String.IsEmpty(Weather.Plugin)">
+				<include content="WeatherImages" condition="!String.IsEmpty(Weather.Plugin)">
 					<param name="left" value="0" />
 					<param name="top" value="-10" />
 					<param name="width" value="130" />
@@ -319,7 +319,7 @@
 				<width>430</width>
 				<top>-110</top>
 				<visible>Weather.IsFetched</visible>
-				<visible>![Control.HasFocus(9000) | ControlGroup(700).HasFocus] | Skin.HasSetting(MinimizeMainMenu)</visible>
+				<visible>![Control.HasFocus(9000) | ControlGroup(700).HasFocus] | Skin.HasSetting(minimizemainmenu)</visible>
 				<control type="label">
 					<top>-70</top>
 					<aligny>center</aligny>
@@ -350,7 +350,7 @@
 				<width>270</width>
 				<top>-110</top>
 				<visible>Weather.IsFetched</visible>
-				<visible>[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + !Skin.HasSetting(MinimizeMainMenu)</visible>
+				<visible>[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + !Skin.HasSetting(minimizemainmenu)</visible>
 				<control type="label">
 					<top>-70</top>
 					<aligny>center</aligny>
@@ -381,8 +381,8 @@
 				<width>450</width>
 				<right>120</right>
 				<visible>Weather.IsFetched</visible>
-				<animation effect="slide" start="85,0" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-				<animation effect="slide" start="85,0" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<animation effect="slide" start="85,0" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hidemainmenuwithwidgets) + !Skin.HasSetting(minimizemainmenu)">Conditional</animation>
+				<animation effect="slide" start="85,0" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hidemainmenuwithwidgets) + Skin.HasSetting(minimizemainmenu)">Conditional</animation>
 				<control type="label">
 					<top>40</top>
 					<aligny>center</aligny>
@@ -390,7 +390,7 @@
 					<align>right</align>
 					<font>WeatherTemp</font>
 					<label>$INFO[Weather.Temperature]</label>
-					<visible>Skin.HasSetting(MinimizeMainMenu) | ![Control.HasFocus(9000) | ControlGroup(700).HasFocus]</visible>
+					<visible>Skin.HasSetting(minimizemainmenu) | ![Control.HasFocus(9000) | ControlGroup(700).HasFocus]</visible>
 				</control>
 			</control>
 		</control>

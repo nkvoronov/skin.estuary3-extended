@@ -26,8 +26,8 @@
 					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<animation effect="rotate" end="-45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
-					<texture colordiffuse="$VAR[MainColorVar]">spinner.png</texture>
-					<visible>String.IsEmpty(Skin.String(SkinUtils.SpinnerTexture.Path)) | Skin.String(SkinUtils.SpinnerTexture.Path,None)</visible>
+					<texture colordiffuse="$VAR[ColorMainVar]">spinner.png</texture>
+					<visible>String.IsEmpty(Skin.String(skinutils.spinnertexture.path)) | Skin.String(skinutils.spinnertexture.path,None)</visible>
 				</control>
 				<control type="image">
 					<centerleft>50%</centerleft>
@@ -36,8 +36,8 @@
 					<height>50</height>
 					<aspectratio>keep</aspectratio>
 					<animation effect="rotate" end="45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
-					<texture flipx="true" colordiffuse="$VAR[MainColorVar]">spinner.png</texture>
-					<visible>String.IsEmpty(Skin.String(SkinUtils.SpinnerTexture.Path)) | Skin.String(SkinUtils.SpinnerTexture.Path,None)</visible>
+					<texture flipx="true" colordiffuse="$VAR[ColorMainVar]">spinner.png</texture>
+					<visible>String.IsEmpty(Skin.String(skinutils.spinnertexture.path)) | Skin.String(skinutils.spinnertexture.path,None)</visible>
 				</control>
 				<control type="multiimage">
 					<depth>DepthMax</depth>
@@ -46,19 +46,19 @@
 					<width>100</width>
 					<height>100</height>
 					<aspectratio>keep</aspectratio>
-					<imagepath>$INFO[Skin.String(SkinUtils.SpinnerTexture.Path)]</imagepath>
+					<imagepath>$INFO[Skin.String(skinutils.spinnertexture.path)]</imagepath>
 					<timeperimage>100</timeperimage>
 					<randomize>false</randomize>
 					<fadetime>0</fadetime>
-					<colordiffuse>$VAR[MainColorVar]</colordiffuse>
-					<visible>![String.IsEmpty(Skin.String(SkinUtils.SpinnerTexture.Path)) | Skin.String(SkinUtils.SpinnerTexture.Path,None)]</visible>
+					<colordiffuse>$VAR[ColorMainVar]</colordiffuse>
+					<visible>![String.IsEmpty(Skin.String(skinutils.spinnertexture.path)) | Skin.String(skinutils.spinnertexture.path,None)]</visible>
 				</control>
 				<control type="image">
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
 					<width>30</width>
 					<height>30</height>
-					<texture colordiffuse="$VAR[MainColorVar]">$INFO[Control.GetLabel(10),dialogs/volume/progress/p,.png]</texture>
+					<texture colordiffuse="$VAR[ColorMainVar">$INFO[Control.GetLabel(10),dialogs/volume/progress/p,.png]</texture>
 				</control>
 				<control type="progress" id="10">
 					<include>HiddenObject</include>

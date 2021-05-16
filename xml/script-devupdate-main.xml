@@ -56,7 +56,7 @@
 						<width>400</width>
 						<left>10</left>
 						<aligny>center</aligny>
-						<textcolor>$VAR[WhiteColorVar]</textcolor>
+						<textcolor>$VAR[ColorWhiteVar]</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
@@ -65,7 +65,7 @@
 						<width>410</width>
 						<left>0</left>
 						<visible>Control.HasFocus(10)</visible>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 					</control>
 					<control type="label">
 						<visible>String.IsEqual(ListItem.Label2, selected)</visible>
@@ -80,7 +80,7 @@
 						<width>400</width>
 						<left>10</left>
 						<aligny>center</aligny>
-						<textcolor>$VAR[WhiteColorVar]</textcolor>
+						<textcolor>$VAR[ColorWhiteVar]</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>
@@ -141,7 +141,7 @@
 						<width>410</width>
 						<left>0</left>
 						<visible>Control.HasFocus(20)</visible>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -208,7 +208,7 @@
 					<right>20</right>
 					<align>right</align>
 					<aligny>top</aligny>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<textcolor>$VAR[ColorMainVar]</textcolor>
 				</control>
 			</control>
 		</control>

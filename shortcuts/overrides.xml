@@ -528,14 +528,14 @@
 			<shortcut label="19173" type="19020" icon="DefaultPVRGuide.png" widget="Library" widgetType="pvrgroup" widgetTarget="tvguide">pvr://channels/tv</shortcut>
 			<shortcut label="31015" type="19020" icon="DefaultPVRRecordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
 			<shortcut label="19040" type="19020" icon="DefaultPVRTimers.png" widget="Library" widgetType="tvtimer" widgetTarget="pvr">TVTimers</shortcut>
-			<shortcut label="33224" type="19020" icon="DefaultPVRChannels.png" condition="Skin.HasSetting(CustomListChannels) + Skin.HasSetting(EnableCustomListChannelsTV)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
+			<shortcut label="33224" type="19020" icon="DefaultPVRChannels.png" condition="Skin.HasSetting(customlistchannels) + Skin.HasSetting(enablecustomListchannelstv)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
 		</node>
 		<node label="19021" condition="PVR.HasRadioChannels + String.IsEmpty(Window(Home).Property(WidgetVisibility))">
 			<shortcut label="31018" type="19021" icon="DefaultPVRChannels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
 			<shortcut label="19174" type="19020" icon="DefaultPVRGuide.png" widget="Library" widgetType="pvrgroup" widgetTarget="radioguide">pvr://channels/radio</shortcut>
 			<shortcut label="31015" type="19021" icon="DefaultPVRRecordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
 			<shortcut label="19040" type="19021" icon="DefaultPVRTimers.png" widget="Library" widgetType="radiotimer" widgetTarget="pvr">RadioTimers</shortcut>
-			<shortcut label="33225" type="19021" icon="DefaultPVRChannels.png" condition="Skin.HasSetting(CustomListChannels) + Skin.HasSetting(EnableCustomListChannelsRadio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
+			<shortcut label="33225" type="19021" icon="DefaultPVRChannels.png" condition="Skin.HasSetting(customlistchannels) + Skin.HasSetting(enablecustomlistchannelsradio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
 		</node>
 		<node label="15016" condition="System.GetBool(gamesgeneral.enable) + String.IsEmpty(Window(Home).Property(WidgetVisibility))">
 			<shortcut label="35049" type="15016" icon="DefaultAddonGame.png" widget="Library" widgetType="addon" widgetTarget="games">addons://sources/game/</shortcut>
@@ -547,12 +547,12 @@
 			<shortcut label="1043" type="24001" icon="DefaultAddonProgram.png" widget="Library" widgetType="addon" widgetTarget="programs">addons://sources/executable</shortcut>
 			<shortcut label="20244" type="24001" icon="DefaultAddonProgram.png" widget="Library" widgetType="addon" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>
 			<shortcut label="1039" type="24001" icon="DefaultAddonPicture.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
-			<node label="33188" condition="Skin.HasSetting(CustomListAddons) + [ Skin.HasSetting(EnableCustomListAddonsVideo) | Skin.HasSetting(EnableCustomListAddonsAudio) | [ Skin.HasSetting(EnableCustomListAddonsGame) + System.GetBool(gamesgeneral.enable) ] | Skin.HasSetting(EnableCustomListAddonsPrograms) | Skin.HasSetting(EnableCustomListAddonsImage) ]">
-				<shortcut label="1037" type="24001" icon="DefaultAddonVideo.png" condition="Skin.HasSetting(EnableCustomListAddonsVideo)" widget="Custom" widgetType="custaddon" widgetTarget="Video">CustomAddonsVideo</shortcut>
-				<shortcut label="1038" type="24001" icon="DefaultAddonMusic.png" condition="Skin.HasSetting(EnableCustomListAddonsAudio)" widget="Custom" widgetType="custaddon" widgetTarget="Audio">CustomAddonsAudio</shortcut>
-				<shortcut label="35049" type="24001" icon="DefaultAddonGame.png" condition="Skin.HasSetting(EnableCustomListAddonsGame) + System.GetBool(gamesgeneral.enable)" widget="Custom" widgetType="custaddon" widgetTarget="Game">CustomAddonsGame</shortcut>
-				<shortcut label="1043" type="24001" icon="DefaultAddonProgram.png" condition="Skin.HasSetting(EnableCustomListAddonsPrograms)" widget="Custom" widgetType="custaddon" widgetTarget="Programs">CustomAddonsPrograms</shortcut>
-				<shortcut label="1039" type="24001" icon="DefaultAddonPicture.png" condition="Skin.HasSetting(EnableCustomListAddonsImage)" widget="Custom" widgetType="custaddon" widgetTarget="Image">CustomAddonsImage</shortcut>
+			<node label="33188" condition="Skin.HasSetting(customlistaddons) + [ Skin.HasSetting(enablecustomlistaddonsvideo) | Skin.HasSetting(enablecustomlistaddonsaudio) | [ Skin.HasSetting(enablecustomlistaddonsgame) + System.GetBool(gamesgeneral.enable) ] | Skin.HasSetting(enablecustomlistaddonsprograms) | Skin.HasSetting(enablecustomlistaddonsimage) ]">
+				<shortcut label="1037" type="24001" icon="DefaultAddonVideo.png" condition="Skin.HasSetting(enablecustomlistaddonsvideo)" widget="Custom" widgetType="custaddon" widgetTarget="Video">CustomAddonsVideo</shortcut>
+				<shortcut label="1038" type="24001" icon="DefaultAddonMusic.png" condition="Skin.HasSetting(enablecustomlistaddonsaudio)" widget="Custom" widgetType="custaddon" widgetTarget="Audio">CustomAddonsAudio</shortcut>
+				<shortcut label="35049" type="24001" icon="DefaultAddonGame.png" condition="Skin.HasSetting(enablecustomlistaddonsgame) + System.GetBool(gamesgeneral.enable)" widget="Custom" widgetType="custaddon" widgetTarget="Game">CustomAddonsGame</shortcut>
+				<shortcut label="1043" type="24001" icon="DefaultAddonProgram.png" condition="Skin.HasSetting(enablecustomlistaddonsprograms)" widget="Custom" widgetType="custaddon" widgetTarget="Programs">CustomAddonsPrograms</shortcut>
+				<shortcut label="1039" type="24001" icon="DefaultAddonPicture.png" condition="Skin.HasSetting(enablecustomlistaddonsimage)" widget="Custom" widgetType="custaddon" widgetTarget="Image">CustomAddonsImage</shortcut>
 			</node>
 			<node label="1043">
 				<content>addon-program</content>

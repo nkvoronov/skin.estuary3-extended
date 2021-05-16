@@ -75,9 +75,9 @@
 							<textoffsetx>40</textoffsetx>
 							<textoffsety>20</textoffsety>
 							<aligny>bottom</aligny>
-							<label>[COLOR $VAR[MainColorVar]]$INFO[Window.Property(TagLine),[I],[/I][CR]][/COLOR]$INFO[Window.Property(Plot)]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$INFO[Window.Property(TagLine),[I],[/I][CR]][/COLOR]$INFO[Window.Property(Plot)]</label>
 							<font>font12</font>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 							<visible>!String.IsEmpty(Window.Property(Plot))</visible>
 						</control>
 						<control type="textbox">
@@ -102,7 +102,7 @@
 							<top>55</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="fade" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(5000).HasPrevious + ControlGroup(5000).HasFocus</visible>
@@ -112,7 +112,7 @@
 							<top>55</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="fade" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(5000).HasNext + ControlGroup(5000).HasFocus</visible>
@@ -153,7 +153,7 @@
 									<height>142</height>
 									<align>center</align>
 									<aligny>top</aligny>
-									<texturefocus border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
+									<texturefocus border="21" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texturefocus>
 									<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 									<textoffsetx>35</textoffsetx>
 									<textoffsety>78</textoffsety>
@@ -190,7 +190,7 @@
 									<height>142</height>
 									<align>center</align>
 									<aligny>top</aligny>
-									<texturefocus border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
+									<texturefocus border="21" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texturefocus>
 									<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 									<textoffsetx>35</textoffsetx>
 									<textoffsety>78</textoffsety>
@@ -529,7 +529,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1000).HasPrevious + Control.HasFocus(1000)</visible>
@@ -539,7 +539,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1000).HasNext + Control.HasFocus(1000)</visible>
@@ -582,7 +582,7 @@
 										<top>360</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Label]$INFO[ListItem.Property(character),[COLOR white8][CR] $LOCALIZE[20347] ,[/COLOR]]</label>
 									</control>
 								</control>
@@ -612,7 +612,7 @@
 										<top>16</top>
 										<width>248</width>
 										<height>348</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 									<control type="textbox">
 										<left>20</left>
@@ -621,7 +621,7 @@
 										<top>360</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Label]$INFO[ListItem.Property(character),[COLOR white8][CR] $LOCALIZE[20347] ,[/COLOR]]</label>
 									</control>
 								</control>
@@ -646,7 +646,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(750).HasPrevious + Control.HasFocus(750)</visible>
@@ -656,7 +656,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(750).HasNext + Control.HasFocus(750)</visible>
@@ -708,7 +708,7 @@
 										<top>360</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Label]$INFO[ListItem.Property(job),[COLOR white8][CR],[/COLOR]]</label>
 									</control>
 								</control>
@@ -739,7 +739,7 @@
 										<top>16</top>
 										<width>248</width>
 										<height>348</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 									<control type="image">
 										<top>20</top>
@@ -756,7 +756,7 @@
 										<top>360</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Label]$INFO[ListItem.Property(job),[COLOR white8][CR],[/COLOR]]</label>
 									</control>
 								</control>
@@ -804,7 +804,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(150).HasPrevious + Control.HasFocus(150)</visible>
@@ -814,7 +814,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(150).HasNext + Control.HasFocus(150)</visible>
@@ -866,7 +866,7 @@
 										<align>right</align>
 										<aligny>center</aligny>
 										<font>font20_title</font>
-										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+										<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Year][/COLOR]</label>
 									</control>
 									<control type="image">
 										<left>20</left>
@@ -883,7 +883,7 @@
 										<top>360</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Label]</label>
 									</control>
 								</control>
@@ -924,7 +924,7 @@
 										<align>right</align>
 										<aligny>center</aligny>
 										<font>font20_title</font>
-										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+										<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Year][/COLOR]</label>
 									</control>
 									<control type="image">
 										<left>20</left>
@@ -939,7 +939,7 @@
 										<top>16</top>
 										<width>248</width>
 										<height>348</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 									<control type="textbox">
 										<left>20</left>
@@ -948,7 +948,7 @@
 										<top>360</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Label]</label>
 									</control>
 								</control>
@@ -1047,7 +1047,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(250).HasPrevious + Control.HasFocus(250)</visible>
@@ -1057,7 +1057,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(250).HasNext + Control.HasFocus(250)</visible>
@@ -1109,7 +1109,7 @@
 										<align>right</align>
 										<aligny>center</aligny>
 										<font>font20_title</font>
-										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+										<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Year][/COLOR]</label>
 									</control>
 									<control type="image">
 										<left>20</left>
@@ -1126,7 +1126,7 @@
 										<top>360</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Label]</label>
 									</control>
 								</control>
@@ -1167,7 +1167,7 @@
 										<align>right</align>
 										<aligny>center</aligny>
 										<font>font20_title</font>
-										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+										<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Year][/COLOR]</label>
 									</control>
 									<control type="image">
 										<left>20</left>
@@ -1182,7 +1182,7 @@
 										<top>16</top>
 										<width>248</width>
 										<height>348</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 									<control type="textbox">
 										<left>20</left>
@@ -1191,7 +1191,7 @@
 										<top>360</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Label]</label>
 									</control>
 								</control>
@@ -1216,7 +1216,7 @@
 							<top>160</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1150).HasPrevious + Control.HasFocus(1150)</visible>
@@ -1226,7 +1226,7 @@
 							<top>160</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1150).HasNext + Control.HasFocus(1150)</visible>
@@ -1270,7 +1270,7 @@
 										<top>245</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Property(Type),[B],: [/B]]$INFO[ListItem.Label]</label>
 									</control>
 								</control>
@@ -1291,7 +1291,7 @@
 										<top>16</top>
 										<width>341</width>
 										<height>228</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 									<control type="image">
 										<left>20</left>
@@ -1308,7 +1308,7 @@
 										<top>245</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Property(Type),[B],: [/B]]$INFO[ListItem.Label]</label>
 									</control>
 								</control>
@@ -1333,7 +1333,7 @@
 							<top>160</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(350).HasPrevious + Control.HasFocus(350)</visible>
@@ -1343,7 +1343,7 @@
 							<top>160</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(350).HasNext + Control.HasFocus(350)</visible>
@@ -1408,7 +1408,7 @@
 										<top>16</top>
 										<width>341</width>
 										<height>228</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 									<control type="image">
 										<left>20</left>
@@ -1425,7 +1425,7 @@
 										<top>245</top>
 										<align>center</align>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Property(Type),[B],: [/B]]$INFO[ListItem.Label]</label>
 									</control>
 								</control>
@@ -1450,7 +1450,7 @@
 							<top>100</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(550).HasPrevious + Control.HasFocus(550)</visible>
@@ -1460,7 +1460,7 @@
 							<top>100</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(550).HasNext + Control.HasFocus(550)</visible>
@@ -1520,7 +1520,7 @@
 										<top>0</top>
 										<width>373</width>
 										<height>160</height>
-										<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
+										<texture border="40" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
 										<animation effect="fade" start="0" end="100" time="160">Focus</animation>
 										<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
 									</control>
@@ -1565,7 +1565,7 @@
 							<top>130</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1450).HasPrevious + Control.HasFocus(1450)</visible>
@@ -1575,7 +1575,7 @@
 							<top>130</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1450).HasNext + Control.HasFocus(1450)</visible>
@@ -1635,7 +1635,7 @@
 										<top>0</top>
 										<width>373</width>
 										<height>220</height>
-										<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
+										<texture border="40" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
 										<animation effect="fade" start="0" end="100" time="160">Focus</animation>
 										<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
 									</control>
@@ -1680,7 +1680,7 @@
 							<top>130</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(650).HasPrevious + Control.HasFocus(650)</visible>
@@ -1690,7 +1690,7 @@
 							<top>130</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(650).HasNext + Control.HasFocus(650)</visible>
@@ -1757,7 +1757,7 @@
 										<top>0</top>
 										<width>200</width>
 										<height>220</height>
-										<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
+										<texture border="40" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
 										<animation effect="fade" start="0" end="100" time="160">Focus</animation>
 										<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
 									</control>
@@ -1847,7 +1847,7 @@
 										<top>0</top>
 										<width>280</width>
 										<height>100</height>
-										<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
+										<texture border="40" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
 										<animation effect="fade" start="0" end="100" time="160">Focus</animation>
 										<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
 									</control>
@@ -1908,7 +1908,7 @@
 										<width>550</width>
 										<height>315</height>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Property(Author),[B],[/B][CR]]$INFO[ListItem.Property(Content)]</label>
 									</control>
 								</control>
@@ -1927,7 +1927,7 @@
 										<top>0</top>
 										<width>630</width>
 										<height>400</height>
-										<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
+										<texture border="40" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
 										<animation effect="fade" start="0" end="100" time="160">Focus</animation>
 										<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
 									</control>
@@ -1937,7 +1937,7 @@
 										<width>550</width>
 										<height>315</height>
 										<font>font12</font>
-										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Property(Author),[B],[/B][CR]]$INFO[ListItem.Property(Content)]</label>
 									</control>
 								</control>
@@ -2007,7 +2007,7 @@
 										<top>0</top>
 										<width>280</width>
 										<height>100</height>
-										<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
+										<texture border="40" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
 										<animation effect="fade" start="0" end="100" time="160">Focus</animation>
 										<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
 									</control>
@@ -2043,7 +2043,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1250).HasPrevious + Control.HasFocus(1250)</visible>
@@ -2053,7 +2053,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1250).HasNext + Control.HasFocus(1250)</visible>
@@ -2116,7 +2116,7 @@
 										<top>16</top>
 										<width>248</width>
 										<height>348</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 							</focusedlayout>
@@ -2140,7 +2140,7 @@
 							<top>200</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1350).HasPrevious + Control.HasFocus(1350)</visible>
@@ -2150,7 +2150,7 @@
 							<top>200</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(1350).HasNext + Control.HasFocus(1350)</visible>
@@ -2212,7 +2212,7 @@
 										<top>16</top>
 										<width>528</width>
 										<height>348</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 							</focusedlayout>
@@ -2236,7 +2236,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
 							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(450).HasPrevious + Control.HasFocus(450)</visible>
@@ -2246,7 +2246,7 @@
 							<top>220</top>
 							<width>28</width>
 							<height>28</height>
-							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
 							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 							<visible>Container(450).HasNext + Control.HasFocus(450)</visible>
@@ -2360,7 +2360,7 @@
 										<top>16</top>
 										<width>248</width>
 										<height>348</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 									<control type="label">
 										<width>240</width>
@@ -2465,7 +2465,7 @@
 										<top>16</top>
 										<width>341</width>
 										<height>228</height>
-										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 									<control type="textbox">
 										<left>20</left>
@@ -2713,7 +2713,7 @@
 				<height>1100</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<texture background="true">colors/black.png</texture>
-				<bordertexture colordiffuse="$VAR[MainColorVar]" border="10">overlays/shadow.png</bordertexture>
+				<bordertexture colordiffuse="$VAR[ColorMainVar]" border="10">overlays/shadow.png</bordertexture>
 				<bordersize>10</bordersize>
 			</control>
 			<control type="image">

@@ -34,7 +34,7 @@
 				<top>0</top>
 				<width>450</width>
 				<height>780</height>
-				<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
+				<texture colordiffuse="$VAR[ColorDialogTintVar]">colors/white.png</texture>
 			</control>
 			<control type="grouplist" id="996">
 				<description>Grouplist For Context Buttons</description>
@@ -48,18 +48,18 @@
 					<left>0</left>
 					<height>65</height>
 					<align>center</align>
-					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
 					<label>$LOCALIZE[32237]</label>
 					<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
-					<visible>System.AddonIsEnabled(script.simpleplaylists) + Skin.HasSetting(EnableWatchitLater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
+					<visible>System.AddonIsEnabled(script.simpleplaylists) + Skin.HasSetting(enablewatchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
 				</control>
 				<!-- <control type="button" id="3001">
 					<description>Jump To Letter</description>
 					<left>0</left>
 					<height>65</height>
 					<align>center</align>
-					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
 					<label>$LOCALIZE[32252]</label>
 					<onclick>RunScript(script.skin.helper.service,action=jumptoletter)</onclick>
@@ -70,11 +70,11 @@
 					<left>0</left>
 					<height>65</height>
 					<align>center</align>
-					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
 					<label>$LOCALIZE[31034]</label>
 					<onclick>RunScript(script.extendedinfo,info=openinfodialogmenu)</onclick>
-					<visible>System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(EnableExtendedInfo) + !System.AddonIsEnabled(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
+					<visible>System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(enableextendedinfo) + !System.AddonIsEnabled(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
 				</control>
 			</control>
 			<include content="UpDownArrows">
@@ -91,7 +91,7 @@
 			<width>450</width>
 			<height>65</height>
 			<align>center</align>
-			<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 			<texturenofocus />
 		</control>
 	</controls>

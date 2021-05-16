@@ -49,7 +49,7 @@
 					<height>425</height>
 					<align>left</align>
 					<label>$VAR[ListItemDateLabelVar]$VAR[ListItemStartTimeLabelVar]$VAR[ListItemExpirationDateTimeLabelVar]$VAR[ListItemGenreLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemCastLabelVar][CR]$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
-					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="grouplist" id="9000">
 					<left>150</left>
@@ -119,7 +119,7 @@
 						<param name="label" value="$LOCALIZE[31114]" />
 						<param name="onclick_1" value="Action(close)" />
 						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title])" />
-						<param name="visible" value="System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(EnableExtendedInfo)" />
+						<param name="visible" value="System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(enableextendedinfo)" />
 					</include>
 				</control>
 			</control>
@@ -129,6 +129,6 @@
 				<param name="posy" value="40" />
 			</include>
 		</control>
-		<include condition="Skin.HasSetting(TouchMode)">TouchBackButton</include>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>
 </window>

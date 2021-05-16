@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">500</defaultcontrol>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<views>500</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
@@ -36,7 +36,7 @@
 							<include content="ThumbLayout">
 								<param name="main_label" value="$VAR[YoutubeLabelsVar]" />
 								<param name="sub_label" value="$INFO[ListItem.label]" />
-								<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Premiered][/COLOR]" />
+								<param name="thumb_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Premiered][/COLOR]" />
 							</include>
 						</control>
 					</itemlayout>
@@ -50,7 +50,7 @@
 								<param name="focused" value="true" />
 								<param name="main_label" value="$VAR[YoutubeLabelsVar]" />
 								<param name="sub_label" value="$INFO[ListItem.label]" />
-								<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Premiered][/COLOR]" />
+								<param name="thumb_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Premiered][/COLOR]" />
 							</include>
 						</control>
 					</focusedlayout>
@@ -102,7 +102,7 @@
 					<texture flipy="true">frame/InfoBar.png</texture>
 				</control>
 				<control type="group">
-					<visible>!Skin.HasSetting(TouchMode)</visible>
+					<visible>!Skin.HasSetting(touchmode)</visible>
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -111,7 +111,7 @@
 						<left>12</left>
 						<width>36</width>
 						<height>36</height>
-						<texturefocus colordiffuse="$VAR[MainColorVar]">frame/menu-nofo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorMainVar]">frame/menu-nofo.png</texturefocus>
 						<texturenofocus>frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
@@ -121,14 +121,14 @@
 						<left>64</left>
 						<width>300</width>
 						<height>44</height>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<label>$LOCALIZE[33063]</label>
 						<onclick>SetFocus(9000)</onclick>
 						<texturefocus />
 						<texturenofocus />
 					</control>
 				</control>
-				<include condition="Skin.HasSetting(TouchMode)">TouchButtons</include>
+				<include condition="Skin.HasSetting(touchmode)">TouchButtons</include>
 			</control>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
@@ -180,16 +180,16 @@
 					<aligny>center</aligny>
 					<font/>
 					<label/>
-					<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorMainVar]">buttons/roundbutton-fo.png</texturefocus>
 					<texturenofocus />
 					<radioposx>40</radioposx>
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
 					<textureradioonfocus>icons/search.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/search.png</textureradioonnofocus>
+					<textureradioonnofocus colordiffuse="$VAR[ColorGreyVar]">icons/search.png</textureradioonnofocus>
 					<textureradioofffocus>icons/search.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/search.png</textureradiooffnofocus>
+					<textureradiooffnofocus colordiffuse="$VAR[ColorGreyVar]">icons/search.png</textureradiooffnofocus>
 					<ondown>SetFocus(7000)</ondown>
 					<onright>50</onright>
 					<onleft>6001</onleft>

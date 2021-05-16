@@ -97,7 +97,7 @@
 											<height>24</height>
 											<font>font12</font>
 											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
-											<textcolor>$VAR[MainColorVar]</textcolor>
+											<textcolor>$VAR[ColorMainVar]</textcolor>
 										</control>
 										<control type="textbox">
 											<top>365</top>
@@ -166,7 +166,7 @@
 									<top>-14</top>
 									<width>493</width>
 									<height>663</height>
-									<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+									<texture colordiffuse="$VAR[ColorMainVar]">colors/grey.png</texture>
 									<bordertexture border="21">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 									<include>Animation_FocusTextureFade</include>
@@ -211,7 +211,7 @@
 											<bottom>30</bottom>
 											<font>font12</font>
 											<label>$VAR[PlotAndTagVar]</label>
-											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 											<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 										</control>
 										<control type="textbox">
@@ -221,7 +221,7 @@
 											<bottom>50</bottom>
 											<font>font12</font>
 											<label>$VAR[PlotAndTagVar]</label>
-											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 											<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 										</control>
 										<control type="textbox">
@@ -357,7 +357,7 @@
 									<top>-14</top>
 									<width>493</width>
 									<height>663</height>
-									<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+									<texture colordiffuse="$VAR[ColorMainVar]">colors/grey.png</texture>
 									<bordertexture border="21">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 									<include>Animation_FocusTextureFade</include>

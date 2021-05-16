@@ -7,10 +7,10 @@
 		<height>80</height>
 		<radioposx>370</radioposx>
 		<aligny>center</aligny>
-		<invalidcolor>$VAR[InvalidColorVar]</invalidcolor>
-		<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+		<invalidcolor>$VAR[ColorInvalidVar]</invalidcolor>
+		<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 		<texturenofocus />
-		<alttexturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</alttexturefocus>
+		<alttexturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</alttexturefocus>
 		<alttexturenofocus></alttexturenofocus>
 	</include>
 	<include name="PVRQuickNavItemsCommon">
@@ -22,7 +22,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font></font>
-				<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[ColorMainVar]">buttons/roundbutton-fo.png</texturefocus>
 				<texturenofocus />
 				<radioposx>26</radioposx>
 				<radioposy>0</radioposy>
@@ -32,7 +32,7 @@
 				<textureradioonnofocus>$PARAM[icon]</textureradioonnofocus>
 				<textureradioofffocus>$PARAM[icon]</textureradioofffocus>
 				<textureradiooffnofocus>$PARAM[icon]</textureradiooffnofocus>
-				<textureradiooffdisabled colordiffuse="$VAR[MainColorVar]">$PARAM[icon]</textureradiooffdisabled>
+				<textureradiooffdisabled colordiffuse="$VAR[ColorMainVar]">$PARAM[icon]</textureradiooffdisabled>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TV$PARAM[area])</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(Radio$PARAM[area])</onclick>
 				<enable>!Window.IsActive(TV$PARAM[area]) + !Window.IsActive(Radio$PARAM[area])</enable>
@@ -70,7 +70,7 @@
 						<font>font12</font>
 						<align>right</align>
 						<aligny>top</aligny>
-						<textcolor>$VAR[GreyColorVar]</textcolor>
+						<textcolor>$VAR[ColorGreyVar]</textcolor>
 						<label>$VAR[PVRAreaVar]</label>
 					</control>
 				</control>
@@ -258,7 +258,7 @@
 		<radioposx>300</radioposx>
 		<font>font25_title</font>
 		<aligny>top</aligny>
-		<textcolor>$VAR[MainColorVar]</textcolor>
+		<textcolor>$VAR[ColorMainVar]</textcolor>
 	</include>
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>

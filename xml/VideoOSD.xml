@@ -14,7 +14,7 @@
 			<texturenofocus />
 			<onclick>Action(close)</onclick>
 		</control>
-		<include condition="Skin.HasSetting(TouchMode)">TouchBackOSDButton</include>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackOSDButton</include>
 		<control type="group">
 			<include>Animation_BottomSlide</include>
 			<bottom>0</bottom>
@@ -254,7 +254,7 @@
 					<height>26</height>
 					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
 					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<textureslidernibfocus colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>Player.Progress</info>
 					<onup>200</onup>
 					<ondown>200</ondown>
@@ -267,8 +267,8 @@
 					<width>100%</width>
 					<height>26</height>
 					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
-					<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<textureslidernib colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>Player.Progress</info>
 					<onup>200</onup>
 					<ondown>200</ondown>
@@ -282,7 +282,7 @@
 					<height>26</height>
 					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
 					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<textureslidernibfocus colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>PVR.TimeshiftProgressPlayPos</info>
 					<onup>200</onup>
 					<ondown>200</ondown>
@@ -295,8 +295,8 @@
 					<width>100%</width>
 					<height>26</height>
 					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
-					<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<textureslidernib colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>PVR.TimeshiftProgressPlayPos</info>
 					<onup>200</onup>
 					<ondown>200</ondown>

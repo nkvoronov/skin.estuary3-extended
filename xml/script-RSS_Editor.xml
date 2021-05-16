@@ -49,7 +49,7 @@
 						<width>880</width>
 						<height>69</height>
 						<aligny>center</aligny>
-						<textcolor>$VAR[GreyColorVar]</textcolor>
+						<textcolor>$VAR[ColorGreyVar]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font13</font>
 					</control>
@@ -60,7 +60,7 @@
 						<top>0</top>
 						<width>880</width>
 						<height>69</height>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 						<animation effect="fade" start="100" end="40" time="100" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 					</control>
 					<control type="label">
@@ -84,8 +84,8 @@
 				<font>font12</font>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>$VAR[GreyColorVar]</textcolor>
-				<label>[COLOR $VAR[MainColorVar]]$INFO[Container(10).NumItems][/COLOR] $LOCALIZE[31036] - $LOCALIZE[31035] [COLOR $VAR[MainColorVar]]$INFO[Container(10).CurrentPage]/$INFO[Container(10).NumPages][/COLOR]</label>
+				<textcolor>$VAR[ColorGreyVar]</textcolor>
+				<label>[COLOR $VAR[ColorMainVar]]$INFO[Container(10).NumItems][/COLOR] $LOCALIZE[31036] - $LOCALIZE[31035] [COLOR $VAR[ColorMainVar]]$INFO[Container(10).CurrentPage]/$INFO[Container(10).NumPages][/COLOR]</label>
 			</control>
 			<control type="grouplist" id="9001">
 				<left>920</left>
@@ -100,10 +100,10 @@
 					<height>90</height>
 					<label>15019</label>
 					<font>font12_title</font>
-					<textcolor>$VAR[WhiteColorVar]</textcolor>
+					<textcolor>$VAR[ColorWhiteVar]</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				</control>
 				<control type="button" id="14">
@@ -111,20 +111,20 @@
 					<height>90</height>
 					<label>15015</label>
 					<font>font12_title</font>
-					<textcolor>$VAR[WhiteColorVar]</textcolor>
+					<textcolor>$VAR[ColorWhiteVar]</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				</control>
 				<control type="button" id="11">
 					<width>300</width>
 					<height>90</height>
 					<font>font12_title</font>
-					<textcolor>$VAR[WhiteColorVar]</textcolor>
+					<textcolor>$VAR[ColorWhiteVar]</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				</control>
 				<control type="button" id="18">
@@ -132,10 +132,10 @@
 					<height>90</height>
 					<label>186</label>
 					<font>font12_title</font>
-					<textcolor>$VAR[WhiteColorVar]</textcolor>
+					<textcolor>$VAR[ColorWhiteVar]</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				</control>
 				<control type="button" id="19">
@@ -143,10 +143,10 @@
 					<height>90</height>
 					<label>222</label>
 					<font>font12_title</font>
-					<textcolor>$VAR[WhiteColorVar]</textcolor>
+					<textcolor>$VAR[ColorWhiteVar]</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				</control>
 			</control>

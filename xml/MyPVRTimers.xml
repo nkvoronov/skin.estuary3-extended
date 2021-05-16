@@ -61,7 +61,7 @@
 								<right>30</right>
 								<height>30</height>
 								<aligny>top</aligny>
-								<label>$INFO[ListItem.ChannelName][COLOR $VAR[GreyColorVar]]$INFO[ListItem.Label, - ][/COLOR]</label>
+								<label>$INFO[ListItem.ChannelName][COLOR $VAR[ColorGreyVar]]$INFO[ListItem.Label, - ][/COLOR]</label>
 							</control>
 							<control type="label">
 								<left>50</left>
@@ -100,7 +100,7 @@
 							<top>0</top>
 							<right>0</right>
 							<height>101</height>
-							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
@@ -213,7 +213,7 @@
 			<width>850</width>
 			<height>60</height>
 			<label>$INFO[PVR.NextTimer]</label>
-			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+			<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 			<align>right</align>
 			<aligny>center</aligny>
 			<wrapmultiline>true</wrapmultiline>

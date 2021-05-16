@@ -158,7 +158,7 @@
 				<texture>frame/osdfade.png</texture>
 			</control>
 			<control type="group">
-				<animation effect="slide" end="90,0" time="0" condition="Skin.HasSetting(TouchMode)">conditional</animation>
+				<animation effect="slide" end="90,0" time="0" condition="Skin.HasSetting(touchmode)">conditional</animation>
 				<control type="grouplist">
 					<visible>!String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(clearlogo))</visible>
 					<top>10</top>
@@ -171,34 +171,34 @@
 						<width>300</width>
 						<texture>$VAR[PlayerClearLogoVar]</texture>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<visible>!Window.IsActive(visualisation) + !Skin.HasSetting(HideLogoPlay)</visible>
+						<visible>!Window.IsActive(visualisation) + !Skin.HasSetting(hidelogoplay)</visible>
 					</control>
 					<control type="label">
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<label>$VAR[OSDSubLabelVar]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>
 				<control type="group">
 					<visible>!Window.IsActive(pvrosdchannels) + !Window.IsActive(pvrchannelguide)</visible>
-					<visible>[String.IsEmpty(Player.Art(clearlogo)) + String.IsEmpty(Player.Art(tvshow.clearlogo))] | Skin.HasSetting(HideLogoPlay)</visible>
+					<visible>[String.IsEmpty(Player.Art(clearlogo)) + String.IsEmpty(Player.Art(tvshow.clearlogo))] | Skin.HasSetting(hidelogoplay)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
 					<left>20</left>
 					<right>400</right>
 					<control type="label">
 						<label>$VAR[NowPlayingBreadcrumbsVar]</label>
 						<font>font45</font>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<top>7</top>
 						<height>50</height>
 					</control>
 					<control type="label">
 						<top>60</top>
 						<label>$VAR[OSDSubLabelVar]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<height>60</height>
 					</control>
 				</control>
@@ -208,14 +208,14 @@
 				<animation effect="fade" time="150">VisibleChange</animation>
 				<control type="label">
 					<font>font_clock</font>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<top>0</top>
 					<right>20</right>
 					<height>200</height>
 					<width>600</width>
 					<align>right</align>
 					<label>$INFO[System.Time]</label>
-					<visible>!Skin.HasSetting(HideTime)</visible>
+					<visible>!Skin.HasSetting(hidetime)</visible>
 				</control>
 				<control type="grouplist">
 					<right>24</right>
@@ -228,7 +228,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<control type="label">
 						<label>$INFO[Player.FinishTime,$LOCALIZE[31080]: ]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<height>100</height>
 						<width>auto</width>
 						<visible>!String.isempty(Player.Duration)</visible>
@@ -236,7 +236,7 @@
 					</control>
 					<control type="label">
 						<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31080]: ]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<height>100</height>
 						<width>auto</width>
 						<visible>VideoPlayer.HasEpg</visible>

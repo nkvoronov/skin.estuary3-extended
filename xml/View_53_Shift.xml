@@ -38,7 +38,7 @@
 					<height>110</height>
 					<visible>Control.HasFocus(53)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+					<texture colordiffuse="$VAR[ColorMainVar]">colors/grey.png</texture>
 					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,1) | Integer.IsEqual(Container.Position,0)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,0)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,3) | Integer.IsEqual(Container.Position,4)">Conditional</animation>
@@ -106,7 +106,7 @@
 							<aspectratio aligny="center">keep</aspectratio>
 							<texture>$VAR[ViewClearLogoVar]</texture>
 							<visible>!ListItem.IsParentFolder</visible>
-							<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
+							<visible>!Skin.HasSetting(hidelogolibrary)</visible>
 							<visible>![String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)]</visible>
 						</control>
 						<control type="textbox">
@@ -118,7 +118,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
+							<visible>!Skin.HasSetting(hidelogolibrary)</visible>
 							<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<visible>![String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)]</visible>
 						</control>
@@ -131,7 +131,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>Skin.HasSetting(HideLogoLibrary) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)</visible>
+							<visible>Skin.HasSetting(hidelogolibrary) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="370">
@@ -182,7 +182,7 @@
 							<aspectratio aligny="center">keep</aspectratio>
 							<texture>$VAR[ViewClearLogoVar]</texture>
 							<visible>!ListItem.IsParentFolder</visible>
-							<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
+							<visible>!Skin.HasSetting(hidelogolibrary)</visible>
 							<visible>![String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)]</visible>
 						</control>
 						<control type="textbox">
@@ -194,7 +194,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
+							<visible>!Skin.HasSetting(hidelogolibrary)</visible>
 							<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<visible>![String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)]</visible>
 						</control>
@@ -207,7 +207,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>Skin.HasSetting(HideLogoLibrary) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)</visible>
+							<visible>Skin.HasSetting(hidelogolibrary) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(listItem.DBType,album)</visible>
 						</control>
 					</focusedlayout>
 				</control>
@@ -238,7 +238,7 @@
 						<left>20</left>
 						<top>45</top>
 						<height>166</height>
-						<visible>!Skin.HasSetting(HideCollectionsText)</visible>
+						<visible>!Skin.HasSetting(hidecollectionstext)</visible>
 						<include content="InfoList">
 							<param name="bottom" value="0" />
 							<param name="width" value="903" />
@@ -251,7 +251,7 @@
 						<left>20</left>
 						<top>45</top>
 						<height>245</height>
-						<visible>Skin.HasSetting(HideCollectionsText)</visible>
+						<visible>Skin.HasSetting(hidecollectionstext)</visible>
 						<include content="InfoListPics">
 							<param name="bottom" value="0" />
 							<param name="width" value="903" />
@@ -269,7 +269,7 @@
 						<left>20</left>
 						<top>45</top>
 						<height>166</height>
-						<visible>!Skin.HasSetting(HideAlbumsText)</visible>
+						<visible>!Skin.HasSetting(hidealbumstext)</visible>
 						<include content="InfoList">
 							<param name="bottom" value="0" />
 							<param name="width" value="903" />
@@ -283,7 +283,7 @@
 						<left>20</left>
 						<top>45</top>
 						<height>245</height>
-						<visible>Skin.HasSetting(HideAlbumsText)</visible>
+						<visible>Skin.HasSetting(hidealbumstext)</visible>
 						<include content="InfoListPics">
 							<param name="bottom" value="0" />
 							<param name="width" value="903" />
@@ -309,8 +309,8 @@
 				<right>30</right>
 				<height>168</height>
 				<label>$PARAM[textbox_content]</label>
-				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 			</control>
 			<control type="textbox" id="$PARAM[textbox_id]">
@@ -319,8 +319,8 @@
 				<right>30</right>
 				<height>165</height>
 				<label>$PARAM[textbox_content]</label>
-				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>String.IsEqual(Skin.Font, Arial)</visible>
 			</control>
 		</control>

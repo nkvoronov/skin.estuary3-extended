@@ -73,7 +73,7 @@
 						<top>27</top>
 						<width>140</width>
 						<height>133</height>
-						<texture colordiffuse="$VAR[MainColorVar]" border="40">buttons/button-fo.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]" border="40">buttons/button-fo.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -142,7 +142,7 @@
 						<top>-5</top>
 						<width>380</width>
 						<height>85</height>
-						<texture colordiffuse="$VAR[MainColorVar]" border="40">buttons/button-fo.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]" border="40">buttons/button-fo.png</texture>
 						<visible>Control.HasFocus(9091)</visible>
 					</control>
 					<control type="label">
@@ -164,7 +164,7 @@
 				<height>50</height>
 				<align>center</align>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>$VAR[MainColorVar]</textcolor>
+				<textcolor>$VAR[ColorMainVar]</textcolor>
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
 			</control>

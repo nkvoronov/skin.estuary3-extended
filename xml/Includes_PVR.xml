@@ -11,15 +11,15 @@
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>$VAR[MainColorVar]</textcolor>
+				<textcolor>$VAR[ColorMainVar]</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>$VAR[MainColorVar]</textcolor>
-				<label>: [COLOR $VAR[WhiteColorVar]]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
+				<textcolor>$VAR[ColorMainVar]</textcolor>
+				<label>: [COLOR $VAR[ColorWhiteVar]]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
 			</control>
 		</control>
 		<control type="image">
@@ -57,7 +57,7 @@
 					<height>70</height>
 					<aligny>center</aligny>
 					<font>font27</font>
-					<textcolor>$VAR[GreyColorVar]</textcolor>
+					<textcolor>$VAR[ColorGreyVar]</textcolor>
 					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
 				</control>
 			</itemlayout>
@@ -66,7 +66,7 @@
 					<left>0</left>
 					<right>0</right>
 					<bottom>0</bottom>
-					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+					<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="image">
@@ -150,7 +150,7 @@
 					<info2>PVR.TimeshiftProgressEpgStart</info2>
 					<info>PVR.TimeshiftProgressPlayPos</info>
 					<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
-					<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
+					<midtexture colordiffuse="$VAR[ColorMainVar]">colors/white.png</midtexture>
 				</control>
 				<control type="progress">
 					<left>0</left>
@@ -185,7 +185,7 @@
 				<height>16</height>
 				<info>PVR.EpgEventProgress</info>
 				<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
-				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
+				<midtexture colordiffuse="$VAR[ColorMainVar]">colors/white.png</midtexture>
 			</control>
 		</control>
 	</include>
@@ -268,7 +268,7 @@
 				<width>830</width>
 				<bottom>75</bottom>
 				<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
 			<control type="textbox">
 				<top>530</top>
@@ -308,7 +308,7 @@
 							<width>830</width>
 							<aligny>center</aligny>
 							<label>$VAR[ListItemDateLabelVar]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
-							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="100" width="780">
@@ -318,7 +318,7 @@
 							<width>830</width>
 							<aligny>center</aligny>
 							<label>$VAR[ListItemDateLabelVar]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
-							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						</control>
 					</itemlayout>
 					<content sortby="date" sortorder="$PARAM[folder_sortorder]">$INFO[ListItem.FilenameAndPath]</content>
@@ -337,7 +337,7 @@
 				<height>40</height>
 				<aligny>center</aligny>
 				<label>$PARAM[label]:</label>
-				<textcolor>$VAR[MainColorVar]</textcolor>
+				<textcolor>$VAR[ColorMainVar]</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>
@@ -356,7 +356,7 @@
 			<width>100%</width>
 			<height>100%</height>
 			<label>$INFO[PVR.ChannelNumberInput]</label>
-			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+			<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 			<align>center</align>
 			<font>WeatherTemp</font>
 			<aligny>center</aligny>
@@ -380,14 +380,14 @@
 				<onup>$PARAM[control_onupdown_id]</onup>
 				<ondown>$PARAM[control_onupdown_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
-				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="$VAR[MainColorVar]">$PARAM[progress_texture]</progresstexture>
+				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="$VAR[ColorMainVar]">$PARAM[progress_texture]</progresstexture>
 				<rulerdatelayout width="1700" height="45" condition="$PARAM[has_rulerdate_layout]">
 					<control type="label">
 						<width>1700</width>
 						<height>45</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[ColorMainVar]</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
@@ -399,7 +399,7 @@
 						<font>font12</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>10</textoffsetx>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[ColorMainVar]</textcolor>
 					</control>
 				</rulerlayout>
 				<channellayout height="62" width="$PARAM[channel_width]">
@@ -465,7 +465,7 @@
 						<width>16</width>
 						<height>16</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[MainColorVar]">icons/pvr/premiere.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">icons/pvr/premiere.png</texture>
 					</control>
 					<control type="image">
 						<left>6</left>
@@ -482,13 +482,13 @@
 						<left>2</left>
 						<width>54</width>
 						<height>54</height>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<control type="image" id="2">
 						<width>58</width>
 						<height>58</height>
-						<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+						<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 					</control>
 					<control type="image" id="2">
 						<width>58</width>
@@ -512,7 +512,7 @@
 						<width>16</width>
 						<height>16</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[MainColorVar]">icons/pvr/premiere.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">icons/pvr/premiere.png</texture>
 					</control>
 					<control type="image">
 						<left>6</left>

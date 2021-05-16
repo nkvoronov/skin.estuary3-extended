@@ -11,7 +11,7 @@
 			<top>0</top>
 			<width>128</width>
 			<height>128</height>
-			<texturefocus colordiffuse="$VAR[MainColorVar]">calibrate/cal_tl.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorMainVar]">calibrate/cal_tl.png</texturefocus>
 			<texturenofocus>calibrate/cal_tl.png</texturenofocus>
 		</control>
 		<control type="mover" id="9">
@@ -20,7 +20,7 @@
 			<top>500</top>
 			<width>128</width>
 			<height>128</height>
-			<texturefocus colordiffuse="$VAR[MainColorVar]">calibrate/cal_br.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorMainVar]">calibrate/cal_br.png</texturefocus>
 			<texturenofocus>calibrate/cal_br.png</texturenofocus>
 		</control>
 		<control type="mover" id="10">
@@ -29,7 +29,7 @@
 			<top>500</top>
 			<width>384</width>
 			<height>128</height>
-			<texturefocus colordiffuse="$VAR[MainColorVar]">calibrate/cal_sub.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorMainVar]">calibrate/cal_sub.png</texturefocus>
 			<texturenofocus>calibrate/cal_sub.png</texturenofocus>
 		</control>
 		<control type="resize" id="11">
@@ -38,7 +38,7 @@
 			<top>390</top>
 			<width>500</width>
 			<height>500</height>
-			<texturefocus colordiffuse="$VAR[MainColorVar]">calibrate/cal_ratio.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorMainVar]">calibrate/cal_ratio.png</texturefocus>
 			<texturenofocus>calibrate/cal_ratio.png</texturenofocus>
 		</control>
 		<control type="label" id="2">
@@ -49,7 +49,7 @@
 			<align>center</align>
 			<label></label>
 			<font>font37</font>
-			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+			<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 		</control>
 		<control type="label" id="3">
 			<description>help information</description>
@@ -59,7 +59,7 @@
 			<align>center</align>
 			<label></label>
 			<font>font37</font>
-			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+			<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 		</control>
 	</controls>
 </window>

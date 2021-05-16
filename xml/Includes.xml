@@ -112,10 +112,10 @@
 		<definition>
 			<control type="group">
 				<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
-				<include content="UserRatingContent" condition="Skin.HasSetting(CircleUserRating)">
+				<include content="UserRatingContent" condition="Skin.HasSetting(circleuserrating)">
 					<param name="infolabel" value="ListItem.UserRating" />
 				</include>
-				<include content="UserRatingContent" condition="Skin.HasSetting(CircleRating)">
+				<include content="UserRatingContent" condition="Skin.HasSetting(circlerating)">
 					<param name="infolabel" value="ListItem.Rating" />
 				</include>
 			</control>
@@ -129,7 +129,7 @@
 			<width>44</width>
 			<height>44</height>
 			<aspectratio>keep</aspectratio>
-			<texture colordiffuse="$VAR[MainColorVar]">overlays/badge.png</texture>
+			<texture colordiffuse="$VAR[ColorMainVar]">overlays/badge.png</texture>
 		</control>
 		<control type="label">
 			<left>3</left>
@@ -143,7 +143,7 @@
 		</control>
 	</include>
 	<include name="InfoList">
-		<param name="item_label">$VAR[ListItemYearLabel2Var][COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Label][/COLOR]</param>
+		<param name="item_label">$VAR[ListItemYearLabel2Var][COLOR $VAR[ColorWhiteVar]]$INFO[ListItem.Label][/COLOR]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
 		<param name="item_height">40</param>
 		<param name="bottom">100</param>
@@ -169,7 +169,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
 				</focusedlayout>
@@ -180,7 +180,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
 				</itemlayout>
@@ -200,7 +200,7 @@
 				<height>40</height>
 				<aligny>center</aligny>
 				<label>$PARAM[label]:</label>
-				<textcolor>$VAR[MainColorVar]</textcolor>
+				<textcolor>$VAR[ColorMainVar]</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>
@@ -215,7 +215,7 @@
 		<param name="align">left</param>
 		<param name="height">70</param>
 		<param name="font">font13</param>
-		<param name="fontcolor">$VAR[GreyColorVar]</param>
+		<param name="fontcolor">$VAR[ColorGreyVar]</param>
 		<definition>
 			<itemlayout width="$PARAM[width]" height="$PARAM[height]">
 				<control type="label">
@@ -236,7 +236,7 @@
 					<top>0</top>
 					<right>0</right>
 					<bottom>0</bottom>
-					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+					<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="label">
@@ -272,7 +272,7 @@
 					<width>$PARAM[size_img]</width>
 					<height>$PARAM[size_img]</height>
 					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="$VAR[MediaFlagsColorVar]">$PARAM[icon]</texture>
+					<texture colordiffuse="$VAR[ColorMediaFlagsVar]">$PARAM[icon]</texture>
 				</control>
 				<control type="label">
 					<left>$PARAM[left_txt]</left>
@@ -281,7 +281,7 @@
 					<aligny>left</aligny>
 					<font>font12</font>
 					<label>$PARAM[label]</label>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					<textcolor>$VAR[ColorMediaFlagsVar]</textcolor>
 				</control>
 			</control>
 		</definition>
@@ -299,7 +299,7 @@
 				<height>$PARAM[height]</height>
 				<fadetime>0</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture colordiffuse="$VAR[MediaFlagsColorVar]">$PARAM[texture]</texture>
+				<texture colordiffuse="$VAR[ColorMediaFlagsVar]">$PARAM[texture]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>$PARAM[colordef]</visible>
 			</control>
@@ -338,21 +338,21 @@
 					<param name="icon" value="lists/year.png" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]" />
 				</include>
-				<include content="MediaFlag" condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">
+				<include content="MediaFlag" condition="String.IsEqual(Skin.String(studiosimages.path),resource://resource.images.studios.white/)">
 					<param name="top" value="-5" />
 					<param name="width" value="120" />
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Studio,resource://resource.images.studios.white/,.png]" />
 					<param name="visible" value="String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,movie)" />
 					<param name="colordef" value="true" />
 				</include>
-				<include content="MediaFlag" condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">
+				<include content="MediaFlag" condition="String.IsEqual(Skin.String(studiosimages.path),resource://resource.images.studios.coloured/)">
 					<param name="top" value="-5" />
 					<param name="width" value="120" />
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Studio,resource://resource.images.studios.coloured/,.png]" />
 					<param name="visible" value="String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,movie)" />
 					<param name="colordef" value="false" />
 				</include>
-				<include content="MediaFlag" condition="String.IsEqual(Skin.String(RecordLabels.path),resource://resource.images.recordlabels.white/)">
+				<include content="MediaFlag" condition="String.IsEqual(Skin.String(recordlabels.path),resource://resource.images.recordlabels.white/)">
 					<param name="top" value="-5" />
 					<param name="width" value="120" />
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]" />
@@ -461,7 +461,7 @@
 						<top>0</top>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 						<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus($PARAM[list_id])">Conditional</animation>
 					</control>
 					<control type="image">
@@ -492,7 +492,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -503,7 +503,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height">
@@ -522,7 +522,7 @@
 						<right>20</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -533,8 +533,8 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>$VAR[GreyColorVar]</textcolor>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<textcolor>$VAR[ColorGreyVar]</textcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					</control>
 				</itemlayout>
 			</control>
@@ -626,7 +626,7 @@
 					<width>1400</width>
 					<label>$PARAM[main_label]</label>
 					<font>font30_title</font>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<height>35</height>
 					<scroll>true</scroll>
 					<animation effect="slide" start="0,0" end="0,15" time="0" condition="String.IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
@@ -635,7 +635,7 @@
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
 					<left>85</left>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<height>100</height>
 					<width>1400</width>
 				</control>
@@ -660,7 +660,7 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font52_title</font>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<height>65</height>
 					<align>center</align>
 					<scroll>true</scroll>
@@ -669,7 +669,7 @@
 				<control type="label" id="$PARAM[id]">
 					<label>$PARAM[sub_label]</label>
 					<left>85</left>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<align>center</align>
 					<height>100</height>
 					<width>100%</width>
@@ -690,8 +690,8 @@
 				<top>$PARAM[down_posy]</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ColorMainVar]">overlays/arrowdown.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[ColorMainVar]">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 				<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -705,8 +705,8 @@
 				<top>$PARAM[up_posy]</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ColorMainVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[ColorMainVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 				<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -728,7 +728,7 @@
 				<top>$PARAM[posy]</top>
 				<width>28</width>
 				<height>28</height>
-				<texture flipx="true" colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+				<texture flipx="true" colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 				<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
@@ -740,7 +740,7 @@
 				<top>$PARAM[posy]</top>
 				<width>28</width>
 				<height>28</height>
-				<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+				<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
 				<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
@@ -798,14 +798,14 @@
 				<top>0</top>
 				<right>0</right>
 				<bottom>0</bottom>
-				<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
+				<texture colordiffuse="$VAR[ColorDialogTintVar]">colors/white.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<right>0</right>
 				<height>70</height>
-				<texture colordiffuse="$VAR[MainColorVar]" border="2">colors/white70.png</texture>
+				<texture colordiffuse="$VAR[ColorMainVar]" border="2">colors/white70.png</texture>
 			</control>
 			<control type="label" id="$PARAM[header_id]">
 				<left>40</left>
@@ -815,7 +815,7 @@
 				<font>font32_title</font>
 				<label>$PARAM[header_label]</label>
 				<aligny>center</aligny>
-				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+				<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 			</control>
 			<control type="button" id="22002">
 				<description>button overlay to avoid closing in dialog area</description>
@@ -842,7 +842,7 @@
 				<textureradioonfocus colordiffuse="white7">dialogs/close.png</textureradioonfocus>
 				<textureradioonnofocus colordiffuse="white7">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
 				<onclick>Action(close)</onclick>
-				<visible>!Skin.HasSetting(TouchMode)</visible>
+				<visible>!Skin.HasSetting(touchmode)</visible>
 			</control>
 			<control type="button">
 				<right>10</right>
@@ -852,7 +852,7 @@
 				<texturefocus>dialogs/close.png</texturefocus>
 				<texturenofocus>dialogs/close.png</texturenofocus>
 				<onclick>Action(close)</onclick>
-				<visible>Skin.HasSetting(TouchMode)</visible>
+				<visible>Skin.HasSetting(touchmode)</visible>
 			</control>
 		</control>
 	</include>
@@ -901,7 +901,7 @@
 					<top>50</top>
 					<label>$PARAM[sublabel]</label>
 					<left>35</left>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<height>100</height>
 					<width>900</width>
 					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
@@ -936,12 +936,12 @@
 								<width>32</width>
 								<height>32</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="$VAR[MainColorVar]">$VAR[NowPlayingIconVar]</texture>
+								<texture colordiffuse="$VAR[ColorMainVar]">$VAR[NowPlayingIconVar]</texture>
 							</control>
 							<control type="label">
 								<label>$INFO[Player.Title]</label>
 								<font>font27</font>
-								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+								<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 								<height>35</height>
 								<width min="1" max="602">auto</width>
 							</control>
@@ -951,8 +951,8 @@
 							<left>-44</left>
 							<top>44</top>
 							<font>font12</font>
-							<textcolor>$VAR[GreyColorVar]</textcolor>
-							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<textcolor>$VAR[ColorGreyVar]</textcolor>
+							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							<height>25</height>
 							<width>630</width>
 							<align>right</align>
@@ -962,7 +962,7 @@
 					<control type="group">
 						<visible>Integer.IsGreater(System.ProfileCount,1) + !Player.HasMedia</visible>
 						<control type="image">
-							<visible>Skin.HasSetting(ShowProfileAvatar)</visible>
+							<visible>Skin.HasSetting(showprofileavatar)</visible>
 							<top>25</top>
 							<left>-70</left>
 							<width>50</width>
@@ -970,13 +970,13 @@
 							<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 							<texture>$INFO[System.ProfileThumb]</texture>
 							<aspectratio>scale</aspectratio>
-						</control>
+							</control>
 						<control type="label">
-							<visible>Skin.HasSetting(ShowProfileName)</visible>
+							<visible>Skin.HasSetting(showprofilename)</visible>
 							<font>font45</font>
 							<align>right</align>
 							<left>-630</left>
-							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							<aligny>center</aligny>
 							<height>110</height>
 							<width max="600">auto</width>
@@ -986,12 +986,12 @@
 					</control>
 					<control type="label">
 						<font>font_clock</font>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<height>200</height>
 						<width>auto</width>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<label>$INFO[System.Time]</label>
-						<visible>!Skin.HasSetting(HideTime)</visible>
+						<visible>!Skin.HasSetting(hidetime)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -1025,7 +1025,7 @@
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-						<visible>Skin.HasSetting(ShowWeatherInfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
+						<visible>Skin.HasSetting(showweatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
 						<top>1</top>
@@ -1034,7 +1034,7 @@
 						<fadetime>300</fadetime>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture>$INFO[Weather.FanartCode,weather/small/,.png]</texture>
-						<visible>Skin.HasSetting(ShowWeatherInfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
+						<visible>Skin.HasSetting(showweatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
 						<top>8</top>
@@ -1058,13 +1058,13 @@
 					<visible>!System.HasActiveModalDialog</visible>
 					<visible>Container.Scrolling</visible>
 					<visible>!Container.Content(seasons)</visible>
-					<visible>Skin.HasSetting(HideLogoLibrary) | Skin.HasSetting(HideLogoSearch)</visible>
+					<visible>Skin.HasSetting(hidelogolibrary) | Skin.HasSetting(hidelogosearch)</visible>
 					<visible>Container.SortMethod(1) | Container.SortMethod(4) | Container.SortMethod(12) | Container.SortMethod(10) | Container.SortMethod(7) | Container.SortMethod(29) | Container.SortMethod(17)</visible>
 					<animation effect="fade" start="0" end="100" time="200" reversible="true">VisibleChange</animation>
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				</control>
 			</control>
-			<include condition="Skin.HasSetting(TouchMode) + !Window.IsActive(Home)">TouchBackButton</include>
+			<include condition="Skin.HasSetting(touchmode) + !Window.IsActive(Home)">TouchBackButton</include>
 		</definition>
 	</include>
 	<include name="TopBarLabels">
@@ -1112,7 +1112,7 @@
 	</include>
 	<include name="BreadcrumbsLabel">
 		<font>font45</font>
-		<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+		<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 		<top>7</top>
 		<height>100</height>
 		<width>auto</width>
@@ -1122,13 +1122,13 @@
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
+			<texture colordiffuse="$VAR[ColorPrimaryBackgroundVar]">special://skin/extras/backgrounds/primary.jpg</texture>
 		</control>
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="$VAR[SecondaryBackgroundColorVar]" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(BackgroundOverlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
+			<texture colordiffuse="$VAR[ColorSecondaryBackgroundVar]" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(backgroundoverlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
 		</control>
 	</include>
 	<include name="DefaultBackground">
@@ -1140,14 +1140,14 @@
 				<description>Video</description>
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
-				<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
+				<visible>Player.HasVideo + !Skin.HasSetting(showbackgroundvideo)</visible>
 				<visible>!Slideshow.IsActive</visible>
 			</control>
 			<control type="visualisation">
 				<description>Visualisation</description>
 				<include>FullScreenDimensions</include>
 				<visible>!Slideshow.IsActive</visible>
-				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(ShowBackgroundVis)</visible>
+				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(showbackgroundvis)</visible>
 			</control>
 			<control type="group">
 				<description>Backgrounds</description>
@@ -1161,7 +1161,7 @@
 				</control>
 				<control type="group" id="31111">
 					<description>Background x</description>
-					<visible>![[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + Visualisation.Enabled + !Skin.HasSetting(ShowBackgroundVis) + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]]</visible>
+					<visible>![[Player.HasVideo + !Skin.HasSetting(showbackgroundvideo)] | [Player.HasAudio + Visualisation.Enabled + !Skin.HasSetting(showbackgroundvis) + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]]</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -1174,11 +1174,11 @@
 							<aspectratio>scale</aspectratio>
 							<fadetime>400</fadetime>
 							<animation effect="fade" time="400">VisibleChange</animation>
-							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Skin.String(CustomBackground)]</imagepath>
-							<visible>Skin.HasSetting(UseCustomBg) + !String.IsEmpty(Skin.String(CustomBackground)) + String.IsEmpty(Control.GetLabel(32213))</visible>
+							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Skin.String(custombackground)]</imagepath>
+							<visible>Skin.HasSetting(usecustombg) + !String.IsEmpty(Skin.String(custombackground)) + String.IsEmpty(Control.GetLabel(32213))</visible>
 						</control>
 						<control type="group" id="32212">
-							<visible>Skin.HasSetting(SeparateBackground) + String.IsEmpty(Control.GetLabel(32213))</visible>
+							<visible>Skin.HasSetting(separatebackground) + String.IsEmpty(Control.GetLabel(32213))</visible>
 							<animation effect="fade" time="400">VisibleChange</animation>
 							<control type="multiimage" id="32221">
 								<description>Background 2</description>
@@ -1186,7 +1186,7 @@
 								<aspectratio>scale</aspectratio>
 								<fadetime>400</fadetime>
 								<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[main_background]</imagepath>
-								<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(32222))</visible>
+								<visible>String.IsEmpty(Skin.String(homefanart.path)) | String.IsEmpty(Control.GetLabel(32222))</visible>
 							</control>
 							<control type="multiimage" id="32222">
 								<description>Background 3</description>
@@ -1194,7 +1194,7 @@
 								<aspectratio>scale</aspectratio>
 								<fadetime>400</fadetime>
 								<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[fanart_background]</imagepath>
-								<visible>!String.IsEmpty(Skin.String(HomeFanart.path))</visible>
+								<visible>!String.IsEmpty(Skin.String(homefanart.path))</visible>
 							</control>
 						</control>
 						<control type="multiimage" id="32213">
@@ -1204,7 +1204,7 @@
 							<fadetime>400</fadetime>
 							<animation effect="fade" time="400">VisibleChange</animation>
 							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[fanart_media]</imagepath>
-							<visible>!Skin.HasSetting(NoFanart)</visible>
+							<visible>!Skin.HasSetting(nofanart)</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -1257,7 +1257,7 @@
 				<control type="group">
 					<visible>$PARAM[info_visible]</visible>
 					<visible>!System.HasActiveModalDialog</visible>
-					<visible>!Skin.HasSetting(TouchMode)</visible>
+					<visible>!Skin.HasSetting(touchmode)</visible>
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -1267,7 +1267,7 @@
 						<width>36</width>
 						<height>36</height>
 						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="Control.IsVisible(51) | Control.IsVisible(53)">Conditional</animation>
-						<texturefocus colordiffuse="$VAR[MainColorVar]">frame/menu-nofo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorMainVar]">frame/menu-nofo.png</texturefocus>
 						<texturenofocus colordiffuse="colordif1">frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
@@ -1278,7 +1278,7 @@
 						<left>12</left>
 						<width>36</width>
 						<height>36</height>
-						<texturefocus colordiffuse="$VAR[MainColorVar]">icons/menu.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorMainVar]">icons/menu.png</texturefocus>
 						<texturenofocus colordiffuse="colordif1">icons/menu.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
@@ -1289,14 +1289,14 @@
 						<left>64</left>
 						<width>300</width>
 						<height>44</height>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<label>$LOCALIZE[33063]</label>
 						<onclick>SetFocus(9000)</onclick>
 						<texturefocus />
 						<texturenofocus />
 					</control>
 				</control>
-				<include condition="Skin.HasSetting(TouchMode)">TouchButtons</include>
+				<include condition="Skin.HasSetting(touchmode)">TouchButtons</include>
 			</control>
 		</definition>
 	</include>
@@ -1317,14 +1317,14 @@
 					<height>48</height>
 					<aligny>center</aligny>
 					<align>right</align>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<label>$INFO[Container($PARAM[right_container_id]).CurrentItem,, / ]$INFO[Container($PARAM[right_container_id]).NumItems]</label>
 				</control>
 				<control type="image">
 					<width>54</width>
 					<height>44</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
+					<texture colordiffuse="$VAR[ColorMainVar]">frame/item-count.png</texture>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -1338,14 +1338,14 @@
 					<width>54</width>
 					<height>44</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
+					<texture colordiffuse="$VAR[ColorMainVar]">frame/item-count.png</texture>
 				</control>
 				<control type="label">
 					<width>auto</width>
 					<height>48</height>
 					<aligny>center</aligny>
 					<align>right</align>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<label>$INFO[Container($PARAM[left_container_id]).CurrentItem,, / ]$INFO[Container($PARAM[left_container_id]).NumItems]</label>
 				</control>
 			</control>
@@ -1378,7 +1378,7 @@
 				<height>15</height>
 				<info>Player.Progress</info>
 				<texturebg border="3" colordiffuse="white8">colors/white50.png</texturebg>
-				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
+				<midtexture colordiffuse="$VAR[ColorMainVar]">colors/white.png</midtexture>
 			</control>
 			<control type="button" id="87">
 				<include>HiddenObject</include>
@@ -1397,7 +1397,7 @@
 				<height>25</height>
 				<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+				<textureslidernibfocus colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
 				<action>seek</action>
 				<visible>!Control.HasFocus(87) + Player.SeekEnabled</visible>
@@ -1408,8 +1408,8 @@
 				<width>$PARAM[width]</width>
 				<height>25</height>
 				<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
-				<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
 				<action>seek</action>
 				<visible>Control.HasFocus(87) + Player.SeekEnabled</visible>
@@ -1441,7 +1441,7 @@
 	<include name="TouchButtons">
 		<control type="grouplist" id="700">
 			<orientation>horizontal</orientation>
-			<visible>Skin.HasSetting(TouchMode)</visible>
+			<visible>Skin.HasSetting(touchmode)</visible>
 			<visible>!Window.IsActive(Home) + !Window.IsActive(filemanager)</visible>
 			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
@@ -1477,7 +1477,7 @@
 					<height>120</height>
 					<label></label>
 					<onclick>ActivateWindow(1103)</onclick>
-					<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorMainVar]">buttons/roundbutton-fo.png</texturefocus>
 					<texturenofocus />
 				</control>
 				<control type="image">
@@ -1485,7 +1485,7 @@
 					<top>34</top>
 					<width>52</width>
 					<height>52</height>
-					<texture colordiffuse="$VAR[GreyColorVar]">$VAR[VolumeIconVar]</texture>
+					<texture colordiffuse="$VAR[ColorGreyVar]">$VAR[VolumeIconVar]</texture>
 				</control>
 			</control>
 			<include content="IconButton">
@@ -1507,15 +1507,15 @@
 			<onclick>Action(Back)</onclick>
 			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
-			<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorMainVar]">buttons/roundbutton-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>30</radioposx>
 			<radiowidth>60</radiowidth>
 			<radioheight>60</radioheight>
 			<textureradioonfocus>icons/back.png</textureradioonfocus>
-			<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/back.png</textureradioonnofocus>
+			<textureradioonnofocus colordiffuse="$VAR[ColorGreyVar]">icons/back.png</textureradioonnofocus>
 			<textureradioofffocus>icons/back.png</textureradioofffocus>
-			<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/back.png</textureradiooffnofocus>
+			<textureradiooffnofocus colordiffuse="$VAR[ColorGreyVar]">icons/back.png</textureradiooffnofocus>
 		</control>
 	</include>
 	<include name="TouchBackOSDButton">
@@ -1528,15 +1528,15 @@
 			<aligny>center</aligny>
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>Action(FullScreen)</onclick>
-			<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorMainVar]">buttons/roundbutton-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>30</radioposx>
 			<radiowidth>60</radiowidth>
 			<radioheight>60</radioheight>
 			<textureradioonfocus>icons/back.png</textureradioonfocus>
-			<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/back.png</textureradioonnofocus>
+			<textureradioonnofocus colordiffuse="$VAR[ColorGreyVar]">icons/back.png</textureradioonnofocus>
 			<textureradioofffocus>icons/back.png</textureradioofffocus>
-			<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/back.png</textureradiooffnofocus>
+			<textureradiooffnofocus colordiffuse="$VAR[ColorGreyVar]">icons/back.png</textureradiooffnofocus>
 			<include>Animation_TopSlide</include>
 		</control>
 	</include>
@@ -1549,15 +1549,15 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<onfocus>Action(Back)</onfocus>
-			<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorMainVar]">buttons/roundbutton-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>30</radioposx>
 			<radiowidth>60</radiowidth>
 			<radioheight>60</radioheight>
 			<textureradioonfocus>icons/back.png</textureradioonfocus>
-			<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/back.png</textureradioonnofocus>
+			<textureradioonnofocus colordiffuse="$VAR[ColorGreyVar]">icons/back.png</textureradioonnofocus>
 			<textureradioofffocus>icons/back.png</textureradioofffocus>
-			<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/back.png</textureradiooffnofocus>
+			<textureradiooffnofocus colordiffuse="$VAR[ColorGreyVar]">icons/back.png</textureradiooffnofocus>
 			<visible>!Window.IsVisible(PictureInfo)</visible>
 		</control>
 	</include>
@@ -1610,7 +1610,7 @@
 					<left>-5</left>
 					<width>410</width>
 					<height>270</height>
-					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+					<texture colordiffuse="$VAR[ColorMainVar]">colors/grey.png</texture>
 					<bordersize>20</bordersize>
 					<include>Animation_FocusTextureFade</include>
 				</control>

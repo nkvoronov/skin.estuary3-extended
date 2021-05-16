@@ -52,7 +52,7 @@
 							<param name="img_fallback" value="DefaultAudio.png" />
 							<param name="img_ratio" value="keep" />
 							<param name="istwolabel" value="True" />
-							<param name="main_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]" />
+							<param name="main_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Year][/COLOR]" />
 							<param name="sub_label" value="$INFO[ListItem.Label]" />
 						</include>
 					</control>

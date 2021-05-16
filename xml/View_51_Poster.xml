@@ -84,7 +84,7 @@
 						<height>40</height>
 						<label>$VAR[TitleAndYearVar]</label>
 						<font>font45_title</font>
-						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="group">
@@ -95,9 +95,9 @@
 							<top>470</top>
 							<height>250</height>
 							<right>25</right>
-							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 							<label>$VAR[PlotAndTagVar]</label>
-							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 						</control>
 						<control type="textbox">
@@ -105,9 +105,9 @@
 							<top>470</top>
 							<height>255</height>
 							<right>25</right>
-							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 							<label>$VAR[PlotAndTagVar]</label>
-							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							<visible>String.IsEqual(Skin.Font, Arial)</visible>
 						</control>
 					</control>
@@ -118,7 +118,7 @@
 							<left>635</left>
 							<top>470</top>
 							<height>245</height>
-							<visible>!Skin.HasSetting(HideCollectionsText)</visible>
+							<visible>!Skin.HasSetting(hidecollectionstext)</visible>
 							<include content="InfoList">
 								<param name="bottom" value="0" />
 								<param name="width" value="1032" />
@@ -131,7 +131,7 @@
 							<left>643</left>
 							<top>480</top>
 							<height>245</height>
-							<visible>Skin.HasSetting(HideCollectionsText)</visible>
+							<visible>Skin.HasSetting(hidecollectionstext)</visible>
 							<include content="InfoListPics">
 								<param name="bottom" value="0" />
 								<param name="width" value="1032" />

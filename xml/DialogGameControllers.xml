@@ -28,7 +28,7 @@
 					<label>$LOCALIZE[35050]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<textcolor>$VAR[ColorMainVar]</textcolor>
 				</control>
 				<control type="image">
 					<description>Controller Profiles Grouplist Background</description>
@@ -61,7 +61,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font25_title</font>
-					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
 				</control>
 			</control>
@@ -84,7 +84,7 @@
 					<label>$LOCALIZE[35059]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<textcolor>$VAR[ColorMainVar]</textcolor>
 				</control>
 				<control type="image">
 					<top>20</top>
@@ -118,7 +118,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font27</font>
-					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
 				</control>
 				<control type="label" id="8">
@@ -128,13 +128,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font20_title</font>
-					<textcolor>$VAR[GreyColorVar]</textcolor>
-					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+					<textcolor>$VAR[ColorGreyVar]</textcolor>
+					<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 				</control>
 				<control type="image" id="9">
 					<description>Feature Separator Image</description>
 					<height>3</height>
-					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+					<texture colordiffuse="$VAR[ColorSeparatorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
@@ -195,7 +195,7 @@
 					<left>10</left>
 					<right>10</right>
 					<description>Controller Description</description>
-					<textcolor>$VAR[GreyColorVar]</textcolor>
+					<textcolor>$VAR[ColorGreyVar]</textcolor>
 				</control>
 			</control>
 		</control>

@@ -40,11 +40,11 @@
 							<top>0</top>
 							<width>860</width>
 							<height>238</height>
-							<texture colordiffuse="$VAR[BorderMediaColorVar]">extras/border/banner.png</texture>
+							<texture colordiffuse="$VAR[ColorBorderMediaVar]">extras/border/banner.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(ShowBorders)</visible>
+							<visible>Skin.HasSetting(showborders)</visible>
 						</control>
 						<control type="image">
 							<left>2</left>
@@ -130,7 +130,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$VAR[BannerLabel2Var]</label>
-							<textcolor>$VAR[MainColorVar]</textcolor>
+							<textcolor>$VAR[ColorMainVar]</textcolor>
 						</control>
 						<control type="progress">
 							<left>20</left>
@@ -138,13 +138,13 @@
 							<width>820</width>
 							<height>1</height>
 							<texturebg></texturebg>
-							<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+							<midtexture colordiffuse="$VAR[ColorMainVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="group">
 							<left>405</left>
-							<visible>Skin.HasSetting(CircleRating) | Skin.HasSetting(CircleUserRating)</visible>
+							<visible>Skin.HasSetting(circlerating) | Skin.HasSetting(circleuserrating)</visible>
 							<include>RatingCircle</include>
 						</control>
 					</control>
@@ -176,18 +176,18 @@
 							<top>0</top>
 							<width>860</width>
 							<height>238</height>
-							<texture colordiffuse="$VAR[BorderMediaColorVar]">extras/border/banner.png</texture>
+							<texture colordiffuse="$VAR[ColorBorderMediaVar]">extras/border/banner.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(ShowBorders)</visible>
+							<visible>Skin.HasSetting(showborders)</visible>
 						</control>
 						<control type="image">
 							<left>-6</left>
 							<top>-6</top>
 							<width>872</width>
 							<height>250</height>
-							<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+							<texture colordiffuse="$VAR[ColorMainVar]">colors/grey.png</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -284,13 +284,13 @@
 							<width>820</width>
 							<height>1</height>
 							<texturebg></texturebg>
-							<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+							<midtexture colordiffuse="$VAR[ColorMainVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="group">
 							<left>405</left>
-							<include condition="Skin.HasSetting(CircleRating) | Skin.HasSetting(CircleUserRating)">RatingCircle</include>
+							<include condition="Skin.HasSetting(circlerating) | Skin.HasSetting(circleuserrating)">RatingCircle</include>
 						</control>
 					</control>
 				</focusedlayout>

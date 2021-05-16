@@ -20,7 +20,7 @@
 			<top>70</top>
 			<control type="button" id="111">
 				<description>Add torrent</description>
-				<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+				<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				<left>0</left>
 				<top>0</top>
@@ -37,7 +37,7 @@
 			</control>
 			<control type="button" id="112">
 				<description>Remove torrent</description>
-				<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+				<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				<left>0</left>
 				<top>120</top>
@@ -54,7 +54,7 @@
 			</control>
 			<control type="button" id="113">
 				<description>Stop torrent</description>
-				<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+				<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				<left>0</left>
 				<top>240</top>
@@ -71,7 +71,7 @@
 			</control>
 			<control type="button" id="114">
 				<description>Start torrent</description>
-				<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+				<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				<left>0</left>
 				<top>360</top>
@@ -88,7 +88,7 @@
 			</control>
 			<control type="button" id="115">
 				<description>Stop all torrents</description>
-				<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+				<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				<left>0</left>
 				<top>480</top>
@@ -105,7 +105,7 @@
 			</control>
 			<control type="button" id="116">
 				<description>Start all torrents</description>
-				<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+				<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				<left>0</left>
 				<top>600</top>
@@ -122,7 +122,7 @@
 			</control>
 			<control type="button" id="118">
 				<description>Settings</description>
-				<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+				<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				<left>0</left>
 				<top>720</top>
@@ -208,7 +208,7 @@
 					<width>1170</width>
 					<height>100</height>
 					<visible>Control.HasFocus(120)</visible>
-					<texture border="5" colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+					<texture border="5" colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>

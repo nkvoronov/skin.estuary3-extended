@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<onload>SetProperty(fanarthometype,settings,Home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
 	<controls>
@@ -25,14 +25,14 @@
 				<top>130</top>
 				<right>0</right>
 				<height>2</height>
-				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[ColorMainVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
 				<left>470</left>
 				<bottom>135</bottom>
 				<right>0</right>
 				<height>2</height>
-				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[ColorMainVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
 		<control type="button" id="7">
@@ -56,7 +56,7 @@
 		<control type="image" id="11">
 			<description>Separator Image</description>
 			<height>3</height>
-			<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+			<texture colordiffuse="$VAR[ColorSeparatorVar]" border="3">dialogs/separator-grey.png</texture>
 		</control>
 		<control type="label" id="14">
 			<description>Default Label</description>
@@ -68,8 +68,8 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font25_title</font>
-			<textcolor>$VAR[GreyColorVar]</textcolor>
-			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+			<textcolor>$VAR[ColorGreyVar]</textcolor>
+			<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 		</control>
 		<control type="group">
 			<depth>DepthContentPanel</depth>
@@ -97,7 +97,7 @@
 				<textoffsetx>40</textoffsetx>
 				<aligny>center</aligny>
 				<font>font37</font>
-				<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 				<texturenofocus />
 			</control>
 		</control>
@@ -139,7 +139,7 @@
 				<onclick>SettingsLevelChange</onclick>
 				<textoffsetx>100</textoffsetx>
 				<textoffsety>0</textoffsety>
-				<texturefocus colordiffuse="$VAR[MainColorVar]">colors/white.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[ColorMainVar]">colors/white.png</texturefocus>
 				<texturenofocus />
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>
@@ -165,7 +165,7 @@
 				<height>102</height>
 				<font>font12</font>
 				<align>justify</align>
-				<textcolor>$VAR[MainColorVar]</textcolor>
+				<textcolor>$VAR[ColorMainVar]</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 		</control>

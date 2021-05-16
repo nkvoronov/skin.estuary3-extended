@@ -64,7 +64,7 @@
 				<height>70</height>
 				<font>font12</font>
 				<align>justify</align>
-				<textcolor>$VAR[MainColorVar]</textcolor>
+				<textcolor>$VAR[ColorMainVar]</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="button" id="7">
@@ -83,7 +83,7 @@
 			<control type="image" id="11">
 				<description>Separator Image</description>
 				<height>3</height>
-				<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[ColorSeparatorVar]" border="3">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="edit" id="12">
 				<include>DefaultSettingButton</include>

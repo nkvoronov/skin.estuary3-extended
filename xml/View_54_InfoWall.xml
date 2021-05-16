@@ -46,7 +46,7 @@
 						<left>64</left>
 						<top>110</top>
 						<include content="ThumbLayout">
-							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label2][/COLOR]" />
+							<param name="thumb_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Label2][/COLOR]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -59,7 +59,7 @@
 						<top>110</top>
 						<include content="ThumbLayout">
 							<param name="focused" value="true" />
-							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label2][/COLOR]" />
+							<param name="thumb_label" value="[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Label2][/COLOR]" />
 						</include>
 					</control>
 				</focusedlayout>

@@ -121,7 +121,7 @@
 					<width>1370</width>
 					<height>50</height>
 					<visible>Control.HasFocus(220)</visible>
-					<texture border="5" colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+					<texture border="5" colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>

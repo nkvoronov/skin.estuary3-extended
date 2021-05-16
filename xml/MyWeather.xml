@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">15100</defaultcontrol>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<menucontrol>10000</menucontrol>
 	<onload>SetProperty(fanarthometype,weather,Home)</onload>
 	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundWeatherVar],Home)</onload>
@@ -63,7 +63,7 @@
 					<width>80%</width>
 					<align>center</align>
 					<height>44</height>
-					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 					<label>$LOCALIZE[31154]</label>
 					<visible>Control.HasFocus(20)</visible>
 					<animation effect="fade" time="400">VisibleChange</animation>
@@ -77,7 +77,7 @@
 					<aligny>center</aligny>
 					<textoffsetx>40</textoffsetx>
 					<textoffsety>0</textoffsety>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus />
 					<onup>20000</onup>
 					<ondown>15100</ondown>
@@ -116,7 +116,7 @@
 						<param name="texture" value="icons/weather/sunset.png" />
 						<param name="header" value="$LOCALIZE[403]" />
 					</include>
-					<include content="WeatherIcons">
+					<include content="WeatherImages">
 						<param name="left" value="0" />
 						<param name="top" value="-5" />
 						<param name="width" value="130" />

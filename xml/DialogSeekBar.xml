@@ -126,7 +126,7 @@
 				<aligny>top</aligny>
 				<label>$VAR[SeekTimeLabelVar]</label>
 				<font>font45</font>
-				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+				<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 				<visible>!Player.ChannelPreviewActive | VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="label" id="40000">
@@ -138,7 +138,7 @@
 				<aligny>top</aligny>
 				<label>$VAR[SeekLabelVar]</label>
 				<font>font13</font>
-				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+				<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 			</control>
 			<control type="group">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -175,8 +175,8 @@
 					<width>100%</width>
 					<height>26</height>
 					<texturesliderbar colordiffuse="white6">osd/progress/nub_bar.png</texturesliderbar>
-					<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_bar.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">colors/white.png</textureslidernibfocus>
+					<textureslidernib colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[ColorMainVar]">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled + !Player.ChannelPreviewActive</visible>
 				</control>
 			</control>
@@ -198,7 +198,7 @@
 					<height>16</height>
 					<info>Player.Progress</info>
 					<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
-					<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
+					<midtexture colordiffuse="$VAR[ColorMainVar]">colors/white.png</midtexture>
 				</control>
 				<control type="slider" id="401">
 					<left>0</left>
@@ -206,8 +206,8 @@
 					<width>100%</width>
 					<height>26</height>
 					<texturesliderbar colordiffuse="white6">osd/progress/nub_bar.png</texturesliderbar>
-					<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_bar.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">colors/white.png</textureslidernibfocus>
+					<textureslidernib colordiffuse="$VAR[ColorMainVar]">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[ColorMainVar]">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled</visible>
 				</control>
 			</control>
@@ -247,7 +247,7 @@
 				<top>-80</top>
 				<height>25</height>
 				<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
-				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+				<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 				<align>center</align>
 				<font>WeatherTemp</font>
 				<aligny>center</aligny>
@@ -318,7 +318,7 @@
 				<left>240</left>
 				<top>180</top>
 				<height>25</height>
-				<label>[COLOR $VAR[GreyColorVar]]$LOCALIZE[14304]: [/COLOR]$INFO[RDS.GetLine(0)]</label>
+				<label>[COLOR $VAR[ColorGreyVar]]$LOCALIZE[14304]: [/COLOR]$INFO[RDS.GetLine(0)]</label>
 				<visible>RDS.HasRadioText</visible>
 			</control>
 		</control>

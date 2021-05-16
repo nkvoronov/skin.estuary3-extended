@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<views>50,51,52,53,54,55,56,57,58,500,501,502</views>
 	<menucontrol>9000</menucontrol>
 	<onload condition="String.IsEmpty(Window(Home).Property(fanarthometype)) | ![String.IsEqual(window(Home).Property(fanarthometype),movies) | String.IsEqual(window(Home).Property(fanarthometype),tvshows) | String.IsEqual(window(Home).Property(fanarthometype),musicvideos)]">SetProperty(fanarthometype,video,Home)</onload>
@@ -47,7 +47,7 @@
 			<control type="group">
 				<centerleft>50%</centerleft>
 				<visible>!Container.Scrolling</visible>
-				<visible>!Skin.HasSetting(HideLogoLibrary)</visible>
+				<visible>!Skin.HasSetting(hidelogolibrary)</visible>
 				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				<control type="image">
 					<top>0</top>
@@ -71,7 +71,7 @@
 				<height>70</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<include condition="!Skin.HasSetting(HideMediaFlagsLibrary)">MediaFlags</include>
+				<include condition="!Skin.HasSetting(hidemediaflagslibrary)">MediaFlags</include>
 			</control>
 			<include>CommonAlphabet</include>
 			<include>CommonScrollbars</include>

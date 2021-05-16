@@ -30,7 +30,7 @@
 					<textoffsetx>20</textoffsetx>
 					<wrapmultiline>false</wrapmultiline>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 					<label>$ADDON[script.module.youtube.dl 32030]</label>
 				</control>
@@ -43,7 +43,7 @@
 					<textoffsetx>20</textoffsetx>
 					<wrapmultiline>false</wrapmultiline>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 					<label>$ADDON[script.module.youtube.dl 32031]</label>
 				</control>
@@ -56,7 +56,7 @@
 					<textoffsetx>20</textoffsetx>
 					<wrapmultiline>false</wrapmultiline>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 					<label>$ADDON[script.module.youtube.dl 32032] ($INFO[Window(10000).property(XBMCJsonRAFifoQueue_download.queue.size)])</label>
 				</control>
@@ -69,7 +69,7 @@
 					<textoffsetx>20</textoffsetx>
 					<wrapmultiline>false</wrapmultiline>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 					<label>$ADDON[script.module.youtube.dl 32033]</label>
 				</control>
@@ -81,7 +81,7 @@
 					<textoffsetx>20</textoffsetx>
 					<wrapmultiline>false</wrapmultiline>
 					<align>center</align>
-					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[ColorMainVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 					<label>$ADDON[script.module.youtube.dl 32034]</label>
 				</control>

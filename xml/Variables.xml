@@ -14,10 +14,10 @@
 	</variable>
 	<variable name="AddonCountLabelVar">
 		<value condition="Integer.IsGreater(System.AddonUpdateCount,0)">$INFO[System.AddonUpdateCount]</value>
-		<value>[COLOR $VAR[GreyColorVar]]$INFO[System.AddonUpdateCount][/COLOR]</value>
+		<value>[COLOR $VAR[ColorGreyVar]]$INFO[System.AddonUpdateCount][/COLOR]</value>
 	</variable>
 	<variable name="MusicInfoTextboxVar">
-		<value condition="String.IsEqual(ListItem.DbType,song) + !String.IsEmpty(ListItem.Comment)">[COLOR $VAR[MainColorVar]][B]$LOCALIZE[569][/B][/COLOR][CR]$INFO[ListItem.Comment]</value>
+		<value condition="String.IsEqual(ListItem.DbType,song) + !String.IsEmpty(ListItem.Comment)">[COLOR $VAR[ColorMainVar]][B]$LOCALIZE[569][/B][/COLOR][CR]$INFO[ListItem.Comment]</value>
 		<value condition="String.IsEqual(ListItem.DbType,album) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="String.IsEqual(ListItem.DbType,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="String.IsEqual(ListItem.DbType,artist) + String.IsEmpty(ListItem.Property(Artist_Description)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
@@ -100,12 +100,12 @@
 		<value condition="!ListItem.IsParentFolder">$VAR[PlotAndTagVar]</value>
 	</variable>
 	<variable name="SelectLabelVar">
-		<value condition="Control.IsVisible(3)">[COLOR $VAR[MainColorVar]]$INFO[Container(3).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR]</value>
-		<value>[COLOR $VAR[MainColorVar]]$INFO[Container(6).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR]</value>
+		<value condition="Control.IsVisible(3)">[COLOR $VAR[ColorMainVar]]$INFO[Container(3).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[ColorMainVar]]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR]</value>
+		<value>[COLOR $VAR[ColorMainVar]]$INFO[Container(6).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[ColorMainVar]]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR]</value>
 	</variable>
 	<variable name="FileBrowserSelectLabelVar">
-		<value condition="Control.IsVisible(450)">[COLOR $VAR[MainColorVar]]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
-		<value>[COLOR $VAR[MainColorVar]]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
+		<value condition="Control.IsVisible(450)">[COLOR $VAR[ColorMainVar]]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[ColorMainVar]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
+		<value>[COLOR $VAR[ColorMainVar]]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[ColorMainVar]]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
 	</variable>
 	<variable name="BannerArtVar">
 		<value condition="ListItem.IsParentFolder">DefaultBackBanner.png</value>
@@ -157,13 +157,13 @@
 		<value>$INFO[ListItem.AddonCreator,, - ]$INFO[ListItem.AddonVersion]</value>
 	</variable>
 	<variable name="RatingSettingLabel2Var">
-		<value condition="Skin.HasSetting(CircleRating)">$LOCALIZE[563]</value>
-		<value condition="Skin.HasSetting(CircleUserRating)">$LOCALIZE[38018]</value>
+		<value condition="Skin.HasSetting(circlerating)">$LOCALIZE[563]</value>
+		<value condition="Skin.HasSetting(circleuserrating)">$LOCALIZE[38018]</value>
 		<value>$LOCALIZE[16018]</value>
 	</variable>
 	<variable name="ProfileIdentificationLabel2Var">
-		<value condition="Skin.HasSetting(ShowProfileName)">$LOCALIZE[31165]</value>
-		<value condition="Skin.HasSetting(ShowProfileAvatar)">$LOCALIZE[31166]</value>
+		<value condition="Skin.HasSetting(showprofilename)">$LOCALIZE[31165]</value>
+		<value condition="Skin.HasSetting(showprofileavatar)">$LOCALIZE[31166]</value>
 		<value>$LOCALIZE[16018]</value>
 	</variable>
 	<variable name="AddonLifecycleTypeVar">
@@ -228,7 +228,7 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="BannerLabel2Var">
-		<value condition="String.IsEqual(Listitem.DBType,tvshow)">[COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(WatchedEpisodes)][/COLOR] / [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(TotalEpisodes)][/COLOR]</value>
+		<value condition="String.IsEqual(Listitem.DBType,tvshow)">[COLOR $VAR[ColorWhiteVar]]$INFO[ListItem.Property(WatchedEpisodes)][/COLOR] / [COLOR $VAR[ColorWhiteVar]]$INFO[ListItem.Property(TotalEpisodes)][/COLOR]</value>
 	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
 		<value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
@@ -238,7 +238,7 @@
 		<value condition="Player.Forwarding32x | Player.Rewinding32x">32x</value>
 	</variable>
 	<variable name="SeekLabelVar">
-		<value condition="!String.IsEmpty(Player.SeekStepSize)">$LOCALIZE[773][COLOR $VAR[GreyColorVar]] $INFO[Player.SeekStepSize][/COLOR]</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize)">$LOCALIZE[773][COLOR $VAR[ColorGreyVar]] $INFO[Player.SeekStepSize][/COLOR]</value>
 		<value condition="Player.Paused">$LOCALIZE[112]</value>
 		<value condition="Player.Forwarding">$LOCALIZE[31039] $VAR[VideoPlayerForwardRewindVar]</value>
 		<value condition="Player.Rewinding">$LOCALIZE[31038] $VAR[VideoPlayerForwardRewindVar]</value>
@@ -319,8 +319,8 @@
 	</variable>
 	<variable name="VideoInfoSubLabelVar">
 		<value condition="String.IsEqual(ListItem.DBType,episode)">$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.Title]</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie)">[I][COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline][/COLOR][/I]</value>
-		<value>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Genre][/COLOR]</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie)">[I][COLOR $VAR[ColorMainVar]]$INFO[ListItem.Tagline][/COLOR][/I]</value>
+		<value>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Genre][/COLOR]</value>
 	</variable>
 	<variable name="VideoInfoBottomLabelVar">
 		<value condition="Control.HasFocus(8)">$INFO[ListItem.LastPlayed,$LOCALIZE[568]: ]</value>
@@ -336,7 +336,7 @@
 	</variable>
 	<variable name="NowPlayingBreadcrumbsVar">
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearlogo)) + !Skin.HasSetting(HideLogoPlay)">$VAR[VideoPlayerSeasonXEpisodeLabelVar]$INFO[VideoPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearlogo)) + !Skin.HasSetting(hidelogoplay)">$VAR[VideoPlayerSeasonXEpisodeLabelVar]$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(episodes) + Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.TVShowTitle]$VAR[VideoPlayerYearLabelVar]</value>
 		<value condition="!VideoPlayer.Content(episodes) + Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.Title]$VAR[VideoPlayerYearLabelVar]</value>
 		<value condition="MusicPartyMode.Enabled">$LOCALIZE[589]</value>
@@ -347,7 +347,7 @@
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</value>
 		<value condition="VideoPlayer.Content(episodes)">$VAR[VideoPlayerSeasonXEpisodeLabelVar]$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$VAR[VideoPlayerChannelNumberLabelVar] $INFO[VideoPlayer.ChannelName] $INFO[VideoPlayer.EpisodeName, (,)]</value>
-		<value>[COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.Genre][/COLOR]</value>
+		<value>[COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.Genre][/COLOR]</value>
 	</variable>
 	<variable name="OSDNextLabelVar">
 		<value condition="Window.IsActive(visualisation)">$INFO[MusicPlayer.offset(1).Title,[COLOR button_focus]$LOCALIZE[19031]: [/COLOR]]$INFO[MusicPlayer.offset(1).Artist, - ]$INFO[MusicPlayer.offset(1).Album, - ] $VAR[MusicPlayerYearLabelVar]</value>
@@ -374,13 +374,13 @@
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart)) + String.IsEmpty(Container.ListItem.Art(animatedfanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)">$INFO[Container.ListItem.Art(animatedfanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Property(AddonFanart))">$INFO[Container.ListItem.Property(AddonFanart)]</value>
-		<!-- MovieGenreFanart !!! -->
-		<value condition="[ String.StartsWith(Container.ListItem.FolderPath,videodb://movies/genres/) | String.StartsWith(Container.ListItem.FolderPath,videodb://tvshows/genres/) ] + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
+		<!-- moviegenrefanart !!! -->
+		<value condition="[ String.StartsWith(Container.ListItem.FolderPath,videodb://movies/genres/) | String.StartsWith(Container.ListItem.FolderPath,videodb://tvshows/genres/) ] + !String.IsEmpty(Skin.String(moviegenrefanart.path))">$INFO[Skin.String(moviegenrefanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(moviegenrefanart.ext)]</value>
 		<value></value>
 	</variable>
 	<variable name="MediaFanartVar">
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(Home).Property(infobackground)]</value>
-		<value condition="Window.IsActive(videos) + Container.Content(genres) + !ListItem.IsParentFolder + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
+		<value condition="Window.IsActive(videos) + Container.Content(genres) + !ListItem.IsParentFolder + !String.IsEmpty(Skin.String(moviegenrefanart.path))">$INFO[Skin.String(moviegenrefanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(moviegenrefanart.ext)]</value>
 		<value condition="Window.IsActive(pictures) + String.IsEmpty(ListItem.Art(fanart)) + !ListItem.IsFolder">$INFO[ListItem.FolderPath]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + [!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
@@ -447,7 +447,7 @@
 		<value>$LOCALIZE[15016]</value>
 	</variable>
 	<variable name="RepeatButtonColordiffuseVar">
-		<value condition="Control.HasFocus(704)">$VAR[MainColorVar]</value>
+		<value condition="Control.HasFocus(704)">$VAR[ColorMainVar]</value>
 		<value>white2</value>
 	</variable>
 	<variable name="PVRChannelMgrHeaderVar">
@@ -487,12 +487,12 @@
 		<value condition="VideoPlayer.Content(episodes)">$LOCALIZE[20373]$INFO[VideoPlayer.Season,: , / ]$LOCALIZE[20359]$INFO[VideoPlayer.Episode,: ]</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Year]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]</value>
-		<value condition="Player.HasAudio">[COLOR $VAR[WhiteColorVar]]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
+		<value condition="Player.HasAudio">[COLOR $VAR[ColorWhiteVar]]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
 	</variable>
 	<variable name="PlayerLabel3Var">
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,. ][COLOR $VAR[WhiteColorVar]]$INFO[Player.Title][/COLOR]</value>
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,. ][COLOR $VAR[ColorWhiteVar]]$INFO[Player.Title][/COLOR]</value>
 	</variable>
 	<variable name="PVRTimerIconVar">
 		<value condition="ListItem.IsRecording">icons/pvr/PVR-IsRecording.png</value>
@@ -513,7 +513,7 @@
 		<value>$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E,: ]</value>
 	</variable>
 	<variable name="PremieredLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Premiered)">[COLOR $VAR[MainColorVar]]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Premiered][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Premiered)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Premiered][CR]</value>
 	</variable>
 	<variable name="FlagLabelVar">
 		<value condition="ListItem.IsPremiere">[B][COLOR button_focus]$LOCALIZE[838][/COLOR][/B]</value>
@@ -558,8 +558,8 @@
 		<value>$INFO[ListItem.EpisodeName]</value>
 	</variable>
 	<variable name="BackgroundOverlayTypeVar">
-		<value condition="String.IsEqual(Skin.String(BackgroundOverlay),0) | String.IsEmpty(Skin.String(BackgroundOverlay)) ">$LOCALIZE[231]</value>
-		<value>$INFO[Skin.String(BackgroundOverlay),$LOCALIZE[467] ]</value>
+		<value condition="String.IsEqual(Skin.String(backgroundoverlay),0) | String.IsEmpty(Skin.String(backgroundoverlay)) ">$LOCALIZE[231]</value>
+		<value>$INFO[Skin.String(backgroundoverlay),$LOCALIZE[467] ]</value>
 	</variable>
 	<variable name="MasterModeLabelVar">
 		<value condition="!System.IsMaster">$LOCALIZE[20045]</value>
@@ -604,22 +604,22 @@
 		<value></value>
 	</variable>
 	<variable name="PlotAndTagVar">
-		<value condition="!String.IsEmpty(ListItem.Plot)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR]][/COLOR]$INFO[ListItem.Plot]</value>
+		<value condition="!String.IsEmpty(ListItem.Plot)">[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Tagline,[I],[/I][CR]][/COLOR]$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Plot))">$INFO[ListItem.Property(Plot)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
 	</variable>
 	<variable name="FanartBackgroundVar">
-		<value condition="Window.IsActive(script-globalsearch.xml) | Window.IsActive(script-script.extendedinfo-VideoList.xml) | Window.IsActive(script-script.extendedinfo-YoutubeList.xml)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="Window.IsVisible(Home) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="Window.IsVisible(Home) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="Window.IsVisible(Home) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="Window.IsVisible(Home)">$INFO[Skin.String(HomeFanart.path)]$VAR[HomeMenuTypeVar]$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!Window.IsVisible(Home) + !String.IsEmpty(Window(Home).Property(fanarthometype))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(Home).Property(fanarthometype)]$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml) | Window.IsActive(script-script.extendedinfo-VideoList.xml) | Window.IsActive(script-script.extendedinfo-YoutubeList.xml)">$INFO[Skin.String(homefanart.path)]search$INFO[Skin.String(homefanart.ext)]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(801)">$INFO[Skin.String(homefanart.path)]power$INFO[Skin.String(homefanart.ext)]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(802)">$INFO[Skin.String(homefanart.path)]settings$INFO[Skin.String(homefanart.ext)]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(803)">$INFO[Skin.String(homefanart.path)]search$INFO[Skin.String(homefanart.ext)]</value>
+		<value condition="Window.IsVisible(Home)">$INFO[Skin.String(homefanart.path)]$VAR[HomeMenuTypeVar]$INFO[Skin.String(homefanart.ext)]</value>
+		<value condition="!Window.IsVisible(Home) + !String.IsEmpty(Window(Home).Property(fanarthometype))">$INFO[Skin.String(homefanart.path)]$INFO[Window(Home).Property(fanarthometype)]$INFO[Skin.String(homefanart.ext)]</value>
 		<value></value>
 	</variable>
 	<variable name="WeatherFanartValueVar">
-		<value condition="!Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container.ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-		<value condition="Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container.ListItem.Property(FanartCode)]</value>
+		<value condition="!Skin.HasSetting(weatherfanart.multi)">$INFO[Skin.String(weatherfanart.path)]$INFO[Container.ListItem.Property(FanartCode)]$INFO[Skin.String(weatherfanart.ext)]</value>
+		<value condition="Skin.HasSetting(weatherfanart.multi)">$INFO[Skin.String(weatherfanart.path)]$INFO[Container.ListItem.Property(FanartCode)]</value>
 		<value></value>
 	</variable>
 	<variable name="SearchFanartVar">
@@ -657,16 +657,16 @@
 		<value>$INFO[Listitem.Art(poster)]</value>
 	</variable>
 	<variable name="IconStudiosVar">
-		<value condition="!String.IsEmpty(Skin.String(StudiosImages.path)) + !ListItem.IsParentFolder">$INFO[Skin.String(StudiosImages.path)]$INFO[ListItem.Label]$INFO[Skin.String(StudiosImages.ext)]</value>
+		<value condition="!String.IsEmpty(Skin.String(studiosimages.path)) + !ListItem.IsParentFolder">$INFO[Skin.String(studiosimages.path)]$INFO[ListItem.Label]$INFO[Skin.String(studiosimages.ext)]</value>
 	</variable>
 	<variable name="IconCountriesVar">
-		<value condition="!String.IsEmpty(Skin.String(LanguageFlags.path)) + !ListItem.IsParentFolder">$INFO[Skin.String(LanguageFlags.path)]$INFO[ListItem.Label]$INFO[Skin.String(LanguageFlags.ext)]</value>
+		<value condition="!String.IsEmpty(Skin.String(languageflags.path)) + !ListItem.IsParentFolder">$INFO[Skin.String(languageflags.path)]$INFO[ListItem.Label]$INFO[Skin.String(languageflags.ext)]</value>
 	</variable>
 	<variable name="IconGenreVar">
-		<value condition="!String.IsEmpty(Skin.String(MovieGenreIcons.path)) + !ListItem.IsParentFolder">$INFO[Skin.String(MovieGenreIcons.path)]$VAR[GenreLabelRuVar]$INFO[Skin.String(MovieGenreIcons.ext)]</value>
+		<value condition="!String.IsEmpty(Skin.String(moviegenreicons.path)) + !ListItem.IsParentFolder">$INFO[Skin.String(moviegenreicons.path)]$VAR[GenreLabelRuVar]$INFO[Skin.String(moviegenreicons.ext)]</value>
 	</variable>
 	<variable name="IconMusicGenreVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicGenreIcons.path)) + !ListItem.IsParentFolder">$INFO[Skin.String(MusicGenreIcons.path)]$INFO[ListItem.Label]$INFO[Skin.String(MusicGenreIcons.ext)]</value>
+		<value condition="!String.IsEmpty(Skin.String(musicgenreicons.path)) + !ListItem.IsParentFolder">$INFO[Skin.String(musicgenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(musicgenreicons.ext)]</value>
 	</variable>
 	<variable name="GenreLabelRuVar">
 		<value condition="String.IsEqual(ListItem.Label,триллер) | String.IsEqual(ListItem.Label,Триллер)">thriller</value>
@@ -758,10 +758,10 @@
 		<value condition="String.IsEqual(Window.Property(type),episode)">$VAR[DialogVideoInfoSeasonXEpisodeLabelVar]$INFO[Window.Property(Title)]</value>
 	</variable>
 	<variable name="DialogVideoInfoYearLabelVar">
-		<value condition="!String.IsEmpty(Window.Property(Year))"> ([COLOR $VAR[MainColorVar]]$INFO[Window.Property(Year)][/COLOR])</value>
+		<value condition="!String.IsEmpty(Window.Property(Year))"> ([COLOR $VAR[ColorMainVar]]$INFO[Window.Property(Year)][/COLOR])</value>
 	</variable>
 	<variable name="DialogVideoInfoSeasonXEpisodeLabelVar">
-		<value condition="![String.IsEmpty(Window.Property(season)) + String.IsEmpty(Window.Property(episode))]">$INFO[Window.Property(season)][COLOR $VAR[MainColorVar]]x[/COLOR]$INFO[Window.Property(episode),, ]</value>
+		<value condition="![String.IsEmpty(Window.Property(season)) + String.IsEmpty(Window.Property(episode))]">$INFO[Window.Property(season)][COLOR $VAR[ColorMainVar]]x[/COLOR]$INFO[Window.Property(episode),, ]</value>
 		<value condition="String.IsEmpty(Window.Property(season)) + !String.IsEmpty(Window.Property(episode))">$INFO[Window.Property(episode),, ]</value>
 	</variable>
 	<variable name="PlayerInfoClearLogoVar">
@@ -890,38 +890,38 @@
 		<value condition="Integer.IsGreater(ListItem.Property(playcount),0)">OverlayWatched.png</value>
 	</variable>
 	<variable name="MediaFlagsSearchStudioIconVar">
-		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">resource://resource.images.studios.white/</value>
-		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">resource://resource.images.studios.coloured/</value>
+		<value condition="String.IsEqual(Skin.String(studiosimages.path),resource://resource.images.studios.white/)">resource://resource.images.studios.white/</value>
+		<value condition="String.IsEqual(Skin.String(studiosimages.path),resource://resource.images.studios.coloured/)">resource://resource.images.studios.coloured/</value>
 	</variable>
 	<variable name="CurrentWeatherIconVar">
-		<value condition="String.IsEmpty(Window(Weather).Property(Current.ProviderIcon)) + !String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode),,.png]</value>
-		<value condition="String.IsEmpty(Window(Weather).Property(Current.ProviderIcon)) + !String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode),,/]</value>
+		<value condition="String.IsEmpty(Window(Weather).Property(Current.ProviderIcon)) + !String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Current.FanartCode),,.png]</value>
+		<value condition="String.IsEmpty(Window(Weather).Property(Current.ProviderIcon)) + !String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Current.FanartCode),,/]</value>
 		<value condition="String.IsEmpty(Window(Weather).Property(Current.ProviderIcon))">$INFO[Weather.Conditions]</value>
 		<value condition="!String.IsEmpty(Window(Weather).Property(Current.ProviderIcon))">$INFO[Window(Weather).Property(Current.ProviderIcon)]</value>
 	</variable>
 	<variable name="InfoBarStatsVar">
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),video) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[3])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[342])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(Movies.Watched)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Movies.UnWatched)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[20343])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[20360]: [/COLOR][/B]$INFO[Window.Property(Episodes.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Episodes.UnWatched)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[20389])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Watched)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.UnWatched)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[2])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[132]: [/COLOR][/B]$INFO[Window.Property(Music.AlbumsCount)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[133]: [/COLOR][/B]$INFO[Window.Property(Music.ArtistsCount)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[134]: [/COLOR][/B]$INFO[Window.Property(Music.SongsCount)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[19020])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),radio) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[19021])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalRadioChannels)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),weather) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[8])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[446])] + System.HasMediaDVD">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[427]: [/COLOR][/B]$INFO[System.DVDLabel]</value>
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[446])] + !System.HasMediaDVD">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[427]: [/COLOR][/B]$LOCALIZE[164]</value>
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[24001])]">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[3]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalVideoAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[2]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[15016]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalGamesAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[0]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalProgramAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[1]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons)]</value>
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),games) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[15016])]">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[15016]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalGamesAddons)]</value>
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),favorites) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[1036])]">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[1036]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalFavourites)]</value>
-		<value condition="!String.Contains(System.CPUTemperature,?) + !String.Contains(System.GPUTemperature,?)">[B][COLOR $VAR[MainColorVar]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR $VAR[MainColorVar]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR $VAR[MainColorVar]]GPU: [/COLOR][/B]$INFO[System.GPUTemperature]</value>
-		<value condition="!String.Contains(System.CPUTemperature,?)">[B][COLOR $VAR[MainColorVar]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR $VAR[MainColorVar]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[155]: [/COLOR][/B]$INFO[System.UsedSpacePercent]</value>
-		<value>[B][COLOR $VAR[MainColorVar]]IP: [/B][/COLOR]$INFO[Network.IPAddress]  [COLOR $VAR[MainColorVar]][B]RAM: [/B][/COLOR]$INFO[system.memory(used.percent)]  [COLOR $VAR[MainColorVar]][B]$LOCALIZE[155]: [/B][/COLOR]$INFO[System.UsedSpacePercent]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),video) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[3])">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[342])">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(Movies.Watched)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Movies.UnWatched)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[20343])">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[20360]: [/COLOR][/B]$INFO[Window.Property(Episodes.Count)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Episodes.UnWatched)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[20389])">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Watched)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.UnWatched)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[2])">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[132]: [/COLOR][/B]$INFO[Window.Property(Music.AlbumsCount)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[133]: [/COLOR][/B]$INFO[Window.Property(Music.ArtistsCount)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[134]: [/COLOR][/B]$INFO[Window.Property(Music.SongsCount)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[19020])">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),radio) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[19021])">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalRadioChannels)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),weather) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[8])">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[446])] + System.HasMediaDVD">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[427]: [/COLOR][/B]$INFO[System.DVDLabel]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[446])] + !System.HasMediaDVD">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[427]: [/COLOR][/B]$LOCALIZE[164]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[24001])]">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[3]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalVideoAddons)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[2]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[15016]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalGamesAddons)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[0]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalProgramAddons)]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[1]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons)]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),games) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[15016])]">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[15016]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalGamesAddons)]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),favorites) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[1036])]">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[1036]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalFavourites)]</value>
+		<value condition="!String.Contains(System.CPUTemperature,?) + !String.Contains(System.GPUTemperature,?)">[B][COLOR $VAR[ColorMainVar]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR $VAR[ColorMainVar]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR $VAR[ColorMainVar]]GPU: [/COLOR][/B]$INFO[System.GPUTemperature]</value>
+		<value condition="!String.Contains(System.CPUTemperature,?)">[B][COLOR $VAR[ColorMainVar]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR $VAR[ColorMainVar]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR $VAR[ColorMainVar]]$LOCALIZE[155]: [/COLOR][/B]$INFO[System.UsedSpacePercent]</value>
+		<value>[B][COLOR $VAR[ColorMainVar]]IP: [/B][/COLOR]$INFO[Network.IPAddress]  [COLOR $VAR[ColorMainVar]][B]RAM: [/B][/COLOR]$INFO[system.memory(used.percent)]  [COLOR $VAR[ColorMainVar]][B]$LOCALIZE[155]: [/B][/COLOR]$INFO[System.UsedSpacePercent]</value>
 	</variable>
 	<variable name="ListItemNumEpisodesLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Property(NumEpisodes))">[COLOR $VAR[MainColorVar]]$LOCALIZE[20360]: [/COLOR]$INFO[ListItem.Property(NumEpisodes)][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(NumEpisodes))">[COLOR $VAR[ColorMainVar]]$LOCALIZE[20360]: [/COLOR]$INFO[ListItem.Property(NumEpisodes)][CR]</value>
 	</variable>
 	<variable name="ListItemStatusLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Status)">[COLOR $VAR[MainColorVar]]$LOCALIZE[126]: [/COLOR]$VAR[LangStatusLabelVar]</value>
+		<value condition="!String.IsEmpty(ListItem.Status)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[126]: [/COLOR]$VAR[LangStatusLabelVar]</value>
 	</variable>
 	<variable name="LangStatusLabelVar">
 		<value condition="String.IsEqual(ListItem.Status, Ended)">$LOCALIZE[32238]</value>
@@ -929,429 +929,429 @@
 		<value>$INFO[ListItem.Status]</value>
 	</variable>
 	<variable name="ListItemStartTimeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.StartTime)">[COLOR $VAR[MainColorVar]]$LOCALIZE[555]: [/COLOR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime][/COLOR] ([COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR])[CR]</value>
+		<value condition="!String.IsEmpty(ListItem.StartTime)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[555]: [/COLOR][COLOR $VAR[ColorGreyVar]]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime][/COLOR] ([COLOR $VAR[ColorMainVar]]$INFO[ListItem.Duration][/COLOR])[CR]</value>
 	</variable>
 	<variable name="ListItemStartTimeLabel2Var">
-		<value condition="!String.IsEmpty(ListItem.StartTime)">[COLOR $VAR[MainColorVar]]$LOCALIZE[555]: [/COLOR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime][/COLOR] ([COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR])</value>
+		<value condition="!String.IsEmpty(ListItem.StartTime)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[555]: [/COLOR][COLOR $VAR[ColorGreyVar]]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime][/COLOR] ([COLOR $VAR[ColorMainVar]]$INFO[ListItem.Duration][/COLOR])</value>
 	</variable>
 	<variable name="ListItemSeasonXEpisodeLabelVar">
-		<value condition="![String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)]">$INFO[ListItem.Season][COLOR $VAR[MainColorVar]]x[/COLOR]$INFO[ListItem.Episode]</value>
+		<value condition="![String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)]">$INFO[ListItem.Season][COLOR $VAR[ColorMainVar]]x[/COLOR]$INFO[ListItem.Episode]</value>
 		<value condition="String.IsEmpty(ListItem.Season) + !String.IsEmpty(ListItem.Episode)">$INFO[ListItem.Episode]</value>
 	</variable>
 	<variable name="VideoPlayerSeasonXEpisodeLabelVar">
-		<value condition="![String.IsEmpty(VideoPlayer.Season) + String.IsEmpty(VideoPlayer.Episode)]">$INFO[VideoPlayer.Season][COLOR $VAR[MainColorVar]]x[/COLOR]$INFO[VideoPlayer.Episode] </value>
+		<value condition="![String.IsEmpty(VideoPlayer.Season) + String.IsEmpty(VideoPlayer.Episode)]">$INFO[VideoPlayer.Season][COLOR $VAR[ColorMainVar]]x[/COLOR]$INFO[VideoPlayer.Episode] </value>
 		<value condition="String.IsEmpty(VideoPlayer.Season) + !String.IsEmpty(VideoPlayer.Episode)">$INFO[VideoPlayer.Episode] </value>
 	</variable>
 	<variable name="ListItemGenreLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Genre)">[COLOR $VAR[MainColorVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Genre)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR]</value>
 	</variable>
 	<variable name="ListItemPlaycountLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Playcount)">[COLOR $VAR[MainColorVar]]$LOCALIZE[567]: [/COLOR]$INFO[ListItem.Playcount][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Playcount)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[567]: [/COLOR]$INFO[ListItem.Playcount][CR]</value>
 	</variable>
 	<variable name="ListItemDiscNumberLabelVar">
-		<value condition="!String.IsEmpty(ListItem.DiscNumber)">[COLOR $VAR[MainColorVar]]$LOCALIZE[427]: [/COLOR]$INFO[ListItem.DiscNumber][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.DiscNumber)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[427]: [/COLOR]$INFO[ListItem.DiscNumber][CR]</value>
 	</variable>
 	<variable name="ListItemWriterLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Writer)">[COLOR $VAR[MainColorVar]]$LOCALIZE[20417]: [/COLOR]$INFO[ListItem.Writer][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Writer)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[20417]: [/COLOR]$INFO[ListItem.Writer][CR]</value>
 	</variable>
 	<variable name="ListItemDirectorLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Director)">[COLOR $VAR[MainColorVar]]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Director)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director][CR]</value>
 	</variable>
 	<variable name="ListItemCastLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Cast)">[COLOR $VAR[MainColorVar]]$LOCALIZE[206]: [/COLOR]$INFO[ListItem.Cast][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Cast)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[206]: [/COLOR]$INFO[ListItem.Cast][CR]</value>
 	</variable>
 	<variable name="ListItemYearLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Year)"> ([COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR])</value>
+		<value condition="!String.IsEmpty(ListItem.Year)"> ([COLOR $VAR[ColorMainVar]]$INFO[ListItem.Year][/COLOR])</value>
 	</variable>
 	<variable name="ListItemYearLabel2Var">
-		<value condition="!String.IsEmpty(ListItem.Year)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]  -  </value>
+		<value condition="!String.IsEmpty(ListItem.Year)">[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Year][/COLOR]  -  </value>
 	</variable>
 	<variable name="ListItemYearLabel3Var">
-		<value condition="!String.IsEmpty(ListItem.Label2) + String.IsEmpty(Window(Home).Property(GlobalSearch.SearchString))">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label2][/COLOR]  -  </value>
-		<value condition="!String.IsEmpty(ListItem.Year) + !String.IsEmpty(Window(Home).Property(GlobalSearch.SearchString))">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]  -  </value>
+		<value condition="!String.IsEmpty(ListItem.Label2) + String.IsEmpty(Window(Home).Property(GlobalSearch.SearchString))">[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Label2][/COLOR]  -  </value>
+		<value condition="!String.IsEmpty(ListItem.Year) + !String.IsEmpty(Window(Home).Property(GlobalSearch.SearchString))">[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Year][/COLOR]  -  </value>
 	</variable>
 	<variable name="ListItemYearLabel4Var">
-		<value condition="!String.IsEmpty(ListItem.Year)">[COLOR $VAR[MainColorVar]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Year)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year][CR]</value>
 	</variable>
 	<variable name="ListItemTrackNumberLabel2Var">
-		<value condition="!String.IsEmpty(ListItem.TrackNumber)">[COLOR $VAR[MainColorVar]]$LOCALIZE[554]: [/COLOR]$INFO[ListItem.TrackNumber,,. ]</value>
+		<value condition="!String.IsEmpty(ListItem.TrackNumber)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[554]: [/COLOR]$INFO[ListItem.TrackNumber,,. ]</value>
 	</variable>
 	<variable name="VideoPlayerYearLabelVar">
-		<value condition="!String.IsEmpty(VideoPlayer.Year)"> ([COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.Year][/COLOR])</value>
+		<value condition="!String.IsEmpty(VideoPlayer.Year)"> ([COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.Year][/COLOR])</value>
 	</variable>
 	<variable name="MusicPlayerYearLabelVar">
-		<value condition="!String.IsEmpty(MusicPlayer.Year)">([COLOR $VAR[MainColorVar]]$INFO[MusicPlayer.offset(1).Year][/COLOR])</value>
+		<value condition="!String.IsEmpty(MusicPlayer.Year)">([COLOR $VAR[ColorMainVar]]$INFO[MusicPlayer.offset(1).Year][/COLOR])</value>
 	</variable>
 	<variable name="VideoPlayerNextStartTimeLabelVar">
-		<value condition="!String.IsEmpty(VideoPlayer.NextStartTime)">[COLOR $VAR[GreyColorVar]]$INFO[VideoPlayer.NextStartTime,, - ]$INFO[VideoPlayer.NextEndTime] [/COLOR]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.NextStartTime)">[COLOR $VAR[ColorGreyVar]]$INFO[VideoPlayer.NextStartTime,, - ]$INFO[VideoPlayer.NextEndTime] [/COLOR]</value>
 	</variable>
 	<variable name="ListItemNextStartTimeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.NextStartTime)">[COLOR $VAR[GreyColorVar]]$INFO[ListItem.NextStartTime] [/COLOR]</value>
+		<value condition="!String.IsEmpty(ListItem.NextStartTime)">[COLOR $VAR[ColorGreyVar]]$INFO[ListItem.NextStartTime] [/COLOR]</value>
 	</variable>
 	<variable name="PlayerTimeRemainingLabelVar">
-		<value condition="!String.IsEmpty(Player.TimeRemaining)">[COLOR $VAR[MainColorVar]]$LOCALIZE[31134]: [/COLOR]$INFO[Player.TimeRemaining][CR]</value>
+		<value condition="!String.IsEmpty(Player.TimeRemaining)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[31134]: [/COLOR]$INFO[Player.TimeRemaining][CR]</value>
 	</variable>
 	<variable name="PVREpgEventRemainingTimeLabelVar">
-		<value condition="!String.IsEmpty(PVR.EpgEventRemainingTime)">[COLOR $VAR[MainColorVar]]$LOCALIZE[31134]: [/COLOR][CR]$INFO[PVR.EpgEventRemainingTime]</value>
+		<value condition="!String.IsEmpty(PVR.EpgEventRemainingTime)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[31134]: [/COLOR][CR]$INFO[PVR.EpgEventRemainingTime]</value>
 	</variable>
 	<variable name="ListItemDateLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Date)">[COLOR $VAR[MainColorVar]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.Date][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Date)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.Date][CR]</value>
 	</variable>
 	<variable name="ListItemDurationLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Duration)">[COLOR $VAR[MainColorVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration][CR]</value>
 	</variable>
 	<variable name="ListItemDurationLabel2Var">
-		<value condition="!String.IsEmpty(ListItem.Duration)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration)">[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Duration][/COLOR]</value>
 	</variable>
 	<variable name="ListItemExpirationDateTimeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.ExpirationDate)">[COLOR $VAR[MainColorVar]]$LOCALIZE[19299]: [/COLOR]$INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.ExpirationDate)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19299]: [/COLOR]$INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime][CR]</value>
 	</variable>
 	<variable name="VideoPlayerChannelNumberLabelVar">
-		<value condition="!String.IsEmpty(VideoPlayer.ChannelNumberLabel)">([COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.ChannelNumberLabel][/COLOR])</value>
+		<value condition="!String.IsEmpty(VideoPlayer.ChannelNumberLabel)">([COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.ChannelNumberLabel][/COLOR])</value>
 	</variable>
 	<variable name="ListItemNextTitleLabelVar">
-		<value condition="!String.IsEmpty(ListItem.NextTitle)">[COLOR $VAR[MainColorVar]]$LOCALIZE[19031]: [/COLOR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.NextTitle][/COLOR]</value>
+		<value condition="!String.IsEmpty(ListItem.NextTitle)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19031]: [/COLOR][COLOR $VAR[ColorGreyVar]]$INFO[ListItem.NextTitle][/COLOR]</value>
 	</variable>
 	<variable name="ListItemDescriptionLabelVar">
 		<value condition="!String.IsEmpty(ListItem.Property(description))">$INFO[ListItem.Property(description)][CR]</value>
 	</variable>
 	<variable name="ListItemPictureDateTimeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.PictureDatetime)">[COLOR $VAR[MainColorVar]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.PictureDatetime][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.PictureDatetime)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.PictureDatetime][CR]</value>
 	</variable>
 	<variable name="ListItemPictureResolutionLabelVar">
-		<value condition="!String.IsEmpty(ListItem.PictureResolution)">[COLOR $VAR[MainColorVar]]$LOCALIZE[169]: [/COLOR]$INFO[ListItem.PictureResolution][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.PictureResolution)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[169]: [/COLOR]$INFO[ListItem.PictureResolution][CR]</value>
 	</variable>
 	<variable name="ListItemPictureCamMakeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.PictureCamMake)">[COLOR $VAR[MainColorVar]]$LOCALIZE[31041]: [/COLOR]$INFO[ListItem.PictureCamMake][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.PictureCamMake)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[31041]: [/COLOR]$INFO[ListItem.PictureCamMake][CR]</value>
 	</variable>
 	<variable name="ListItemPictureCamModelLabelVar">
-		<value condition="!String.IsEmpty(ListItem.PictureCamModel)">[COLOR $VAR[MainColorVar]]$LOCALIZE[21823]: [/COLOR]$INFO[ListItem.PictureCamModel][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.PictureCamModel)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[21823]: [/COLOR]$INFO[ListItem.PictureCamModel][CR]</value>
 	</variable>
 	<variable name="ListItemSizeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Size)">[COLOR $VAR[MainColorVar]]$LOCALIZE[289]: [/COLOR]$INFO[ListItem.Size][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Size)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[289]: [/COLOR]$INFO[ListItem.Size][CR]</value>
 	</variable>
 	<variable name="ListItemPictureApertureLabelVar">
-		<value condition="!String.IsEmpty(ListItem.PictureAperture)">[COLOR $VAR[MainColorVar]]$LOCALIZE[21826]: [/COLOR]$INFO[ListItem.PictureAperture][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.PictureAperture)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[21826]: [/COLOR]$INFO[ListItem.PictureAperture][CR]</value>
 	</variable>
 	<variable name="ListItemPictureFocalLenLabelVar">
-		<value condition="!String.IsEmpty(ListItem.PictureFocalLen)">[COLOR $VAR[MainColorVar]]$LOCALIZE[21827]: [/COLOR]$INFO[ListItem.PictureFocalLen][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.PictureFocalLen)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[21827]: [/COLOR]$INFO[ListItem.PictureFocalLen][CR]</value>
 	</variable>
 	<variable name="ListItemPictureExpTimeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.PictureExpTime)">[COLOR $VAR[MainColorVar]]$LOCALIZE[21830]: [/COLOR]$INFO[ListItem.PictureExpTime][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.PictureExpTime)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[21830]: [/COLOR]$INFO[ListItem.PictureExpTime][CR]</value>
 	</variable>
 	<variable name="ListItemArtistLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Artist)">[COLOR $VAR[MainColorVar]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Artist)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist][CR]</value>
 	</variable>
 	<variable name="ListItemAlbumLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Album)">[COLOR $VAR[MainColorVar]]$LOCALIZE[558]: [/COLOR]$INFO[ListItem.Album][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Album)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[558]: [/COLOR]$INFO[ListItem.Album][CR]</value>
 	</variable>
 	<variable name="ListItemArtistYearsActiveLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Artist_YearsActive))">[COLOR $VAR[MainColorVar]]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Artist_YearsActive)][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Artist_YearsActive))">[COLOR $VAR[ColorMainVar]]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Artist_YearsActive)][CR]</value>
 	</variable>
 	<variable name="ListItemArtistStyleLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Artist_Style))">[COLOR $VAR[MainColorVar]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(Artist_Style)][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Artist_Style))">[COLOR $VAR[ColorMainVar]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(Artist_Style)][CR]</value>
 	</variable>
 	<variable name="ListItemAlbumLabelLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Album_Label))">[COLOR $VAR[MainColorVar]]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(Album_Label)][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Album_Label))">[COLOR $VAR[ColorMainVar]]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(Album_Label)][CR]</value>
 	</variable>
 	<variable name="ListItemAlbumStyleLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Album_Style))">[COLOR $VAR[MainColorVar]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(Album_Style)][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Album_Style))">[COLOR $VAR[ColorMainVar]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(Album_Style)][CR]</value>
 	</variable>
-	<variable name="SplashScreenDurationNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SplashScreenDuration))">$INFO[Skin.String(SplashScreenDuration)]</value>
+	<variable name="splashscreendurationNameVar">
+		<value condition="!String.IsEmpty(Skin.String(splashscreenduration))">$INFO[Skin.String(splashscreenduration)]</value>
 		<value>5</value>
 	</variable>
-	<variable name="WidgetLimitItemsVar">
-		<value condition="!String.IsEmpty(Skin.String(WidgetLimitItems))">$INFO[Skin.String(WidgetLimitItems)]</value>
+	<variable name="widgetlimititemsVar">
+		<value condition="!String.IsEmpty(Skin.String(widgetlimititems))">$INFO[Skin.String(widgetlimititems)]</value>
 		<value>25</value>
 	</variable>
 	<variable name="StudiosImagesNameVar">
-		<value condition="!String.IsEmpty(Skin.String(StudiosImages.name))">$INFO[Skin.String(StudiosImages.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(studiosimages.name))">$INFO[Skin.String(studiosimages.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="RecordLabelsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(RecordLabels.name))">$INFO[Skin.String(RecordLabels.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(recordlabels.name))">$INFO[Skin.String(recordlabels.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="LanguageFlagsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(LanguageFlags.name))">$INFO[Skin.String(LanguageFlags.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(languageflags.name))">$INFO[Skin.String(languageflags.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="MovieGenreIconsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MovieGenreIcons.name))">$INFO[Skin.String(MovieGenreIcons.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(moviegenreicons.name))">$INFO[Skin.String(moviegenreicons.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="MusicGenreIconsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicGenreIcons.name))">$INFO[Skin.String(MusicGenreIcons.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(musicgenreicons.name))">$INFO[Skin.String(musicgenreicons.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WeatherIconsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(WeatherIcons.name))">$INFO[Skin.String(WeatherIcons.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(weathericons.name))">$INFO[Skin.String(weathericons.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
-	<variable name="SkinSettingPopupPositionNameVar">
-		<value condition="!String.IsEmpty(Skin.String(PopupPosition.label))">$INFO[Skin.String(PopupPosition.label)]</value>
+	<variable name="SkinSettingpopuppositionNameVar">
+		<value condition="!String.IsEmpty(Skin.String(popupposition.label))">$INFO[Skin.String(popupposition.label)]</value>
 		<value>$LOCALIZE[32229]</value>
 	</variable>
 	<variable name="CustomFocusNameVar">
-		<value condition="String.IsEmpty(Skin.String(CustomFocus))">1</value>
-		<value condition="!String.IsEmpty(Skin.String(CustomFocus))">$INFO[Skin.String(CustomFocus)]</value>
+		<value condition="String.IsEmpty(Skin.String(customfocus))">1</value>
+		<value condition="!String.IsEmpty(Skin.String(customfocus))">$INFO[Skin.String(customfocus)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="CustomFocusVar">
-		<value condition="String.IsEmpty(Skin.String(CustomFocus))">-1</value>
-		<value condition="Integer.IsLess(Skin.String(CustomFocus),2)">-1</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),2)">0</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),3)">1</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),4)">2</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),5)">3</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),6)">4</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),7)">5</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),8)">6</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),9)">7</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),10)">8</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),11)">9</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),12)">10</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),13)">11</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),14)">12</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),15)">13</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),16)">14</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),17)">15</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),18)">16</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),19)">17</value>
-		<value condition="Integer.IsEqual(Skin.String(CustomFocus),20)">18</value>
+		<value condition="String.IsEmpty(Skin.String(customfocus))">-1</value>
+		<value condition="Integer.IsLess(Skin.String(customfocus),2)">-1</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),2)">0</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),3)">1</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),4)">2</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),5)">3</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),6)">4</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),7)">5</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),8)">6</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),9)">7</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),10)">8</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),11)">9</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),12)">10</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),13)">11</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),14)">12</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),15)">13</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),16)">14</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),17)">15</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),18)">16</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),19)">17</value>
+		<value condition="Integer.IsEqual(Skin.String(customfocus),20)">18</value>
 	</variable>
 	<variable name="BackgroundOpacityValueVar">
-		<value condition="String.IsEmpty(Skin.String(Opacity)) | String.IsEqual(Skin.String(Opacity),Default)">bg_overlay</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),0)">00FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),5)">0DFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),10)">1AFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),15)">26FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),20)">33FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),25)">40FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),30)">4DFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),35)">59FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),40)">66FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),45)">73FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),50)">80FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),55)">8CFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),60)">99FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),65)">A6FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),70)">B3FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),75)">BFFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),80)">CCFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),85)">D9FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),90)">E6FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),95)">F2FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(Opacity),100)">FFFFFFFF</value>
+		<value condition="String.IsEmpty(Skin.String(opacity)) | String.IsEqual(Skin.String(opacity),Default)">bg_overlay</value>
+		<value condition="String.IsEqual(Skin.String(opacity),0)">00FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),5)">0DFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),10)">1AFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),15)">26FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),20)">33FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),25)">40FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),30)">4DFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),35)">59FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),40)">66FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),45)">73FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),50)">80FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),55)">8CFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),60)">99FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),65)">A6FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),70)">B3FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),75)">BFFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),80)">CCFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),85)">D9FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),90)">E6FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),95)">F2FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(opacity),100)">FFFFFFFF</value>
 		<value>bg_overlay</value>
 	</variable>
 	<variable name="BackgroundOpacityValueNameVar">
-		<value condition="!String.IsEmpty(Skin.String(Opacity)) + !String.IsEqual(Skin.String(Opacity),Default)">$INFO[Skin.String(Opacity.label)] %</value>
+		<value condition="!String.IsEmpty(Skin.String(opacity)) + !String.IsEqual(Skin.String(opacity),Default)">$INFO[Skin.String(opacity.label)] %</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="BackgroundPowerVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundPower))">$INFO[Skin.String(BackgroundPower)]</value>
+		<value condition="!String.IsEmpty(Skin.String(backgroundpower))">$INFO[Skin.String(backgroundpower)]</value>
 		<value>special://skin/extras/home-images/power.jpg</value>
 	</variable>
 	<variable name="BackgroundPowerNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundPower))">$INFO[Skin.String(BackgroundPower)]</value>
+		<value condition="!String.IsEmpty(Skin.String(backgroundpower))">$INFO[Skin.String(backgroundpower)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="BackgroundSettingsVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundSettings))">$INFO[Skin.String(BackgroundSettings)]</value>
+		<value condition="!String.IsEmpty(Skin.String(backgroundsettings))">$INFO[Skin.String(backgroundsettings)]</value>
 		<value>special://skin/extras/home-images/settings.jpg</value>
 	</variable>
 	<variable name="BackgroundSettingsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundSettings))">$INFO[Skin.String(BackgroundSettings)]</value>
+		<value condition="!String.IsEmpty(Skin.String(backgroundsettings))">$INFO[Skin.String(backgroundsettings)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="BackgroundSearchVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundSearch))">$INFO[Skin.String(BackgroundSearch)]</value>
+		<value condition="!String.IsEmpty(Skin.String(backgroundsearch))">$INFO[Skin.String(backgroundsearch)]</value>
 		<value>special://skin/extras/home-images/search.jpg</value>
 	</variable>
 	<variable name="BackgroundSearchNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundSearch))">$INFO[Skin.String(BackgroundSearch)]</value>
+		<value condition="!String.IsEmpty(Skin.String(backgroundsearch))">$INFO[Skin.String(backgroundsearch)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="BackgroundAudioVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundAudio))">$INFO[Skin.String(BackgroundAudio)]</value>
+		<value condition="!String.IsEmpty(Skin.String(backgroundaudio))">$INFO[Skin.String(backgroundaudio)]</value>
 		<value>special://skin/extras/home-images/music.jpg</value>
 	</variable>
 	<variable name="BackgroundAudioNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundAudio))">$INFO[Skin.String(BackgroundAudio)]</value>
+		<value condition="!String.IsEmpty(Skin.String(backgroundaudio))">$INFO[Skin.String(backgroundaudio)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="HomeFanartNameVar">
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.name))">$INFO[Skin.String(HomeFanart.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(homefanart.name))">$INFO[Skin.String(homefanart.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="MovieGenreFanartNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MovieGenreFanart.name))">$INFO[Skin.String(MovieGenreFanart.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(moviegenrefanart.name))">$INFO[Skin.String(moviegenrefanart.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WeatherFanartNameVar">
-		<value condition="!String.IsEmpty(Skin.String(WeatherFanart.name))">$INFO[Skin.String(WeatherFanart.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(weatherfanart.name))">$INFO[Skin.String(weatherfanart.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
-	<variable name="PrimaryBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor)) + !String.IsEqual(Skin.String(PrimaryBackgroundColor), None)">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
-		<value>primary_background</value>
-	</variable>
-	<variable name="PrimaryBackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor)) + !String.IsEqual(Skin.String(PrimaryBackgroundColor), None)">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="SecondaryBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor)) + !String.IsEqual(Skin.String(SecondaryBackgroundColor), None)">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
-		<value>secondary_background</value>
-	</variable>
-	<variable name="SecondaryBackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor)) + !String.IsEqual(Skin.String(SecondaryBackgroundColor), None)">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="MediaFlagsColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MediaFlagsColor)) + !String.IsEqual(Skin.String(MediaFlagsColor), None)">$INFO[Skin.String(MediaFlagsColor)]</value>
-		<value>white</value>
-	</variable>
-	<variable name="MediaFlagsColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MediaFlagsColor)) + !String.IsEqual(Skin.String(MediaFlagsColor), None)">$INFO[Skin.String(MediaFlagsColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="BorderMediaColorVar">
-		<value condition="!String.IsEmpty(Skin.String(BorderMediaColor)) + !String.IsEqual(Skin.String(BorderMediaColor), None)">$INFO[Skin.String(BorderMediaColor)]</value>
-		<value>white</value>
-	</variable>
-	<variable name="BorderMediaColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BorderMediaColor)) + !String.IsEqual(Skin.String(BorderMediaColor), None)">$INFO[Skin.String(BorderMediaColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="DialogTintColorVar">
-		<value condition="!String.IsEmpty(Skin.String(DialogTintColor)) + !String.IsEqual(Skin.String(DialogTintColor), None)">$INFO[Skin.String(DialogTintColor)]</value>
-		<value>dialog_tint</value>
-	</variable>
-	<variable name="DialogTintColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(DialogTintColor)) + !String.IsEqual(Skin.String(DialogTintColor), None)">$INFO[Skin.String(DialogTintColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="BackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundColor)) + !String.IsEqual(Skin.String(BackgroundColor), None)">$INFO[Skin.String(BackgroundColor)]</value>
-		<value>background</value>
-	</variable>
-	<variable name="BackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundColor)) + !String.IsEqual(Skin.String(BackgroundColor), None)">$INFO[Skin.String(BackgroundColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="BlackColorVar">
-		<value condition="!String.IsEmpty(Skin.String(BlackColor)) + !String.IsEqual(Skin.String(BlackColor), None)">$INFO[Skin.String(BlackColor)]</value>
-		<value>black</value>
-	</variable>
-	<variable name="BlackColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BlackColor)) + !String.IsEqual(Skin.String(BlackColor), None)">$INFO[Skin.String(BlackColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="WhiteColorVar">
-		<value condition="!String.IsEmpty(Skin.String(WhiteColor)) + !String.IsEqual(Skin.String(WhiteColor), None)">$INFO[Skin.String(WhiteColor)]</value>
-		<value>white</value>
-	</variable>
-	<variable name="WhiteColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(WhiteColor)) + !String.IsEqual(Skin.String(WhiteColor), None)">$INFO[Skin.String(WhiteColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="GreyColorVar">
-		<value condition="!String.IsEmpty(Skin.String(GreyColor)) + !String.IsEqual(Skin.String(GreyColor), None)">$INFO[Skin.String(GreyColor)]</value>
-		<value>grey</value>
-	</variable>
-	<variable name="GreyColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(GreyColor)) + !String.IsEqual(Skin.String(GreyColor), None)">$INFO[Skin.String(GreyColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="BlueColorVar">
-		<value condition="!String.IsEmpty(Skin.String(BlueColor)) + !String.IsEqual(Skin.String(BlueColor), None)">$INFO[Skin.String(BlueColor)]</value>
-		<value>blue</value>
-	</variable>
-	<variable name="BlueColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BlueColor)) + !String.IsEqual(Skin.String(BlueColor), None)">$INFO[Skin.String(BlueColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="RedColorVar">
-		<value condition="!String.IsEmpty(Skin.String(RedColor)) + !String.IsEqual(Skin.String(RedColor), None)">$INFO[Skin.String(RedColor)]</value>
-		<value>red</value>
-	</variable>
-	<variable name="RedColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(RedColor)) + !String.IsEqual(Skin.String(RedColor), None)">$INFO[Skin.String(RedColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="MainColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MainColor)) + !String.IsEqual(Skin.String(MainColor), None)">$INFO[Skin.String(MainColor)]</value>
+	<variable name="ColorMainVar">
+		<value condition="!String.IsEmpty(Skin.String(colormain))">$INFO[Skin.String(colormain)]</value>
 		<value>button_focus</value>
 	</variable>
-	<variable name="MainColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MainColor)) + !String.IsEqual(Skin.String(MainColor), None)">$INFO[Skin.String(MainColor)]</value>
+	<variable name="ColorMainNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colormain))">$INFO[Skin.String(colormain)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
-	<variable name="TextShadowColorVar">
-		<value condition="!String.IsEmpty(Skin.String(TextShadowColor)) + !String.IsEqual(Skin.String(TextShadowColor), None)">$INFO[Skin.String(TextShadowColor)]</value>
+	<variable name="ColorPrimaryBackgroundVar">
+		<value condition="!String.IsEmpty(Skin.String(colorprimarybackground))">$INFO[Skin.String(colorprimarybackground)]</value>
+		<value>primary_background</value>
+	</variable>
+	<variable name="ColorPrimaryBackgroundNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorprimarybackground))">$INFO[Skin.String(colorprimarybackground)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="ColorSecondaryBackgroundVar">
+		<value condition="!String.IsEmpty(Skin.String(colorsecondarybackground))">$INFO[Skin.String(colorsecondarybackground)]</value>
+		<value>secondary_background</value>
+	</variable>
+	<variable name="ColorSecondaryBackgroundNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorsecondarybackground))">$INFO[Skin.String(colorsecondarybackground)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="ColorMediaFlagsVar">
+		<value condition="!String.IsEmpty(Skin.String(colormediaflags))">$INFO[Skin.String(colormediaflags)]</value>
+		<value>white</value>
+	</variable>
+	<variable name="ColorMediaFlagsNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colormediaflags))">$INFO[Skin.String(colormediaflags)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="ColorBorderMediaVar">
+		<value condition="!String.IsEmpty(Skin.String(colorbordermedia))">$INFO[Skin.String(colorbordermedia)]</value>
+		<value>white</value>
+	</variable>
+	<variable name="ColorBorderMediaNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorbordermedia))">$INFO[Skin.String(colorbordermedia)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="ColorRssHeaderVar">
+		<value condition="!String.IsEmpty(Skin.String(colorrssheader))">$INFO[Skin.String(colorrssheader)]</value>
+		<value>rssheader</value>
+		</variable>
+	<variable name="ColorRssHeaderNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorrssheader))">$INFO[Skin.String(colorrssheader)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>	
+	<variable name="ColorBackgroundVar">
+		<value condition="!String.IsEmpty(Skin.String(colorbackground))">$INFO[Skin.String(colorbackground)]</value>
+		<value>background</value>
+	</variable>
+	<variable name="ColorBackgroundNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorbackground))">$INFO[Skin.String(colorbackground)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>	
+	<variable name="ColorDialogTintVar">
+		<value condition="!String.IsEmpty(Skin.String(colordialogtint))">$INFO[Skin.String(colordialogtint)]</value>
+		<value>dialog_tint</value>
+	</variable>
+	<variable name="ColorDialogTintNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colordialogtint))">$INFO[Skin.String(colordialogtint)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="ColorWhiteVar">
+		<value condition="!String.IsEmpty(Skin.String(colorwhite))">$INFO[Skin.String(colorwhite)]</value>
+		<value>white</value>
+	</variable>
+	<variable name="ColorWhiteNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorwhite))">$INFO[Skin.String(colorwhite)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="ColorTextShadowVar">
+		<value condition="!String.IsEmpty(Skin.String(colortextshadow))">$INFO[Skin.String(colortextshadow)]</value>
 		<value>text_shadow</value>
 	</variable>
-	<variable name="TextShadowColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(TextShadowColor)) + !String.IsEqual(Skin.String(TextShadowColor), None)">$INFO[Skin.String(TextShadowColor)]</value>
+	<variable name="ColorTextShadowNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colortextshadow))">$INFO[Skin.String(colortextshadow)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
-	<variable name="DisabledColorVar">
-		<value condition="!String.IsEmpty(Skin.String(DisabledColor)) + !String.IsEqual(Skin.String(DisabledColor), None)">$INFO[Skin.String(DisabledColor)]</value>
-		<value>disabled</value>
-	</variable>
-	<variable name="DisabledColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(DisabledColor)) + !String.IsEqual(Skin.String(DisabledColor), None)">$INFO[Skin.String(DisabledColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="SelectedColorVar">
-		<value condition="!String.IsEmpty(Skin.String(SelectedColor)) + !String.IsEqual(Skin.String(SelectedColor), None)">$INFO[Skin.String(SelectedColor)]</value>
+	<variable name="ColorSelectedVar">
+		<value condition="!String.IsEmpty(Skin.String(colorselected))">$INFO[Skin.String(colorselected)]</value>
 		<value>selected</value>
 	</variable>
-	<variable name="SelectedColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SelectedColor)) + !String.IsEqual(Skin.String(SelectedColor), None)">$INFO[Skin.String(SelectedColor)]</value>
+	<variable name="ColorSelectedNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorselected))">$INFO[Skin.String(colorselected)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
-	<variable name="InvalidColorVar">
-		<value condition="!String.IsEmpty(Skin.String(InvalidColor)) + !String.IsEqual(Skin.String(InvalidColor), None)">$INFO[Skin.String(InvalidColor)]</value>
+	<variable name="ColorDisabledVar">
+		<value condition="!String.IsEmpty(Skin.String(colordisabled))">$INFO[Skin.String(colordisabled)]</value>
+		<value>disabled</value>
+	</variable>
+	<variable name="ColorDisabledNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colordisabled))">$INFO[Skin.String(colordisabled)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>	
+	<variable name="ColorInvalidVar">
+		<value condition="!String.IsEmpty(Skin.String(colorinvalid))">$INFO[Skin.String(colorinvalid)]</value>
 		<value>invalid</value>
 	</variable>
-	<variable name="InvalidColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(InvalidColor)) + !String.IsEqual(Skin.String(InvalidColor), None)">$INFO[Skin.String(InvalidColor)]</value>
+	<variable name="ColorInvalidNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorinvalid))">$INFO[Skin.String(colorinvalid)]</value>
 		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="ScrollbarColorVar">
-		<value condition="!String.IsEmpty(Skin.String(ScrollbarColor)) + !String.IsEqual(Skin.String(ScrollbarColor), None)">$INFO[Skin.String(ScrollbarColor)]</value>
+	</variable>	
+	<variable name="ColorScrollbarVar">
+		<value condition="!String.IsEmpty(Skin.String(colorscrollbar))">$INFO[Skin.String(colorscrollbar)]</value>
 		<value>scrollbar</value>
 	</variable>
-	<variable name="ScrollbarColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(ScrollbarColor)) + !String.IsEqual(Skin.String(ScrollbarColor), None)">$INFO[Skin.String(ScrollbarColor)]</value>
+	<variable name="ColorScrollbarNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorscrollbar))">$INFO[Skin.String(colorscrollbar)]</value>
 		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="ScrollbarBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(ScrollbarBackgroundColor)) + !String.IsEqual(Skin.String(ScrollbarBackgroundColor), None)">$INFO[Skin.String(ScrollbarBackgroundColor)]</value>
+	</variable>	
+	<variable name="ColorScrollbarBackgroundVar">
+		<value condition="!String.IsEmpty(Skin.String(colorscrollbarbackground))">$INFO[Skin.String(colorscrollbarbackground)]</value>
 		<value>scrollbar_background</value>
 	</variable>
-	<variable name="ScrollbarBackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(ScrollbarBackgroundColor)) + !String.IsEqual(Skin.String(ScrollbarBackgroundColor), None)">$INFO[Skin.String(ScrollbarBackgroundColor)]</value>
+	<variable name="ColorScrollbarBackgroundNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorscrollbarbackground))">$INFO[Skin.String(colorscrollbarbackground)]</value>
 		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="SeparatorColorVar">
-		<value condition="!String.IsEmpty(Skin.String(SeparatorColor)) + !String.IsEqual(Skin.String(SeparatorColor), None)">$INFO[Skin.String(SeparatorColor)]</value>
+	</variable>	
+	<variable name="ColorSeparatorVar">
+		<value condition="!String.IsEmpty(Skin.String(colorseparator))">$INFO[Skin.String(colorseparator)]</value>
 		<value>separator</value>
 	</variable>
-	<variable name="SeparatorColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SeparatorColor)) + !String.IsEqual(Skin.String(SeparatorColor), None)">$INFO[Skin.String(SeparatorColor)]</value>
+	<variable name="ColorSeparatorNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorseparator))">$INFO[Skin.String(colorseparator)]</value>
 		<value>$LOCALIZE[15109]</value>
+	</variable>	
+	<variable name="ColorGreyVar">
+		<value condition="!String.IsEmpty(Skin.String(colorgrey))">$INFO[Skin.String(colorgrey)]</value>
+		<value>grey</value>
 	</variable>
-	<variable name="RssHeaderColorVar">
-		<value condition="!String.IsEmpty(Skin.String(RSSHeaderColor)) + !String.IsEqual(Skin.String(RSSHeaderColor), None)">$INFO[Skin.String(RSSHeaderColor)]</value>
-		<value>rssheader</value>
+	<variable name="ColorGreyNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorgrey))">$INFO[Skin.String(colorgrey)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>	
+	<variable name="ColorBlueVar">
+		<value condition="!String.IsEmpty(Skin.String(colorblue))">$INFO[Skin.String(colorblue)]</value>
+		<value>blue</value>
 	</variable>
-	<variable name="RssHeaderColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(RSSHeaderColor)) + !String.IsEqual(Skin.String(RSSHeaderColor), None)">$INFO[Skin.String(RSSHeaderColor)]</value>
+	<variable name="ColorBlueNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorblue))">$INFO[Skin.String(colorblue)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>	
+	<variable name="ColorRedVar">
+		<value condition="!String.IsEmpty(Skin.String(colorred))">$INFO[Skin.String(colorred)]</value>
+		<value>red</value>
+	</variable>
+	<variable name="ColorRedNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorred))">$INFO[Skin.String(colorred)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>	
+	<variable name="ColorBlackVar">
+		<value condition="!String.IsEmpty(Skin.String(colorblack))">$INFO[Skin.String(colorblack)]</value>
+		<value>black</value>
+	</variable>
+	<variable name="ColorBlackNameVar">
+		<value condition="!String.IsEmpty(Skin.String(colorblack))">$INFO[Skin.String(colorblack)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="TitleAndYearVar">
@@ -1463,8 +1463,9 @@
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="SkinSettingSpinnerVar">
-		<value condition="Skin.String(SkinUtils.SpinnerTexture.Path,None)">$LOCALIZE[15109]</value>
-		<value condition="!String.IsEmpty(Skin.String(SkinUtils.SpinnerTexture.Path))">$INFO[Skin.String(SkinUtils.SpinnerTexture.Path)]</value>
+		<value condition="Skin.String(skinutils.spinnertexture.path,None)">$LOCALIZE[15109]</value>
+		<value condition="!String.IsEmpty(Skin.String(skinutils.spinnertexture.path)) + !String.IsEmpty(Skin.String(skinutils.spinnertexture.name))">$INFO[Skin.String(skinutils.spinnertexture.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(skinutils.spinnertexture.path)) + String.IsEmpty(Skin.String(skinutils.spinnertexture.name))">$INFO[Skin.String(skinutils.spinnertexture.path)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="SkinSettingWidgetNameVar">

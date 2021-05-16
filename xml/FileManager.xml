@@ -10,7 +10,7 @@
 			<centertop>50%</centertop>
 			<width>68</width>
 			<height>68</height>
-			<texture colordiffuse="$VAR[MainColorVar]" border="2">icons/file-manager/left-right.png</texture>
+			<texture colordiffuse="$VAR[ColorMainVar]" border="2">icons/file-manager/left-right.png</texture>
 			<animation effect="fade" start="0" end="100" time="300" delay="100">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
 		</control>
@@ -83,7 +83,7 @@
 				<height>48</height>
 				<aligny>center</aligny>
 				<align>right</align>
-				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+				<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 				<label>$INFO[Container(21).CurrentItem,, / ]$INFO[Container(21).NumItems]</label>
 			</control>
 			<control type="label" id="102">
@@ -95,14 +95,14 @@
 				<aligny>center</aligny>
 				<label>$PARAM[header_label]</label>
 				<haspath>true</haspath>
-				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+				<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 			</control>
 			<control type="label">
 				<left>730</left>
 				<width>400</width>
 				<height>48</height>
 				<aligny>center</aligny>
-				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+				<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 				<label>$INFO[Container(20).CurrentItem,, / ]$INFO[Container(20).NumItems]</label>
 			</control>
 			<control type="label" id="101">
@@ -113,7 +113,7 @@
 				<aligny>center</aligny>
 				<label>$PARAM[header_label]</label>
 				<haspath>true</haspath>
-				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+				<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 			</control>
 		</control>
 	</controls>

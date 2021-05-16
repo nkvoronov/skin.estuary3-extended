@@ -432,11 +432,11 @@
 				<control type="grouplist" id="$PYTHON[22+int($SKINSHORTCUTS[id])]001">
 					<include>Widget-GroupCommon</include>
 					<pagecontrol>$PYTHON[22+int($SKINSHORTCUTS[id])]010</pagecontrol>
-					<include content="Widget-Categories" condition="!Skin.HasSetting(HomeNoCategoriesWidget)">
+					<include content="Widget-Categories" condition="!Skin.HasSetting(homenocategorieswidget)">
 						<param name="widget_header" value="$LOCALIZE[31148]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]100Var]"/>
 						<param name="content_path" value="skinshortcuts-group-$SKINSHORTCUTS[submenu]"/>
-						<param name="small" value="Skin.HasSetting(UseSmallerCategories)"/>
+						<param name="small" value="Skin.HasSetting(usesmallercategories)"/>
 						<param name="custom" value="true"/>
 						<param name="list_id" value="$PYTHON[22+int($SKINSHORTCUTS[id])]100"/>
 					</include>
@@ -508,7 +508,7 @@
 						<param name="widget8_sortorder" value="$SKINSHORTCUTS[widget8_sortorder]"/>
 					</include>
 				</control>
-				<include content="Widget-Scrollbar" condition="Skin.HasSetting(TouchMode)">
+				<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
 					<param name="scrollbar_id" value="$PYTHON[22+int($SKINSHORTCUTS[id])]010"/>
 				</include>
 			</control>
