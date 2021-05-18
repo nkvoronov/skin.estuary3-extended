@@ -150,11 +150,11 @@
 		</control>
 	</include>
 	<include name="HomeMainCustomWidgetsSelectAddons">
-		<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-		<onclick>Skin.SetAddon(UsrSelectAddon,$PARAM[type])</onclick>
-		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].label,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>
-		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].Name,$INFO[Skin.String(UsrSelectAddon)])</onclick>
-		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].icon,$INFO[system.addonicon(Skin.String(UsrSelectAddon))])</onclick>
+		<onclick>Skin.Reset(usrselectaddon)</onclick>
+		<onclick>Skin.SetAddon(usrselectaddon,$PARAM[type])</onclick>
+		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].label,$INFO[system.addontitle(Skin.String(usrselectaddon))])</onclick>
+		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].Name,$INFO[Skin.String(usrselectaddon)])</onclick>
+		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].icon,$INFO[system.addonicon(Skin.String(usrselectaddon))])</onclick>
 	</include>
 	<include name="HomeCustomAddonsItems">
 		<item id="1">
