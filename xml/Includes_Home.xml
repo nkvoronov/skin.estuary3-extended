@@ -430,7 +430,6 @@
 		<onleft>9000</onleft>
 		<onback>9000</onback>
 		<onright/>
-		<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 		<onfocus>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],Home)</onfocus>
 		<onfocus>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],Home)</onfocus>
 		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
@@ -606,7 +605,7 @@
 		<param name="content_target"></param>
 		<param name="content_sortby"></param>
 		<param name="content_sortorder"></param>
-		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="img_ratio">keep</param>
 		<param name="img_fallback">DefaultFolder.png</param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
@@ -777,7 +776,7 @@
 	<include name="Widget-Posters">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="img_fallback">DefaultFolder.png</param>
 		<param name="content_type">no</param>
 		<param name="content_sortby"></param>
@@ -878,7 +877,7 @@
 	<include name="Widget-Thumbs">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$VAR[ListItemSeasonXEpisodeLabelVar]</param>
@@ -1008,7 +1007,7 @@
 		<param name="visible">true</param>
 		<param name="custom">false</param>
 		<param name="favourites">false</param>
-		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="img_fallback">DefaultFolder.png</param>
 		<param name="content_type">no</param>
@@ -1184,7 +1183,7 @@
 	<include name="Widget-Channels">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="item_limit">$VAR[widgetlimititemsVar]</param>
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="label2">$INFO[ListItem.Title]</param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>

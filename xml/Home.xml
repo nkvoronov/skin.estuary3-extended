@@ -4,10 +4,11 @@
 	<onload>SetProperty(CurrentSkin,skin.estuary3-extended,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(fanarthometype))">ClearProperty(fanarthometype,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(homebackground))">ClearProperty(homebackground,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(weather).Property(homebackground))">ClearProperty(homebackground,weather)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
+	<onload>RunScript(script.skin.utils,action=updateproperties)</onload>
 	<onload condition="System.AddonIsEnabled(script.skin.utils) + Skin.HasSetting(customlistchannels) + [Skin.HasSetting(enablecustomListchannelstv) | Skin.HasSetting(enablecustomlistchannelsradio)]">RunScript(script.skin.utils,action=updatechannel)</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$VAR[CustomFocusVar])</onload>
-
 	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<controls>
 		<control type="button" id="20000">
@@ -68,7 +69,6 @@
 					<movement>6</movement>
 					<focusposition>1</focusposition>
 					<onfocus>ClearProperty(listposition,Home)</onfocus>
-					<onfocus>ClearProperty(SkinHelper.WidgetContainer,Home)</onfocus>
 					<include>skinshortcuts-template-submenus-right</include>
 					<onleft>700</onleft>
 					<onup>9000</onup>

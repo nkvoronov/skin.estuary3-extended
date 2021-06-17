@@ -270,127 +270,45 @@
 				<bottom>90</bottom>
 				<width>100%</width>
 				<texture border="21">dialogs/dialog-bg.png</texture>
-				<animation effect="zoom" start="100,100" end="75.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hidemainmenuwithwidgets) + !Skin.HasSetting(minimizemainmenu)">Conditional</animation>
-				<animation effect="zoom" start="100,100" end="95.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hidemainmenuwithwidgets) + Skin.HasSetting(minimizemainmenu)">Conditional</animation>
-			</control>
-			<control type="grouplist">
-				<top>50</top>
-				<left>50</left>
-				<right>20</right>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>-90</itemgap>
-				<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
-					<param name="label" value="Window(weather).Property(Current.Wind)" />
-					<param name="texture" value="icons/weather/wind.png" />
-					<param name="header" value="404" />
-				</include>
-				<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
-					<param name="label" value="Window(weather).Property(Current.Humidity)" />
-					<param name="texture" value="icons/weather/humidity.png" />
-					<param name="header" value="406" />
-				</include>
-				<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
-					<param name="label" value="Window(weather).Property(Current.Precipitation)" />
-					<param name="texture" value="icons/weather/rain.png" />
-					<param name="header" value="33021" />
-				</include>
-				<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
-					<param name="label" value="Window(weather).Property(Today.Sunrise)" />
-					<param name="texture" value="icons/weather/sunrise.png" />
-					<param name="header" value="405" />
-				</include>
-				<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
-					<param name="label" value="Window(weather).Property(Today.Sunset)" />
-					<param name="texture" value="icons/weather/sunset.png" />
-					<param name="header" value="403" />
-				</include>
-				<include content="WeatherIcons" condition="!String.IsEmpty(Weather.Plugin)">
-					<param name="left" value="0" />
-					<param name="top" value="-10" />
-					<param name="width" value="130" />
-					<param name="height" value="130" />
-					<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
-					<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
-				</include>
+				<animation effect="zoom" start="100,100" end="99.9,100" time="300" condition="!Skin.HasSetting(hidemainmenuwithwidgets) + !Skin.HasSetting(minimizemainmenu)">Conditional</animation>
+				<animation effect="zoom" start="100,100" end="99.9,100" time="300" condition="!Skin.HasSetting(hidemainmenuwithwidgets) + Skin.HasSetting(minimizemainmenu)">Conditional</animation>
+				<animation effect="zoom" start="100,100" end="72.2,100" time="300" condition="Skin.HasSetting(hidemainmenuwithwidgets) + !Skin.HasSetting(minimizemainmenu) + [Control.HasFocus(9000) | ControlGroup(700).HasFocus]">Conditional</animation>
+				<animation effect="zoom" start="100,100" end="92.6,100" time="300" condition="Skin.HasSetting(hidemainmenuwithwidgets) + Skin.HasSetting(minimizemainmenu) + [Control.HasFocus(9000) | ControlGroup(700).HasFocus]">Conditional</animation>
 			</control>
 			<control type="group">
-				<left>1150</left>
-				<width>430</width>
-				<top>-110</top>
-				<visible>Weather.IsFetched</visible>
-				<visible>![Control.HasFocus(9000) | ControlGroup(700).HasFocus] | Skin.HasSetting(minimizemainmenu)</visible>
-				<control type="label">
-					<top>-70</top>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>font30_title</font>
-					<label>[B]$INFO[Weather.Location][/B]</label>
-					<scroll>true</scroll>
+				<visible>!Skin.HasSetting(minimizemainmenu)</visible>
+				<control type="group">
+					<visible>!Skin.HasSetting(hidemainmenuwithwidgets)</visible>
+					<include>WeatherWidgetMainDef</include>
 				</control>
-				<control type="label">
-					<top>20</top>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>font14</font>
-					<label>$INFO[Weather.Conditions]</label>
-					<scroll>true</scroll>
-				</control>
-				<control type="label">
-					<top>100</top>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>font14</font>
-					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
-					<scroll>true</scroll>
+				<control type="group">
+					<visible>Skin.HasSetting(hidemainmenuwithwidgets)</visible>
+					<control type="group">
+						<visible>Control.HasFocus(9000) | ControlGroup(700).HasFocus</visible>
+						<include>WeatherWidgetMainDef</include>
+					</control>
+					<control type="group">
+						<visible>![Control.HasFocus(9000) | ControlGroup(700).HasFocus]</visible>
+						<include>WeatherWidgetMainExp</include>
+					</control>
 				</control>
 			</control>
 			<control type="group">
-				<left>1150</left>
-				<width>270</width>
-				<top>-110</top>
-				<visible>Weather.IsFetched</visible>
-				<visible>[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + !Skin.HasSetting(minimizemainmenu)</visible>
-				<control type="label">
-					<top>-70</top>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>font30_title</font>
-					<label>[B]$INFO[Weather.Location][/B]</label>
-					<scroll>true</scroll>
+				<visible>Skin.HasSetting(minimizemainmenu)</visible>
+				<control type="group">
+					<visible>!Skin.HasSetting(hidemainmenuwithwidgets)</visible>
+					<include>WeatherWidgetMainMin</include>
 				</control>
-				<control type="label">
-					<top>20</top>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>font14</font>
-					<label>$INFO[Weather.Conditions]</label>
-					<scroll>true</scroll>
-				</control>
-				<control type="label">
-					<top>100</top>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>font14</font>
-					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
-					<scroll>true</scroll>
-				</control>
-			</control>
-			<control type="group">
-				<top>55</top>
-				<width>450</width>
-				<right>120</right>
-				<visible>Weather.IsFetched</visible>
-				<animation effect="slide" start="85,0" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hidemainmenuwithwidgets) + !Skin.HasSetting(minimizemainmenu)">Conditional</animation>
-				<animation effect="slide" start="85,0" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hidemainmenuwithwidgets) + Skin.HasSetting(minimizemainmenu)">Conditional</animation>
-				<control type="label">
-					<top>40</top>
-					<aligny>center</aligny>
-					<height>24</height>
-					<align>right</align>
-					<font>WeatherTemp</font>
-					<label>$INFO[Weather.Temperature]</label>
-					<visible>Skin.HasSetting(minimizemainmenu) | ![Control.HasFocus(9000) | ControlGroup(700).HasFocus]</visible>
+				<control type="group">
+					<visible>Skin.HasSetting(hidemainmenuwithwidgets)</visible>
+					<control type="group">
+						<visible>Control.HasFocus(9000) | ControlGroup(700).HasFocus</visible>
+						<include>WeatherWidgetMainMin</include>
+					</control>
+					<control type="group">
+						<visible>![Control.HasFocus(9000) | ControlGroup(700).HasFocus]</visible>
+						<include>WeatherWidgetMainExp</include>
+					</control>
 				</control>
 			</control>
 		</control>
@@ -404,6 +322,253 @@
 			<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
 			<param name="list_id" value="$PARAM[control_id]400" />
 		</include>
+	</include>
+	<include name="WeatherWidgetMainDef">
+		<control type="grouplist">
+			<top>50</top>
+			<left>50</left>
+			<right>20</right>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>-115</itemgap>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Wind)" />
+				<param name="texture" value="icons/weather/wind.png" />
+				<param name="header" value="404" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Humidity)" />
+				<param name="texture" value="icons/weather/humidity.png" />
+				<param name="header" value="406" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Precipitation)" />
+				<param name="texture" value="icons/weather/rain.png" />
+				<param name="header" value="33021" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Today.Sunrise)" />
+				<param name="texture" value="icons/weather/sunrise.png" />
+				<param name="header" value="405" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Today.Sunset)" />
+				<param name="texture" value="icons/weather/sunset.png" />
+				<param name="header" value="403" />
+			</include>
+			<include content="WeatherIcons" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="left" value="0" />
+				<param name="top" value="-10" />
+				<param name="width" value="130" />
+				<param name="height" value="130" />
+				<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+				<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
+			</include>
+		</control>
+		<control type="group">
+			<left>1000</left>
+			<width>280</width>
+			<top>-110</top>
+			<visible>Weather.IsFetched</visible>
+			<control type="label">
+				<top>-70</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font30_title</font>
+				<label>[B]$INFO[Weather.Location][/B]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<top>20</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font14</font>
+				<label>$INFO[Weather.Conditions]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<top>100</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font14</font>
+				<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
+				<scroll>true</scroll>
+			</control>
+		</control>
+	</include>
+	<include name="WeatherWidgetMainMin">
+		<control type="grouplist">
+			<top>50</top>
+			<left>50</left>
+			<right>20</right>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>-100</itemgap>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Wind)" />
+				<param name="texture" value="icons/weather/wind.png" />
+				<param name="header" value="404" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Humidity)" />
+				<param name="texture" value="icons/weather/humidity.png" />
+				<param name="header" value="406" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Precipitation)" />
+				<param name="texture" value="icons/weather/rain.png" />
+				<param name="header" value="33021" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Today.Sunrise)" />
+				<param name="texture" value="icons/weather/sunrise.png" />
+				<param name="header" value="405" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Today.Sunset)" />
+				<param name="texture" value="icons/weather/sunset.png" />
+				<param name="header" value="403" />
+			</include>
+			<include content="WeatherIcons" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="left" value="0" />
+				<param name="top" value="-10" />
+				<param name="width" value="130" />
+				<param name="height" value="130" />
+				<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+				<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
+			</include>
+		</control>
+		<control type="group">
+			<left>1080</left>
+			<width>350</width>
+			<top>-110</top>
+			<visible>Weather.IsFetched</visible>
+			<control type="label">
+				<top>-70</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font30_title</font>
+				<label>[B]$INFO[Weather.Location][/B]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<top>20</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font14</font>
+				<label>$INFO[Weather.Conditions]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<top>100</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font14</font>
+				<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		<control type="group">
+			<top>55</top>
+			<width>450</width>
+			<left>1210</left>
+			<visible>Weather.IsFetched</visible>
+			<control type="label">
+				<top>40</top>
+				<aligny>center</aligny>
+				<height>24</height>
+				<align>right</align>
+				<font>WeatherTemp</font>
+				<label>$INFO[Weather.Temperature]</label>
+			</control>
+		</control>
+	</include>
+	<include name="WeatherWidgetMainExp">
+		<control type="grouplist">
+			<top>50</top>
+			<left>50</left>
+			<right>20</right>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>-90</itemgap>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Wind)" />
+				<param name="texture" value="icons/weather/wind.png" />
+				<param name="header" value="404" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Humidity)" />
+				<param name="texture" value="icons/weather/humidity.png" />
+				<param name="header" value="406" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Current.Precipitation)" />
+				<param name="texture" value="icons/weather/rain.png" />
+				<param name="header" value="33021" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Today.Sunrise)" />
+				<param name="texture" value="icons/weather/sunrise.png" />
+				<param name="header" value="405" />
+			</include>
+			<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="label" value="Window(weather).Property(Today.Sunset)" />
+				<param name="texture" value="icons/weather/sunset.png" />
+				<param name="header" value="403" />
+			</include>
+			<include content="WeatherIcons" condition="!String.IsEmpty(Weather.Plugin)">
+				<param name="left" value="0" />
+				<param name="top" value="-10" />
+				<param name="width" value="130" />
+				<param name="height" value="130" />
+				<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+				<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
+			</include>
+		</control>
+		<control type="group">
+			<left>1150</left>
+			<width>430</width>
+			<top>-110</top>
+			<visible>Weather.IsFetched</visible>
+			<control type="label">
+				<top>-70</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font30_title</font>
+				<label>[B]$INFO[Weather.Location][/B]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<top>20</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font14</font>
+				<label>$INFO[Weather.Conditions]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<top>100</top>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>font14</font>
+				<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		<control type="group">
+			<top>55</top>
+			<width>450</width>
+			<left>1340</left>
+			<visible>Weather.IsFetched</visible>
+			<control type="label">
+				<top>40</top>
+				<aligny>center</aligny>
+				<height>24</height>
+				<align>right</align>
+				<font>WeatherTemp</font>
+				<label>$INFO[Weather.Temperature]</label>
+			</control>
+		</control>
 	</include>
 	<include name="include-MusicVideosWidget">
 		<include content="Widget-MusicVideos" condition="Library.HasContent(musicvideos)">

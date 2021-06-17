@@ -3,8 +3,9 @@
 	<defaultcontrol always="true">15100</defaultcontrol>
 	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<menucontrol>10000</menucontrol>
-	<onload>SetProperty(fanarthometype,weather,Home)</onload>
-	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundWeatherVar],Home)</onload>
+	<onload>SetProperty(fanarthometype,weather,weather)</onload>
+	<onunload>ClearProperty(fanarthometype,weather)</onunload>
+	<onunload>ClearProperty(homebackground,weather)</onunload>
 	<controls>
 		<control type="button" id="20000">
 			<include>HiddenObject</include>

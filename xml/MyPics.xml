@@ -4,7 +4,7 @@
 	<backgroundcolor>$VAR[ColorBackgroundVar]</backgroundcolor>
 	<views>50,52,53,54,55,500</views>
 	<menucontrol>9000</menucontrol>	
-	<onload>SetProperty(fanarthometype,pictures,Home)</onload>
+    <onload>SetProperty(fanarthometype,pictures,Home)</onload>
 	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundPicturesVar],Home)</onload>
 	<controls>
 		<include content="DefaultBackground">

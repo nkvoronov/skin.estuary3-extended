@@ -139,7 +139,7 @@
 					<description>Duration Splash Screen</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[32107]</label>
-					<label2>$VAR[splashscreendurationNameVar]</label2>
+					<label2>$VAR[SplashScreenDurationNameVar]</label2>
 					<onclick condition="String.IsEmpty(Skin.String(splashscreenduration))">Skin.SetString(splashscreenduration,5,)</onclick>
 					<onclick>Skin.SetNumeric(splashscreenduration)</onclick>
 					<enable>Skin.HasSetting(enablesplashscreen)</enable>
@@ -192,7 +192,7 @@
 					<description>Widget Limit Items</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[32111]</label>
-					<label2>$VAR[widgetlimititemsVar]</label2>
+					<label2>$VAR[WidgetLimitItemsVar]</label2>
 					<onclick condition="String.IsEmpty(Skin.String(widgetlimititems))">Skin.SetString(widgetlimititems,25,)</onclick>
 					<onclick>Skin.SetNumeric(widgetlimititems)</onclick>
 				</control>
@@ -265,7 +265,7 @@
 				<include content="SetSkinSetting">
 					<param name="control_id" value="216" />
 					<param name="label" value="$LOCALIZE[32120]" />
-					<param name="label2" value="$VAR[SkinSettingpopuppositionNameVar]" />
+					<param name="label2" value="$VAR[SkinSettingPopUpPositionNameVar]" />
 					<param name="property" value="popupposition" />
 					<param name="header" value="$LOCALIZE[32120]" />
 				</include>
