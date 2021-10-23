@@ -30,7 +30,7 @@
 				<width>1000</width>
 				<height>50</height>
 				<label>$VAR[OSDHelpTextVar]</label>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 			</control>
 			<control type="group" id="200">
 				<include>Animation_BottomSlide</include>
@@ -51,14 +51,14 @@
 							<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 						</include>
 						<onclick>PlayerControl(Previous)</onclick>
-						<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [VideoPlayer.Content(LiveTV) + Player.SeekEnabled]</visible>
+						<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)]</visible>
 					</control>
 					<control type="radiobutton" id="601">
 						<include content="OSDButton">
 							<param name="texture" value="osd/fullscreen/buttons/rewind.png"/>
 						</include>
 						<onclick>PlayerControl(Rewind)</onclick>
-						<visible>Player.SeekEnabled + !VideoPlayer.Content(livetv)</visible>
+						<visible>[Player.SeekEnabled + !VideoPlayer.Content(livetv)] + !Player.Paused</visible>
 					</control>
 					<control type="group" id="698">
 						<width>76</width>
@@ -71,7 +71,7 @@
 							<height>74</height>
 							<label></label>
 							<font></font>
-							<texturefocus colordiffuse="button_focus">osd/fullscreen/buttons/button-fo.png</texturefocus>
+							<texturefocus colordiffuse="$VAR[ColorMainVar]">osd/fullscreen/buttons/button-fo.png</texturefocus>
 							<texturenofocus />
 							<onleft>601</onleft>
 							<onright>603</onright>
@@ -99,7 +99,7 @@
 							<param name="texture" value="osd/fullscreen/buttons/forward.png"/>
 						</include>
 						<onclick>PlayerControl(Forward)</onclick>
-						<visible>Player.SeekEnabled + !VideoPlayer.Content(livetv)</visible>
+						<visible>[Player.SeekEnabled + !VideoPlayer.Content(livetv)] + !Player.Paused</visible>
 					</control>
 					<control type="radiobutton" id="607">
 						<include content="OSDButton">
@@ -109,11 +109,11 @@
 						<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | PVR.IsTimeShift</visible>
 					</control>
 					<control type="radiobutton" id="608">
-						<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/record-white.png</textureradioonfocus>
+						<textureradioonfocus colordiffuse="$VAR[ColorWhiteVar]">osd/fullscreen/buttons/record-white.png</textureradioonfocus>
 						<textureradioonnofocus>osd/fullscreen/buttons/record-white.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="white">osd/fullscreen/buttons/record.png</textureradioofffocus>
+						<textureradioofffocus colordiffuse="$VAR[ColorWhiteVar]">osd/fullscreen/buttons/record.png</textureradioofffocus>
 						<textureradiooffnofocus>osd/fullscreen/buttons/record.png</textureradiooffnofocus>
-						<texturefocus colordiffuse="button_focus">osd/fullscreen/buttons/button-fo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorMainVar]">osd/fullscreen/buttons/button-fo.png</texturefocus>
 						<width>76</width>
 						<animation center="38,38" effect="zoom" end="100" reversible="false" start="95" time="480" tween="back">Focus</animation>
 						<height>76</height>

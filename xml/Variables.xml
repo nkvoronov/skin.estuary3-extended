@@ -893,8 +893,8 @@
 		<value>$INFO[ListItem.AddonCreator,, - ]$INFO[ListItem.AddonVersion]</value>
 	</variable>
 	<variable name="AddonLifecycleTypeVar">
-		<value condition="String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24170])">[COLOR button_focus]$LOCALIZE[24170][/COLOR][CR]$INFO[ListItem.AddonLifecycleDesc]</value> <!-- Deprecated -->
-		<value condition="String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24171])">[COLOR button_focus]$LOCALIZE[24171][/COLOR][CR]$INFO[ListItem.AddonLifecycleDesc]</value> <!-- Broken -->
+		<value condition="String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24170])">[COLOR $VAR[ColorMainVar]]$LOCALIZE[24170][/COLOR][CR]$INFO[ListItem.AddonLifecycleDesc]</value> <!-- Deprecated -->
+		<value condition="String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24171])">[COLOR $VAR[ColorMainVar]]$LOCALIZE[24171][/COLOR][CR]$INFO[ListItem.AddonLifecycleDesc]</value> <!-- Broken -->
 	</variable>
 	<variable name="AddonsListIconVar">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
@@ -975,15 +975,15 @@
 		<value condition="Window.IsActive(visualisation) + Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)">$LOCALIZE[554] $INFO[Playlist.Position] / $INFO[Playlist.Length]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</value>
 		<value condition="VideoPlayer.Content(episodes)">$VAR[VideoPlayerSeasonXEpisodeLabelVar]$INFO[VideoPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$VAR[VideoPlayerChannelNumberLabelVar] $INFO[VideoPlayer.ChannelName] $INFO[VideoPlayer.EpisodeName, (,)]</value>
+		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$VAR[VideoPlayerChannelNumberLabelVar]$INFO[VideoPlayer.ChannelName]</value>
 		<value>[COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.Genre][/COLOR]</value>
 	</variable>
 	<variable name="OSDNextLabelVar">
-		<value condition="Window.IsActive(visualisation)">$INFO[MusicPlayer.offset(1).Title,[COLOR button_focus]$LOCALIZE[19031]: [/COLOR]]$INFO[MusicPlayer.offset(1).Artist, - ]$INFO[MusicPlayer.offset(1).Album, - ] $VAR[MusicPlayerYearLabelVar]</value>
-		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.offset(1).Title,[COLOR button_focus]$LOCALIZE[19031]: [/COLOR]]$INFO[VideoPlayer.offset(1).Artist, - ]$INFO[VideoPlayer.offset(1).Album, - ]$INFO[VideoPlayer.offset(1).Year, (,)]</value>
-		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.NextStartTime,[COLOR button_focus]$LOCALIZE[19031]: [/COLOR]]$INFO[VideoPlayer.NextEndTime, - ]$INFO[VideoPlayer.NextTitle,: ]</value>
-		<value condition="VideoPlayer.Content(episodes) + Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.offset(1).TVShowtitle,[COLOR button_focus]$LOCALIZE[19031]: [/COLOR]]$INFO[VideoPlayer.offset(1).Season, - S,]$INFO[VideoPlayer.offset(1).Episode,E]$INFO[VideoPlayer.offset(1).Title,  - ]</value>
-		<value>$INFO[VideoPlayer.offset(1).Title,[COLOR button_focus]$LOCALIZE[19031]: [/COLOR]]$INFO[VideoPlayer.offset(1).Year, (,)]</value>
+		<value condition="Window.IsActive(visualisation) + !String.IsEmpty(MusicPlayer.offset(1).Title)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19031]: [/COLOR]$INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Artist, - ]$INFO[MusicPlayer.offset(1).Album, - ]$VAR[MultiDiscVar]$VAR[MusicPlayerYearLabel1Var]</value>
+		<value condition="VideoPlayer.Content(musicvideos) + !String.IsEmpty(VideoPlayer.offset(1).Title)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.offset(1).Title]$INFO[VideoPlayer.offset(1).Artist, - ]$INFO[VideoPlayer.offset(1).Album, - ]$VAR[VideoPlayerYearLabel1Var]</value>
+		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.NextTitle)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19031]: [/COLOR][COLOR $VAR[ColorGreyVar]]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, - ,. ][/COLOR]$INFO[VideoPlayer.NextTitle]</value>
+		<value condition="VideoPlayer.Content(episodes) + Window.IsActive(fullscreenvideo) + !String.IsEmpty(VideoPlayer.offset(1).TVShowtitle)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.offset(1).TVShowtitle]$VAR[VideoPlayerSeasonXEpisodeLabel1Var]$INFO[VideoPlayer.offset(1).Title,  - ]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.offset(1).Title)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.offset(1).Title]$VAR[VideoPlayerYearLabel1Var]</value>
 	</variable>
 	<!-- Others -->
 	<variable name="AutoCompletionContentVar">
@@ -1009,7 +1009,7 @@
 	<variable name="ListLabelVar">
 		<value condition="String.IsEqual(ListItem.DbType,episode) + Window.IsActive(videoplaylist)">$INFO[ListItem.TVShowtitle,,: ]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(ListItem.DbType,musicvideo) + Window.IsActive(videoplaylist)">$INFO[ListItem.Artist,, - ]$INFO[ListItem.Title]</value>
-		<value condition="[!String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode) | !String.IsEmpty(ListItem.EpisodeName)] + Window.IsActive(videoplaylist)">$INFO[ListItem.Title,,: ]$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName]</value>
+		<value condition="[!String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode) | !String.IsEmpty(ListItem.EpisodeName)] + Window.IsActive(videoplaylist)">$INFO[ListItem.Title,,: ]$VAR[SeasonEpisodeLabelVar]$INFO[ListItem.EpisodeName]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="ListLabel2Var">
@@ -1057,7 +1057,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,song)">$VAR[MusicTrackInfoVar]$VAR[ListItemArtistLabelVar]$VAR[ListItemAlbumLabelVar]$VAR[ListItemDiscNumberLabelVar]$VAR[ListItemYearLabel4Var]$VAR[ListItemGenreLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemPlaycountLabelVar]</value>
 	</variable>
 	<variable name="NowPlayingInfoVar">
-		<value>$INFO[MusicPlayer.Title,[COLOR button_focus]$LOCALIZE[554]: [/COLOR],[CR]]$INFO[MusicPlayer.Artist,[COLOR button_focus]$LOCALIZE[557]: [/COLOR],[CR]]$INFO[MusicPlayer.Album,[COLOR button_focus]$LOCALIZE[558]: [/COLOR],[CR]]$VAR[MultiDiscVar,[COLOR button_focus]$LOCALIZE[427]: [/COLOR],[CR]]$INFO[MusicPlayer.Year,[COLOR button_focus]$LOCALIZE[345]: [/COLOR],[CR]]$INFO[MusicPlayer.Genre,[COLOR button_focus]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[MusicPlayer.Time,[COLOR button_focus]$LOCALIZE[180]: [/COLOR],/]$INFO[MusicPlayer.Duration,,[CR]]</value>
+		<value>[COLOR $VAR[ColorMainVar]]$LOCALIZE[554]: [/COLOR]$INFO[MusicPlayer.Title,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[557]: [/COLOR]$INFO[MusicPlayer.Artist,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[558]: [/COLOR]$INFO[MusicPlayer.Album,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[427]: [/COLOR]$VAR[MultiDiscVar,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[345]: [/COLOR]$INFO[MusicPlayer.Year,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[515]: [/COLOR]$INFO[MusicPlayer.Genre,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[MusicPlayer.Time,,/]$INFO[MusicPlayer.Duration,,[CR]]</value>
 	</variable>
 	<variable name="MusicTrackInfoVar">
 		<value condition="String.IsEmpty(ListItem.Title)">$VAR[ListItemTrackNumberLabel2Var,,[CR]]</value>
@@ -1067,7 +1067,7 @@
 		<value condition="Integer.IsGreater(ListItem.TotalDiscs,1)">$INFO[ListItem.DiscNumber]$INFO[ListItem.DiscTitle, - ]</value>
 	</variable>
 	<variable name="MultiDiscVar">
-		<value condition="MusicPlayer.IsMultiDisc + Window.IsActive(visualisation)">$INFO[MusicPlayer.DiscNumber, - [$LOCALIZE[427] ,] ]$INFO[MusicPlayer.DiscTitle]</value>
+		<value condition="MusicPlayer.IsMultiDisc + Window.IsActive(visualisation)">$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427] , ]$INFO[MusicPlayer.DiscTitle]</value>
 		<value condition="MusicPlayer.IsMultiDisc">$INFO[MusicPlayer.DiscNumber]$INFO[MusicPlayer.DiscTitle, - ]</value>
 	</variable>
 	<variable name="BannerLabel2Var">
@@ -1211,21 +1211,24 @@
 	<variable name="PremieredLabelVar">
 		<value condition="!String.IsEmpty(ListItem.Premiered)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Premiered][CR]</value>
 	</variable>
+	<variable name="RatingLabelVar">
+		<value condition="!String.IsEmpty(ListItem.Rating)">[COLOR $VAR[ColorGreyVar]]$LOCALIZE[563]: [/COLOR]$INFO[ListItem.Rating][CR]</value>
+	</variable>
 	<variable name="FlagLabelVar">
-		<value condition="ListItem.IsPremiere">[B][COLOR button_focus]$LOCALIZE[838][/COLOR][/B]</value>
-		<value condition="ListItem.IsFinale">[B][COLOR button_focus]$LOCALIZE[849][/COLOR][/B]</value>
-		<value condition="ListItem.IsLive">[B][COLOR button_focus]$LOCALIZE[839][/COLOR][/B]</value>
-		<value condition="ListItem.IsNew">[B][COLOR button_focus]$LOCALIZE[842][/COLOR][/B]</value>
+		<value condition="ListItem.IsPremiere">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[838][/COLOR][/B]</value>
+		<value condition="ListItem.IsFinale">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[849][/COLOR][/B]</value>
+		<value condition="ListItem.IsLive">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[839][/COLOR][/B]</value>
+		<value condition="ListItem.IsNew">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[842][/COLOR][/B]</value>
 	</variable>
 	<variable name="FlagDashLabelVar">
-		<value condition="ListItem.IsPremiere + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)">[B][COLOR button_focus]$LOCALIZE[838][/COLOR][/B]</value>
-		<value condition="ListItem.IsPremiere">[B][COLOR button_focus]$LOCALIZE[838][/COLOR][/B] - </value>
-		<value condition="ListItem.IsFinale + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)">[B][COLOR button_focus]$LOCALIZE[849][/COLOR][/B]</value>
-		<value condition="ListItem.IsFinale">[B][COLOR button_focus]$LOCALIZE[849][/COLOR][/B] - </value>
-		<value condition="ListItem.IsLive + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)">[B][COLOR button_focus]$LOCALIZE[839][/COLOR][/B]</value>
-		<value condition="ListItem.IsLive">[B][COLOR button_focus]$LOCALIZE[839][/COLOR][/B] - </value>
-		<value condition="ListItem.IsNew + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)">[B][COLOR button_focus]$LOCALIZE[842][/COLOR][/B]</value>
-		<value condition="ListItem.IsNew">[B][COLOR button_focus]$LOCALIZE[842][/COLOR][/B] - </value>
+		<value condition="ListItem.IsPremiere + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[838][/COLOR][/B]</value>
+		<value condition="ListItem.IsPremiere">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[838][/COLOR][/B] - </value>
+		<value condition="ListItem.IsFinale + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[849][/COLOR][/B]</value>
+		<value condition="ListItem.IsFinale">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[849][/COLOR][/B] - </value>
+		<value condition="ListItem.IsLive + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[839][/COLOR][/B]</value>
+		<value condition="ListItem.IsLive">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[839][/COLOR][/B] - </value>
+		<value condition="ListItem.IsNew + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[842][/COLOR][/B]</value>
+		<value condition="ListItem.IsNew">[B][COLOR $VAR[ColorMainVar]]$LOCALIZE[842][/COLOR][/B] - </value>
 	</variable>
 	<variable name="DateDurationLabelVar">
 		<value condition="[Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)] + Container.SortMethod(3) + String.IsEmpty(ListItem.ExpirationDate)">$INFO[ListItem.Date,[COLOR grey]$LOCALIZE[552]:[/COLOR] ,[CR]]$INFO[ListItem.Duration,[COLOR grey]$LOCALIZE[180]:[/COLOR] ,[CR]]</value>
@@ -1240,7 +1243,7 @@
 		<value>$INFO[ListItem.Date,[COLOR grey],[/COLOR][CR]]</value>
 	</variable>
 	<variable name="ExpirationDateTimeLabel">
-		<value condition="!String.IsEmpty(ListItem.ExpirationDate)">[COLOR grey]$LOCALIZE[19299]:[/COLOR] $INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.ExpirationDate)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19299]: [/COLOR]$INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime][CR]</value>
 	</variable>
 	<variable name="VideoHWDecoderVar">
 		<value condition="Player.Process(videohwdecoder)">HW</value>
@@ -1353,9 +1356,16 @@
 		<value condition="![String.IsEmpty(VideoPlayer.Season) + String.IsEmpty(VideoPlayer.Episode)]">$INFO[VideoPlayer.Season][COLOR $VAR[ColorMainVar]]x[/COLOR]$INFO[VideoPlayer.Episode] </value>
 		<value condition="String.IsEmpty(VideoPlayer.Season) + !String.IsEmpty(VideoPlayer.Episode)">$INFO[VideoPlayer.Episode] </value>
 	</variable>
+	<variable name="VideoPlayerSeasonXEpisodeLabel1Var">
+		<value condition="![String.IsEmpty(VideoPlayer.offset(1).Season) + String.IsEmpty(VideoPlayer.offset(1).Episode)]">$INFO[VideoPlayer.offset(1).Season][COLOR $VAR[ColorMainVar]]x[/COLOR]$INFO[VideoPlayer.offset(1).Episode] </value>
+		<value condition="String.IsEmpty(VideoPlayer.offset(1).Season) + !String.IsEmpty(VideoPlayer.offset(1).Episode)">$INFO[VideoPlayer.offset(1).Episode] </value>
+	</variable>
 	<variable name="ListItemGenreLabelVar">
 		<value condition="!String.IsEmpty(ListItem.Genre)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR]</value>
 	</variable>
+	<variable name="ListItemTimerTypeVar">
+		<value condition="!String.IsEmpty(ListItem.TimerType)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[803]: [/COLOR]$INFO[ListItem.TimerType][CR]</value>
+	</variable>		
 	<variable name="ListItemPlaycountLabelVar">
 		<value condition="!String.IsEmpty(ListItem.Playcount)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[567]: [/COLOR]$INFO[ListItem.Playcount][CR]</value>
 	</variable>
@@ -1390,14 +1400,17 @@
 	<variable name="VideoPlayerYearLabelVar">
 		<value condition="!String.IsEmpty(VideoPlayer.Year)"> ([COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.Year][/COLOR])</value>
 	</variable>
-	<variable name="MusicPlayerYearLabelVar">
-		<value condition="!String.IsEmpty(MusicPlayer.Year)">([COLOR $VAR[ColorMainVar]]$INFO[MusicPlayer.offset(1).Year][/COLOR])</value>
+	<variable name="VideoPlayerYearLabel1Var">
+		<value condition="!String.IsEmpty(VideoPlayer.offset(1).Year)"> ([COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.offset(1).Year][/COLOR])</value>
+	</variable>
+	<variable name="MusicPlayerYearLabel1Var">
+		<value condition="!String.IsEmpty(MusicPlayer.offset(1).Year)"> ([COLOR $VAR[ColorMainVar]]$INFO[MusicPlayer.offset(1).Year][/COLOR])</value>
 	</variable>
 	<variable name="VideoPlayerNextStartTimeLabelVar">
 		<value condition="!String.IsEmpty(VideoPlayer.NextStartTime)">[COLOR $VAR[ColorGreyVar]]$INFO[VideoPlayer.NextStartTime,, - ]$INFO[VideoPlayer.NextEndTime] [/COLOR]</value>
 	</variable>
 	<variable name="ListItemNextStartTimeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.NextStartTime)">[COLOR $VAR[ColorGreyVar]]$INFO[ListItem.NextStartTime] [/COLOR]</value>
+		<value condition="!String.IsEmpty(ListItem.NextStartTime)">[COLOR $VAR[ColorGreyVar]]$INFO[ListItem.NextStartTime]. [/COLOR]</value>
 	</variable>
 	<variable name="PlayerTimeRemainingLabelVar">
 		<value condition="!String.IsEmpty(Player.TimeRemaining)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[31134]: [/COLOR]$INFO[Player.TimeRemaining][CR]</value>
@@ -1414,11 +1427,8 @@
 	<variable name="ListItemDurationLabel2Var">
 		<value condition="!String.IsEmpty(ListItem.Duration)">[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Duration][/COLOR]</value>
 	</variable>
-	<variable name="ListItemExpirationDateTimeLabelVar">
-		<value condition="!String.IsEmpty(ListItem.ExpirationDate)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19299]: [/COLOR]$INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime][CR]</value>
-	</variable>
 	<variable name="VideoPlayerChannelNumberLabelVar">
-		<value condition="!String.IsEmpty(VideoPlayer.ChannelNumberLabel)">([COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.ChannelNumberLabel][/COLOR])</value>
+		<value condition="!String.IsEmpty(VideoPlayer.ChannelNumberLabel)">([COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.ChannelNumberLabel][/COLOR]) </value>
 	</variable>
 	<variable name="ListItemNextTitleLabelVar">
 		<value condition="!String.IsEmpty(ListItem.NextTitle)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[19031]: [/COLOR][COLOR $VAR[ColorGreyVar]]$INFO[ListItem.NextTitle][/COLOR]</value>
@@ -1624,5 +1634,26 @@
 		<value condition="!String.IsEmpty(ListItem.Art(artist.clearart))">$INFO[ListItem.Art(artist.clearart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.clearart))">$INFO[Container.Art(artist.clearart)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearart)]</value>
+	</variable>	
+	<variable name="PVRListItemSubLabelVar">
+		<value condition="ListItem.IsFolder">[COLOR $VAR[ColorGreyVar]]$INFO[ListItem.Timertype][/COLOR]</value>
+		<value condition="$EXP[listitem_has_episode_info] + !String.IsEmpty(ListItem.EpgEventTitle) + !String.StartsWith(ListItem.EpisodeName,ListItem.EpgEventTitle)">$INFO[ListItem.EpgEventTitle] | [COLOR $VAR[ColorGreyVar]]$VAR[SeasonEpisodeLabelVar]$INFO[ListItem.EpisodeName][/COLOR]</value>
+		<value condition="$EXP[listitem_has_episode_info]">[COLOR $VAR[ColorGreyVar]]$VAR[SeasonEpisodeLabelVar]$INFO[ListItem.EpisodeName][/COLOR]</value>
+		<value>$INFO[ListItem.EpgEventTitle]</value>
+	</variable>
+	<variable name="PVRListItemSubLabelFocusedVar">
+		<value condition="ListItem.IsFolder">$INFO[ListItem.Timertype]</value>
+		<value condition="$EXP[listitem_has_episode_info] + !String.IsEmpty(ListItem.EpgEventTitle) + !String.StartsWith(ListItem.EpisodeName,ListItem.EpgEventTitle)">$INFO[ListItem.EpgEventTitle] | $VAR[SeasonEpisodeLabelVar]$INFO[ListItem.EpisodeName]</value>
+		<value condition="$EXP[listitem_has_episode_info]">$VAR[SeasonEpisodeLabelVar]$INFO[ListItem.EpisodeName]</value>
+		<value>$INFO[ListItem.EpgEventTitle]</value>
+	</variable>
+	<variable name="BreadcrumbsPVRChannelsOSDVar">
+		<value condition="PVR.IsPlayingTV">$LOCALIZE[19020] / $LOCALIZE[19019] / $INFO[VideoPlayer.ChannelGroup]</value>
+		<value condition="PVR.IsPlayingRadio">$LOCALIZE[19021] / $LOCALIZE[19019] / $INFO[VideoPlayer.ChannelGroup]</value>
+		<value>$LOCALIZE[19019] / $INFO[VideoPlayer.ChannelGroup]</value>
+	</variable>
+	<variable name="PVRInfoPanelDateDurationLabelVar">
+		<value condition="!String.IsEmpty(ListItem.StartDate) + !String.IsEmpty(ListItem.StartTime)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.StartDate,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[555]: [/COLOR]$INFO[ListItem.StartTime,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration]</value>
+		<value condition="!String.IsEmpty(ListItem.Date)">[COLOR $VAR[ColorMainVar]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.Date,,[CR]][COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration]</value>
 	</variable>
 </includes>

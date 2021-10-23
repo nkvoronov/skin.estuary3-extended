@@ -1344,7 +1344,7 @@
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-						<label>[COLOR button_focus][B]$LOCALIZE[31000]: [/COLOR]$INFO[musicplayer.Playlistposition,]$INFO[musicplayer.Playlistlength,/][/B][CR]$VAR[NowPlayingInfoVar]</label>
+						<label>[COLOR $VAR[ColorMainVar]][B]$LOCALIZE[31000]: [/COLOR]$INFO[musicplayer.Playlistposition,]$INFO[musicplayer.Playlistlength,/][/B][CR]$VAR[NowPlayingInfoVar]</label>
 					</control>
 					<control type="textbox" id="15599">
 						<visible>!Player.HasAudio + Window.IsActive(musicplaylist)</visible>
@@ -1353,7 +1353,7 @@
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-						<label>[COLOR button_focus][B]$LOCALIZE[31000]: [/COLOR]$LOCALIZE[36623][/B]</label>
+						<label>[COLOR $VAR[ColorMainVar]][B]$LOCALIZE[31000]: [/COLOR]$LOCALIZE[36623][/B]</label>
 					</control>
 				</control>
 			</control>

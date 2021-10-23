@@ -99,7 +99,7 @@
 				<top>-3</top>
 				<right>0</right>
 				<height>3</height>
-				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[ColorMainVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -190,7 +190,7 @@
 				<top>30</top>
 				<right>0</right>
 				<height>3</height>
-				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[ColorMainVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="grouplist">
 				<left>420</left>
@@ -202,7 +202,7 @@
 					<label>$LOCALIZE[31030]: $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)]</label>
 					<aligny>top</aligny>
 					<textoffsety>40</textoffsety>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					<font>font12</font>
 				</control>
 				<control type="progress">
@@ -217,7 +217,7 @@
 					<height>40</height>
 					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 					<aligny>center</aligny>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					<font>font12</font>
 					<visible>System.SupportsCPUUsage</visible>
 				</control>
@@ -239,7 +239,7 @@
 					<aligny>bottom</aligny>
 					<textoffsety>10</textoffsety>
 					<label>$LOCALIZE[31031]:</label>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					<font>font25_title</font>
 				</control>
 				<control type="grouplist">
@@ -255,7 +255,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<label>$LOCALIZE[144]</label>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Kodi Build Version</description>
@@ -263,8 +263,8 @@
 						<height>40</height>
 						<font>font12</font>
 						<label>$INFO[System.BuildVersionShort]$INFO[System.BuildVersionCode, (,)]</label>
-						<textcolor>button_focus</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>$VAR[ColorMainVar]</textcolor>
+						<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -280,7 +280,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<label>Git:</label>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Git version</description>
@@ -288,8 +288,8 @@
 						<height>40</height>
 						<font>font12</font>
 						<label>$INFO[System.BuildVersionGit]</label>
-						<textcolor>button_focus</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>$VAR[ColorMainVar]</textcolor>
+						<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -305,15 +305,15 @@
 						<height>40</height>
 						<font>font12</font>
 						<label>$LOCALIZE[174]</label>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					</control>
 					<control type="label" id="53">
 						<description>Kodi Build Date</description>
 						<width>auto</width>
 						<height>40</height>
 						<font>font12</font>
-						<textcolor>button_focus</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>$VAR[ColorMainVar]</textcolor>
+						<shadowcolor>$VAR[ColorBlackVar]</shadowcolor>
 					</control>
 				</control>
 			</control>

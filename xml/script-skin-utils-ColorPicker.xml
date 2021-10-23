@@ -118,7 +118,7 @@
 						<posx>20</posx>
 						<width>260</width>
 						<height>80</height>
-						<texture colordiffuse="ff171717">colors/white.png</texture>
+						<texture colordiffuse="white9">colors/white.png</texture>
 					</control>
 					<control type="label" id="3031">
 						<width>200</width>
@@ -126,7 +126,7 @@
 						<align>left</align>
 						<font>font12</font>
 						<label>$ADDON[script.skin.utils 32033]</label>
-						<textcolor>white</textcolor>
+						<textcolor>$VAR[ColorWhiteVar]</textcolor>
 					</control>
 					<control type="label" id="3032">
 						<width>80</width>
@@ -134,7 +134,7 @@
 						<align>right</align>
 						<font>font12</font>
 						<label>$INFO[Control.Getlabel(3033)]</label>
-						<textcolor>white</textcolor>
+						<textcolor>$VAR[ColorWhiteVar]</textcolor>
 					</control>
 					<control type="slider" id="3033">
 						<top>45</top>
@@ -152,7 +152,7 @@
 						<posx>20</posx>
 						<width>260</width>
 						<height>70</height>
-						<texture colordiffuse="ff171717">colors/white.png</texture>
+						<texture colordiffuse="white9">colors/white.png</texture>
 					</control>
 					<control type="image">
 						<top>10</top>

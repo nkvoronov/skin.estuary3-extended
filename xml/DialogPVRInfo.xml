@@ -39,7 +39,7 @@
 					<ondown>9000</ondown>
 					<onup>9000</onup>
 					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[207],Home)</onclick>
-					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.Plot],Home)</onclick>
+					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.EpisodeName] $ESCINFO[ListItem.Plot],Home)</onclick>
 					<onclick>ActivateWindow(1102)</onclick>
 				</control>
 				<control type="textbox" id="400">
@@ -48,13 +48,13 @@
 					<width>1050</width>
 					<height>425</height>
 					<align>left</align>
-					<label>$VAR[ListItemDateLabelVar]$VAR[ListItemStartTimeLabelVar]$VAR[ListItemExpirationDateTimeLabelVar]$VAR[ListItemGenreLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemCastLabelVar][CR]$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
+                    <label>$INFO[ListItem.ChannelName,[B],[/B][CR]]$VAR[PVRInfoPanelDateDurationLabelVar][CR]$VAR[RecordingSizeLabelVar]$VAR[PremieredLabelVar]$VAR[RatingLabelVar]$VAR[ExpirationDateTimeLabelVar]$VAR[ListItemGenreLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemCastLabelVar]$INFO[ListItem.EpisodeName,, ]$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>150</left>
+					<left>50</left>
 					<top>600</top>
-					<width>1520</width>
+					<width>1720</width>
 					<height>160</height>
 					<itemgap>10</itemgap>
 					<align>center</align>
@@ -124,8 +124,8 @@
 				</control>
 			</control>
 			<include content="InfoDialogTopBarInfo">
-				<param name="main_label" value="$INFO[ListItem.Title] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]" />
-				<param name="sub_label" value="$VAR[FlagDashLabelVar][COLOR grey]$VAR[SeasonEpisodeLabelVar][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white][B],[/B][/COLOR]]" />
+				<param name="main_label" value="$INFO[ListItem.Title]$VAR[ListItemYearLabelVar]" />
+				<param name="sub_label" value="" />
 				<param name="posy" value="40" />
 			</include>
 		</control>

@@ -2511,7 +2511,7 @@
 								<width>120</width>
 								<height>120</height>
 								<label>$INFO[Window.Property(Top250)]</label>
-								<textcolor>black</textcolor>
+								<textcolor>$VAR[ColorBlackVar]</textcolor>
 								<align>center</align>
 								<font>font14</font>
 							</control>

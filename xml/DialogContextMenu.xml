@@ -54,17 +54,6 @@
 					<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
 					<visible>System.AddonIsEnabled(script.simpleplaylists) + Skin.HasSetting(enablewatchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
 				</control>
-				<!-- <control type="button" id="3001">
-					<description>Jump To Letter</description>
-					<left>0</left>
-					<height>65</height>
-					<align>center</align>
-					<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
-					<texturenofocus />
-					<label>$LOCALIZE[32252]</label>
-					<onclick>RunScript(script.skin.helper.service,action=jumptoletter)</onclick>
-					<visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)] + !Window.IsVisible(Home)</visible>
-				</control> -->
 				<control type="button" id="3002">
 					<description>Extended Info</description>
 					<left>0</left>

@@ -502,7 +502,7 @@
 									<width>410</width>
 									<height>30</height>
 									<font>font27_narrow</font>
-									<label>$INFO[ListItem.Label,[COLOR button_focus],[/COLOR]] $INFO[ListItem.Label2]</label>
+									<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Label2]</label>
 								</control>
 							</itemlayout>
 							<focusedlayout height="35">
@@ -511,7 +511,7 @@
 									<top>1</top>
 									<width>446</width>
 									<height>33</height>
-									<texture colordiffuse="button_focus">lists/focus.png</texture>
+									<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
 									<visible>Control.HasFocus(41)</visible>
 								</control>
 								<control type="label">
@@ -530,7 +530,7 @@
 									<width>410</width>
 									<height>30</height>
 									<font>font27_narrow</font>
-									<label>$INFO[ListItem.Label,[COLOR button_focus],[/COLOR]] $INFO[ListItem.Label2]</label>
+									<label>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Label2]</label>
 									<scroll>false</scroll>
 									<visible>!Control.HasFocus(41)</visible>
 								</control>
