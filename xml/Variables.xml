@@ -1112,6 +1112,10 @@
 		<value condition="String.IsEqual(ListItem.DBType,movie)">[I][COLOR $VAR[ColorMainVar]]$INFO[ListItem.Tagline][/COLOR][/I]</value>
 		<value>[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Genre][/COLOR]</value>
 	</variable>
+	<variable name="VideoPlayerPlotVar">
+		<value condition="!String.IsEqual(VideoPlayer.Tagline)">[I][COLOR $VAR[ColorMainVar]]$INFO[VideoPlayer.Tagline][/COLOR][/I][CR]$INFO[VideoPlayer.Plot]</value>
+		<value>$INFO[VideoPlayer.Plot]</value>
+	</variable>
 	<variable name="VideoInfoBottomLabelVar">
 		<value condition="Control.HasFocus(8)">$INFO[ListItem.LastPlayed,$LOCALIZE[568]: ]</value>
 		<value condition="Control.HasFocus(6)">$INFO[ListItem.FileNameAndPath]</value>

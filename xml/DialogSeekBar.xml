@@ -358,7 +358,7 @@
 				<itemgap>10</itemgap>
 				<control type="textbox">
 					<height>250</height>
-					<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
+					<label>$VAR[VideoPlayerPlotVar]</label>
 					<align>left</align>
 					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
 					<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
