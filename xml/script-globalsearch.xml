@@ -9,7 +9,7 @@
 			<param name="fanart_media" value="$VAR[SearchFanartVar]" />
 		</include>
 		<control type="group">
-			<visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)]</visible>
+			<visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)]</visible>
 			<depth>DepthContentPanel</depth>
 			<include>OpenClose_Left</include>
 			<control type="group">
