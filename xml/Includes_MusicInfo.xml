@@ -43,8 +43,8 @@
 		</item>
 		<item>
 			<label>$LOCALIZE[515]:</label>
-			<label2>$INFO[ListItem.Genre]</label2>
-			<visible>!String.IsEmpty(ListItem.Genre)</visible>
+			<label2>$VAR[GenreVar]</label2>
+			<visible>!String.IsEmpty(ListItem.Genre) | !String.IsEmpty(ListItem.Property(Genre))</visible>
 		</item>
 		<item>
 			<label>$LOCALIZE[175]:</label>
