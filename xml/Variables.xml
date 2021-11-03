@@ -519,8 +519,7 @@
 	<variable name="HomeFanartVar">
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(Home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$VAR[WeatherFanartValueVar]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart)) + String.IsEmpty(Container.ListItem.Art(animatedfanart))">$INFO[Container.ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)">$INFO[Container.ListItem.Art(animatedfanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Property(AddonFanart))">$INFO[Container.ListItem.Property(AddonFanart)]</value>
 		<!-- moviegenrefanart !!! -->
 		<value condition="[ String.StartsWith(Container.ListItem.FolderPath,videodb://movies/genres/) | String.StartsWith(Container.ListItem.FolderPath,videodb://tvshows/genres/) ] + !String.IsEmpty(Skin.String(moviegenrefanart.path))">$INFO[Skin.String(moviegenrefanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(moviegenrefanart.ext)]</value>
@@ -530,7 +529,6 @@
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(Home).Property(infobackground)]</value>
 		<value condition="Window.IsActive(videos) + Container.Content(genres) + !ListItem.IsParentFolder + !String.IsEmpty(Skin.String(moviegenrefanart.path))">$INFO[Skin.String(moviegenrefanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(moviegenrefanart.ext)]</value>
 		<value condition="Window.IsActive(pictures) + String.IsEmpty(ListItem.Art(fanart)) + !ListItem.IsFolder">$INFO[ListItem.FolderPath]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + [!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
@@ -842,7 +840,6 @@
 		<value condition="!String.IsEmpty(Container(502).ListItem.Art(fanart))">$INFO[Container(502).ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="NoClearViewVar">
-		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + [!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="ClearArtViewVar">

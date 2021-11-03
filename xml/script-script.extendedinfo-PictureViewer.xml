@@ -28,7 +28,7 @@
 				<aspectratio>keep</aspectratio>
 				<animation effect="rotate" end="-45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
 				<texture colordiffuse="$VAR[ColorMainVar]">spinner.png</texture>
-				<visible>String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path)) | Skin.String(SkinHelper.SpinnerTexture.Path,None)</visible>
+				<visible>String.IsEmpty(Skin.String(skinutils.spinnertexture.path)) | Skin.String(skinutils.spinnertexture.path,None)</visible>
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>
@@ -38,7 +38,7 @@
 				<aspectratio>keep</aspectratio>
 				<animation effect="rotate" end="45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
 				<texture flipx="true" colordiffuse="$VAR[ColorMainVar]">spinner.png</texture>
-				<visible>String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path)) | Skin.String(SkinHelper.SpinnerTexture.Path,None)</visible>
+				<visible>String.IsEmpty(Skin.String(skinutils.spinnertexture.path)) | Skin.String(skinutils.spinnertexture.path,None)</visible>
 			</control>
 			<control type="multiimage">
 				<depth>DepthMax</depth>
@@ -47,12 +47,12 @@
 				<width>100</width>
 				<height>100</height>
 				<aspectratio>keep</aspectratio>
-				<imagepath>$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</imagepath>
+				<imagepath>$INFO[Skin.String(skinutils.spinnertexture.path)]</imagepath>
 				<timeperimage>100</timeperimage>
 				<randomize>false</randomize>
 				<fadetime>0</fadetime>
 				<colordiffuse>$VAR[ColorMainVar]</colordiffuse>
-				<visible>![String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path)) | Skin.String(SkinHelper.SpinnerTexture.Path,None)]</visible>
+				<visible>![String.IsEmpty(Skin.String(skinutils.spinnertexture.path)) | Skin.String(skinutils.spinnertexture.path,None)]</visible>
 			</control>
 		</control>
 		<control type="list" id="5000">

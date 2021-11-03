@@ -93,17 +93,17 @@
 							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 						</control>
 						<control type="label">
-							<left>20</left>
-							<right>20</right>
 							<top>0</top>
 							<bottom>0</bottom>
+							<left>100</left>
+							<right>20</right>
 							<align>right</align>
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$VAR[ListLabel2Var]</label>
 							<textcolor>$VAR[ColorMainVar]</textcolor>
 							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
-						</control>
+						</control>								
 						<control type="image">
 							<left>21</left>
 							<centertop>50%</centertop>
