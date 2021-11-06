@@ -1006,9 +1006,9 @@
 					<description>Settings Global Search</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick condition="System.AddonIsEnabled(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
-					<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
 					<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
+					<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
 					<enable>Skin.HasSetting(enableglobalsearch)</enable>
 				</control>
 				<control type="image" id="704">
@@ -1032,9 +1032,9 @@
 					<description>Settings ExtendedInfo</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick condition="System.AddonIsEnabled(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
-					<onclick condition="System.HasAddon(script.extendedinfo) + !System.AddonIsEnabled(script.extendedinfo)">EnableAddon(script.extendedinfo)</onclick>
 					<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+					<onclick condition="System.HasAddon(script.extendedinfo) + !System.AddonIsEnabled(script.extendedinfo)">EnableAddon(script.extendedinfo)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
 					<enable>Skin.HasSetting(enableextendedinfo)</enable>
 				</control>
 				<control type="image" id="708">
@@ -1051,6 +1051,8 @@
 					<description>Enable Simple Playlists</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[32176]</label>
+					<onclick condition="!System.HasAddon(script.simpleplaylists)">InstallAddon(script.simpleplaylists)</onclick>
+					<onclick condition="System.HasAddon(script.simpleplaylists) + !System.AddonIsEnabled(script.simpleplaylists)">EnableAddon(script.simpleplaylists)</onclick>
 					<onclick>Skin.ToggleSetting(enablewatchitlater)</onclick>
 					<selected>Skin.HasSetting(enablewatchitlater)</selected>
 				</control>
@@ -1058,9 +1060,9 @@
 					<description>Settings Simple Playlists</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick condition="System.AddonIsEnabled(script.simpleplaylists)">Addon.OpenSettings(script.simpleplaylists)</onclick>
-					<onclick condition="System.HasAddon(script.simpleplaylists) + !System.AddonIsEnabled(script.simpleplaylists)">EnableAddon(script.simpleplaylists)</onclick>
 					<onclick condition="!System.HasAddon(script.simpleplaylists)">InstallAddon(script.simpleplaylists)</onclick>
+					<onclick condition="System.HasAddon(script.simpleplaylists) + !System.AddonIsEnabled(script.simpleplaylists)">EnableAddon(script.simpleplaylists)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.simpleplaylists)">Addon.OpenSettings(script.simpleplaylists)</onclick>
 					<enable>Skin.HasSetting(enablewatchitlater)</enable>
 				</control>
 				<control type="image" id="712">
@@ -1085,9 +1087,9 @@
 					<description>Settings CU LRC Lyrics</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick condition="System.AddonIsEnabled(script.cu.lrclyrics)">Addon.OpenSettings(script.cu.lrclyrics)</onclick>
-					<onclick condition="System.HasAddon(script.cu.lrclyrics) + !System.AddonIsEnabled(script.cu.lrclyrics)">EnableAddon(script.cu.lrclyrics)</onclick>
 					<onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
+					<onclick condition="System.HasAddon(script.cu.lrclyrics) + !System.AddonIsEnabled(script.cu.lrclyrics)">EnableAddon(script.cu.lrclyrics)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.cu.lrclyrics)">Addon.OpenSettings(script.cu.lrclyrics)</onclick>
 				</control>
 				<control type="image" id="716">
 					<description>Separator Image</description>
@@ -1103,10 +1105,10 @@
 					<description>Settings Skin Shortcuts</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick condition="System.AddonIsEnabled(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
-					<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-				</control>				
+					<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
+				</control>
 				<control type="image" id="719">
 					<description>Separator Image</description>
 					<height>3</height>
@@ -1121,9 +1123,9 @@
 					<description>Settings Skin Utils</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick condition="System.AddonIsEnabled(script.skin.utils)">Addon.OpenSettings(script.skin.utils)</onclick>
-					<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 					<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+					<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.skin.utils)">Addon.OpenSettings(script.skin.utils)</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
 					<param name="control_id1" value="737" />

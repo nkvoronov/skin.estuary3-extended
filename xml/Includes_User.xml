@@ -131,7 +131,7 @@
 				<width>1900</width>
 				<usecontrolcoords>true</usecontrolcoords>
 				<animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="100,0" time="0" condition="![String.IsEqual(Container($PARAM[container_id]).ListItem.DBType,artist) | String.IsEqual(Container($PARAM[container_id]).ListItem.DBType,album)]">Conditional</animation>				
+				<animation effect="slide" start="0,0" end="100,0" time="0" condition="![String.IsEqual(Container($PARAM[container_id]).ListItem.DBType,artist) | String.IsEqual(Container($PARAM[container_id]).ListItem.DBType,album)]">Conditional</animation>
 				<control type="group">
 					<width>150</width>
 					<top>-5</top>
@@ -412,9 +412,9 @@
 				<include>DefaultSettingButton</include>
 				<label>- $PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setbackground,header=$PARAM[header] - $PARAM[label],skinstring=$PARAM[property])</onclick>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
-				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>				
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setbackground,header=$PARAM[header] - $PARAM[label],skinstring=$PARAM[property])</onclick>
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
@@ -433,9 +433,9 @@
 				<description>Reset Section</description>
 				<include>DefaultSettingButton</include>
 				<label>$LOCALIZE[10041]</label>
-				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=dialogyesno,header=$PARAM[header],message=$PARAM[text],yesaction=$PARAM[action])</onclick>
-				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=dialogyesno,header=$PARAM[header],message=$PARAM[text],yesaction=$PARAM[action])</onclick>
 			</control>
 		</definition>
 	</include>
@@ -447,9 +447,9 @@
 				<include>DefaultSettingButton</include>
 				<label>$PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setresourceaddon,skinstring=$PARAM[property],addontype=$PARAM[type],header=$PARAM[label])</onclick>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
-				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>							
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setresourceaddon,skinstring=$PARAM[property],addontype=$PARAM[type],header=$PARAM[label])</onclick>
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
@@ -465,9 +465,9 @@
 				<include>DefaultSettingButton</include>
 				<label>$PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectcolor,header=$PARAM[label],skinstring=$PARAM[property],defcolor=$PARAM[defcolor])</onclick>
-				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectcolor,header=$PARAM[label],skinstring=$PARAM[property],defcolor=$PARAM[defcolor])</onclick>
 			</control>
 			<control type="button" id="$PARAM[control_id2]">
 				<description>Reset Color</description>
@@ -485,9 +485,9 @@
 				<include>DefaultSettingButton</include>
 				<label>$PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
-				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
 			</control>
 		</definition>
 	</include>
