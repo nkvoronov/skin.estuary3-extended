@@ -993,7 +993,7 @@
 				<control type="label" id="701">
 					<description>Global Search Label</description>
 					<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[24000] Global Search</label>
+					<label>Global Search</label>
 				</control>
 				<control type="radiobutton" id="702">
 					<description>Enable Global Search</description>
@@ -1019,7 +1019,7 @@
 				<control type="label" id="705">
 					<description>ExtendedInfo Label</description>
 					<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[24000] Extended Info</label>
+					<label>Extended Info</label>
 				</control>
 				<control type="radiobutton" id="706">
 					<description>Enable ExtendedInfo Search</description>
@@ -1045,7 +1045,7 @@
 				<control type="label" id="709">
 					<description>Simple Playlists Label</description>
 					<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[24000] Simple Playlists</label>
+					<label>Simple Playlists</label>
 				</control>
 				<control type="radiobutton" id="710">
 					<description>Enable Simple Playlists</description>
@@ -1073,7 +1073,7 @@
 				<control type="label" id="713">
 					<description>CU LRC Lyrics Label</description>
 					<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[24000] CU LRC Lyrics</label>
+					<label>CU LRC Lyrics</label>
 				</control>
 				<control type="radiobutton" id="714">
 					<description>CU LRC Lyrics Alternative View</description>
@@ -1099,7 +1099,7 @@
 				<control type="label" id="717">
 					<description>Skin Shortcuts Label</description>
 					<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[24000] Skin Shortcuts</label>
+					<label>Skin Shortcuts</label>
 				</control>
 				<control type="button" id="718">
 					<description>Settings Skin Shortcuts</description>
@@ -1117,7 +1117,7 @@
 				<control type="label" id="720">
 					<description>Skin Utils Label</description>
 					<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[24000] Skin Utils</label>
+					<label>Skin Utils</label>
 				</control>
 				<control type="button" id="721">
 					<description>Settings Skin Utils</description>
