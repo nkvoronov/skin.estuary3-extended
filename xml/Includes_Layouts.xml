@@ -1561,20 +1561,6 @@
 								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 								<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 							</control>
-							<control type="textbox" id="15503">
-								<width>537</width>
-								<bottom>310</bottom>
-								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-							</control>
-							<control type="textbox" id="15503">
-								<width>537</width>
-								<bottom>310</bottom>
-								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-								<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-							</control>
 							<control type="textbox">
 								<description>No Content</description>
 								<width>537</width>
@@ -1584,7 +1570,7 @@
 								<font>font27</font>
 								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
-								<visible>[String.IsEmpty(Control.GetLabel(15502)) + Control.IsVisible(15502)] | [String.IsEmpty(Control.GetLabel(15503)) + Control.IsVisible(15503)]</visible>
+								<visible>String.IsEmpty(Control.GetLabel(15502)) + Control.IsVisible(15502)</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -1632,7 +1618,7 @@
 								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>!ListItem.IsParentFolder</visible>
-								<visible>[String.IsEmpty(Control.GetLabel(15504)) + Control.IsVisible(15504)]</visible>
+								<visible>String.IsEmpty(Control.GetLabel(15504)) + Control.IsVisible(15504)</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -1921,17 +1907,6 @@
 							<visible>!ListItem.IsCollection</visible>
 							<scroll>true</scroll>
 						</control>
-						<control type="label">
-							<description>Genre for Collection</description>
-							<bottom>80</bottom>
-							<height>25</height>
-							<align>center</align>
-							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
-							<font>font12</font>
-							<textcolor>$VAR[ColorMainVar]</textcolor>
-							<visible>ListItem.IsCollection</visible>
-							<scroll>true</scroll>
-						</control>
 					</control>
 				</control>
 			</control>
@@ -1996,7 +1971,7 @@
 								<bottom>100</bottom>
 								<label>$VAR[PlotAndTagVar]</label>
 								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								<visible>[String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+								<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox" id="16500">
@@ -2004,7 +1979,7 @@
 								<bottom>116</bottom>
 								<label>$VAR[PlotAndTagVar]</label>
 								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								<visible>[String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+								<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox" id="16501">
@@ -2012,7 +1987,7 @@
 								<bottom>225</bottom>
 								<label>$VAR[PlotAndTagVar]</label>
 								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+								<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))]</visible>
 								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox" id="16501">
@@ -2020,7 +1995,7 @@
 								<bottom>240</bottom>
 								<label>$VAR[PlotAndTagVar]</label>
 								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))+ String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+								<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))]</visible>
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox">
@@ -2052,20 +2027,6 @@
 								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 								<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 							</control>
-							<control type="textbox" id="16503">
-								<width>537</width>
-								<bottom>424</bottom>
-								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-							</control>
-							<control type="textbox" id="16503">
-								<width>537</width>
-								<bottom>426</bottom>
-								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-								<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-							</control>
 							<control type="textbox">
 								<description>No Content</description>
 								<width>537</width>
@@ -2075,7 +2036,7 @@
 								<font>font27</font>
 								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
-								<visible>[String.IsEmpty(Control.GetLabel(16502)) + Control.IsVisible(16502)] | [String.IsEmpty(Control.GetLabel(16503)) + Control.IsVisible(16503)]</visible>
+								<visible>String.IsEmpty(Control.GetLabel(16502)) + Control.IsVisible(16502)</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -2394,17 +2355,6 @@
 							<visible>!ListItem.IsCollection</visible>
 							<scroll>true</scroll>
 						</control>
-						<control type="label">
-							<description>Genre for Collection</description>
-							<bottom>80</bottom>
-							<height>25</height>
-							<align>center</align>
-							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
-							<font>font12</font>
-							<textcolor>$VAR[ColorMainVar]</textcolor>
-							<visible>ListItem.IsCollection</visible>
-							<scroll>true</scroll>
-						</control>
 					</control>
 				</control>
 			</control>
@@ -2695,26 +2645,6 @@
 					<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 				</control>
-				<control type="textbox">
-					<top>60</top>
-					<left>429</left>
-					<right>10</right>
-					<width>640</width>
-					<bottom>238</bottom>
-					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-					<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-				</control>
-				<control type="textbox">
-					<top>60</top>
-					<left>429</left>
-					<right>10</right>
-					<width>640</width>
-					<bottom>235</bottom>
-					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-				</control>
 				<control type="group">
 					<top>225</top>
 					<left>429</left>
@@ -2739,17 +2669,6 @@
 						<param name="sortorder" value="ascending" />
 						<param name="list_id" value="6100" />
 					</include>
-				</control>
-				<control type="label">
-					<bottom>11</bottom>
-					<left>429</left>
-					<right>10</right>
-					<width>640</width>
-					<height>30</height>
-					<scroll>true</scroll>
-					<font>font12</font>
-					<textcolor>$VAR[ColorMainVar]</textcolor>
-					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
 				</control>
 			</control>
 		</control>
