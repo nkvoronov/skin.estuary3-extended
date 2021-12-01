@@ -45,6 +45,14 @@
 						<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 						<visible>Skin.HasSetting(enableextendedinfo)</visible>
 					</item>
+					<!-- <item>
+						<label>MUSICBRAINZ</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.extendedinfo)">RunScript(script.extendedinfo,info=musicbrainzbrowser,search=True)</onclick>
+						<onclick condition="System.HasAddon(script.extendedinfo) + !System.AddonIsEnabled(script.extendedinfo)">EnableAddon(script.extendedinfo)</onclick>
+						<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+						<visible>Skin.HasSetting(enableextendedinfo)</visible>
+					</item> -->
 				</content>
 			</control>
 		</control>
