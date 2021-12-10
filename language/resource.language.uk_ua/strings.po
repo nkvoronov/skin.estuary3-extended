@@ -1178,6 +1178,10 @@ msgctxt "#32241"
 msgid "Select background"
 msgstr "Вибрати фон"
 
+msgctxt "#32242"
+msgid "Search MusicBrainz"
+msgstr "Искать в MusicBrainz"
+
 ###############################
 
 msgctxt "#32250"
