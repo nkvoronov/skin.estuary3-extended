@@ -49,7 +49,7 @@
 					<label>$ADDON[script.skinshortcuts 32045]</label>
 					<label2>$INFO[Container(211).ListItem.Property(background)]</label2>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<enable>![Skin.HasSetting(nofanart) | Skin.HasSetting(hide_backgrounds)]</enable>
+					<enable>!Skin.HasSetting(nofanart)</enable>
 				</control>
 				<control type="button" id="405">
 					<description>Edit Submenu</description>
