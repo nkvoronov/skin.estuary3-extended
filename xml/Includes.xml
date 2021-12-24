@@ -1140,8 +1140,8 @@
 				<description>Video</description>
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
-				<visible>Player.HasVideo + !Skin.HasSetting(showbackgroundvideo)</visible>
 				<visible>!Slideshow.IsActive</visible>
+				<visible>Player.HasVideo + !Skin.HasSetting(showbackgroundvideo)</visible>				
 			</control>
 			<control type="visualisation">
 				<description>Visualisation</description>

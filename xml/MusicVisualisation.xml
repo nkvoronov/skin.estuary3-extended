@@ -9,6 +9,7 @@
 			<visible>Player.HasAudio</visible>
 		</control>
 		<control type="multiimage">
+			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
@@ -48,10 +49,6 @@
 				<imagepath background="true" colordiffuse="white5">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)</visible>
 			</control>
-		</control>
-		<control type="group">
-			<visible>!Visualisation.Enabled + [[String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] | Skin.HasSetting(hide_background_fanart)]</visible>
-			<include>ColoredBackgroundImages</include>
 		</control>
 		<control type="group">
 			<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv)</visible>
