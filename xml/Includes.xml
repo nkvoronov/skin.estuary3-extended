@@ -330,10 +330,9 @@
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<visible>$PARAM[visible]</visible>
-				<!--<animation effect="slide" start="0,0" end="20,0" time="0" condition="![String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,set) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,artist) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,album)]">Conditional</animation> -->				
 				<include content="InfoFlag">
 					<param name="top" value="10" />
-					<param name="width" value="170" />
+					<param name="width" value="175" />
 					<param name="visible" value="[String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,episode)] + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered)" />
 					<param name="icon" value="lists/year.png" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]" />
