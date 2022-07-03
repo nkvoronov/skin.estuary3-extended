@@ -1575,6 +1575,7 @@
 						</control>
 						<control type="group">
 							<top>570</top>
+                            <visible>!String.IsEmpty(ListItem.DBID)</visible>
 							<visible>String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song)</visible>
 							<control type="textbox" id="15504">
 								<width>537</width>
@@ -2040,7 +2041,8 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album)</visible>
+                            <visible>!String.IsEmpty(ListItem.DBID)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song)</visible>
 							<control type="textbox" id="16504">
 								<width>537</width>
 								<bottom>422</bottom>
