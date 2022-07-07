@@ -9,7 +9,7 @@
 			<param name="fanart_media" value="$VAR[SearchYoutubeFanartVar]" />
 		</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active] | $EXP[extendedinfo_visible] | Window.IsVisible(script-extendedinfo-TheMovieDBList.xml)">Conditional</animation>
 			<control type="group">
 				<left>50</left>
 				<top>0</top>
@@ -190,7 +190,7 @@
 					<textureradioonnofocus colordiffuse="$VAR[ColorGreyVar]">icons/search.png</textureradioonnofocus>
 					<textureradioofffocus>icons/search.png</textureradioofffocus>
 					<textureradiooffnofocus colordiffuse="$VAR[ColorGreyVar]">icons/search.png</textureradiooffnofocus>
-					<ondown>SetFocus(7000)</ondown>
+					<ondown>SetFocus(9000)</ondown>
 					<onright>50</onright>
 					<onleft>6001</onleft>
 				</control>
@@ -204,22 +204,12 @@
 					<font>font13</font>
 					<label>$LOCALIZE[137]</label>
 				</control>
-				<control type="button" id="7000">
-					<top>170</top>
-					<include>MediaMenuItemsCommon</include>
-					<ondown>9000</ondown>
-					<onup>6000</onup>
-					<onright>500</onright>
-					<onleft>500</onleft>
-					<label>$ADDON[script.extendedinfo 32024]</label>
-				</control>
 				<control type="grouplist" id="9000">
-					<top>250</top>
+					<top>170</top>
 					<width>470</width>
-					<height>830</height>
 					<orientation>vertical</orientation>
 					<scroll>true</scroll>
-					<onup>7000</onup>
+					<onup>6000</onup>
 					<ondown>9000</ondown>
 					<onright>500</onright>
 					<onleft>500</onleft>

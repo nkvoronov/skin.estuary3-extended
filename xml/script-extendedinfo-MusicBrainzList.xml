@@ -6,7 +6,7 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include content="DefaultBackground">
-			<param name="fanart_media" value="$VAR[MediaFanartVar]" />
+			<param name="fanart_media" value="$VAR[SearchMusicBrainzFanartVar]" />
 		</include>
 		<control type="group">
 			<control type="group">
@@ -135,7 +135,9 @@
 						<control type="group">
 							<top>150</top>
 							<left>40</left>
-							<include>SquareLayout</include>
+							<include content="SquareLayout">
+								<param name="watched" value="!String.IsEmpty(ListItem.DBID)" />
+							</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="410" width="310">
@@ -147,6 +149,7 @@
 							<left>40</left>
 							<include content="SquareLayout">
 								<param name="focused" value="true" />
+                                <param name="watched" value="!String.IsEmpty(ListItem.DBID)" />
 							</include>
 						</control>
 					</focusedlayout>
@@ -571,7 +574,7 @@
 					<textureradioofffocus>icons/search.png</textureradioofffocus>
 					<textureradiooffnofocus colordiffuse="$VAR[ColorGreyVar]">icons/search.png</textureradiooffnofocus>
 					<ondown>SetFocus(9000)</ondown>
-					<onright>50</onright>
+					<onright>54</onright>
 					<onleft>6001</onleft>
 				</control>
 				<control type="label">
@@ -585,7 +588,8 @@
 					<label>$LOCALIZE[137]</label>
 				</control>
 				<control type="grouplist" id="9000">
-					<top>250</top>
+					<top>170</top>
+					<width>470</width>
 					<orientation>vertical</orientation>
 					<scroll>true</scroll>
 					<itemgap>0</itemgap>
@@ -605,8 +609,8 @@
 						<align>right</align>
 					</control>
 					<control type="button" id="5001">
+                        <onup>6100</onup>
 						<include>MediaMenuItemsCommon</include>
-						<onup>6100</onup>
 						<label>$ADDON[script.extendedinfo 32104]</label>
 						<label2>[B]$INFO[Window.Property(Sort_Label)][/B]</label2>
 					</control>
@@ -620,30 +624,6 @@
 						<label>$LOCALIZE[467]</label>
 						<label2>[B]$INFO[Window.Property(Type)][/B]</label2>
 					</control>
-					<!-- <control type="label" id="5333">
-						<include>MediaMenuLabelCommon</include>
-						<label>$ADDON[script.extendedinfo 32023]</label>
-					</control>
-					<control type="button" id="5002">
-						<include>MediaMenuItemsCommon</include>
-						<label>$LOCALIZE[515]</label>
-					</control>
-					<control type="button" id="5003">
-						<include>MediaMenuItemsCommon</include>
-						<label>$LOCALIZE[172]</label>
-					</control>
-					<control type="button" id="5009">
-						<include>MediaMenuItemsCommon</include>
-						<label>$ADDON[script.extendedinfo 32114]</label>
-					</control>
-					<control type="button" id="5012">
-						<include>MediaMenuItemsCommon</include>
-						<label>$ADDON[script.extendedinfo 32111]</label>
-					</control>
-					<control type="button" id="5005">
-						<include>MediaMenuItemsCommon</include>
-						<label>$ADDON[script.extendedinfo 32022]</label>
-					</control> -->
 				</control>
 			</control>
 		</control>

@@ -6,10 +6,10 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include content="DefaultBackground">
-			<param name="fanart_media" value="$VAR[SearchFanartVar]" />
+			<param name="fanart_media" value="$VAR[GlobalSearchFanartVar]" />
 		</include>
 		<control type="group">
-			<visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)]</visible>
+			<visible>![$EXP[infodialog_visible] | $EXP[extendedinfo_visible] | $EXP[extendedlist_visible]]</visible>
 			<depth>DepthContentPanel</depth>
 			<include>OpenClose_Left</include>
 			<control type="group">
@@ -392,7 +392,7 @@
 			<control type="group">
 				<centerleft>50%</centerleft>
 				<visible>!Skin.HasSetting(hidelogosearch)</visible>
-				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)] + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !$EXP[infodialog_visible] + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				<control type="image">
 					<top>0</top>
 					<height>140</height>
