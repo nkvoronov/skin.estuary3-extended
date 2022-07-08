@@ -611,7 +611,7 @@
 		<value></value>
 	</variable>
 	<variable name="SearchYoutubeFanartVar">
-		<value condition="$EXP[infodialog_active] | $EXP[extendedinfo_visible]">$INFO[Window(Home).Property(infobackground)]</value>
+		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$INFO[Window(Home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEqual(Window.Property(Type),$LOCALIZE[19029])">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Thumb) + !String.IsEqual(Window.Property(Type),$LOCALIZE[19029])">$INFO[ListItem.Thumb]</value>
 		<value></value>
@@ -1252,9 +1252,9 @@
 		<value condition="!String.IsEmpty(ListItem.Plot)">[COLOR $VAR[ColorMainVar]]$INFO[ListItem.Tagline,[I],[/I][CR]][/COLOR]$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Plot))">$INFO[ListItem.Property(Plot)]</value>
 	</variable>
-	<variable name="YoutubeLabelsVar">
-		<value condition="String.IsEqual(Window.Property(Type),$LOCALIZE[19029])">$INFO[ListItem.Property(itemcount),, $LOCALIZE[36913]]</value>
-		<value condition="!String.IsEqual(Window.Property(Type),$LOCALIZE[19029])">$INFO[ListItem.Property(viewcount),$ADDON[script.extendedinfo 32061] ,]$INFO[ListItem.Property(duration), - ,]</value>
+	<variable name="YoutubeThumbVar">
+        <value condition="String.IsEqual(ListItem.Property(type),video)">$INFO[ListItem.Property(formatted_duration)]</value>
+        <value condition="!String.IsEqual(ListItem.Property(type),video)">$INFO[ListItem.Property(itemcount)]</value>
 	</variable>
 	<variable name="PlaylistLabelVar">
 		<value condition="String.IsEqual(ListItem.DbType,episode)">$INFO[ListItem.TVShowtitle,,: ]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>

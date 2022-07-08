@@ -38,6 +38,14 @@
 						<onclick condition="!System.HasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
 					</item>
 					<item>
+						<label>$LOCALIZE[31114] (extendedinfo)</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.extendedinfo)">RunScript(script.extendedinfo,info=youtubebrowser,search=True)</onclick>
+						<onclick condition="System.HasAddon(script.extendedinfo) + !System.AddonIsEnabled(script.extendedinfo)">EnableAddon(script.extendedinfo)</onclick>
+						<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+						<visible>Skin.HasSetting(enableextendedinfo)</visible>
+					</item>
+					<item>
 						<label>$LOCALIZE[32240]</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.AddonIsEnabled(script.extendedinfo)">RunScript(script.extendedinfo,info=moviedbbrowser,search=True)</onclick>
