@@ -85,9 +85,10 @@
 						<width>1000</width>
 						<height>25</height>
 						<font>font12</font>
-						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32181]: [/COLOR]$INFO[Window.Property(Artist_Begin_Area)]</label>
-						<visible>!String.isEmpty(Window.Property(Artist_Begin_Area))</visible>
-					</control>                    
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32191]: [/COLOR]$INFO[Window.Property(Artist_Born)]</label>
+						<visible>!String.isEmpty(Window.Property(Artist_Born))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Group)</visible>
+					</control>
 					<control type="label">
 						<align>left</align>
 						<aligny>center</aligny>
@@ -96,8 +97,33 @@
 						<width>1000</width>
 						<height>25</height>
 						<font>font12</font>
-						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[21893]: [/COLOR]$INFO[Window.Property(Artist_Born)]</label>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32192]: [/COLOR]$INFO[Window.Property(Artist_Begin_Area)]</label>
+						<visible>!String.isEmpty(Window.Property(Artist_Begin_Area))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Group)</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32198]: [/COLOR]$INFO[Window.Property(Artist_Born)]</label>
 						<visible>!String.isEmpty(Window.Property(Artist_Born))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32199]: [/COLOR]$INFO[Window.Property(Artist_Begin_Area)]</label>
+						<visible>!String.isEmpty(Window.Property(Artist_Begin_Area))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
 					</control>
 					<control type="label">
 						<align>left</align>
@@ -107,20 +133,70 @@
 						<width>1000</width>
 						<height>25</height>
 						<font>font12</font>
-						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32182]: [/COLOR]$INFO[Window.Property(Artist_End_Area)]</label>
-						<visible>!String.IsEmpty(Window.Property(Artist_End_Area))</visible>
-					</control>
-					<control type="label">
-						<align>left</align>
-						<aligny>center</aligny>
-						<left>20</left>
-						<top>0</top>
-						<width>1000</width>
-						<height>25</height>
-						<font>font12</font>
-						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[21897]: [/COLOR]$INFO[Window.Property(Artist_Died)]</label>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32194]: [/COLOR]$INFO[Window.Property(Artist_Died)]</label>
 						<visible>!String.isEmpty(Window.Property(Artist_Died))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Group)</visible>
 					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>0</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32195]: [/COLOR]$INFO[Window.Property(Artist_End_Area)]</label>
+						<visible>!String.IsEmpty(Window.Property(Artist_End_Area))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Group)</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>0</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32200]: [/COLOR]$INFO[Window.Property(Artist_Died)]</label>
+						<visible>!String.isEmpty(Window.Property(Artist_Died))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>0</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32201]: [/COLOR]$INFO[Window.Property(Artist_End_Area)]</label>
+						<visible>!String.IsEmpty(Window.Property(Artist_End_Area))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
+					</control>
+                    
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>0</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32196]: [/COLOR]$INFO[Window.Property(Rating)]</label>
+						<visible>!String.IsEmpty(Window.Property(Rating))</visible>
+					</control> 
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>0</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32195]: [/COLOR]$INFO[Window.Property(isnis)]</label>
+						<visible>!String.IsEmpty(Window.Property(isnis))</visible>
+					</control>
+
 					<control type="group" id="140">
 						<description>Description</description>
 						<height>255</height>
@@ -241,7 +317,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -306,7 +382,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -424,7 +500,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -489,7 +565,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -607,7 +683,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -672,7 +748,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -790,7 +866,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -855,7 +931,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -973,7 +1049,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1038,7 +1114,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1156,7 +1232,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1221,7 +1297,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1339,7 +1415,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1404,7 +1480,7 @@
 										<left>20</left>
 										<width>240</width>
 										<height>240</height>
-										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1497,7 +1573,7 @@
 							<onleft>350</onleft>
 							<onright>350</onright>
 							<onup>551</onup>
-							<ondown>450</ondown>
+							<ondown>850</ondown>
 							<pagecontrol>60</pagecontrol>
 							<scrolltime>300</scrolltime>
 							<orientation>horizontal</orientation>
@@ -1573,6 +1649,88 @@
 							</focusedlayout>
 						</control>
 					</control>
+					<control type="group">
+						<description>Genres List</description>
+						<visible>Integer.IsGreater(Container(850).NumItems,0)</visible>
+						<height>180</height>
+						<control type="label">
+							<top>6</top>
+							<left>25</left>
+							<width>1000</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$LOCALIZE[135]$INFO[Container(850).NumItems, (,)]</label>
+						</control>
+						<control type="panel" id="850">
+							<left>-45</left>
+							<top>30</top>
+							<width>1940</width>
+							<height>100</height>
+							<onleft>850</onleft>
+							<onright>850</onright>
+							<onup>350</onup>
+							<ondown>450</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="100" width="270">
+								<control type="group">
+									<left>45</left>
+									<top>0</top>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>280</width>
+										<height>100</height>
+										<texture border="40">buttons/button-nofo.png</texture>
+									</control>
+									<control type="label">
+										<left>0</left>
+										<top>0</top>
+										<width>280</width>
+										<height>100</height>
+										<align>center</align>
+										<aligny>center</aligny>
+										<font>font12</font>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="100" width="270">
+								<control type="group">
+									<left>45</left>
+									<top>0</top>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>280</width>
+										<height>100</height>
+										<texture border="40">buttons/button-nofo.png</texture>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>280</width>
+										<height>100</height>
+										<texture border="40" colordiffuse="$VAR[ColorMainVar]">buttons/button-fo.png</texture>
+										<animation effect="fade" start="0" end="100" time="160">Focus</animation>
+										<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
+									</control>
+									<control type="label">
+										<left>0</left>
+										<top>0</top>
+										<width>280</width>
+										<height>100</height>
+										<align>center</align>
+										<aligny>center</aligny>
+										<font>font12</font>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>                    
 					<control type="group" id="4500">
 						<description>Artwork List</description>
 						<height>450</height>
@@ -1613,16 +1771,16 @@
 							<height>500</height>
 							<onleft>450</onleft>
 							<onright>450</onright>
-							<onup>350</onup>
+							<onup>850</onup>
 							<ondown>750</ondown>
 							<scrolltime>200</scrolltime>
 							<orientation>horizontal</orientation>
-							<itemlayout height="500" width="270">
+							<itemlayout height="500" width="370">
 								<control type="group">
 									<top>10</top>
 									<left>45</left>
 									<control type="image">
-										<width>280</width>
+										<width>380</width>
 										<height>380</height>
 										<texture>DefaultVideo.png</texture>
 										<aspectratio aligny="center">scale</aspectratio>
@@ -1632,19 +1790,19 @@
 									<control type="image">
 										<left>20</left>
 										<top>20</top>
-										<width>240</width>
+										<width>340</width>
 										<height>340</height>
 										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 									</control>
 								</control>
 							</itemlayout>
-							<focusedlayout height="500" width="270">
+							<focusedlayout height="500" width="370">
 								<control type="group">
 									<top>10</top>
 									<left>45</left>
 									<control type="image">
-										<width>280</width>
+										<width>380</width>
 										<height>380</height>
 										<texture>DefaultVideo.png</texture>
 										<aspectratio aligny="center">scale</aspectratio>
@@ -1654,7 +1812,7 @@
 									<control type="image">
 										<left>20</left>
 										<top>20</top>
-										<width>240</width>
+										<width>340</width>
 										<height>340</height>
 										<texture background="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
@@ -1662,7 +1820,7 @@
 									<control type="image">
 										<left>16</left>
 										<top>16</top>
-										<width>248</width>
+										<width>348</width>
 										<height>348</height>
 										<texture border="8" colordiffuse="$VAR[ColorMainVar]">buttons/thumbnail_focused.png</texture>
 									</control>
@@ -1798,7 +1956,7 @@
 						<width>830</width>
 						<height>190</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture background="true" fallback="">$INFO[Window.Property(clearlogo)]</texture>
+						<texture background="true" fallback="extras/extendedinfo/musicbrainz.png">$INFO[Window.Property(clearlogo)]</texture>
 					</control>
 				</control>
 				<control type="group">
