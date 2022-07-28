@@ -18,7 +18,7 @@
 				<include>ButtonMenuList</include>
 				<content>
 					<item>
-						<label>$LOCALIZE[31113]</label>
+						<label>$LOCALIZE[31113] (globalsearch)</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.AddonIsEnabled(script.globalsearch)">RunScript(script.globalsearch)</onclick>
 						<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
@@ -26,12 +26,12 @@
 						<visible>Skin.HasSetting(enableglobalsearch)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[31145]</label>
+						<label>$LOCALIZE[31145] (addonbrowser)</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
 					</item>
 					<item>
-						<label>$LOCALIZE[31114]</label>
+						<label>$LOCALIZE[31114] (youtube)</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/list/",return)</onclick>
 						<onclick condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">EnableAddon(plugin.video.youtube)</onclick>
@@ -46,7 +46,7 @@
 						<visible>Skin.HasSetting(enableextendedinfo)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[32240]</label>
+						<label>$LOCALIZE[32240] (extendedinfo)</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.AddonIsEnabled(script.extendedinfo)">RunScript(script.extendedinfo,info=moviedbbrowser,search=True)</onclick>
 						<onclick condition="System.HasAddon(script.extendedinfo) + !System.AddonIsEnabled(script.extendedinfo)">EnableAddon(script.extendedinfo)</onclick>
@@ -54,7 +54,7 @@
 						<visible>Skin.HasSetting(enableextendedinfo)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[32242]</label>
+						<label>$LOCALIZE[32242] (extendedinfo)</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.AddonIsEnabled(script.extendedinfo)">RunScript(script.extendedinfo,info=musicbrainzbrowser,search=True)</onclick>
 						<onclick condition="System.HasAddon(script.extendedinfo) + !System.AddonIsEnabled(script.extendedinfo)">EnableAddon(script.extendedinfo)</onclick>

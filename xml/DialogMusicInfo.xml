@@ -9,6 +9,7 @@
 			<height>1080</height>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-extendedinfo-DialogMusicInfo.xml) | Window.IsVisible(script-extendedinfo-MusicBrainzList.xml)">Conditional</animation>
 			<control type="group">
 				<depth>DepthContentPopout</depth>
 				<top>158</top>
@@ -372,6 +373,23 @@
 					<align>center</align>
 					<itemgap>-15</itemgap>
 					<orientation>horizontal</orientation>
+					<include content="InfoDialogButton">
+						<param name="id" value="101" />
+						<param name="icon" value="icons/infodialogs/info.png" />
+						<param name="label" value="$LOCALIZE[31034]" />
+						<param name="onclick_1" value="RunScript(script.extendedinfo,info=openinfodialog)" />
+						<param name="visible" value="System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(enableextendedinfo) + [String.IsEqual(ListItem.dbtype,artist) |  String.IsEqual(ListItem.dbtype,album) |  String.IsEqual(ListItem.dbtype,song)]" />
+					</include>
+					<control type="radiobutton" id="440">
+						<label>$LOCALIZE[31114]</label>
+						<include content="VideoInfoButtonsCommon">
+							<param name="icon" value="extras/infodialogs/youtube.png" />
+						</include>
+						<onclick>Action(close)</onclick>
+						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(enableextendedinfo)</visible>
+						<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
+						<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+					</control>
 					<control type="radiobutton" id="155">
 						<include content="VideoInfoButtonsCommon">
 							<param name="icon" value="icons/infodialogs/play.png" />
@@ -429,16 +447,6 @@
 						<onclick>SetProperty(fanart,$ESCINFO[ListItem.Art(fanart)],Home)</onclick>
 						<onclick>ActivateWindow(1104)</onclick>
 						<visible>String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)</visible>
-					</control>
-					<control type="radiobutton" id="440">
-						<label>$LOCALIZE[31114]</label>
-						<include content="VideoInfoButtonsCommon">
-							<param name="icon" value="extras/infodialogs/youtube.png" />
-						</include>
-						<onclick>Action(close)</onclick>
-						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(enableextendedinfo)</visible>
-						<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
-						<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
 					</control>
 					<include content="InfoDialogButton">
 						<param name="id" value="6" />

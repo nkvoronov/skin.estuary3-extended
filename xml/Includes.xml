@@ -45,7 +45,7 @@
 	<expression name="extendedlist_visible">Window.IsVisible(script-extendedinfo-TheMovieDBList.xml) | Window.IsVisible(script-extendedinfo-YoutubeList.xml) | Window.IsVisible(script-extendedinfo-MusicBrainzList.xml)</expression>
 	<expression name="extendedinfo_visible">Window.IsVisible(script-extendedinfo-DialogMusicInfo.xml) | Window.IsVisible(script-extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-extendedinfo-DialogInfo.xml)</expression>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | $EXP[extendedinfo_visible] | $EXP[extendedlist_visible]</expression>
-	<expression name="infodialog_visible">Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</expression>    
+    <expression name="extendedinfo_active">Window.IsActive(script-extendedinfo-DialogMusicInfo.xml) | Window.IsActive(script-extendedinfo-DialogVideoInfo.xml) | Window.IsActive(script-extendedinfo-DialogInfo.xml)</expression>
 	<expression name="extendedlist_active">Window.IsActive(script-extendedinfo-TheMovieDBList.xml) | Window.IsActive(script-extendedinfo-YoutubeList.xml) | Window.IsActive(script-extendedinfo-MusicBrainzList.xml)</expression>   
 	<expression name="globalsearch_active">Window.IsActive(script-globalsearch.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131)</expression>
