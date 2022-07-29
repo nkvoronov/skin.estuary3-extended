@@ -358,7 +358,7 @@
 							<label>$LOCALIZE[31033]</label>
 							<onup>130</onup>
 							<onleft>12</onleft>
-							<onright>120</onright>
+							<onright>102</onright>
 							<onup condition="Integer.IsGreater(Container(5000).CurrentItem,3)">210</onup>
 							<onup condition="!Integer.IsGreater(Container(5000).CurrentItem,3)">138</onup>
 						</control>
