@@ -50,9 +50,9 @@
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
-					<label>$LOCALIZE[32237] (simpleplaylists)</label>
+					<label>$LOCALIZE[32237]</label>
 					<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
-					<visible>System.AddonIsEnabled(script.simpleplaylists) + Skin.HasSetting(enablewatchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
+					<visible>System.AddonIsEnabled(script.simpleplaylists) + Skin.HasSetting(enablewatchitlater) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,song)]</visible>
 				</control>
 				<control type="button" id="3002">
 					<description>Extended Info</description>
@@ -61,7 +61,7 @@
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
-					<label>$LOCALIZE[31034] (extendedinfo)</label>
+					<label>$LOCALIZE[31034]</label>
 					<onclick>RunScript(script.extendedinfo,info=openinfodialogmenu)</onclick>
 					<visible>System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(enableextendedinfo) + !System.AddonIsEnabled(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director) | String.IsEqual(ListItem.dbtype,artist) |  String.IsEqual(ListItem.dbtype,album) |  String.IsEqual(ListItem.dbtype,song)]</visible>
 				</control>

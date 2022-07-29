@@ -286,7 +286,7 @@
 						<bottom>0</bottom>
 						<aspectratio>stretch</aspectratio>
 						<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
-						<bordertexture>colors/white.png</bordertexture>
+						<bordertexture colordiffuse="$VAR[ColorBorderMediaVar]">colors/white.png</bordertexture>
 						<bordersize>1</bordersize>
 					</control>
 				</focusedlayout>
@@ -298,7 +298,7 @@
 						<bottom>0</bottom>
 						<aspectratio>stretch</aspectratio>
 						<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
-						<bordertexture>colors/white.png</bordertexture>
+						<bordertexture colordiffuse="$VAR[ColorBorderMediaVar]">colors/white.png</bordertexture>
 						<bordersize>1</bordersize>
 					</control>
 				</itemlayout>

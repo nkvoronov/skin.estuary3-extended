@@ -3313,6 +3313,7 @@
 			<animation effect="slide" end="-1500,0" time="900" tween="sine" condition="Control.HasFocus(132) | Control.HasFocus(133)">WindowClose</animation>
 			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !Control.HasFocus(133)">Conditional</animation>
 			<control type="image">
+                <description>Background</description>
 				<left>-10</left>
 				<top>-10</top>
 				<width>749</width>
@@ -3323,11 +3324,12 @@
 				<bordersize>10</bordersize>
 			</control>
 			<control type="image">
+                <description>Thumb</description>
 				<width>729</width>
 				<height>1080</height>
 				<aspectratio aligny="center">keep</aspectratio>
 				<fadetime>300</fadetime>
-				<texture>$INFO[Window.Property(thumb)]</texture>
+                <texture background="true">$INFO[Window.Property(thumb)]</texture>
 			</control>
 		</control>
 	</controls>

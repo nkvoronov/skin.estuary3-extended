@@ -2707,6 +2707,7 @@
 			<animation effect="slide" end="-1500,0" time="900" tween="sine" condition="Control.HasFocus(132) | Control.HasFocus(133) | ControlGroup(5000).HasFocus">WindowClose</animation>
 			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !Control.HasFocus(133) + !ControlGroup(5000).HasFocus">Conditional</animation>
 			<control type="image">
+                <description>Background</description>
 				<left>-10</left>
 				<top>-10</top>
 				<width>749</width>
@@ -2717,20 +2718,22 @@
 				<bordersize>10</bordersize>
 			</control>
 			<control type="image">
+                <description>Poster</description>
 				<width>729</width>
 				<height>1080</height>
 				<fadetime>300</fadetime>
 				<aspectratio aligny="top">scale</aspectratio>
-				<texture>$INFO[Window.Property(Poster)]</texture>
+                <texture background="true">$INFO[Window.Property(Poster)]</texture>
 			</control>
 			<control type="image">
+                <description>Still original</description>
 				<top>0</top>
 				<width>729</width>
 				<height>1080</height>
 				<fadetime>300</fadetime>
 				<aspectratio aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(Window.Property(type),episode)</visible>
-				<texture>$INFO[Window.Property(still_original)]</texture>
+				<texture background="true">$INFO[Window.Property(still_original)]</texture>
 			</control>
 		</control>
 	</controls>
