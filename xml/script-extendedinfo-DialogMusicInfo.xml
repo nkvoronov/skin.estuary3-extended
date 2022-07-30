@@ -44,7 +44,9 @@
 					<width>2100</width>
 					<height>896</height>
 					<usecontrolcoords>true</usecontrolcoords>
+                    <!-- artist -->
 					<control type="label">
+                        <description>Artist Sort</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -52,10 +54,12 @@
 						<width>1000</width>
 						<height>25</height>
 						<font>font12</font>
-						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[557]: [/COLOR]$INFO[Window.Property(Artist)]</label>
-						<visible>!String.IsEmpty(Window.Property(Artist))</visible>
+						<label>[COLOR $VAR[ColorMainVar]]Sort name: [/COLOR]$INFO[Window.Property(Artist_Sortname)]</label>
+						<visible>!String.IsEmpty(Window.Property(Artist_Sortname))</visible>
+                        <visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
 					</control>
 					<control type="label">
+                        <description>Artist Type</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -67,17 +71,7 @@
 						<visible>!String.IsEmpty(Window.Property(Artist_Type))</visible>
 					</control>
 					<control type="label">
-						<align>left</align>
-						<aligny>center</aligny>
-						<left>20</left>
-						<top>10</top>
-						<width>1000</width>
-						<height>25</height>
-						<font>font12</font>
-						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[564]: [/COLOR]$INFO[Window.Property(Album_Type)]$INFO[Window.Property(Album_Type2), (,)]</label>
-						<visible>!String.IsEmpty(Window.Property(Album_Type))</visible>
-					</control>
-					<control type="label">
+                        <description>Artist Gender</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -89,17 +83,7 @@
 						<visible>!String.IsEmpty(Window.Property(Artist_Gender))</visible>
 					</control>
 					<control type="label">
-						<align>left</align>
-						<aligny>center</aligny>
-						<left>20</left>
-						<top>10</top>
-						<width>1000</width>
-						<height>25</height>
-						<font>font12</font>
-						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[574]: [/COLOR]$INFO[Window.Property(Country)]</label>
-						<visible>!String.isEmpty(Window.Property(Country))</visible>
-					</control>
-					<control type="label">
+                        <description>Artist Born</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -112,6 +96,7 @@
 						<visible>String.IsEqual(Window.Property(Artist_Type),Group)</visible>
 					</control>
 					<control type="label">
+                        <description>Artist Begin Area</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -124,6 +109,7 @@
 						<visible>String.IsEqual(Window.Property(Artist_Type),Group)</visible>
 					</control>
 					<control type="label">
+                        <description>Artist Born</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -136,6 +122,7 @@
 						<visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
 					</control>
 					<control type="label">
+                        <description>Artist Begin Area</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -148,6 +135,7 @@
 						<visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
 					</control>
 					<control type="label">
+                        <description>Artist Died</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -160,6 +148,7 @@
 						<visible>String.IsEqual(Window.Property(Artist_Type),Group)</visible>
 					</control>
 					<control type="label">
+                        <description>Artist End Area</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -172,6 +161,7 @@
 						<visible>String.IsEqual(Window.Property(Artist_Type),Group)</visible>
 					</control>
 					<control type="label">
+                        <description>Artist Died</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -184,6 +174,7 @@
 						<visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
 					</control>
 					<control type="label">
+                        <description>Artist End Area</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -194,19 +185,21 @@
 						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32201]: [/COLOR]$INFO[Window.Property(Artist_End_Area)]</label>
 						<visible>!String.IsEmpty(Window.Property(Artist_End_Area))</visible>
 						<visible>String.IsEqual(Window.Property(Artist_Type),Person)</visible>
-					</control>
+					</control> 
 					<control type="label">
+                        <description>Country</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
-						<top>0</top>
+						<top>10</top>
 						<width>1000</width>
 						<height>25</height>
 						<font>font12</font>
-						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32196]: [/COLOR]$INFO[Window.Property(Rating)]$INFO[Window.Property(Votes_Count), (,)]</label>
-						<visible>!String.IsEmpty(Window.Property(Rating))</visible>
+						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[574]: [/COLOR]$INFO[Window.Property(Country)]</label>
+						<visible>!String.isEmpty(Window.Property(Country))</visible>
 					</control>
 					<control type="label">
+                        <description>ISNIS</description>
 						<align>left</align>
 						<aligny>center</aligny>
 						<left>20</left>
@@ -216,6 +209,151 @@
 						<font>font12</font>
 						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32195]: [/COLOR]$INFO[Window.Property(isnis)]</label>
 						<visible>!String.IsEmpty(Window.Property(isnis))</visible>
+					</control>
+                    <!-- release -->
+					<control type="label">
+                        <description>Artist</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[557]: [/COLOR]$INFO[Window.Property(Artist)]</label>
+						<visible>!String.IsEmpty(Window.Property(Artist))</visible>
+					</control>                   
+					<control type="label">
+                        <description>Barcode</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32210]: [/COLOR]$INFO[Window.Property(Release_Barcode)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Barcode))</visible>
+					</control> 
+					<control type="label">
+                        <description>Format</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32205]: [/COLOR]$INFO[Window.Property(Release_Format)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Format))</visible>
+					</control>
+					<control type="label">
+                        <description>Length</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[Window.Property(Release_Length)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Length))</visible>
+					</control>                    
+					<control type="label">
+                        <description>Album Types</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[564]: [/COLOR]$INFO[Window.Property(Album_Type)]$INFO[Window.Property(Album_Type2), (,)]</label>
+						<visible>!String.IsEmpty(Window.Property(Album_Type))</visible>
+					</control>
+					<control type="label">
+                        <description>Status</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32215]: [/COLOR]$INFO[Window.Property(Release_Status)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Status))</visible>
+					</control> 
+					<control type="label">
+                        <description>Language</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32213]: [/COLOR]$INFO[Window.Property(Release_Language)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Language))</visible>
+					</control> 
+					<control type="label">
+                        <description>Script</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32214]: [/COLOR]$INFO[Window.Property(Release_Script)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Script))</visible>
+					</control>
+					<control type="label">
+                        <description>Data Quality</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32212]: [/COLOR]$INFO[Window.Property(Release_Quality)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Quality))</visible>
+					</control>
+					<control type="label">
+                        <description>Labels</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32208]: [/COLOR]$INFO[Window.Property(Release_Label)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Label))</visible>
+					</control>                    
+					<control type="label">
+                        <description>Catalog</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32209]: [/COLOR]$INFO[Window.Property(Release_Catalognum)]</label>
+						<visible>!String.IsEmpty(Window.Property(Release_Catalognum))</visible>
+					</control>                   
+					<control type="label">
+                        <description>Rating</description>
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>0</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32196]: [/COLOR]$INFO[Window.Property(Rating)]$INFO[Window.Property(Votes_Count), (,)]</label>
+						<visible>!String.IsEmpty(Window.Property(Rating))</visible>
 					</control>
 					<control type="group" id="140">
 						<description>Description</description>

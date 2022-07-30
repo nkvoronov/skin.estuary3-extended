@@ -205,6 +205,7 @@
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[39027]: [/COLOR]$INFO[ListItem.Property(Artist_Sortname)]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Sortname))</visible>
+                            <visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -387,6 +388,7 @@
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[39027]: [/COLOR]$INFO[ListItem.Property(Artist_Sortname)]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Sortname))</visible>
+                            <visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
