@@ -40,7 +40,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<description>Description Background</description>
+				<description>Description</description>
 				<include>OpenClose_Left</include>
 				<include>Visible_Right</include>
 				<left>705</left>

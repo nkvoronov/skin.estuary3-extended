@@ -345,9 +345,9 @@
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.duration(mm:ss)]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration]</label>
 							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.duration)</visible>
+							<visible>!String.IsEmpty(ListItem.Duration)</visible>
 						</control>
 					</control>
 				</control>
@@ -528,9 +528,9 @@
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.duration(mm:ss)]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration]</label>
 							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.duration)</visible>
+							<visible>!String.IsEmpty(ListItem.Duration)</visible>
 						</control>
 					</control>
 				</control>
