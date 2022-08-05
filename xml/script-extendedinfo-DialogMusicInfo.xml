@@ -37,7 +37,7 @@
 						<orientation>vertical</orientation>
 						<control type="label">
 							<width>100%</width>
-							<label>$INFO[Window.Property(label)]</label>
+							<label>$INFO[Window.Property(Main_Label)]</label>
 							<font>font52_title</font>
 							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							<height>65</height>
@@ -46,7 +46,7 @@
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(Control.GetLabel(33333))">Conditional</animation>
 						</control>
 						<control type="label" id="33333">
-							<label></label>
+							<label>$INFO[Window.Property(Sub_Label)]</label>
 							<left>85</left>
 							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
 							<align>center</align>
@@ -56,10 +56,10 @@
 					</control> -->
 					<include content="InfoDialogTopBarInfo">
 						<param name="posx" value="400" />
-						<param name="main_label" value="$INFO[Window.Property(label)]" />
-						<param name="sub_label" value="" />
+						<param name="main_label" value="$INFO[Window.Property(Main_Label)]" />
+						<param name="sub_label" value="$INFO[Window.Property(Sub_Label)]" />
 						<param name="id" value="33333" />
-					</include>
+					</include>                    
 					<control type="group">
 						<description>Poster</description>
 						<depth>DepthContentPopout</depth>
@@ -115,7 +115,7 @@
 						<include>OpenClose_Left</include>
 						<include>Visible_Right</include>
 						<left>680</left>
-						<top>174</top>
+						<top>176</top>
 						<control type="image">
 							<description>Music Info Background</description>
 							<left>0</left>
@@ -184,6 +184,11 @@
 								</focusedlayout>
 								<content>
 									<!-- artist -->
+									<item>
+										<label>$LOCALIZE[39026]:</label>
+										<label2>$INFO[Window.Property(Artist_Disambiguation)]</label2>
+										<visible>!String.IsEmpty(Window.Property(Artist_Disambiguation))</visible>
+									</item>                                    
 									<item>
 										<label>$LOCALIZE[39027]:</label>
 										<label2>$INFO[Window.Property(Artist_Sortname)]</label2>
@@ -265,6 +270,16 @@
 										<visible>!String.IsEmpty(Window.Property(Artist))</visible>
 									</item>
 									<item>
+										<label>$LOCALIZE[558]:</label>
+										<label2>$INFO[Window.Property(Album)]</label2>
+										<visible>!String.IsEmpty(Window.Property(Album))</visible>
+									</item>
+									<item>
+										<label>$LOCALIZE[562]:</label>
+										<label2>$INFO[Window.Property(Year)]</label2>
+										<visible>!String.IsEmpty(Window.Property(Year))</visible>
+									</item>
+									<item>
 										<label>$ADDON[script.extendedinfo 32210]:</label>
 										<label2>$INFO[Window.Property(Release_Barcode)]</label2>
 										<visible>!String.IsEmpty(Window.Property(Release_Barcode))</visible>
@@ -280,8 +295,13 @@
 										<visible>!String.IsEmpty(Window.Property(Release_Length))</visible>
 									</item>
 									<item>
+										<label>$LOCALIZE[180]:</label>
+										<label2>$INFO[Window.Property(Recording_Length)]</label2>
+										<visible>!String.IsEmpty(Window.Property(Recording_Length))</visible>
+									</item>
+									<item>
 										<label>$LOCALIZE[564]:</label>
-										<label2>$INFO[Window.Property(Album_Type)]$INFO[Window.Property(Album_Type2), (,)]</label2>
+										<label2>$INFO[Window.Property(Album_Type)]</label2>
 										<visible>!String.IsEmpty(Window.Property(Album_Type))</visible>
 									</item>
 									<item>
@@ -310,11 +330,6 @@
 										<visible>!String.IsEmpty(Window.Property(Release_Quality))</visible>
 									</item>
 									<item>
-										<label>$ADDON[script.extendedinfo 32208]:</label>
-										<label2>$INFO[Window.Property(Release_Label)]</label2>
-										<visible>!String.IsEmpty(Window.Property(Release_Label))</visible>
-									</item>
-									<item>
 										<label>$ADDON[script.extendedinfo 32209]:</label>
 										<label2>$INFO[Window.Property(Release_Catalognum)]</label2>
 										<visible>!String.IsEmpty(Window.Property(Release_Catalognum))</visible>
@@ -335,7 +350,7 @@
 						<left>1200</left>
 						<control type="group">
 							<description>Description controls</description>
-							<top>154</top>
+							<top>156</top>
 							<control type="button" id="132">
 								<description>Description buttons 1</description>
 								<onleft>41</onleft>
@@ -392,7 +407,7 @@
 						<control type="textbox" id="800">
 							<description>Description text</description>
 							<left>10</left>
-							<top>185</top>
+							<top>187</top>
 							<width>645</width>
 							<height>340</height>
 							<textoffsetx>40</textoffsetx>
@@ -3308,9 +3323,9 @@
 									<texture border="40">buttons/button-nofo.png</texture>
 								</control>
 								<control type="label">
-									<left>0</left>
+									<left>20</left>
 									<top>0</top>
-									<width>280</width>
+									<width>240</width>
 									<height>100</height>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -3340,14 +3355,15 @@
 									<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
 								</control>
 								<control type="label">
-									<left>0</left>
+									<left>20</left>
 									<top>0</top>
-									<width>280</width>
+									<width>240</width>
 									<height>100</height>
 									<align>center</align>
 									<aligny>center</aligny>
 									<font>font12</font>
 									<label>$INFO[ListItem.Label]</label>
+                                    <scroll>true</scroll>
 								</control>
 							</control>
 						</focusedlayout>
@@ -3391,9 +3407,9 @@
 									<texture border="40">buttons/button-nofo.png</texture>
 								</control>
 								<control type="label">
-									<left>0</left>
+									<left>20</left>
 									<top>0</top>
-									<width>280</width>
+									<width>240</width>
 									<height>100</height>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -3423,14 +3439,15 @@
 									<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
 								</control>
 								<control type="label">
-									<left>0</left>
+									<left>20</left>
 									<top>0</top>
-									<width>280</width>
+									<width>240</width>
 									<height>100</height>
 									<align>center</align>
 									<aligny>center</aligny>
 									<font>font12</font>
 									<label>$INFO[ListItem.Label]</label>
+                                    <scroll>true</scroll>
 								</control>
 							</control>
 						</focusedlayout>

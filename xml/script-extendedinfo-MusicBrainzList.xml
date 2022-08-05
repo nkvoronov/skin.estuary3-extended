@@ -103,7 +103,7 @@
 							<label>$VAR[ListLabel2Var]</label>
 							<textcolor>$VAR[ColorMainVar]</textcolor>
 							<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
-						</control>								
+						</control>
 						<control type="image">
 							<left>21</left>
 							<centertop>50%</centertop>
@@ -173,7 +173,7 @@
 				<visible>Control.IsVisible(55)</visible>
 				<include>OpenClose_Left</include>
 				<include>Visible_Left</include>
-				<include>ListThumbInfoPanelA</include>                
+				<include>ListThumbInfoPanelA</include>
 				<control type="group">
 					<top>570</top>
 					<left>30</left>
@@ -186,18 +186,18 @@
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[369]: [/COLOR]$INFO[ListItem.title]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[369]: [/COLOR]$INFO[ListItem.Title]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.title)</visible>
-							<visible>!String.IsEqual(ListItem.DBType,song)</visible>
+							<visible>!String.IsEqual(ListItem.dbtype,song)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[554]: [/COLOR]$INFO[ListItem.title]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[554]: [/COLOR]$INFO[ListItem.Title]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.title)</visible>
-							<visible>String.IsEqual(ListItem.DBType,song)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,song)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -205,7 +205,7 @@
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[39027]: [/COLOR]$INFO[ListItem.Property(Artist_Sortname)]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Sortname))</visible>
-                            <visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
+							<visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -220,14 +220,14 @@
 							<label>[COLOR $VAR[ColorMainVar]]$ADDON[script.extendedinfo 32180]: [/COLOR]$INFO[ListItem.Property(Artist_Gender)]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Gender))</visible>
-						</control> 
+						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[574]: [/COLOR]$INFO[ListItem.Property(Country)]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Country))</visible>
-						</control>                        
+						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
@@ -235,7 +235,7 @@
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
 							<visible>String.IsEqual(ListItem.Property(Artist_Type),Group)</visible>
-						</control>                        
+						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
@@ -243,7 +243,7 @@
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Begin_Area))</visible>
 							<visible>String.IsEqual(ListItem.Property(Artist_Type),Group)</visible>
-						</control> 
+						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
@@ -251,7 +251,7 @@
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
 							<visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
-						</control>                        
+						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
@@ -291,20 +291,20 @@
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_End_Area))</visible>
 							<visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
-						</control>                      
-						<control type="label">
-							<height>40</height>
-							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.artist]</label>
-							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.artist)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[558]: [/COLOR]$INFO[ListItem.album]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist]</label>
 							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.album)</visible>
+							<visible>!String.IsEmpty(ListItem.Artist)</visible>
+						</control>
+						<control type="label">
+							<height>40</height>
+							<aligny>center</aligny>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[558]: [/COLOR]$INFO[ListItem.Album]</label>
+							<scroll>true</scroll>
+							<visible>!String.IsEmpty(ListItem.Album)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -316,16 +316,9 @@
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[564] 2: [/COLOR]$INFO[ListItem.Property(Album_Type2)]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[562]: [/COLOR]$INFO[ListItem.Year]</label>
 							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.Property(Album_Type2))</visible>
-						</control>
-						<control type="label">
-							<height>40</height>
-							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[562]: [/COLOR]$INFO[ListItem.year]</label>
-							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.year)</visible>
+							<visible>!String.IsEmpty(ListItem.Year)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -340,7 +333,7 @@
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Genre)</visible>
-							<visible>String.IsEqual(ListItem.DBType,song)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,song)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -372,7 +365,7 @@
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[369]: [/COLOR]$INFO[ListItem.title]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.title)</visible>
-							<visible>!String.IsEqual(ListItem.DBType,song)</visible>
+							<visible>!String.IsEqual(ListItem.dbtype,song)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -380,7 +373,7 @@
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[554]: [/COLOR]$INFO[ListItem.title]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.title)</visible>
-							<visible>String.IsEqual(ListItem.DBType,song)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,song)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -388,7 +381,7 @@
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[39027]: [/COLOR]$INFO[ListItem.Property(Artist_Sortname)]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Sortname))</visible>
-                            <visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
+							<visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -418,7 +411,7 @@
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
 							<visible>String.IsEqual(ListItem.Property(Artist_Type),Group)</visible>
-						</control>                        
+						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
@@ -426,7 +419,7 @@
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Begin_Area))</visible>
 							<visible>String.IsEqual(ListItem.Property(Artist_Type),Group)</visible>
-						</control> 
+						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
@@ -434,7 +427,7 @@
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
 							<visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
-						</control>                        
+						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
@@ -474,20 +467,20 @@
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Property(Artist_End_Area))</visible>
 							<visible>String.IsEqual(ListItem.Property(Artist_Type),Person)</visible>
-						</control>                        
-						<control type="label">
-							<height>40</height>
-							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.artist]</label>
-							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.artist)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[558]: [/COLOR]$INFO[ListItem.album]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist]</label>
 							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.album)</visible>
+							<visible>!String.IsEmpty(ListItem.Artist)</visible>
+						</control>
+						<control type="label">
+							<height>40</height>
+							<aligny>center</aligny>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[558]: [/COLOR]$INFO[ListItem.Album]</label>
+							<scroll>true</scroll>
+							<visible>!String.IsEmpty(ListItem.Album)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -499,16 +492,9 @@
 						<control type="label">
 							<height>40</height>
 							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[564] 2: [/COLOR]$INFO[ListItem.Property(Album_Type2)]</label>
+							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[562]: [/COLOR]$INFO[ListItem.Year]</label>
 							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.Property(Album_Type2))</visible>
-						</control>
-						<control type="label">
-							<height>40</height>
-							<aligny>center</aligny>
-							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[562]: [/COLOR]$INFO[ListItem.year]</label>
-							<scroll>true</scroll>
-							<visible>!String.IsEmpty(ListItem.year)</visible>
+							<visible>!String.IsEmpty(ListItem.Year)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
@@ -523,7 +509,7 @@
 							<label>[COLOR $VAR[ColorMainVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(ListItem.Genre)</visible>
-							<visible>String.IsEqual(ListItem.DBType,song)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,song)</visible>
 						</control>
 						<control type="label">
 							<height>40</height>
