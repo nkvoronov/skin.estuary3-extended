@@ -110,18 +110,95 @@
 							<aspectratio aligny="center" align="center">keep</aspectratio>
 						</control>
 					</control>
-					<control type="group">
-						<description>Music Info</description>
+					<control type="group" id="140">
+						<description>Description</description>
 						<include>OpenClose_Left</include>
 						<include>Visible_Right</include>
 						<left>680</left>
+						<control type="group">
+							<description>Description controls</description>
+							<top>156</top>
+							<control type="button" id="132">
+								<description>Description buttons 1</description>
+								<onleft>41</onleft>
+								<onright>41</onright>
+								<onup>150</onup>
+								<ondown>5000</ondown>
+								<left>-35</left>
+								<width>720</width>
+								<height>470</height>
+								<label/>
+								<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
+								<visible>!String.IsEmpty(Window.Property(Description))</visible>
+							</control>
+							<control type="button" id="133">
+								<description>Description buttons 2</description>
+								<onleft>41</onleft>
+								<onright>41</onright>
+								<onup>150</onup>
+								<ondown>5000</ondown>
+								<left>-35</left>
+								<width>720</width>
+								<height>470</height>
+								<label/>
+								<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
+								<visible>String.IsEmpty(Window.Property(Description))</visible>
+							</control>
+							<control type="group">
+								<!-- <visible>String.IsEmpty(Control.GetLabel(800))</visible> -->
+                                <visible>String.IsEmpty(Window.Property(Description))</visible>
+								<control type="image">
+									<description>Fanart</description>
+									<left>-12</left>
+									<top>23</top>
+									<width>674</width>
+									<height>384</height>
+									<aspectratio aligny="top">scale</aspectratio>
+									<texture>$INFO[Window.Property(infobackground)]</texture>
+                                    <visible>!String.IsEmpty(Window.Property(infobackground))</visible>
+								</control>
+								<control type="textbox">
+									<description>No content</description>
+									<left>-14</left>
+									<top>20</top>
+									<width>670</width>
+									<height>420</height>
+									<align>center</align>
+									<aligny>center</aligny>
+									<font>font27</font>
+									<textcolor>white8</textcolor>
+									<label>$LOCALIZE[19055]</label>									
+									<visible>String.IsEmpty(Window.Property(infobackground))</visible>
+								</control>
+							</control>
+						</control>
+						<control type="textbox" id="800">
+							<description>Description text</description>
+							<left>10</left>
+							<top>187</top>
+							<width>645</width>
+							<height>400</height>
+							<textoffsetx>40</textoffsetx>
+							<textoffsety>20</textoffsety>
+							<aligny>bottom</aligny>
+							<label>$INFO[Window.Property(Description)]</label>
+							<font>font12</font>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>!String.IsEmpty(Window.Property(Description))</visible>
+						</control>
+					</control>                    
+					<control type="group">
+						<description>Music Info</description>
+						<include>OpenClose_Left</include>
+						<include>Visible_Right</include>						
+                        <left>1400</left>
 						<top>176</top>
 						<control type="image">
 							<description>Music Info Background</description>
 							<left>0</left>
 							<top>0</top>
 							<width>450</width>
-							<height>390</height>
+							<height>430</height>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="bg_videoinfo">colors/black.png</texture>
 						</control>
@@ -133,13 +210,13 @@
 								<left>42</left>
 								<top>0</top>
 								<width>446</width>
-								<height>385</height>
+								<height>425</height>
 								<onleft condition="!String.IsEmpty(Window.Property(Description))">132</onleft>
 								<onleft condition="String.IsEmpty(Window.Property(Description))">133</onleft>
 								<onright condition="!String.IsEmpty(Window.Property(Description))">132</onright>
 								<onright condition="String.IsEmpty(Window.Property(Description))">133</onright>
 								<onup>150</onup>
-								<ondown>150</ondown>
+								<ondown>5000</ondown>
 								<pagecontrol/>
 								<scrolltime>200</scrolltime>
 								<itemlayout height="35">
@@ -342,83 +419,92 @@
 								</content>
 							</control>
 						</control>
-					</control>
-					<control type="group" id="140">
-						<description>Description</description>
-						<include>OpenClose_Left</include>
-						<include>Visible_Right</include>
-						<left>1200</left>
-						<control type="group">
-							<description>Description controls</description>
-							<top>156</top>
-							<control type="button" id="132">
-								<description>Description buttons 1</description>
-								<onleft>41</onleft>
-								<onright>41</onright>
-								<onup>150</onup>
-								<ondown>150</ondown>
-								<left>-35</left>
-								<width>720</width>
-								<height>430</height>
-								<label/>
-								<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
-								<visible>!String.IsEmpty(Window.Property(Description))</visible>
-							</control>
-							<control type="button" id="133">
-								<description>Description buttons 2</description>
-								<onleft>41</onleft>
-								<onright>41</onright>
-								<onup>150</onup>
-								<ondown>150</ondown>
-								<left>-35</left>
-								<width>720</width>
-								<height>430</height>
-								<label/>
-								<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
-								<visible>String.IsEmpty(Window.Property(Description))</visible>
-							</control>
-							<control type="group">
-								<visible>String.IsEmpty(Control.GetLabel(800))</visible>
-								<control type="image">
-									<description>Fanart</description>
-									<left>-12</left>
-									<top>23</top>
-									<width>674</width>
-									<height>384</height>
-									<aspectratio aligny="top">scale</aspectratio>
-									<texture>$INFO[Window.Property(infobackground)]</texture>
-								</control>
-								<control type="textbox">
-									<description>No content</description>
-									<left>-14</left>
-									<top>20</top>
-									<width>670</width>
-									<height>380</height>
-									<align>center</align>
-									<aligny>center</aligny>
-									<font>font27</font>
-									<textcolor>white8</textcolor>
-									<label>$LOCALIZE[19055]</label>
-									<visible>String.IsEmpty(Window.Property(Description))</visible>
-									<visible>String.IsEmpty(Window.Property(infobackground))</visible>
-								</control>
-							</control>
+					</control>                    
+                    <control type="group" id="50000">
+						<description>Buttons</description>
+                        <left>680</left>
+                        <top>625</top>
+						<height>120</height>
+						<control type="image">
+							<left>-10</left>
+							<top>55</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[ColorMainVar]" flipx="true">overlays/arrowright.png</texture>
+							<animation effect="fade" time="200">VisibleChange</animation>
+							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(5000).HasPrevious + ControlGroup(5000).HasFocus</visible>
 						</control>
-						<control type="textbox" id="800">
-							<description>Description text</description>
-							<left>10</left>
-							<top>187</top>
-							<width>645</width>
-							<height>340</height>
-							<textoffsetx>40</textoffsetx>
-							<textoffsety>20</textoffsety>
-							<aligny>bottom</aligny>
-							<label>$INFO[Window.Property(Description)]</label>
-							<font>font12</font>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>!String.IsEmpty(Window.Property(Description))</visible>
+						<control type="image">
+							<left>1072</left>
+							<top>55</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[ColorMainVar]">overlays/arrowright.png</texture>
+							<animation effect="fade" time="200">VisibleChange</animation>
+							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(5000).HasNext + ControlGroup(5000).HasFocus</visible>
 						</control>
-					</control>
+						<control type="grouplist" id="5000">
+							<left>0</left>
+							<top>0</top>
+							<width>1090</width>
+							<height>140</height>
+							<onup>41</onup>
+							<ondown>150</ondown>
+							<itemgap>-10</itemgap>
+							<orientation>horizontal</orientation>
+							<scrolltime tween="quadratic">200</scrolltime>
+                            <include content="InfoDialogToggleButton">
+								<param name="id" value="8" />
+								<param name="icon_on" value="icons/infodialogs/play.png" />
+								<param name="icon_off" value="icons/infodialogs/play.png" />
+								<param name="label" value="$LOCALIZE[208]" />
+								<param name="visible" value="!String.IsEmpty(Window.Property(DBID)) + String.IsEqual(Window.Property(Type),Song)" />
+								<param name="width" value="280" />
+							</include>
+							<include content="InfoDialogToggleButton">
+								<param name="id" value="120" />
+								<param name="icon_on" value="icons/filemanager.png" />
+								<param name="icon_off" value="icons/filemanager.png" />
+								<param name="label" value="$LOCALIZE[1024]" />
+								<param name="visible" value="!String.IsEmpty(Window.Property(DBID)) + [String.IsEqual(Window.Property(Type),Artist) | String.IsEqual(Window.Property(Type),Album)] + !String.IsEqual(Window.Property(Type_Alt),release-group)" />
+								<param name="width" value="280" />
+							</include>                            
+                            <include content="InfoDialogToggleButton">
+								<param name="id" value="100" />
+								<param name="icon_on" value="extras/extendedinfo/info.png" />
+								<param name="icon_off" value="extras/extendedinfo/info.png" />
+								<param name="label" value="$LOCALIZE[557]" />
+								<param name="visible" value="String.IsEqual(Window.Property(Type),Song) | String.IsEqual(Window.Property(Type),Album)" />
+								<param name="width" value="280" />
+							</include>
+                            <include content="InfoDialogToggleButton">
+								<param name="id" value="101" />
+								<param name="icon_on" value="extras/extendedinfo/info.png" />
+								<param name="icon_off" value="extras/extendedinfo/info.png" />
+								<param name="label" value="$LOCALIZE[558]" />
+								<param name="visible" value="String.IsEqual(Window.Property(Type),Song) | String.IsEqual(Window.Property(Type_Alt),release)" />
+								<param name="width" value="280" />
+							</include>                            
+                            <include content="InfoDialogToggleButton">
+								<param name="id" value="102" />
+								<param name="icon_on" value="extras/extendedinfo/info.png" />
+								<param name="icon_off" value="extras/extendedinfo/info.png" />
+								<param name="label" value="$ADDON[script.extendedinfo 32211]" />
+								<param name="visible" value="String.IsEqual(Window.Property(Type),Song)" />
+								<param name="width" value="280" />
+							</include>                           
+                            <include content="InfoDialogToggleButton">
+								<param name="id" value="445" />
+								<param name="icon_on" value="extras/extendedinfo/tool2.png" />
+								<param name="icon_off" value="extras/extendedinfo/tool2.png" />
+								<param name="label" value="$ADDON[script.extendedinfo 32133]" />
+								<param name="visible" value="true" />
+								<param name="width" value="280" />
+							</include>                            
+                        </control>                       
+                    </control>                    
 				</control>
 				<control type="group" id="1500">
 					<description>Albums</description>
@@ -461,8 +547,7 @@
 						<height>400</height>
 						<onleft>150</onleft>
 						<onright>150</onright>
-						<onup condition="!String.IsEmpty(Window.Property(Description))">132</onup>
-						<onup condition="String.IsEmpty(Window.Property(Description))">133</onup>
+						<onup>5000</onup>
 						<ondown>151</ondown>
 						<scrolltime>200</scrolltime>
 						<orientation>horizontal</orientation>
