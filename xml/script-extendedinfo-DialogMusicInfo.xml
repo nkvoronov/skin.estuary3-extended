@@ -145,7 +145,6 @@
 								<visible>String.IsEmpty(Window.Property(Description))</visible>
 							</control>
 							<control type="group">
-								<!-- <visible>String.IsEmpty(Control.GetLabel(800))</visible> -->
                                 <visible>String.IsEmpty(Window.Property(Description))</visible>
 								<control type="image">
 									<description>Fanart</description>
@@ -416,6 +415,27 @@
 										<label2>$INFO[Window.Property(Rating)]$INFO[Window.Property(Votes_Count), (,)]</label2>
 										<visible>!String.IsEmpty(Window.Property(Rating))</visible>
 									</item>
+                                    <!-- ids -->
+									<item>
+										<label>artist ids:</label>
+										<label2>$INFO[Window.Property(musicbrainzartistsid)]</label2>
+										<visible>!String.IsEmpty(Window.Property(musicbrainzartistsid))</visible>
+									</item> 
+									<item>
+										<label>release group id:</label>
+										<label2>$INFO[Window.Property(musicbrainzreleasegroupid)]</label2>
+										<visible>!String.IsEmpty(Window.Property(musicbrainzreleasegroupid))</visible>
+									</item> 
+									<item>
+										<label>release id:</label>
+										<label2>$INFO[Window.Property(musicbrainzreleaseid)]</label2>
+										<visible>!String.IsEmpty(Window.Property(musicbrainzreleaseid))</visible>
+									</item> 
+									<item>
+										<label>recording id:</label>
+										<label2>$INFO[Window.Property(musicbrainztrackid)]</label2>
+										<visible>!String.IsEmpty(Window.Property(musicbrainztrackid))</visible>
+									</item>                                    
 								</content>
 							</control>
 						</control>
