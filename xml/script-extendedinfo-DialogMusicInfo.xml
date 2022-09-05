@@ -3241,15 +3241,55 @@
 					<left>10</left>
 					<height>430</height>
 					<visible>Integer.IsGreater(Container(161).NumItems,0)</visible>
-					<control type="label">
+                    <control type="group">
+						<description>info labels</description>
 						<top>6</top>
-						<left>25</left>
-						<width>1000</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>font13</font>
-						<label>Recording$INFO[Container(161).NumItems, (,)]</label>
-					</control>
+						<height>75</height>
+						<width>1880</width>
+						<left>25</left>                    
+                        <control type="label">
+                            <top>6</top>
+                            <left>25</left>
+                            <width>1000</width>
+                            <height>25</height>
+                            <aligny>center</aligny>
+                            <font>font13</font>
+                            <label>Credits$INFO[Container(161).NumItems, (,)]</label>
+                        </control>
+						<control type="label">
+							<description>type</description>
+							<top>30</top>
+							<left>70</left>
+							<width>200</width>
+							<height>80</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>type</label>
+							<textcolor>$VAR[ColorMainVar]</textcolor>
+						</control>
+						<control type="label">
+							<description>attributes</description>
+							<top>30</top>
+							<left>270</left>
+							<width>300</width>
+							<height>80</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>attributes</label>
+							<textcolor>$VAR[ColorMainVar]</textcolor>
+						</control>
+						<control type="label">
+							<description>artist</description>
+							<top>30</top>
+							<left>570</left>
+							<width>400</width>
+							<height>80</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>artist</label>
+							<textcolor>$VAR[ColorMainVar]</textcolor>
+						</control>                        
+                    </control>    
 					<control type="list" id="161">
 						<top>110</top>
 						<left>0</left>
@@ -3264,6 +3304,111 @@
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>vertical</orientation>
 						<pagecontrol>174</pagecontrol>
+						<itemlayout height="80">
+							<control type="group">
+								<left>25</left>
+								<control type="image">
+									<description>watched icon</description>
+									<left>21</left>
+									<centertop>50%</centertop>
+									<width>32</width>
+									<height>32</height>
+									<texture colordiffuse="$VAR[ColorGreyVar]">$VAR[ListWatchedIconVar]</texture>
+								</control>
+								<control type="label">
+									<description>type</description>
+									<left>70</left>
+									<width>200</width>
+									<top>0</top>
+									<bottom>0</bottom>
+									<aligny>center</aligny>
+									<font>font27</font>
+									<label>$INFO[ListItem.Property(type)]</label>
+									<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+									<scroll>true</scroll>
+								</control>
+								<control type="label">
+									<description>attributes</description>
+									<left>270</left>
+									<width>300</width>
+									<top>0</top>
+									<bottom>0</bottom>
+									<aligny>center</aligny>
+									<font>font27</font>
+									<label>$INFO[ListItem.Property(attributes)]</label>
+									<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+									<scroll>true</scroll>
+								</control>
+								<control type="label">
+									<description>artist</description>
+									<left>570</left>
+									<width>400</width>
+									<top>0</top>
+									<bottom>0</bottom>
+									<aligny>center</aligny>
+									<font>font27</font>
+									<label>$INFO[ListItem.Artist]</label>
+									<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+								</control>                                
+							</control>
+						</itemlayout>
+						<focusedlayout height="80">
+							<control type="group">
+								<left>25</left>
+								<control type="image">
+									<description>focus background</description>
+									<left>0</left>
+									<right>0</right>
+									<top>0</top>
+									<bottom>0</bottom>
+									<texture colordiffuse="$VAR[ColorMainVar]">lists/focus.png</texture>
+									<visible>Control.HasFocus(161)</visible>
+								</control>
+								<control type="image">
+									<description>watched icon</description>
+									<left>21</left>
+									<centertop>50%</centertop>
+									<width>32</width>
+									<height>32</height>
+									<texture>$VAR[ListWatchedIconVar]</texture>
+								</control>
+								<control type="label">
+									<description>type</description>
+									<left>70</left>
+									<width>200</width>
+									<top>0</top>
+									<bottom>0</bottom>
+									<aligny>center</aligny>
+									<font>font27</font>
+									<label>$INFO[ListItem.Property(type)]</label>
+									<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+									<scroll>true</scroll>
+								</control>
+								<control type="label">
+									<description>attributes</description>
+									<left>270</left>
+									<width>300</width>
+									<top>0</top>
+									<bottom>0</bottom>
+									<aligny>center</aligny>
+									<font>font27</font>
+									<label>$INFO[ListItem.Property(attributes)]</label>
+									<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+									<scroll>true</scroll>
+								</control>
+								<control type="label">
+									<description>artist</description>
+									<left>570</left>
+									<width>400</width>
+									<top>0</top>
+									<bottom>0</bottom>
+									<aligny>center</aligny>
+									<font>font27</font>
+									<label>$INFO[ListItem.Artist]</label>
+									<shadowcolor>$VAR[ColorTextShadowVar]</shadowcolor>
+								</control>                                
+							</control>
+						</focusedlayout>                            
 					</control>
 					<control type="scrollbar" id="174">
 						<right>0</right>
