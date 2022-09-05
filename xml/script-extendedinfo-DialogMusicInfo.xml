@@ -417,22 +417,32 @@
 									</item>
                                     <!-- ids -->
 									<item>
-										<label>artist ids:</label>
+										<label></label>
+										<label2>____________________________________</label2>
+										<visible>true</visible>
+									</item>                                    
+									<item>
+										<label>Artist:</label>
+										<label2>$INFO[Window.Property(musicbrainzartistid)]</label2>
+										<visible>!String.IsEmpty(Window.Property(musicbrainzartistid)) + String.IsEqual(Window.Property(Type),Artist)</visible>
+									</item>                                    
+									<item>
+										<label>Artists:</label>
 										<label2>$INFO[Window.Property(musicbrainzartistsid)]</label2>
 										<visible>!String.IsEmpty(Window.Property(musicbrainzartistsid))</visible>
 									</item> 
 									<item>
-										<label>release group id:</label>
+										<label>Release Group:</label>
 										<label2>$INFO[Window.Property(musicbrainzreleasegroupid)]</label2>
 										<visible>!String.IsEmpty(Window.Property(musicbrainzreleasegroupid))</visible>
 									</item> 
 									<item>
-										<label>release id:</label>
+										<label>Release:</label>
 										<label2>$INFO[Window.Property(musicbrainzreleaseid)]</label2>
 										<visible>!String.IsEmpty(Window.Property(musicbrainzreleaseid))</visible>
 									</item> 
 									<item>
-										<label>recording id:</label>
+										<label>Recording:</label>
 										<label2>$INFO[Window.Property(musicbrainztrackid)]</label2>
 										<visible>!String.IsEmpty(Window.Property(musicbrainztrackid))</visible>
 									</item>                                    
