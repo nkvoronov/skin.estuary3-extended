@@ -3254,7 +3254,7 @@
                             <height>25</height>
                             <aligny>center</aligny>
                             <font>font13</font>
-                            <label>Credits$INFO[Container(161).NumItems, (,)]</label>
+                            <label>$LOCALIZE[470]$INFO[Container(161).NumItems, (,)]</label>
                         </control>
 						<control type="label">
 							<description>type</description>
@@ -3264,7 +3264,7 @@
 							<height>80</height>
 							<aligny>center</aligny>
 							<font>font13</font>
-							<label>type</label>
+							<label>$LOCALIZE[564]</label>
 							<textcolor>$VAR[ColorMainVar]</textcolor>
 						</control>
 						<control type="label">
@@ -3275,7 +3275,7 @@
 							<height>80</height>
 							<aligny>center</aligny>
 							<font>font13</font>
-							<label>attributes</label>
+							<label>$LOCALIZE[369]</label>
 							<textcolor>$VAR[ColorMainVar]</textcolor>
 						</control>
 						<control type="label">
@@ -3286,7 +3286,7 @@
 							<height>80</height>
 							<aligny>center</aligny>
 							<font>font13</font>
-							<label>artist</label>
+							<label>$LOCALIZE[557]</label>
 							<textcolor>$VAR[ColorMainVar]</textcolor>
 						</control>                        
                     </control>    
